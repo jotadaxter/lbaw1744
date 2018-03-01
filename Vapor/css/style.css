@@ -1,5 +1,5 @@
 /* Generic Header */
-@import "color-ref.css"
+@import "color-ref.css";
 
 #header_box {
     background-color: var(--color-fg-main);
