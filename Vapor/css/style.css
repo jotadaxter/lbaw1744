@@ -1,12 +1,13 @@
 /* Generic Header */
+@import "color-ref.css"
 
 #header_box {
-    background-color: #ff6699;
+    background-color: var(--color-fg-main);
 }
 
 /* Background Style */
 body {
-    background-color: #d3d3d3;
+    background-color: var(--color-bg-main);
 
 }
 
