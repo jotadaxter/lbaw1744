@@ -1,6 +1,6 @@
 /* Generic Header */
 
-header {
+#header_box {
     background-color: #ff6699;
 }
 
@@ -13,4 +13,7 @@ body {
 /* Vapor Title */
 .vaporTitle {
     font-family: "Times New Roman";
+    float:left;
 }
+
+/* Icons */

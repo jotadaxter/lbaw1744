@@ -1,15 +1,16 @@
 <footer>
-    <div ID="navbar">
+    <div ID="navbar" class="container">
         <ul class="list-inline">
-            <li><a href="redirect.php?page_type=home">Home</a></li>
+            <li><a href="home_page.php">Home</a></li>
             <li><a href="redirect.php?page_type=profile_search">Profile Search</a></li>
             <li><a href="redirect.php?page_type=register">Register</a></li>
             <li><a href="redirect.php?page_type=login">Login</a></li>
-            <li><a href="templates/nav/about.html">About</a></li>
+            <li><a href="about_page.php">About</a></li>
         </ul>
-    </div>
+
     <br>
     &copy; 2017 Vapor
+    </div>
 </footer>
 
 
