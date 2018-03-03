@@ -14,8 +14,8 @@
 /* Background Style */
 body {
     /*background-color: var(--color-bg-main);*/
-	background: url(https://78.media.tumblr.com/54040aa3d8780337aefa36adf12f007f/tumblr_msupzak9sU1sydj82o1_500.png) right bottom no-repeat,
-				url(http://vapor-art.com/images/fore-grid.png) bottom no-repeat,
+	background: url(../res/images/icons_bg.png) right bottom no-repeat,
+				url(../res/images/fore-grid.png) bottom no-repeat,
 				linear-gradient(to bottom, var(--color-bg-main-top) 0%, var(--color-bg-main-mid) 80%, var(--color-bg-main-bot) 100%); /* Standard syntax (must be last) */
     
 	background-size:1000px,100% 20%, auto;
