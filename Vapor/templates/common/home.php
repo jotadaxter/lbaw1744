@@ -19,7 +19,7 @@
                     <a href="#"><img src="http://placekitten.com/1600/600" /></a>
                 </div>
             </div>
-
+            <!-- Switch Image buttons -->
             <a class="left carousel-control" href="#carousel-example" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
             </a>
