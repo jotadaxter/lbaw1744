@@ -7,7 +7,7 @@
  */
 echo 'notifications page';
 include_once(__DIR__ . '/conf.php');
-include_once(__DIR__ . '/templates/common/header.php');
+include_once(__DIR__ . '/templates/common/header_signed.php');
 include_once(__DIR__ . '/templates/nav/about.php');
 include_once(__DIR__ . '/templates/common/footer.php');
 ?>

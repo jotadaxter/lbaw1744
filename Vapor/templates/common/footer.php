@@ -1,15 +1,27 @@
 <footer>
-    <div ID="navbar" class="container">
-        <ul class="list-inline">
-            <li><a href="home_page.php">Home</a></li>
-            <li><a href="redirect.php?page_type=profile_search">Profile Search</a></li>
-            <li><a href="redirect.php?page_type=register">Register</a></li>
-            <li><a href="redirect.php?page_type=login">Login</a></li>
-            <li><a href="about_page.php">About</a></li>
-        </ul>
+    <div class="container text-center">
+        <hr />
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="home_page.php">Home</a></li>
+                    <li><a href="about_page.php">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
 
-    <br>
-    &copy; 2017 Vapor
+        <hr />
+
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="/"> &copy; 2018 V a p o r</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </footer>
 

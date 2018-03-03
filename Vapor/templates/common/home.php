@@ -1,7 +1,32 @@
-<div id="myDIV" class="container mainTitle">
-    <mainTitle>
-        <br>Welcome to our Website!
-    </mainTitle>
-    <br><br>
-    <hr>
+<div id="myDIV" class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <br>Welcome to our Website!
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <br>Welcome to our Website!
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <br>Welcome to our Website!
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <br>Welcome to our Website!
+        </div>
+    </div><div class="row">
+        <div class="col-lg-3">
+            <br>Welcome to our Website!
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <br>Welcome to our Website!
+        </div>
+    </div>
+
 </div>
