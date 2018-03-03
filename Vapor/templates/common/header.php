@@ -21,29 +21,48 @@
             <!-- Title -->
             <h1 class="vaporTitle">V A P O R</h1>
         </div>
-        <div class="col-lg-4 ">
+        <div class="col-lg-4">
             <!-- Search Bar -->
-
-            <div class="input-group stylish-input-group">
+            <div class="input-group stylish-input-group" style="margin-top: 20px">
                 <input type="text" class="form-control"  placeholder="Search" >
                 <span class="input-group-addon">
-            <button type="submit">
-                <span class="glyphicon glyphicon-search"></span>
-            </button>
-        </span>
+                    <button type="submit">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
             </div>
-
-        </div>
-        <div class="col-lg-3">
         </div>
 
-        <div class="col-lg-1 ">
+        <div class="col-lg-1 "  style="margin-top: 15px">
             <!-- Notification Icon -->
             <img id="bell" class="img-rounded img-thumbnail" src="res/icons/bell.png" alt="bell_icon">
         </div>
-        <div class="col-lg-1 ">
+        <div class="col-lg-1 "  style="margin-top: 15px">
             <!-- Cart Icon -->
             <img id="cart" class="img-rounded img-thumbnail" src="res/icons/cart.png" alt="cart_icon">
+        </div>
+        <div class="col-lg-2"  style="margin-top: 20px">
+            <!-- User Dropbox Menu -->
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">janedoe69 <span class="glyphicon glyphicon-user pull-right"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Account Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">User stats <span class="glyphicon glyphicon-stats pull-right"></span></a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Messages <span class="badge pull-right"> 42 </span></a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Favourites Snippets <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-1 "  style="margin-top: 5px">
+            <!-- Profile Picture -->
+            <img id="profile_picture" class="img-rounded img-thumbnail" src="res/images/profile_picture.png" alt="profile_picture">
         </div>
 
     </div>
