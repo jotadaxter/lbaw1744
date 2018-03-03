@@ -14,14 +14,45 @@
 </head>
 <body>
 
-<div id="header_box" class="container-fluid navbar navbar-default">
-    <h1 class="vaporTitle">V A P O R</h1>
-    <div class="collapse navbar-collapse navbar-right">
-        <ul class="nav navbar-nav">
-            <li><img id="bell" class="img-rounded img-thumbnail" src="res/icons/bell.png" alt="bell_icon"></li>
-            <li><img id="cart" class="img-rounded img-thumbnail" src="res/icons/cart.png" alt="cart_icon"></li>
-        </ul>
+<div id="header_box" class="container">
+
+    <div class="row">
+        <div class="col-lg-3 ">
+            <!-- Title -->
+            <h1 class="vaporTitle">V A P O R</h1>
+        </div>
+        <div class="col-lg-4 ">
+            <!-- Search Bar -->
+
+            <div class="input-group stylish-input-group">
+                <input type="text" class="form-control"  placeholder="Search" >
+                <span class="input-group-addon">
+            <button type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </span>
+            </div>
+
+        </div>
+        <div class="col-lg-3">
+        </div>
+
+        <div class="col-lg-1 ">
+            <!-- Notification Icon -->
+            <img id="bell" class="img-rounded img-thumbnail" src="res/icons/bell.png" alt="bell_icon">
+        </div>
+        <div class="col-lg-1 ">
+            <!-- Cart Icon -->
+            <img id="cart" class="img-rounded img-thumbnail" src="res/icons/cart.png" alt="cart_icon">
+        </div>
+
     </div>
+
+
+
+
+
+
 
 
 
