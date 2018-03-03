@@ -1,13 +1,25 @@
 /* Generic Header */
 @import "color-ref.css";
 
+@keyframes rotateY360 {
+    0%   {transform: rotateX(0deg);}
+    50%   {transform: rotateX(180deg);}
+    100% {transform: rotateX(360deg);}
+}
+
 #header_box {
     background-color: var(--color-fg-main);
 }
 
 /* Background Style */
 body {
-    background-color: var(--color-bg-main);
+    /*background-color: var(--color-bg-main);*/
+	background: url(https://78.media.tumblr.com/54040aa3d8780337aefa36adf12f007f/tumblr_msupzak9sU1sydj82o1_500.png) right bottom no-repeat,
+				url(http://vapor-art.com/images/fore-grid.png) bottom no-repeat,
+				linear-gradient(to bottom, var(--color-bg-main-top) 0%, var(--color-bg-main-mid) 80%, var(--color-bg-main-bot) 100%); /* Standard syntax (must be last) */
+    
+	background-size:1000px,100% 20%, auto;
+	background-attachment: fixed;
 
 }
 
@@ -16,7 +28,9 @@ body {
     font-size: 300%;
     font-family: "Times New Roman";
     text-align: center;
-    color:white;
+    color:var(--color-fg-text);
+	
+	animation: rotateY360 5s infinite ease-in-out;
 }
 
 /* Search Bar */
