@@ -63,21 +63,25 @@ body {
 .nav>li>a:hover, .nav>li>a:focus, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
     background:white;
 }
+
 .dropdown {
     background:#fff;
     border:1px solid #ccc;
     border-radius:4px;
     width:200px;
 }
+
 .dropdown-menu>li>a {
     color:#428bca;
 }
+
 .dropdown ul.dropdown-menu {
     border-radius:4px;
     box-shadow:none;
     margin-top:20px;
     width:200px;
 }
+
 .dropdown ul.dropdown-menu:before {
     content: "";
     border-bottom: 10px solid #fff;
@@ -88,6 +92,7 @@ body {
     right: 16px;
     z-index: 10;
 }
+
 .dropdown ul.dropdown-menu:after {
     content: "";
     border-bottom: 12px solid #ccc;
@@ -100,27 +105,13 @@ body {
 }
 
 /* Icons */
-#bell{
-    margin-left: 30px;
-}
-
-/* Header Buttons */
-.signIn_btn{
-    margin-left:-140px;
-}
-
-.register_btn{
-    margin-left:-40px;
-}
 
 .cart_not_signed{
     margin-top: 5px;
-    margin-left: 5px;
     width:50%;
 }
 
 /* Slideshow */
-
 .jk-slider{
     width:60%;
     margin:auto;
@@ -145,12 +136,9 @@ body {
 .generic_login_button{
     margin-top:10px;
     margin-bottom:10px;
-    width:50%;
-    margin-left: 80px;
 }
 
 #facebook_button{
-    margin-left: 270px;
     background-color: #3b5998;
     color: white;
 }
@@ -194,7 +182,6 @@ body {
 }
 
 #twitter_button{
-    margin-left: -110px;
     color: white;
     background: #00aced;
 }
@@ -210,7 +197,6 @@ body {
 }
 
 #steam_button{
-    margin-left: 270px;
     color: white;
     background: #878787;
 }
@@ -226,7 +212,6 @@ body {
 }
 
 #github_button{
-    margin-left: -110px;
     color: white;
     background: #666666;
 }
