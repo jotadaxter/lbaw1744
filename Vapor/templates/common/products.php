@@ -1,127 +1,89 @@
 <div id="myDIV" class="container">
 
 	<script src="./js/products_page.js"></script>
-	<!------ Include the above in your HEAD tag ---------->
-
+	<link href="css/product_page.css" rel="stylesheet">
 	<script src="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
 	<link href="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-	<div class="container-full">
-	  <div class="row">
-		<div class="col-xs-8">
-		  <form class="form-inline">
-			<div class="form-group">
-			  <input type="text" class="form-control" id="txtQuery" placeholder="Search...">
+	<!------ Include the above in your HEAD tag ---------->
+
+	<div class="wrapper">
+		<nav id="sidebar">
+			<div class="sidebar-header">
+				<h3>Advanced Search</h3>
 			</div>
-			<button id="btnSearch" type="button" class="btn btn-default">Search</button>
-			<button id="btnClear" type="button" class="btn btn-default">Clear</button>
+
+			<!-- Sidebar Links -->
+			<ul class="list-unstyled components">
+				<li><a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">NarrowByTag</a>
+					<ul class="collapse list-unstyled" id="homeSubmenu">
+						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Open Source</a></li>
+						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Freeware</a></li>
+						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Botnet</a></li>
+						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Bitcoin</a></li>
+					</ul>
+				<li><a href="#homeSubmen" data-toggle="collapse" aria-expanded="false">NarrowByName</a>
+					<ul class="collapse list-unstyled" id="homeSubmen">
+						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Op. Systems</a></li>
+						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Device Systems</a></li>
+						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">MiddleWare</a></li>
+						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Utility Software</a></li>
+					</ul>
+
+				<li><!-- Link with dropdown items -->
+					<a href="#homeSubme" data-toggle="collapse" aria-expanded="false">NarrowByOS</a>
+					<ul class="collapse list-unstyled" id="homeSubme">
+						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Windows 10</a></li>
+						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Mac OS</a></li>
+						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Linux</a></li>
+						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Debian</a></li>
+					</ul>
+
+			</ul>
+		</nav>
+	
+	
+
+		<div class="content">
+		  <div class="row">
+			<div class="col-xs-8">
+			  <form class="form-inline">
+				<div class="form-group">
+				  <input type="text" class="form-control" id="txtQuery" placeholder="Search...">
+				</div>
+				<button id="btnSearch" type="button" class="btn btn-default">Search</button>
+				<button id="btnClear" type="button" class="btn btn-default">Clear</button>
+			  </form>
+			</div>
+			<div class="col-xs-4">
+			  <button id="btnAdd" type="button" class="btn btn-default pull-right">Add New Record</button>
+			</div>
+		  </div>
+		  <div class="row" style="margin-top: 10px">
+			<div class="col-xs-12">
+			  <table id="grid"></table>
+			</div>
+		  </div>
+		</div>
+
+		<div id="dialog" style="hidden">
+		  <input type="hidden" id="ID" />
+		  <form>
+			<div class="form-group">
+			  <label for="Name">Name</label>
+			  <input type="text" class="form-control" id="Name">
+			</div>
+			<div class="form-group">
+			  <label for="Tags">Tags</label>
+			  <input type="text" class="form-control" id="Tags" />
+			</div>
+			<div class="form-group">
+			  <label for="Rate">Rate</label>
+			  <input type="text" class="form-control" id="Rate" />
+			</div>
+			<button type="button" id="btnSave" class="btn btn-default">Save</button>
+			<button type="button" id="btnCancel" class="btn btn-default">Cancel</button>
 		  </form>
 		</div>
-		<div class="col-xs-4">
-		  <button id="btnAdd" type="button" class="btn btn-default pull-right">Add New Record</button>
-		</div>
-	  </div>
-	  <div class="row" style="margin-top: 10px">
-		<div class="col-xs-12">
-		  <table id="grid"></table>
-		</div>
-	  </div>
-	</div>
-
-	<div id="dialog" style="hidden">
-	  <input type="hidden" id="ID" />
-	  <form>
-		<div class="form-group">
-		  <label for="Name">Name</label>
-		  <input type="text" class="form-control" id="Name">
-		</div>
-		<div class="form-group">
-		  <label for="Tags">Tags</label>
-		  <input type="text" class="form-control" id="Tags" />
-		</div>
-		<div class="form-group">
-		  <label for="Rate">Rate</label>
-		  <input type="text" class="form-control" id="Rate" />
-		</div>
-		<button type="button" id="btnSave" class="btn btn-default">Save</button>
-		<button type="button" id="btnCancel" class="btn btn-default">Cancel</button>
-	  </form>
-	</div>
-
-    <!-- Image Gallery -->
-    <div class="container gallery" >
-        <div class="row">
-            <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h1 class="gallery-title"></h1>
-            </div>
-
-            <div align="center">
-                <button class="btn btn-default filter-button" data-filter="all">Popular</button>
-                <button class="btn btn-default filter-button" data-filter="new">Novidades</button>
-                <button class="btn btn-default filter-button" data-filter="promo">Promoções</button>
-            </div>
-            <br/>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter new">
-                <img src="res/images/product.png" class="img-responsive">
-                <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                <img src="res/images/product.png" class="img-responsive">
-                <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter new">
-                <img src="res/images/product.png" class="img-responsive">
-                <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                <img src="res/images/product.png" class="img-responsive">
-                <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                <img src="res/images/product.png" class="img-responsive">
-                <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                <img src="res/images/product.png" class="img-responsive">
-                <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                <img src="res/images/product.png" class="img-responsive">
-                <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                <img src="res/images/product.png" class="img-responsive">
-                <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                <img src="res/images/product.png" class="img-responsive">
-                <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter new">
-                <img src="res/images/product.png" class="img-responsive">
-                <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                <img src="res/images/product.png" class="img-responsive">
-                <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                <img src="res/images/product.png" class="img-responsive">
-                <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
-            </div>
-        </div>
-    </div>
     </section>
-
+</div>
 </div>
