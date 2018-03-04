@@ -65,12 +65,7 @@
                 <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
             </div>
 
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter all">
-                <img src="res/images/product.png" class="img-responsive">
-                <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter all">
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                 <img src="res/images/product.png" class="img-responsive">
                 <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
             </div>
@@ -80,12 +75,17 @@
                 <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
             </div>
 
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter all">
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                 <img src="res/images/product.png" class="img-responsive">
                 <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
             </div>
 
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter all">
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
+                <img src="res/images/product.png" class="img-responsive">
+                <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                 <img src="res/images/product.png" class="img-responsive">
                 <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
             </div>
@@ -100,13 +100,12 @@
                 <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
             </div>
 
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter all">
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                 <img src="res/images/product.png" class="img-responsive">
                 <figcaption class="figure-caption text-right product-description">Product Description</figcaption>
             </div>
         </div>
     </div>
     </section>
-
 
 </div>
