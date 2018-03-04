@@ -35,11 +35,8 @@ body {
 
 /* Search Bar */
 
-#imaginary_container{
-    margin-top:20%; /* Don't copy this */
-}
 .stylish-input-group .input-group-addon{
-    background: white !important;
+    background: white;
 }
 .stylish-input-group .form-control{
     border-right:0;
@@ -61,6 +58,7 @@ body {
     border-radius: 10px;
     margin-left:60px;
 }
+
 
 .nav>li>a:hover, .nav>li>a:focus, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
     background:white;
@@ -116,7 +114,9 @@ body {
 }
 
 .cart_not_signed{
-
+    margin-top: 5px;
+    margin-left: 5px;
+    width:50%;
 }
 
 /* Slideshow */

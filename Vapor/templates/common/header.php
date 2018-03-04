@@ -41,7 +41,7 @@
             <button type="button" class="register_btn btn btn-default btn-round">Register</button>
         </div>
         <div class="col-lg-2"  style="margin-top: 20px">
-            <button type="button" class="signIn_btn btn btn-default btn-round">Sign In</button>
+            <button type="submit" id="signIn_btn" class="signIn_btn btn btn-default btn-round">Sign In</button>
         </div>
 
 

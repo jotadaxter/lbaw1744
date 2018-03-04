@@ -45,7 +45,7 @@
             <!-- User Dropbox Menu -->
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">janedoe69</a>
+                    <a href="#" class="usernameOptions dropdown-toggle" data-toggle="dropdown">janedoe69</a>
                     <ul class="dropdown-menu">
                         <li><a href="#">View Profile <span class="glyphicon glyphicon-user pull-right"></span></a></li>
                         <li class="divider"></li>
@@ -53,7 +53,7 @@
                         <li class="divider"></li>
                         <li><a href="#">Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                        <li><a id="signOut_btn" href="#">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
                     </ul>
                 </li>
             </ul>
@@ -75,7 +75,7 @@
 
 </div>
 
-<script src="js/home_page.js"></script>
+<script src="js/home_page_signed.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,8 @@
-document.getElementById("cart").addEventListener("click", function(){
-    document.location.href = '/LBAW/Vapor/shopping_cart.php';
+document.getElementById("bell").addEventListener("click", function(){
+    document.location.href = '/LBAW/Vapor/notifications.php';
 });
-document.getElementById("signIn_btn").addEventListener("click", function(){
-    document.location.href = '/LBAW/Vapor/home_page_signed.php';
+document.getElementById("signOut_btn").addEventListener("click", function(){
+    document.location.href = '/LBAW/Vapor/home_page.php';
 });
 
 $(document).ready(function(){
