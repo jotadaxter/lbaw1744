@@ -129,6 +129,7 @@ body {
 .product-description{
     background-color:grey;
     color:white;
+    text-align: center;
 }
 
 /* Login */

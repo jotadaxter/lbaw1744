@@ -40,7 +40,7 @@
             <img id="cart" class="cart_not_signed img-rounded thumbnail" src="res/icons/cart.png" alt="cart_icon">
         </div>
         <div class="col-sm-1 col-md-1 col-lg-1 "  style="margin-top: 20px">
-            <button type="button" class="register_btn btn btn-default btn-round">Register</button>
+            <button type="button" id="register_btn" class="register_btn btn btn-default btn-round">Register</button>
         </div>
         <div class="col-sm-1 col-sm-offset-1 col-md- col-md-offset-1 col-lg-1"  style="margin-top: 20px">
             <button type="submit" id="signIn_btn" class="signIn_btn btn btn-default btn-round">Sign In</button>
