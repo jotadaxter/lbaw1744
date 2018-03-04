@@ -7,6 +7,10 @@ document.getElementById("signIn_btn").addEventListener("click", function(){
 document.getElementById("register_btn").addEventListener("click", function(){
     document.location.href = '/LBAW/Vapor/register_page.php';
 });
+document.getElementById("search_btn").addEventListener("click", function(){
+    document.location.href = '/LBAW/Vapor/products_page.php';
+});
+
 
 /* Filters the Products shown */
 $(document).ready(function(){

@@ -27,12 +27,11 @@
             <div class="input-group stylish-input-group" style="margin-top: 20px">
                 <input type="text" class="form-control"  placeholder="Search" >
                 <span class="input-group-addon">
-                    <button type="submit">
+                    <button type="button" id="search_btn">
                         <span class="glyphicon glyphicon-search"></span>
                     </button>
                 </span>
             </div>
-
         </div>
 
         <div class="col-sm-1 col-md-2 col-lg-1 col-lg-offset-1"  style="margin-top: 15px">
