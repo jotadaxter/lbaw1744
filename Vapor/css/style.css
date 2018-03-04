@@ -106,6 +106,19 @@ body {
     margin-left: 30px;
 }
 
+/* Header Buttons */
+.signIn_btn{
+    margin-left:-140px;
+}
+
+.register_btn{
+    margin-left:-40px;
+}
+
+.cart_not_signed{
+
+}
+
 /* Slideshow */
 
 .jk-slider{
