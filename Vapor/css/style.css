@@ -56,9 +56,14 @@ body {
     margin-left: -30px;
     margin-top: -8px;
 }
+.nav>li>a{
+    background-color: white;
+    border-radius: 10px;
+    margin-left:60px;
+}
 
 .nav>li>a:hover, .nav>li>a:focus, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
-    background:#fff;
+    background:grey;
 }
 .dropdown {
     background:#fff;
@@ -108,27 +113,17 @@ body {
 /* Slideshow */
 
 .jk-slider{
-    width:75%;
+    width:60%;
     margin:auto;
+
 }
-.hero {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 3;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
-    -webkit-transform: translate3d(-50%,-50%,0);
-    -moz-transform: translate3d(-50%,-50%,0);
-    -ms-transform: translate3d(-50%,-50%,0);
-    -o-transform: translate3d(-50%,-50%,0);
-    transform: translate3d(-50%,-50%,0);
+
+/* Image Gallery */
+.gallery{
+    margin-left:-15px;
 }
-.hero h1 {
-    font-size: 6em;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
+
+.product-description{
+    background-color:grey;
+    color:white;
 }
