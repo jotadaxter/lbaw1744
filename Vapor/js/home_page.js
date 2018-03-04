@@ -2,7 +2,7 @@ document.getElementById("cart").addEventListener("click", function(){
     document.location.href = '/LBAW/Vapor/shopping_cart.php';
 });
 document.getElementById("signIn_btn").addEventListener("click", function(){
-    document.location.href = '/LBAW/Vapor/home_page_signed.php';
+    document.location.href = '/LBAW/Vapor/login_page.php';
 });
 
 $(document).ready(function(){
