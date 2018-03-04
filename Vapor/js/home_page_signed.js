@@ -4,6 +4,9 @@ document.getElementById("bell").addEventListener("click", function(){
 document.getElementById("signOut_btn").addEventListener("click", function(){
     document.location.href = '/LBAW/Vapor/home_page.php';
 });
+document.getElementById("search_btn").addEventListener("click", function(){
+    document.location.href = '/LBAW/Vapor/products_page.php';
+});
 
 $(document).ready(function(){
     $(".filter-button").click(function(){
