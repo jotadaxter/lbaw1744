@@ -37,7 +37,7 @@
             <!-- Notification Icon -->
             <img id="bell" class="img-rounded img-thumbnail" src="res/icons/bell.png" alt="bell_icon">
         </div>
-        <div class="col-lg-1 "  style="margin-top: 15px">
+        <div class="col-lg-2 "  style="margin-top: 15px">
             <!-- Cart Icon -->
             <img id="cart" class="img-rounded img-thumbnail" src="res/icons/cart.png" alt="cart_icon">
         </div>

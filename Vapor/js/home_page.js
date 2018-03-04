@@ -5,6 +5,7 @@ document.getElementById("signIn_btn").addEventListener("click", function(){
     document.location.href = '/LBAW/Vapor/login_page.php';
 });
 
+/* Filters the Products shown */
 $(document).ready(function(){
     $(".filter-button").click(function(){
         var value = $(this).attr('data-filter');
@@ -21,4 +22,15 @@ $(document).ready(function(){
         $(this).removeClass("active");
     }
     $(this).addClass("active");
+});
+
+/* Mobiles Menu */
+$(document).ready(function() {
+    var sideslider = $('[data-toggle=collapse-side]');
+    var sel = sideslider.attr('data-target');
+    var sel2 = sideslider.attr('data-target-2');
+    sideslider.click(function(event){
+        $(sel).toggleClass('in');
+        $(sel2).toggleClass('out');
+    });
 });

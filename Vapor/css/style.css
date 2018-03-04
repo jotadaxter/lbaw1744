@@ -108,7 +108,6 @@ body {
 
 .cart_not_signed{
     margin-top: 5px;
-    width:50%;
 }
 
 /* Slideshow */
@@ -226,5 +225,32 @@ body {
     border-color: #666666
 }
 
+/* Media Queries */
 
+/* XS Screen*/
+@media screen and (max-width: 575px){
 
+}
+/* SM Screen*/
+@media screen and (min-width: 576px){
+
+}
+
+/* MD Screen*/
+@media screen and (min-width: 768px){
+}
+
+/* LG Screen*/
+@media screen and (min-width: 992px){
+    .cart_not_signed{
+        width:50%;
+    }
+
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+.navbar-default:hover .navbar-toggle:hover {
+    background-color: pink;
+}
