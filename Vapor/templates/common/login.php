@@ -1,3 +1,4 @@
+
 <div class="container">
     <div class="row">
         <h3 style="color:white; text-align: center">Sign In Via</h3>
@@ -53,6 +54,8 @@
                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
                     <input  type="password" class="form-control" name="password" placeholder="Password">
                 </div>
+                <span class="help-block"></span>
+                <button id="login_btn" type="button" class="btn btn-lg btn-primary btn-block" >Sign in</button>
 
             </form>
         </div>
@@ -60,3 +63,4 @@
 
 
 </div>
+<script src="js/login_page.js"></script>
