@@ -140,3 +140,106 @@ body {
     background-color:grey;
     color:white;
 }
+
+/* Login */
+.generic_login_button{
+    margin-top:10px;
+    margin-bottom:10px;
+    width:50%;
+    margin-left: 80px;
+}
+
+#facebook_button{
+    margin-left: 270px;
+    background-color: #3b5998;
+    color: white;
+}
+#facebook_button:hover{
+    background-color: #172d5e;
+}
+#facebook_button:focus{
+    background-color: #fff;
+    color:#3b5998;
+    border-color: #3b5998;
+}
+
+#google_button{
+    color: white;
+    background: #c32f10;
+}
+
+#google_button:hover{
+    background: #6b1301;
+}
+
+#google_button:focus{
+    background-color: #fff;
+    color: #c32f10;
+    border-color: #c32f10;
+}
+
+#linkedin_button{
+    color: white;
+    background: #0976b4;
+}
+
+#linkedin_button:hover{
+    background: #004269;
+}
+
+#linkedin_button:focus{
+    background: #fff;
+    color: #0976b4;
+    border-color: #0976b4
+}
+
+#twitter_button{
+    margin-left: -110px;
+    color: white;
+    background: #00aced;
+}
+
+#twitter_button:hover{
+    background: #043d52
+}
+
+#twitter_button:focus{
+    background: #fff;
+    color:#00aced;
+    border-color: #00aced;
+}
+
+#steam_button{
+    margin-left: 270px;
+    color: white;
+    background: #878787;
+}
+
+#steam_button:hover{
+    background: #292929;
+}
+
+#steam_button:focus{
+    background: #fff;
+    color : #878787;
+    border-color: #878787
+}
+
+#github_button{
+    margin-left: -110px;
+    color: white;
+    background: #666666;
+}
+
+#github_button:hover{
+    background: #333333;
+}
+
+#github_button:focus{
+    background: #fff;
+    color : #666666;
+    border-color: #666666
+}
+
+
+
