@@ -56,14 +56,14 @@ body {
     margin-left: -30px;
     margin-top: -8px;
 }
-.nav>li>a{
+.line{
     background-color: white;
     border-radius: 10px;
     margin-left:60px;
 }
 
 .nav>li>a:hover, .nav>li>a:focus, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
-    background:grey;
+    background:white;
 }
 .dropdown {
     background:#fff;
