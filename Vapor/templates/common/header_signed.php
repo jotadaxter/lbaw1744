@@ -47,7 +47,7 @@
                 <li class="dropdown">
                     <a href="#" class="usernameOptions dropdown-toggle" data-toggle="dropdown">janedoe69</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">View Profile <span class="glyphicon glyphicon-user pull-right"></span></a></li>
+                        <li><a id="view_profile" href="#">View Profile <span class="glyphicon glyphicon-user pull-right"></span></a></li>
                         <li class="divider"></li>
                         <li><a href="#">My Products <span class="glyphicon glyphicon-th-list pull-right"></span></a></li>
                         <li class="divider"></li>
