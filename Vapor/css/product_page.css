@@ -3,10 +3,41 @@
     align-items: stretch;
 }
 
+.customList{
+	animation: rotateHue 5s infinite ease-in-out;
+	font-family: "Microsoft Sans Serif", sans-serif;
+	color: black;
+	box-shadow: -1px -1px 1px rgba(0,0,0,1) inset, 1px 1px 1px rgba(255,255,255,1) inset;
+	background: lightgrey;
+	border: 1px solid;
+	border-radius: 0;
+	padding-bottom: 1px !important;
+}
+
+.customList > a{
+	margin: 2px 2px 0;
+    padding: 1px 2px;
+    color: #fff;
+    background: linear-gradient(to right, #000080, #1084d0);
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 16px;
+	display: block;
+}
+
+
+.customList > ul{
+	padding: 1px 5px;
+	font-size: 11px;
+	font-family: Tahoma, Verdana;
+	color: #070707;
+}
+
 #sidebar {
     min-width: 150px;
     max-width: 50px;
 }
+
 
 #sidebar.active {
     margin-left: -250px;
@@ -16,17 +47,13 @@ a[data-toggle="collapse"] {
     position: relative;
 }
 
-a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
-    content: '\e259';
-    display: block;
-    position: absolute;
-    right: 20px;
+a[aria-expanded="false"]::after, a[aria-expanded="true"]::after {
+    content: '\e260';
     font-family: 'Glyphicons Halflings';
-    font-size: 0.6em;
 }
 
-a[aria-expanded="true"]::before {
-    content: '\e260';
+a[aria-expanded="true"]::after {
+    content: '\e259';
 }
 
 @media (max-width: 768px) {
@@ -46,6 +73,9 @@ a[aria-expanded="true"]::before {
     
 }
 ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
+	padding: 1px 5px;
+	font-size: 11px;
+	font-family: Tahoma, Verdana;
+	color: #070707;
+    padding-left: 5px !important;
 }
