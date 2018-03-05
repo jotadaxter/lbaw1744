@@ -1,7 +1,7 @@
 <div id="myDIV" class="container">
 
 	<script src="./js/products_page.js"></script>
-	<link href="css/product_page.css" rel="stylesheet">
+	<link href="css/products_page.css" rel="stylesheet">
 	<script src="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
 	<link href="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 	<!------ Include the above in your HEAD tag ---------->

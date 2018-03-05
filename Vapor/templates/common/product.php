@@ -1,17 +1,11 @@
-<div id="myDIV" class="container">
+<div id="prodDIV" class="container">
+
+	<link href="css/product_page.css" rel="stylesheet">
 <div class="container-fluid">
-	<style>
-	.tag{
-		 box-sizing: content-box;
-		 border-radius: 20px;
-		margin: 0 290px 0 0;
-		padding: 5px 5px 5px 5px;
-		border: 4px solid #000000;
-	}
-</style>
+<div class="row"><div class="product-title page-title"><h1>Ableton Live 9.1</div></div>
+<div class="container-fluid">
     <div class="row">
 		<div class="col-md-4">
-            <div class="product-title"><h1>Ableton Live 9.1</div>
                 <div class="row">
                     <div class="col-md-12">
                         <img src="res/images/product.png" class="img-rounded" alt="Cinque Terre" width="210" height="210">    
@@ -110,5 +104,6 @@
 			</div>
 		 </div>
     </div>
+</div>
 </div>
 </div>
