@@ -8,8 +8,8 @@
 
 //include_once('database/connection.php');
 
-include_once('home_page.php');
-
+//include_once('home_page.php');
+include_once('product_page.php');
 
 
 
