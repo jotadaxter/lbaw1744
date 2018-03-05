@@ -14,14 +14,14 @@
 
 			<!-- Sidebar Links -->
 			<ul class="list-unstyled components">
-				<li><a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">NarrowByTag</a>
+				<li class="customList"><a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Narrow By Tag </a>
 					<ul class="collapse list-unstyled" id="homeSubmenu">
 						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Open Source</a></li>
 						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Freeware</a></li>
 						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Botnet</a></li>
 						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Bitcoin</a></li>
 					</ul>
-				<li><a href="#homeSubmen" data-toggle="collapse" aria-expanded="false">NarrowByName</a>
+				<li class="customList"><a href="#homeSubmen" data-toggle="collapse" aria-expanded="false">Narrow By Name </a>
 					<ul class="collapse list-unstyled" id="homeSubmen">
 						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Op. Systems</a></li>
 						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Device Systems</a></li>
@@ -29,10 +29,10 @@
 						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Utility Software</a></li>
 					</ul>
 
-				<li><!-- Link with dropdown items -->
-					<a href="#homeSubme" data-toggle="collapse" aria-expanded="false">NarrowByOS</a>
+				<li class="customList"><!-- Link with dropdown items -->
+					<a href="#homeSubme" data-toggle="collapse" aria-expanded="false">Narrow By OS </a>
 					<ul class="collapse list-unstyled" id="homeSubme">
-						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Windows 10</a></li>
+						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Windows</a></li>
 						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Mac OS</a></li>
 						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Linux</a></li>
 						<li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Debian</a></li>
