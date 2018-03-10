@@ -10,6 +10,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/products_page.css?v=1.0" rel="stylesheet" type="text/css">
+    <script src="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <script src="./js/products_page.js"></script>
 </head>
 
 <body>
@@ -92,31 +95,79 @@
             <ul class="list-unstyled components">
                 <li class="customList"><a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Narrow By Tag </a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Open Source</a></li>
-                        <li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Freeware</a></li>
-                        <li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Botnet</a></li>
-                        <li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Bitcoin</a></li>
+                        <li>
+                            <input id="opensource" type="checkbox" name="vehicle" value="Bike">
+                            <a href="#">Open Source</a>
+                            <label for="opensource"></label>
+                        </li>
+                        <li>
+                            <input id="freeware" type="checkbox" name="vehicle" value="Bike">
+                            <a href="#">Freeware</a>
+                            <label for="freeware"></label>
+                        </li>
+                        <li>
+                            <input id="botnet" type="checkbox" name="vehicle" value="Bike">
+                            <a href="#">Botnet</a>
+                            <label for="botnet"></label>
+                        </li>
+                        <li>
+                            <input id="bitcoin" type="checkbox" name="vehicle" value="Bike">
+                            <a href="#">Bitcoin</a>
+                            <label for="bitcoin"></label>
+                        </li>
                     </ul>
+                </li>
                 <li class="customList"><a href="#homeSubmen" data-toggle="collapse" aria-expanded="false">Narrow By Name </a>
                     <ul class="collapse list-unstyled" id="homeSubmen">
-                        <li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Op. Systems</a></li>
-                        <li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Device Systems</a></li>
-                        <li><input type="checkbox" name="vehicle" value="Bike"><a href="#">MiddleWare</a></li>
-                        <li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Utility Software</a></li>
+                        <li>
+                            <input id="op_systems" type="checkbox" name="vehicle" value="Bike">
+                            <a href="#">Op. Systems</a>
+                            <label for="op_systems"></label>
+                        </li>
+                        <li>
+                            <input id="device_systems" type="checkbox" name="vehicle" value="Bike">
+                            <a href="#">Device Systems</a>
+                            <label for="device_systems"></label>
+                        </li>
+                        <li>
+                            <input id="middleware" type="checkbox" name="vehicle" value="Bike">
+                            <a href="#">MiddleWare</a>
+                            <label for="middleware"></label>
+                        </li>
+                        <li>
+                            <input id="utility_software" type="checkbox" name="vehicle" value="Bike">
+                            <a href="#">Utility Software</a>
+                            <label for="utility_software"></label>
+                        </li>
                     </ul>
-
-                <li class="customList"><!-- Link with dropdown items -->
+                </li>
+                <li class="customList">
                     <a href="#homeSubme" data-toggle="collapse" aria-expanded="false">Narrow By OS </a>
                     <ul class="collapse list-unstyled" id="homeSubme">
-                        <li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Windows</a></li>
-                        <li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Mac OS</a></li>
-                        <li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Linux</a></li>
-                        <li><input type="checkbox" name="vehicle" value="Bike"><a href="#">Debian</a></li>
+                        <li>
+                            <input id="windows" type="checkbox" name="vehicle" value="Bike">
+                            <a href="#">Windows</a>
+                            <label for="windows"></label>
+                        </li>
+                        <li>
+                            <input id="macOS" type="checkbox" name="vehicle" value="Bike">
+                            <a href="#">Mac OS</a>
+                            <label for="macOS"></label>
+                        </li>
+                        <li>
+                            <input id="linux" type="checkbox" name="vehicle" value="Bike">
+                            <a href="#">Linux</a>
+                            <label for="linux"></label>
+                        </li>
+                        <li>
+                            <input id="debian" type="checkbox" name="vehicle" value="Bike">
+                            <a href="#">Debian</a>
+                            <label for="debian"></label>
+                        </li>
                     </ul>
+                </li>
             </ul>
         </nav>
-
-
 
         <div class="content">
             <div class="row">
@@ -140,7 +191,7 @@
             </div>
         </div>
 
-        <div id="dialog" style="hidden">
+        <div id="dialog" style="visibility: hidden;">
             <input type="hidden" id="ID" />
             <form>
                 <div class="form-group">
@@ -159,7 +210,6 @@
                 <button type="button" id="btnCancel" class="btn btn-default">Cancel</button>
             </form>
         </div>
-        </section>
     </div>
 </div>
 

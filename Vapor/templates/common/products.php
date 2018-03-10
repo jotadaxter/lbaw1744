@@ -1,8 +1,8 @@
 <div id="myDIV" class="container">
 
-	<!--<script src="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
+    <script src="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
 	<link href="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-	-->
+
 	<script src="./js/products_page.js"></script>
 	<link href="css/products_page.css?v=1.0" rel="stylesheet" type="text/css">
 
