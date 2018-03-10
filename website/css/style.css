@@ -1,0 +1,262 @@
+/* Generic Header */
+@import "color-ref.css";
+
+@keyframes rotateY360 {
+    0%   {transform: rotateX(0deg);}
+    100% {transform: rotateX(360deg);}
+}
+
+@keyframes rotateHue {
+    0%   {filter: hue-rotate(0deg);}
+    100% {filter: hue-rotate(360deg);}
+}
+
+
+#header_box {
+    background-color: var(--color-fg-main);
+}
+
+/* Background Style */
+body {
+    /*background-color: var(--color-bg-main);*/
+	background: url(../res/images/icons_bg.png) right bottom no-repeat,
+				url(../res/images/fore-grid.png) bottom no-repeat,
+				linear-gradient(to bottom, var(--color-bg-main-top) 0%, var(--color-bg-main-mid) 80%, var(--color-bg-main-bot) 100%); /* Standard syntax (must be last) */
+    
+	background-size:17.5%,100% 20%, auto;
+	background-attachment: fixed;
+
+}
+
+/* Vapor Title */
+.vaporTitle {
+    font-size: 300%;
+    font-family: "Times New Roman";
+    text-align: center;
+    color:var(--color-fg-text);
+	
+	animation: rotateY360 5s infinite ease-in-out;
+}
+
+/* Search Bar */
+
+.stylish-input-group .input-group-addon{
+    background: white;
+}
+.stylish-input-group .form-control{
+    border-right:0;
+    box-shadow:0 0 0;
+    border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+/* Username DropDownBox */
+.nav{
+    margin-left: -30px;
+    margin-top: -8px;
+}
+.line{
+    background-color: white;
+    border-radius: 10px;
+    margin-left:60px;
+}
+
+
+.nav>li>a:hover, .nav>li>a:focus, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+    background:white;
+}
+
+.dropdown {
+    background:#fff;
+    border:1px solid #ccc;
+    border-radius:4px;
+    width:200px;
+}
+
+.dropdown-menu>li>a {
+    color:#428bca;
+}
+
+.dropdown ul.dropdown-menu {
+    border-radius:4px;
+    box-shadow:none;
+    margin-top:20px;
+    width:200px;
+}
+
+.dropdown ul.dropdown-menu:before {
+    content: "";
+    border-bottom: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    z-index: 10;
+}
+
+.dropdown ul.dropdown-menu:after {
+    content: "";
+    border-bottom: 12px solid #ccc;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    position: absolute;
+    top: -12px;
+    right: 14px;
+    z-index: 9;
+}
+
+/* Icons */
+
+.cart_not_signed{
+    margin-top: 5px;
+}
+
+/* Slideshow */
+.jk-slider{
+    width:60%;
+    margin:auto;
+
+}
+
+/* Image Gallery */
+.gallery{
+    margin-left:-15px;
+}
+
+.gallery_product{
+    margin-bottom: 20px;
+}
+
+.product-description{
+    background-color:grey;
+    color:white;
+    text-align: center;
+}
+
+/* Login */
+.generic_login_button{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+#facebook_button{
+    background-color: #3b5998;
+    color: white;
+}
+#facebook_button:hover{
+    background-color: #172d5e;
+}
+#facebook_button:focus{
+    background-color: #fff;
+    color:#3b5998;
+    border-color: #3b5998;
+}
+
+#google_button{
+    color: white;
+    background: #c32f10;
+}
+
+#google_button:hover{
+    background: #6b1301;
+}
+
+#google_button:focus{
+    background-color: #fff;
+    color: #c32f10;
+    border-color: #c32f10;
+}
+
+#linkedin_button{
+    color: white;
+    background: #0976b4;
+}
+
+#linkedin_button:hover{
+    background: #004269;
+}
+
+#linkedin_button:focus{
+    background: #fff;
+    color: #0976b4;
+    border-color: #0976b4
+}
+
+#twitter_button{
+    color: white;
+    background: #00aced;
+}
+
+#twitter_button:hover{
+    background: #043d52
+}
+
+#twitter_button:focus{
+    background: #fff;
+    color:#00aced;
+    border-color: #00aced;
+}
+
+#steam_button{
+    color: white;
+    background: #878787;
+}
+
+#steam_button:hover{
+    background: #292929;
+}
+
+#steam_button:focus{
+    background: #fff;
+    color : #878787;
+    border-color: #878787
+}
+
+#github_button{
+    color: white;
+    background: #666666;
+}
+
+#github_button:hover{
+    background: #333333;
+}
+
+#github_button:focus{
+    background: #fff;
+    color : #666666;
+    border-color: #666666
+}
+
+/* Media Queries */
+
+/* XS Screen*/
+@media screen and (max-width: 575px){
+
+}
+/* SM Screen*/
+@media screen and (min-width: 576px){
+
+}
+
+/* MD Screen*/
+@media screen and (min-width: 768px){
+}
+
+/* LG Screen*/
+@media screen and (min-width: 992px){
+    .cart_not_signed{
+        width:50%;
+    }
+
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+.navbar-default:hover .navbar-toggle:hover {
+    background-color: pink;
+}
