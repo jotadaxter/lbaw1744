@@ -12,7 +12,6 @@
 
 </head>
 
-</head>
 <body>
 
 <div id="header_box" class="container">
