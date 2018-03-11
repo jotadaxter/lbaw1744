@@ -159,10 +159,10 @@ th,
 }
 
 .dropdown {
-background:#fff;
--    border:1px solid #ccc;
--    border-radius:4px;
--    width:200px;
+    background:#fff;
+    border:1px solid #ccc;
+    border-radius:4px;
+    width:200px;
 }
 
 .dropdown-menu>li>a {
