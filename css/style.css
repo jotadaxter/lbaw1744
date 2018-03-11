@@ -76,9 +76,9 @@ img#cart{
 .nav-pills>li>a:focus,
 th,
 .panel,
-button,
-button:focus,
-button:hover{
+.input-group-addon,
+.input-group-addon:focus,
+.input-group-addon:hover{
     font-family: "Microsoft Sans Serif", sans-serif;
     color: black;
     box-shadow: -1px -1px 1px rgba(0,0,0,1) inset, 1px 1px 1px rgba(255,255,255,1) inset;
@@ -91,7 +91,7 @@ button:hover{
 }
 
 .nav-pills>li>a:active,
-button:active,
+.input-group-addon:active,
 .btn:active{
     font-family: "Microsoft Sans Serif", sans-serif;
     color: black;
@@ -105,8 +105,8 @@ button:active,
 
 .nav-pills>li>a:disabled,
 .nav-pills>li>a:disabled:hover,
-button:disabled,
-button:disabled:hover,
+.input-group-addon:disabled,
+.input-group-addon:disabled:hover,
 .btn:disabled,
 .btn:disabled:hover{
     font-family: "Microsoft Sans Serif", sans-serif;
