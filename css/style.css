@@ -74,7 +74,7 @@ img#cart{
 .nav-pills>li>a:hover,
 .nav-pills>li>a:focus,
 th,
-.panel .panel-info{
+.panel-body{
     font-family: "Microsoft Sans Serif", sans-serif;
     color: black;
     box-shadow: -1px -1px 1px rgba(0,0,0,1) inset, 1px 1px 1px rgba(255,255,255,1) inset;
