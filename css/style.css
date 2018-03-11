@@ -38,7 +38,8 @@ body {
     animation: rotateY360 5s ease-in-out;
 }
 
-.indent-box {
+.indent-box,
+.panel-footer{
     box-shadow: -2px -2px 1px rgba(255,255,255,1) inset, 2px 2px 1px rgba(0,0,0,1) inset;
     padding: 10px;
 }
@@ -111,7 +112,7 @@ th,
     padding: 5px 5px 5px 5px;
 }
 
-.panel-heading{
+.panel-heading, .panel-title{
     margin: 2px 2px 0;
     padding: 1px 2px;
     color: #fff;
