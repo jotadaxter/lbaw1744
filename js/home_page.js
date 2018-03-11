@@ -1,14 +1,11 @@
-document.getElementById("cart").addEventListener("click", function(){
-    document.location.href = '/LBAW/Vapor/shopping_cart.php';
-});
 document.getElementById("signIn_btn").addEventListener("click", function(){
-    document.location.href = '/LBAW/Vapor/login_page.php';
+    document.location.href = '/LBAW/login.html';
 });
 document.getElementById("register_btn").addEventListener("click", function(){
-    document.location.href = '/LBAW/Vapor/register_page.php';
+    document.location.href = '/LBAW/register.html';
 });
 document.getElementById("search_btn").addEventListener("click", function(){
-    document.location.href = '/LBAW/Vapor/products_page.php';
+    document.location.href = '/LBAW/product_search.html';
 });
 
 
@@ -29,15 +26,4 @@ $(document).ready(function(){
         $(this).removeClass("active");
     }
     $(this).addClass("active");
-});
-
-/* Mobiles Menu */
-$(document).ready(function() {
-    var sideslider = $('[data-toggle=collapse-side]');
-    var sel = sideslider.attr('data-target');
-    var sel2 = sideslider.attr('data-target-2');
-    sideslider.click(function(event){
-        $(sel).toggleClass('in');
-        $(sel2).toggleClass('out');
-    });
 });

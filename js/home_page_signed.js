@@ -1,14 +1,11 @@
-document.getElementById("bell").addEventListener("click", function(){
-    document.location.href = '/LBAW/Vapor/notifications.php';
-});
 document.getElementById("signOut_btn").addEventListener("click", function(){
-    document.location.href = '/LBAW/Vapor/home_page.php';
+    document.location.href = '/LBAW/home.html';
 });
 document.getElementById("search_btn").addEventListener("click", function(){
-    document.location.href = '/LBAW/Vapor/products_page.php';
+    document.location.href = '/LBAW/product_search.html';
 });
 document.getElementById("view_profile").addEventListener("click", function(){
-    document.location.href = '/LBAW/Vapor/profile_page.php';
+    document.location.href = '/LBAW/profile.html';
 });
 
 $(document).ready(function(){
