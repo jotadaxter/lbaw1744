@@ -1,0 +1,18 @@
+:root {
+    /* Default colors, if nothing is defined */
+    --color-default-main: white; 
+    --color-default-text: black;
+    
+    /* Foreground colors, such as the header */
+    --color-fg-main:      transparent; 
+    --color-fg-text:      white; 
+    
+     /* Background colors, such as the body and objects */
+    --color-bg-main-top:  #ff6699;
+    --color-bg-main-mid:  #d3d3d3;
+    --color-bg-main-bot:  teal;
+    --color-bg-text:      black;
+    
+    --alt-color-bg-main:  white;
+    --alt-color-bg-text:  black; 
+}
