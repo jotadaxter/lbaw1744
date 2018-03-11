@@ -52,15 +52,6 @@ table.gj-grid-bootstrap thead th
     padding: 10px;
 }
 
-#sidebar {
-    min-width: 150px;
-    max-width: 50px;
-}
-
-
-#sidebar.active {
-    margin-left: -250px;
-}
 
 a[data-toggle="collapse"] {
     position: relative;
@@ -76,9 +67,7 @@ a[aria-expanded="true"]::after {
 }
 
 @media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
+
     #sidebar.active {
         margin-left: 0;
     }
