@@ -110,6 +110,17 @@ th{
     padding: 5px 5px 5px 5px;
 }
 
+h3{
+    margin: 2px 2px 0;
+    padding: 1px 2px;
+    color: #fff;
+    background: linear-gradient(to right, #000080, #1084d0);
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 16px;
+    display: block;
+}
+
 /* Search Bar */
 .shift-down{
     margin-top: 20px;
