@@ -324,7 +324,7 @@ th,
     background-color: pink;
 }
 
-.row-hidden-xs .gallery>.row
+.row visible-xs .gallery>.row
 {
     margin-right: 15px;
 }
