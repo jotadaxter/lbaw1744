@@ -38,13 +38,13 @@ body {
     animation: rotateY360 5s ease-in-out;
 }
 
-.indent-box,
+.indent-box,tbody,
 .panel-footer{
     box-shadow: -2px -2px 1px rgba(255,255,255,1) inset, 2px 2px 1px rgba(0,0,0,1) inset;
     padding: 10px;
 }
 
-.white-box, tbody,
+.white-box, 
 .input-group .form-control{
     box-shadow: 2px 2px 1px rgba(0,0,0,1) inset, -2px -2px 1px lightgrey inset;
     background-color: white;
