@@ -323,3 +323,8 @@ th,
 .navbar-default:hover .navbar-toggle:hover {
     background-color: pink;
 }
+
+.row-hidden-xs .gallery>.row
+{
+    margin-right: 15px;
+}
