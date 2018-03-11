@@ -158,11 +158,23 @@ th,
     background:white;
 }
 
+.dropdown > ul{
+    padding: 1px 5px;
+    font-size: 11px;
+    font-family: Tahoma, Verdana;
+    color: #070707;
+    margin: 5px;
+}
+
 .dropdown {
-    background:#fff;
-    border:1px solid #ccc;
-    border-radius:4px;
-    width:200px;
+    margin: 2px 2px 0;
+    padding: 1px 2px;
+    color: #fff;
+    background: linear-gradient(to right, #000080, #1084d0);
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 16px;
+    display: block;
 }
 
 .dropdown-menu>li>a {
