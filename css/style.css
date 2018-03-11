@@ -158,6 +158,11 @@ th,
     background:white;
 }
 
+
+.nav-pills>li>a{
+    margin: 0px;
+}
+
 .dropdown {
     background:#fff;
     border:1px solid #ccc;
