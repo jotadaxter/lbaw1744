@@ -87,7 +87,6 @@ th,
     border-radius: 0px;
     padding: 5px 5px 5px 5px;
     cursor: pointer;
-    margin: 5px;
 }
 
 .nav-pills>li>a:active,
@@ -116,6 +115,13 @@ th,
     border: 1px solid;
     border-radius: 0px;
     padding: 5px 5px 5px 5px;
+}
+
+.btn,
+th,
+.panel,
+.input-group-addon{
+    margin: 5px;
 }
 
 .panel-info>.panel-heading, .panel-heading, .panel-title{
@@ -156,11 +162,6 @@ th,
 
 .nav>li>a:hover, .nav>li>a:focus, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
     background:white;
-}
-
-
-.nav-pills>li>a{
-    margin: 0px;
 }
 
 .dropdown {
