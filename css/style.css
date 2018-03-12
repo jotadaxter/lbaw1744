@@ -169,16 +169,6 @@ ul.nav.nav-pills.nav-stacked{
 
 /* Username DropDownBox */
 
-.navbar .navbar-right > li > .dropdown-menu:before,
-.navbar .nav > li > .dropdown-menu.navbar-right:before {
-    right: 12px; left: auto;
-}
-
-.navbar .navbar-right > li > .dropdown-menu:after,
-.navbar .nav > li > .dropdown-menu.navbar-right:after {
-    right: 13px; left: auto;
-}
-
 .nav{
     margin-left: -30px;
     margin-top: -8px;
