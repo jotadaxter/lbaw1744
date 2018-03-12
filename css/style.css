@@ -75,6 +75,7 @@ img#cart{
 .nav-pills>li>a:hover,
 .nav-pills>li>a:focus,
 div#myDIV .row,
+.carousel,
 th,
 .panel,
 .input-group-addon,
@@ -92,6 +93,7 @@ th,
 
 .nav-pills>li>a:active,
 .input-group-addon:active,
+.carousel-control:active,
 .btn:active{
     font-family: "Microsoft Sans Serif", sans-serif;
     color: black;
