@@ -11,6 +11,10 @@
     /*100% {filter: hue-rotate(360deg);}*/
 }
 
+.padded{
+    padding: 10px;
+}
+
 
 #header_box {
     background-color: var(--color-fg-main);
