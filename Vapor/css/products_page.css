@@ -4,63 +4,54 @@
 }
 
 .customList{
-	animation: rotateHue 5s infinite ease-in-out;
-	font-family: "Microsoft Sans Serif", sans-serif;
-	color: black;
-	box-shadow: -1px -1px 1px rgba(0,0,0,1) inset, 1px 1px 1px rgba(255,255,255,1) inset;
-	background: lightgrey;
-	border: 1px solid;
-	border-radius: 0;
-	padding-bottom: 1px !important;
-	margin: 10px;
+    animation: rotateHue 5s infinite ease-in-out;
+    font-family: "Microsoft Sans Serif", sans-serif;
+    color: black;
+    box-shadow: -1px -1px 1px rgba(0,0,0,1) inset, 1px 1px 1px rgba(255,255,255,1) inset;
+    background: lightgrey;
+    border: 1px solid;
+    border-radius: 0;
+    padding-bottom: 1px !important;
+    margin: 10px;
 }
 
 .customList > a{
-	margin: 2px 2px 0;
+    margin: 2px 2px 0;
     padding: 1px 2px;
     color: #fff;
     background: linear-gradient(to right, #000080, #1084d0);
     font-weight: bold;
     font-size: 11px;
     line-height: 16px;
-	display: block;
+    display: block;
 }
 
 
 .customList > ul{
-	padding: 1px 5px;
-	font-size: 11px;
-	font-family: Tahoma, Verdana;
-	color: #070707;
-	margin: 5px;
+    padding: 1px 5px;
+    font-size: 11px;
+    font-family: Tahoma, Verdana;
+    color: #070707;
+    margin: 5px;
 }
 
 .gj-grid-bootstrap tfoot tr[data-role=pager] th,
 table.gj-grid-bootstrap thead th
 {
-	background-color: lightgrey;
+    background-color: lightgrey;
 }
 
 .gj-grid-bootstrap-3 tfoot tr[data-role=pager] th>div>input{
-	box-shadow: 2px 2px 1px rgba(0,0,0,1) inset, -2px -2px 1px lightgrey inset;
-	background-color: white;
-	border-top: 0px solid lightgrey;
-	border-left: 0px solid lightgrey;
-	border-bottom: 1px solid white;
-	border-right: 1px solid white;
-	border-radius: 0px;
-	padding: 10px;
+    box-shadow: 2px 2px 1px rgba(0,0,0,1) inset, -2px -2px 1px lightgrey inset;
+    background-color: white;
+    border-top: 0px solid lightgrey;
+    border-left: 0px solid lightgrey;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    border-radius: 0px;
+    padding: 10px;
 }
 
-#sidebar {
-    min-width: 150px;
-    max-width: 50px;
-}
-
-
-#sidebar.active {
-    margin-left: -250px;
-}
 
 a[data-toggle="collapse"] {
     position: relative;
@@ -76,9 +67,7 @@ a[aria-expanded="true"]::after {
 }
 
 @media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
+
     #sidebar.active {
         margin-left: 0;
     }
@@ -89,12 +78,12 @@ a[aria-expanded="true"]::after {
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-    
+
 }
 ul ul a {
-	padding: 1px 5px;
-	font-size: 11px;
-	font-family: Tahoma, Verdana;
-	color: #070707;
+    padding: 1px 5px;
+    font-size: 11px;
+    font-family: Tahoma, Verdana;
+    color: #070707;
     padding-left: 5px !important;
 }

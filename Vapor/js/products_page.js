@@ -1,12 +1,12 @@
 $(document).ready(function () {
   var data, grid, dialog;
   data = [
-    { 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'Dropbox', 
-		'Tags': '<img src="res/images/windows_logo.png" width="30">', 
+    { 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'Dropbox',
+		'Tags': '<img src="res/images/windows_logo.png" width="30">',
 		'Rate': '<img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30">' },
 		
-    { 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'Abode Reader', 
-		'Tags': '<img src="res/images/windows_logo.png" width="30"> <img src="res/images/ios_logo.png" width="30">' , 
+    { 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'Abode Reader',
+		'Tags': '<img src="res/images/windows_logo.png" width="30"> <img src="res/images/ios_logo.png" width="30">' ,
 		'Rate': '<img src="res/images/star_full.png" width="30">'},
 		
     { 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'Windows', 
@@ -23,6 +23,14 @@ $(document).ready(function () {
 		
     { 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'IOS', 
 		'Tags': '<img src="res/images/windows_logo.png" width="30">' , 
+		'Rate': '<img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30">'},
+		
+	{ 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'IOS', 
+		'Tags': '<img src="res/images/windows_logo.png" width="30">' , 
+		'Rate': '<img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30">'},
+		
+	{ 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'IOS', 
+		'Tags': '<img src="res/images/windows_logo.png" width="30">' , 
 		'Rate': '<img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30">'}
   ];
   grid = $('#grid').grid({
@@ -36,7 +44,7 @@ $(document).ready(function () {
       { title: '', field: 'Edit', width: 34, type: 'icon', icon: 'glyphicon-pencil', tooltip: 'Edit', events: { 'click': Edit } },
                     { title: '', field: 'Delete', width: 34, type: 'icon', icon: 'glyphicon-remove', tooltip: 'Delete', events: { 'click': Delete } }
     ],
-    pager: { limit: 5 }
+    pager: { limit: 7 }
   });
   dialog = $('#dialog').dialog({
     title: 'Add/Edit Record',

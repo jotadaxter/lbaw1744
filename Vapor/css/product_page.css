@@ -26,7 +26,7 @@
 	margin: 10px;
 }
 
-#prodDIV .product-title > h1{
+#prodDIV .product-title > h1, #prodDIV .nav.nav-tabs.nav_tabs > li > a{
 	margin: 2px 2px 0;
     padding: 1px 6px;
     color: #fff;
