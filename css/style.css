@@ -39,8 +39,7 @@ body {
 }
 
 .indent-box,tbody,
-.panel-footer,
-.gallery-product{
+.panel-footer{
     box-shadow: -2px -2px 1px rgba(255,255,255,1) inset, 2px 2px 1px rgba(0,0,0,1) inset;
     padding: 10px;
 }
@@ -77,7 +76,6 @@ img#cart{
 .nav-pills>li>a:focus,
 div#myDIV .row,
 .carousel,
-.carousel-control,
 th,
 .panel,
 .input-group-addon,
@@ -95,7 +93,6 @@ th,
 
 .nav-pills>li>a:active,
 .input-group-addon:active,
-.carousel-control:active,
 .btn:active{
     font-family: "Microsoft Sans Serif", sans-serif;
     color: black;
