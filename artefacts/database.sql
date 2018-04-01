@@ -1,5 +1,4 @@
-
-	--Enums
+--Enums
 
 CREATE TYPE paymentmethod AS ENUM (
     'Credit Card',
@@ -18,13 +17,8 @@ CREATE TYPE userstate AS ENUM (
 
 	-- Tables
 
-CREATE TABLE "Buyers" (
-    user_id SERIAL NOT NULL
-);
-
-
 CREATE TABLE "Discounts" (
-    product_id SERIAL NOT NULL,
+    product_id integer NOT NULL,
     discounted_price double precision NOT NULL,
     begin_date timestamp with time zone DEFAULT now() NOT NULL,
     end_date timestamp with time zone NOT NULL,
@@ -33,25 +27,15 @@ CREATE TABLE "Discounts" (
 );
 
 
-CREATE TABLE "Payments" (
-    transaction_id SERIAL NOT NULL,
-    paid_date timestamp with time zone DEFAULT now() NOT NULL,
-    payment_method paymentmethod,
-    total double precision NOT NULL,
-    details text,
-    CONSTRAINT "Payments_check" CHECK ((total > 0. AND payment_method <> NULL) OR (total = 0. AND payment_method = NULL))
-);
-
-
 CREATE TABLE "ProductImages" (
-    product_id SERIAL NOT NULL,
+    product_id integer NOT NULL,
     img_path text NOT NULL
 );
 
 
 CREATE TABLE "Products" (
     product_id SERIAL NOT NULL,
-    seller_id SERIAL NOT NULL,
+    seller_id integer NOT NULL,
     description text NOT NULL,
     release_date timestamp with time zone NOT NULL,
     operating_system text NOT NULL,
@@ -65,23 +49,25 @@ CREATE TABLE "Products" (
 CREATE TABLE "Purchases" (
     purchase_id SERIAL NOT NULL,
     final_price double precision NOT NULL,
-    buyer_id SERIAL NOT NULL,
-    product_id SERIAL NOT NULL,
-    serial_key text NOT NULL,
-    payment_id SERIAL NOT NULL,
-    CONSTRAINT "Purchases_final_price_check" CHECK (final_price >= 0.)
+    buyer_id integer NOT NULL,
+    sk_id integer NOT NULL,
+    paid_date timestamp with time zone DEFAULT now() NOT NULL,
+    payment_method paymentmethod,
+    details text,
+    CONSTRAINT "Payments_check" CHECK ((final_price > 0. AND payment_method <> NULL) OR (final_price = 0. AND payment_method = NULL))
 );
 
 
 CREATE TABLE "Reviews" (
-    purchase_id SERIAL NOT NULL,
+	sk_id integer NOT NULL,
     rating integer NOT NULL,
+    review_date timestamp with time zone DEFAULT now() NOT NULL,
     "comment" text
 );
 
 
 CREATE TABLE "Sellers" (
-    user_id SERIAL NOT NULL,
+    user_id integer NOT NULL,
     professional_email text NOT NULL,
     professional_name text NOT NULL,
     professional_phone integer NOT NULL
@@ -89,9 +75,10 @@ CREATE TABLE "Sellers" (
 
 
 CREATE TABLE "SerialKeys" (
-    owner_id SERIAL,
-    product_id SERIAL NOT NULL,
-    serial_key text NOT NULL
+	sk_id SERIAL NOT NULL,
+    owner_id integer,
+    product_id integer NOT NULL,
+    code text NOT NULL
 );
 
 
@@ -118,35 +105,27 @@ CREATE TABLE "Users" (
 
 
 CREATE TABLE "Wishlists" (
-    user_id SERIAL NOT NULL,
-    product_id SERIAL NOT NULL
+    user_id integer NOT NULL,
+    product_id integer NOT NULL
 );
+
+CREATE TABLE "Wishlists" (
+    user_id integer NOT NULL,
+    product_id integer NOT NULL
+);
+
+CREATE TABLE "PurchasedProducts" (
+    purchase_id integer NOT NULL,
+    product_id integer NOT NULL
+);
+
 
 
 	-- Primary Keys and Uniques
 
-ALTER TABLE ONLY "Buyers"
-    ADD CONSTRAINT "Buyers_pkey" PRIMARY KEY (user_id);
-
-
-ALTER TABLE ONLY "Buyers"
-    ADD CONSTRAINT "Buyers_user_id_key" UNIQUE (user_id);
-
 
 ALTER TABLE ONLY "Discounts"
     ADD CONSTRAINT "Discounts_pkey" PRIMARY KEY (product_id);
-
-
-ALTER TABLE ONLY "Discounts"
-    ADD CONSTRAINT "Discounts_product_id_key" UNIQUE (product_id);
-
-
-ALTER TABLE ONLY "Payments"
-    ADD CONSTRAINT "Payments_pkey" PRIMARY KEY (transaction_id);
-
-
-ALTER TABLE ONLY "Payments"
-    ADD CONSTRAINT "Payments_transaction_id_key" UNIQUE (transaction_id);
 
 
 ALTER TABLE ONLY "ProductImages"
@@ -161,29 +140,12 @@ ALTER TABLE ONLY "Products"
     ADD CONSTRAINT "Products_pkey" PRIMARY KEY (product_id);
 
 
-ALTER TABLE ONLY "Products"
-    ADD CONSTRAINT "Products_product_id_key" UNIQUE (product_id);
-
-
-ALTER TABLE ONLY "Products"
-    ADD CONSTRAINT "Products_seller_id_key" UNIQUE (seller_id);
-
-	
 ALTER TABLE ONLY "Purchases"
     ADD CONSTRAINT "Purchases_pkey" PRIMARY KEY (purchase_id);
 
 
-ALTER TABLE ONLY "Purchases"
-    ADD CONSTRAINT "Purchases_purchase_id_key" UNIQUE (purchase_id);
-
-
 ALTER TABLE ONLY "Reviews"
-    ADD CONSTRAINT "Reviews_pkey" PRIMARY KEY (purchase_id);
-
-
-ALTER TABLE ONLY "Reviews"
-    ADD CONSTRAINT "Reviews_purchase_id_key" UNIQUE (purchase_id);
-
+    ADD CONSTRAINT "Reviews_pkey" PRIMARY KEY (sk_id);
 
 ALTER TABLE ONLY "Sellers"
     ADD CONSTRAINT "Sellers_pkey" PRIMARY KEY (user_id);
@@ -198,11 +160,7 @@ ALTER TABLE ONLY "Sellers"
 
 
 ALTER TABLE ONLY "SerialKeys"
-    ADD CONSTRAINT "SerialKeys_pkey" PRIMARY KEY (serial_key);
-
-
-ALTER TABLE ONLY "SerialKeys"
-    ADD CONSTRAINT "SerialKeys_serial_key_key" UNIQUE (serial_key);
+    ADD CONSTRAINT "SerialKeys_pkey" PRIMARY KEY (sk_id);
 
 
 ALTER TABLE ONLY "Tags"
@@ -211,14 +169,10 @@ ALTER TABLE ONLY "Tags"
 
 ALTER TABLE ONLY "Users"
     ADD CONSTRAINT "Users_email_key" UNIQUE (email);
-	
+
 
 ALTER TABLE ONLY "Users"
     ADD CONSTRAINT "Users_pkey" PRIMARY KEY (user_id);
-
-
-ALTER TABLE ONLY "Users"
-    ADD CONSTRAINT "Users_user_id_key" UNIQUE (user_id);
 
 
 ALTER TABLE ONLY "Users"
@@ -228,12 +182,13 @@ ALTER TABLE ONLY "Users"
 ALTER TABLE ONLY "Wishlists"
     ADD CONSTRAINT "Wishlists_pkey" PRIMARY KEY (user_id, product_id);
 
-	
+
+ALTER TABLE ONLY "PurchasedProducts"
+    ADD CONSTRAINT "Wishlists_pkey" PRIMARY KEY (purchase_id, product_id);
+
+
 
 	-- Foreign Keys
-
-ALTER TABLE ONLY "Buyers"
-    ADD CONSTRAINT "Buyers_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(user_id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "ProductImages"
@@ -249,19 +204,15 @@ ALTER TABLE ONLY "Purchases"
 
 
 ALTER TABLE ONLY "Purchases"
-    ADD CONSTRAINT "Purchases_payment_id_fkey" FOREIGN KEY (payment_id) REFERENCES "Payments"(transaction_id) ON UPDATE CASCADE;
-
-
-ALTER TABLE ONLY "Purchases"
     ADD CONSTRAINT "Purchases_product_id_fkey" FOREIGN KEY (product_id) REFERENCES "Products"(product_id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "Purchases"
-    ADD CONSTRAINT "Purchases_serial_key_fkey" FOREIGN KEY (serial_key) REFERENCES "SerialKeys"(serial_key) ON UPDATE CASCADE;
+    ADD CONSTRAINT "Purchases_serial_key_fkey" FOREIGN KEY (sk_id) REFERENCES "SerialKeys"(sk_id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "Reviews"
-    ADD CONSTRAINT "Reviews_purchase_id_fkey" FOREIGN KEY (purchase_id) REFERENCES "Purchases"(purchase_id) ON UPDATE CASCADE;
+    ADD CONSTRAINT "Reviews_purchase_id_fkey" FOREIGN KEY (sk_id) REFERENCES "SerialKeys"(sk_id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "Sellers"
@@ -286,79 +237,11 @@ ALTER TABLE ONLY "Wishlists"
 
 ALTER TABLE ONLY "Wishlists"
     ADD CONSTRAINT "Wishlists_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(user_id) ON UPDATE CASCADE;
-	
-    --TRIGGERS
 
--- adding repeated item
-CREATE FUNCTION add_repeated_item() RETURNS TRIGGER AS
-$BODY$
-BEGIN
-    IF EXISTS (SELECT * FROM Products WHERE NEW.user_id = seller.id AND New.product_id = product_id) THEN
-        RAISE EXCEPTION 'A seller cannot add a product that has already been added.';
-    END IF;
-    RETURN NEW;
-END
-$BODY$
-LANGUAGE plpgsql;
 
-CREATE TRIGGER add_repeated_item
-    BEFORE INSERT ON Products
-    FOR EACH ROW
-        EXECUTE PROCEDURE add_repeated_item();
---adding repeated item
+ALTER TABLE ONLY "PurchasedProducts"
+    ADD CONSTRAINT "PurchasedProducts_product_id_fkey" FOREIGN KEY (product_id) REFERENCES "Products"(product_id) ON UPDATE CASCADE;
 
--- adding repeated tags
-CREATE FUNCTION add_repeated_tag() RETURNS TRIGGER AS
-$BODY$
-BEGIN
-    IF EXISTS (SELECT * FROM Tags WHERE NEW.tag_name = tag_name) THEN
-        RAISE EXCEPTION 'Cannot add to the database a Tag that has already been added';
-    END IF;
-    RETURN NEW;
-END
-$BODY$
-LANGUAGE plpgsql;
 
-CREATE TRIGGER add_repeated_tag
-    BEFORE INSERT ON Tags
-    FOR EACH ROW
-        EXECUTE PROCEDURE add_repeated_tag();
--- adding repeated tags
-
--- adding repeated item to wishlist
-CREATE FUNCTION add_repeated_item_to_wishlist() RETURNS TRIGGER AS
-$BODY$
-BEGIN
-    IF EXISTS (SELECT * FROM Wishlists WHERE NEW.user_id = user_id AND NEW.product_id = product_id) THEN
-        RAISE EXCEPTION 'Cannot add to a Wishlist a Product that has already been added.';
-    END IF;
-    RETURN NEW;
-END
-$BODY$
-LANGUAGE plpgsql;
-
-CREATE TRIGGER add_repeated_item_to_wishlist
-    BEFORE INSERT OR UPDATE ON Wishlists
-    FOR EACH ROW
-        EXECUTE PROCEDURE add_repeated_item_to_wishlist();
--- adding repeated item to wishlist
-
--- adding repeated item to wishlist
-CREATE FUNCTION add_seller_product_to_wishlist() RETURNS TRIGGER AS
-$BODY$
-BEGIN
-    IF EXISTS (SELECT * FROM Wishlists
-        INNER JOIN Products ON Products.product_id = Wishlists.product_id
-        WHERE NEW.product_id = product_id AND New.user_id = seller_id) THEN
-        RAISE EXCEPTION 'A Seller cannot add a product it is currently selling to its own Wishlist.';
-    END IF;
-    RETURN NEW;
-END
-$BODY$
-LANGUAGE plpgsql;
-
-CREATE TRIGGER add_seller_product_to_wishlist
-    BEFORE INSERT OR UPDATE ON Wishlists
-    FOR EACH ROW
-        EXECUTE PROCEDURE add_seller_product_to_wishlist();
--- adding repeated item to wishlist
+ALTER TABLE ONLY "PurchasedProducts"
+    ADD CONSTRAINT "PurchasedProducts_user_id_fkey" FOREIGN KEY (purchase_id) REFERENCES "Purchases"(purchase_id) ON UPDATE CASCADE;
