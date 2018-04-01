@@ -109,11 +109,6 @@ CREATE TABLE "Wishlists" (
     product_id integer NOT NULL
 );
 
-CREATE TABLE "Wishlists" (
-    user_id integer NOT NULL,
-    product_id integer NOT NULL
-);
-
 CREATE TABLE "PurchasedProducts" (
     purchase_id integer NOT NULL,
     product_id integer NOT NULL

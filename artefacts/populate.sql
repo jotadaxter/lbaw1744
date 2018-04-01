@@ -64,28 +64,93 @@ INSERT INTO Products (product_id, seller_id, description, release_date, operatin
 INSERT INTO Products (product_id, seller_id, description, release_date, operating_system, price, logo_path, name) VALUES (209, 109, 'dynamic mixing device', '2018/10/9', 'wml', 99, 'channelblender.jpg', 'channel blender');
 
 -- Product Images (product_id, img_path)
-INSERT INTO ProductImages(product_id, img_path) VALUES (200, 'abletonimg1.jpg');
-INSERT INTO ProductImages(product_id, img_path) VALUES (201, 'photoshopimg1.jpg');
-INSERT INTO ProductImages(product_id, img_path) VALUES (202, 'visualstudioimg1.jpg');
-INSERT INTO ProductImages(product_id, img_path) VALUES (203, 'sonyvegasimg1.jpg');
-INSERT INTO ProductImages(product_id, img_path) VALUES (204, 'blenderimg1.jpg');
-INSERT INTO ProductImages(product_id, img_path) VALUES (205, 'massiveimg1.jpg');
-INSERT INTO ProductImages(product_id, img_path) VALUES (206, 'ilustratorimg1.jpg');
-INSERT INTO ProductImages(product_id, img_path) VALUES (207, 'visualcodeimg1.jpg');
-INSERT INTO ProductImages(product_id, img_path) VALUES (208, 'soundforgeimg1.jpg');
-INSERT INTO ProductImages(product_id, img_path) VALUES (209, 'channelblenderimg1.jpg');
+INSERT INTO ProductImages(product_id, img_path) VALUES (300, 'abletonimg1.jpg');
+INSERT INTO ProductImages(product_id, img_path) VALUES (301, 'photoshopimg1.jpg');
+INSERT INTO ProductImages(product_id, img_path) VALUES (302, 'visualstudioimg1.jpg');
+INSERT INTO ProductImages(product_id, img_path) VALUES (303, 'sonyvegasimg1.jpg');
+INSERT INTO ProductImages(product_id, img_path) VALUES (304, 'blenderimg1.jpg');
+INSERT INTO ProductImages(product_id, img_path) VALUES (305, 'massiveimg1.jpg');
+INSERT INTO ProductImages(product_id, img_path) VALUES (306, 'ilustratorimg1.jpg');
+INSERT INTO ProductImages(product_id, img_path) VALUES (307, 'visualcodeimg1.jpg');
+INSERT INTO ProductImages(product_id, img_path) VALUES (308, 'soundforgeimg1.jpg');
+INSERT INTO ProductImages(product_id, img_path) VALUES (309, 'channelblenderimg1.jpg');
 
 -- Tags (product_id, tag_name)
---INSERT INTO Tags(poduct_id, tag_name) VALUES (200, 'daw');
---INSERT INTO Tags(poduct_id, tag_name) VALUES (201, 'image');
---INSERT INTO Tags(poduct_id, tag_name) VALUES (202, 'programming');
---INSERT INTO Tags(poduct_id, tag_name) VALUES (203, 'video');
---INSERT INTO Tags(poduct_id, tag_name) VALUES (204, '3d');
---INSERT INTO Tags(poduct_id, tag_name) VALUES (205, 'audio');
---INSERT INTO Tags(poduct_id, tag_name) VALUES (206, 'design');
---INSERT INTO Tags(poduct_id, tag_name) VALUES (207, 'text');
---INSERT INTO Tags(poduct_id, tag_name) VALUES (208, 'audio');
---INSERT INTO Tags(poduct_id, tag_name) VALUES (209, '3d');
+INSERT INTO Tags(poduct_id, tag_name) VALUES (400, 'daw');
+INSERT INTO Tags(poduct_id, tag_name) VALUES (401, 'image');
+INSERT INTO Tags(poduct_id, tag_name) VALUES (402, 'programming');
+INSERT INTO Tags(poduct_id, tag_name) VALUES (403, 'video');
+INSERT INTO Tags(poduct_id, tag_name) VALUES (404, '3d');
+INSERT INTO Tags(poduct_id, tag_name) VALUES (405, 'audio');
+INSERT INTO Tags(poduct_id, tag_name) VALUES (406, 'design');
+INSERT INTO Tags(poduct_id, tag_name) VALUES (407, 'text');
+INSERT INTO Tags(poduct_id, tag_name) VALUES (408, 'audio');
+INSERT INTO Tags(poduct_id, tag_name) VALUES (409, '3d');
 
--- Reviews (purchase_id, rating, comment)
---INSERT INTO Reviews(purchase_id, rating, comment) VALUES ();
+-- Reviews (sk_id, rating, review_date, comment)
+INSERT INTO Reviews(sk_id, rating, review_date, comment) VALUES (500, 4, '2018/3/1', 'very good product although a tad expensive');
+INSERT INTO Reviews(sk_id, rating, review_date, comment) VALUES (501, 5, '2017/4/12', 'i am amazed at this product it is very nice');
+INSERT INTO Reviews(sk_id, rating, review_date, comment) VALUES (502, 5, '2018/10/25', 'this is an incredible piece of software');
+INSERT INTO Reviews(sk_id, rating, review_date, comment) VALUES (503, 4, '2017/6/15', 'the product fulfills its purpose with precision');
+INSERT INTO Reviews(sk_id, rating, review_date, comment) VALUES (504, 3, '2018/2/5', 'hey thats pretty good');
+INSERT INTO Reviews(sk_id, rating, review_date, comment) VALUES (505, 5, '2018/8/14', 'i am astonished at how efficient this product is');
+INSERT INTO Reviews(sk_id, rating, review_date, comment) VALUES (506, 2, '2018/4/22', 'way too expensive for the amount of features it comes with');
+INSERT INTO Reviews(sk_id, rating, review_date, comment) VALUES (507, 4, '2017/10/30', 'way too cheap for the amount of features it comes with');
+INSERT INTO Reviews(sk_id, rating, review_date, comment) VALUES (508, 1, '2016/7/6', 'absolutely atrocious, barely works, cant even install it');
+INSERT INTO Reviews(sk_id, rating, review_date, comment) VALUES (509, 3, '2018/12/14', 'its nice but there are way better options out there');
+
+-- Discounts (product_id, discounted_rice, begin_date, end_date)
+INSERT INTO Discounts(product_id, discounted_price, begin_date, end_date) VALUES (200, 20, '2018/5/10', '2018/5/20');
+INSERT INTO Discounts(product_id, discounted_price, begin_date, end_date) VALUES (201, 20, '2018/5/10', '2018/5/20');
+INSERT INTO Discounts(product_id, discounted_price, begin_date, end_date) VALUES (202, 30, '2018/5/10', '2018/5/20');
+INSERT INTO Discounts(product_id, discounted_price, begin_date, end_date) VALUES (203, 20, '2018/12/1', '2019/1/4'),;
+INSERT INTO Discounts(product_id, discounted_price, begin_date, end_date) VALUES (205, 15, '2018/4/1', '2018/4/30');
+
+-- SerialKeys (sk_id, owner_id, product_id, code)
+INSERT INTO SerialKeys(sk_id, owner_id, product_id, code) VALUES (700, 105, 200, '1J6B5JHG7I');
+INSERT INTO SerialKeys(sk_id, owner_id, product_id, code) VALUES (701, 106, 201, '0FIAJ5N6B3');
+INSERT INTO SerialKeys(sk_id, owner_id, product_id, code) VALUES (702, 107, 202, '09FUHRB5N6');
+INSERT INTO SerialKeys(sk_id, owner_id, product_id, code) VALUES (703, 108, 203, 'S0HNS4K6HS');
+INSERT INTO SerialKeys(sk_id, owner_id, product_id, code) VALUES (704, 109, 204, 'OFCJAGHI54');
+INSERT INTO SerialKeys(sk_id, owner_id, product_id, code) VALUES (705, 105, 205, '0SAIDUFRKF');
+INSERT INTO SerialKeys(sk_id, owner_id, product_id, code) VALUES (706, 106, 206, 'SGHUDIFOG3');
+INSERT INTO SerialKeys(sk_id, owner_id, product_id, code) VALUES (707, 107, 207, '5URJEDKHA4');
+INSERT INTO SerialKeys(sk_id, owner_id, product_id, code) VALUES (708, 108, 208, '38HUEDWXJH');
+INSERT INTO SerialKeys(sk_id, owner_id, product_id, code) VALUES (709, 109, 209, 'IODIGHOI2N');
+
+
+-- Purchases (purchase_id, final_price, buyer_id, sk_id, paid_date, paymentmethod, details)
+INSERT INTO Purchases(purchase_id, final_price, buyer_id, sk_id, paid_date, paymentmethod, details) VALUES (800, 579, 100, 700, '2018/4/21', 'Credit Card', 'Purchase successful');
+INSERT INTO Purchases(purchase_id, final_price, buyer_id, sk_id, paid_date, paymentmethod, details) VALUES (801, 579, 101, 701, '2018/6/12', 'Credit Card', 'Purchase successful');
+INSERT INTO Purchases(purchase_id, final_price, buyer_id, sk_id, paid_date, paymentmethod, details) VALUES (802, 169, 102, 702, '2018/5/2', 'PayPal', 'Minor setbacks contacting seller');
+INSERT INTO Purchases(purchase_id, final_price, buyer_id, sk_id, paid_date, paymentmethod, details) VALUES (803, 279, 103, 703, '2018/6/23', 'Banking Transfer', 'Purchase successful');
+INSERT INTO Purchases(purchase_id, final_price, buyer_id, sk_id, paid_date, paymentmethod, details) VALUES (804, 14, 104, 704, '2018/3/31', 'Banking Transfer', 'Minor setbacks contacting seller');
+INSERT INTO Purchases(purchase_id, final_price, buyer_id, sk_id, paid_date, paymentmethod, details) VALUES (805, 29, 100, 705, '2018/1/26', 'Credit Card', 'Purchase sucessful');
+INSERT INTO Purchases(purchase_id, final_price, buyer_id, sk_id, paid_date, paymentmethod, details) VALUES (806, 99, 101, 706, '2018/8/1', 'PayPal', 'Purchase successful');
+INSERT INTO Purchases(purchase_id, final_price, buyer_id, sk_id, paid_date, paymentmethod, details) VALUES (807, 579, 102, 707, '2018/11/4', 'PayPal', 'Purchase successful');
+INSERT INTO Purchases(purchase_id, final_price, buyer_id, sk_id, paid_date, paymentmethod, details) VALUES (808, 199, 103, 708, '2018/3/10', 'PayPal', 'Purchase successful');
+INSERT INTO Purchases(purchase_id, final_price, buyer_id, sk_id, paid_date, paymentmethod, details) VALUES (809, 99, 104, 709, '2018/9/2', 'Credit Card', 'Purchase successful');
+
+-- Wishlists (user_id, product_id)
+INSERT INTO Wishlists(user_id, product_id) VALUES (100, 209);
+INSERT INTO Wishlists(user_id, product_id) VALUES (101, 208);
+INSERT INTO Wishlists(user_id, product_id) VALUES (102, 207);
+INSERT INTO Wishlists(user_id, product_id) VALUES (103, 206);
+INSERT INTO Wishlists(user_id, product_id) VALUES (104, 205);
+INSERT INTO Wishlists(user_id, product_id) VALUES (105, 204);
+INSERT INTO Wishlists(user_id, product_id) VALUES (106, 203);
+INSERT INTO Wishlists(user_id, product_id) VALUES (107, 202);
+INSERT INTO Wishlists(user_id, product_id) VALUES (108, 201);
+INSERT INTO Wishlists(user_id, product_id) VALUES (109, 200);
+
+-- PurchasedProducts (purchase_id, product_id)
+INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (800, 200);
+INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (801, 201);
+INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (802, 202);
+INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (803, 203);
+INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (804, 204);
+INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (805, 205);
+INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (806, 206);
+INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (807, 200);
+INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (808, 208);
+INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (809, 206);
