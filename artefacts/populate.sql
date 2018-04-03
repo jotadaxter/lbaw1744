@@ -25,7 +25,7 @@ DELETE FROM ProductImages;
 DELETE FROM Tags;
 DELETE FROM SerialKeys;
 
--- Users (nome, morada, idPais) VALUES ('Controlar', 'Alfena', 1);
+-- Users (user_id, username, password, fullname, email, phone_number, birth_date, admission_date, userstate, admin, img, nif)
 INSERT INTO Users(user_id, username, password, fullname, email, phone_number, birth_date, admission_date, userstate, admin, img, nif) VALUES(100, 'janedoe1', 'cheekybreeky', 'jane eleanor doer', 969420666, 'janedoe@gmail.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666420666);
 INSERT INTO Users(user_id, username, password, fullname, email, phone_number, birth_date, admission_date, userstate, admin, img, nif) VALUES(101, 'jenlong', 'oblivion', 'jenny long', 911999333, 'jenny.long84@example.com', '1973/7/10', '2018/2/20', 'Active', false, 'jenavatar.jpg', 666420777);
 INSERT INTO Users(user_id, username, password, fullname, email, phone_number, birth_date, admission_date, userstate, admin, img, nif) VALUES(102, 'everettdotnet', 'morrowind', 'everett adams', 969420444, 'everett.adams60@example.com', '1980/3/8', '2018/1/10', 'Active', false, 'eveavatar.jpg', 666420888);
@@ -36,13 +36,6 @@ INSERT INTO Users(user_id, username, password, fullname, email, phone_number, bi
 INSERT INTO Users(user_id, username, password, fullname, email, phone_number, birth_date, admission_date, userstate, admin, img, nif) VALUES(107, 'desugurippu', 'noided', 'michael arnold', 969420111, 'michael.arnold30@example.com', '1984/8/7', '2018/3/22', 'Active', false, 'micavatar.jpg', 666421333);
 INSERT INTO Users(user_id, username, password, fullname, email, phone_number, birth_date, admission_date, userstate, admin, img, nif) VALUES(108, 'normac', 'cardibandrum', 'norma cooper', 969420222, 'norma.cooper92@example.com', '1999/12/28', '2018/1/4', 'Active', false, 'normavatar.jpg', 666421444);
 INSERT INTO Users(user_id, username, password, fullname, email, phone_number, birth_date, admission_date, userstate, admin, img, nif) VALUES(109, 'lilnina', 'groovey', 'nina sutton', 969420333, 'nina.sutton76@example.com', '1997/10/9', '2018/2/3', 'Active', false, 'ninavatar.jpg', 666421555);
-
--- Buyers (user_id)
-INSERT INTO Buyers(user_id) VALUES (100);
-INSERT INTO Buyers(user_id) VALUES (101);
-INSERT INTO Buyers(user_id) VALUES (102);
-INSERT INTO Buyers(user_id) VALUES (103);
-INSERT INTO Buyers(user_id) VALUES (104);
 
 -- Sellers (user_id, professional_email, professional_name, professional_phone)
 INSERT INTO Sellers (user_id, professional_email, professional_name, professional_phone) VALUES (105, 'ableton@gmail.com', 'ableton', 912345678);
@@ -142,15 +135,3 @@ INSERT INTO Wishlists(user_id, product_id) VALUES (106, 203);
 INSERT INTO Wishlists(user_id, product_id) VALUES (107, 202);
 INSERT INTO Wishlists(user_id, product_id) VALUES (108, 201);
 INSERT INTO Wishlists(user_id, product_id) VALUES (109, 200);
-
--- PurchasedProducts (purchase_id, product_id)
-INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (800, 200);
-INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (801, 201);
-INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (802, 202);
-INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (803, 203);
-INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (804, 204);
-INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (805, 205);
-INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (806, 206);
-INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (807, 200);
-INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (808, 208);
-INSERT INTO PurchasedProducts(purchase_id, product_id) VALUES (809, 206);
