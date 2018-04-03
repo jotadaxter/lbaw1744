@@ -1,4 +1,3 @@
---Enums
 
 CREATE TYPE paymentmethod AS ENUM (
     'Credit Card',
@@ -50,7 +49,6 @@ CREATE TABLE "Purchases" (
     purchase_id SERIAL NOT NULL,
     final_price double precision NOT NULL,
     buyer_id integer NOT NULL,
-    sk_id integer NOT NULL,
     paid_date timestamp with time zone DEFAULT now() NOT NULL,
     payment_method paymentmethod,
     details text,
@@ -109,9 +107,10 @@ CREATE TABLE "Wishlists" (
     product_id integer NOT NULL
 );
 
-CREATE TABLE "PurchasedProducts" (
-    purchase_id integer NOT NULL,
-    product_id integer NOT NULL
+CREATE TABLE "PurchasedKeys" (
+    sk_id integer NOT NULL,
+    product_id integer NOT NULL,
+    price double precision NOT NULL
 );
 
 
@@ -178,8 +177,8 @@ ALTER TABLE ONLY "Wishlists"
     ADD CONSTRAINT "Wishlists_pkey" PRIMARY KEY (user_id, product_id);
 
 
-ALTER TABLE ONLY "PurchasedProducts"
-    ADD CONSTRAINT "Wishlists_pkey" PRIMARY KEY (purchase_id, product_id);
+ALTER TABLE ONLY "PurchasedKeys"
+    ADD CONSTRAINT "PurchasedKeys_pkey" PRIMARY KEY (sk_id, product_id);
 
 
 
@@ -200,10 +199,6 @@ ALTER TABLE ONLY "Purchases"
 
 ALTER TABLE ONLY "Purchases"
     ADD CONSTRAINT "Purchases_product_id_fkey" FOREIGN KEY (product_id) REFERENCES "Products"(product_id) ON UPDATE CASCADE;
-
-
-ALTER TABLE ONLY "Purchases"
-    ADD CONSTRAINT "Purchases_serial_key_fkey" FOREIGN KEY (sk_id) REFERENCES "SerialKeys"(sk_id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "Reviews"
@@ -234,9 +229,9 @@ ALTER TABLE ONLY "Wishlists"
     ADD CONSTRAINT "Wishlists_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(user_id) ON UPDATE CASCADE;
 
 
-ALTER TABLE ONLY "PurchasedProducts"
-    ADD CONSTRAINT "PurchasedProducts_product_id_fkey" FOREIGN KEY (product_id) REFERENCES "Products"(product_id) ON UPDATE CASCADE;
+ALTER TABLE ONLY "PurchasedKeys"
+    ADD CONSTRAINT "PurchasedKeys_sk_id_fkey" FOREIGN KEY (sk_id) REFERENCES "SerialKeys"(sk_id) ON UPDATE CASCADE;
 
 
-ALTER TABLE ONLY "PurchasedProducts"
-    ADD CONSTRAINT "PurchasedProducts_user_id_fkey" FOREIGN KEY (purchase_id) REFERENCES "Purchases"(purchase_id) ON UPDATE CASCADE;
+ALTER TABLE ONLY "PurchasedKeys"
+    ADD CONSTRAINT "PurchasedKeys_user_id_fkey" FOREIGN KEY (purchase_id) REFERENCES "Purchases"(purchase_id) ON UPDATE CASCADE;
