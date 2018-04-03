@@ -109,7 +109,7 @@ CREATE TABLE "Wishlists" (
 
 CREATE TABLE "PurchasedKeys" (
     sk_id integer NOT NULL,
-    product_id integer NOT NULL,
+    purchase_id integer NOT NULL,
     price double precision NOT NULL
 );
 
@@ -178,7 +178,7 @@ ALTER TABLE ONLY "Wishlists"
 
 
 ALTER TABLE ONLY "PurchasedKeys"
-    ADD CONSTRAINT "PurchasedKeys_pkey" PRIMARY KEY (sk_id, product_id);
+    ADD CONSTRAINT "PurchasedKeys_pkey" PRIMARY KEY (sk_id, purchase_id);
 
 
 
@@ -195,10 +195,6 @@ ALTER TABLE ONLY "Products"
 
 ALTER TABLE ONLY "Purchases"
     ADD CONSTRAINT "Purchases_buyer_id_fkey" FOREIGN KEY (buyer_id) REFERENCES "Users"(user_id) ON UPDATE CASCADE;
-
-
-ALTER TABLE ONLY "Purchases"
-    ADD CONSTRAINT "Purchases_product_id_fkey" FOREIGN KEY (product_id) REFERENCES "Products"(product_id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "Reviews"
