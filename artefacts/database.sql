@@ -1,3 +1,5 @@
+DROP SCHEMA IF EXISTS public CASCADE;
+CREATE SCHEMA public AUTHORIZATION lbaw1744;
 
 CREATE TYPE paymentmethod AS ENUM (
     'Credit Card',
@@ -34,7 +36,7 @@ CREATE TABLE "ProductImages" (
 
 CREATE TABLE "Products" (
     product_id SERIAL NOT NULL,
-    seller_id integer NOT NULL,
+    user_id integer NOT NULL,
     description text NOT NULL,
     release_date timestamp with time zone NOT NULL,
     operating_system text NOT NULL,
@@ -48,7 +50,7 @@ CREATE TABLE "Products" (
 CREATE TABLE "Purchases" (
     purchase_id SERIAL NOT NULL,
     final_price double precision NOT NULL,
-    buyer_id integer NOT NULL,
+    user_id integer NOT NULL,
     paid_date timestamp with time zone DEFAULT now() NOT NULL,
     payment_method paymentmethod,
     details text,
@@ -74,7 +76,7 @@ CREATE TABLE "Sellers" (
 
 CREATE TABLE "SerialKeys" (
 	sk_id SERIAL NOT NULL,
-    owner_id integer,
+    user_id integer,
     product_id integer NOT NULL,
     code text NOT NULL
 );
@@ -190,11 +192,11 @@ ALTER TABLE ONLY "ProductImages"
 
 
 ALTER TABLE ONLY "Products"
-    ADD CONSTRAINT "Products_seller_id_fkey" FOREIGN KEY (seller_id) REFERENCES "Sellers"(user_id) ON UPDATE CASCADE;
+    ADD CONSTRAINT "Products_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Sellers"(user_id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "Purchases"
-    ADD CONSTRAINT "Purchases_buyer_id_fkey" FOREIGN KEY (buyer_id) REFERENCES "Users"(user_id) ON UPDATE CASCADE;
+    ADD CONSTRAINT "Purchases_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(user_id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "Reviews"
@@ -206,7 +208,7 @@ ALTER TABLE ONLY "Sellers"
 
 
 ALTER TABLE ONLY "SerialKeys"
-    ADD CONSTRAINT "SerialKeys_owner_id_fkey" FOREIGN KEY (owner_id) REFERENCES "Users"(user_id) ON UPDATE CASCADE;
+    ADD CONSTRAINT "SerialKeys_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(user_id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "SerialKeys"
@@ -230,4 +232,4 @@ ALTER TABLE ONLY "PurchasedKeys"
 
 
 ALTER TABLE ONLY "PurchasedKeys"
-    ADD CONSTRAINT "PurchasedKeys_user_id_fkey" FOREIGN KEY (purchase_id) REFERENCES "Purchases"(purchase_id) ON UPDATE CASCADE;
+    ADD CONSTRAINT "PurchasedKeys_purchase_id_fkey" FOREIGN KEY (purchase_id) REFERENCES "Purchases"(purchase_id) ON UPDATE CASCADE;

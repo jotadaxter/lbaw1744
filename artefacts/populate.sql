@@ -30,17 +30,17 @@ INSERT INTO "Sellers"(user_id, professional_email, professional_name, profession
 INSERT INTO "Sellers"(user_id, professional_email, professional_name, professional_phone) VALUES (108, 'sony@gmail.com', 'sony', 913654987);
 INSERT INTO "Sellers"(user_id, professional_email, professional_name, professional_phone) VALUES (109, 'blender@gmail.com', 'blender', 919876543);
 
--- Products (product_id, seller_id, description, release_date, operating_system, price, logo_path, name)
-INSERT INTO "Products" (product_id, seller_id, description, release_date, operating_system, price, logo_path, name) VALUES (200, 105, 'daw for live mixing and production', '2015/10/20', 'wml', 599, 'ableton9.jpg', 'ableton 9 live suite');
-INSERT INTO "Products" (product_id, seller_id, description, release_date, operating_system, price, logo_path, name) VALUES (201, 106, 'image editing software', '2016/2/14', 'wml', 599, 'photoshop.jpg', 'adobe photoshop');
-INSERT INTO "Products" (product_id, seller_id, description, release_date, operating_system, price, logo_path, name) VALUES (202, 107, 'programming ide', '2018/3/12', 'w', 199, 'visualstudio.jpg', 'visual studio 2018');
-INSERT INTO "Products" (product_id, seller_id, description, release_date, operating_system, price, logo_path, name) VALUES (203, 108, 'video editing software', '2014/1/22', 'wm', 299, 'sonyvegas.jpg', 'sony vegas pro');
-INSERT INTO "Products" (product_id, seller_id, description, release_date, operating_system, price, logo_path, name) VALUES (204, 109, '3d rendering and editing software', '2013/10/12', 'wml', 0, 'blender.jpg', 'blender');
-INSERT INTO "Products" (product_id, seller_id, description, release_date, operating_system, price, logo_path, name) VALUES (205, 105, 'synthetizer plug in for ableton', '2017/11/21', 'wml', 29, 'massive.jpg', 'ableton massive plugin');
-INSERT INTO "Products" (product_id, seller_id, description, release_date, operating_system, price, logo_path, name) VALUES (206, 106, 'vector graphic design software', '2016/4/1', 'wml', 99, 'ilustrator.jpg', 'adobe ilustrator');
-INSERT INTO "Products" (product_id, seller_id, description, release_date, operating_system, price, logo_path, name) VALUES (207, 107, 'programming text editor', '2017/11/10', 'w', 0, 'visualcode.jpg', 'microsoft visual code');
-INSERT INTO "Products" (product_id, seller_id, description, release_date, operating_system, price, logo_path, name) VALUES (208, 108, 'digital audio editing suite software', '2002/7/12', 'wm', 199, 'soundforge.jpg', 'sony sound forge');
-INSERT INTO "Products" (product_id, seller_id, description, release_date, operating_system, price, logo_path, name) VALUES (209, 109, 'dynamic mixing device', '2018/10/9', 'wml', 99, 'channelblender.jpg', 'channel blender');
+-- Products (product_id, user_id, description, release_date, operating_system, price, logo_path, name)
+INSERT INTO "Products" (product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (200, 105, 'daw for live mixing and production', '2015/10/20', 'wml', 599, 'ableton9.jpg', 'ableton 9 live suite');
+INSERT INTO "Products" (product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (201, 106, 'image editing software', '2016/2/14', 'wml', 599, 'photoshop.jpg', 'adobe photoshop');
+INSERT INTO "Products" (product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (202, 107, 'programming ide', '2018/3/12', 'w', 199, 'visualstudio.jpg', 'visual studio 2018');
+INSERT INTO "Products" (product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (203, 108, 'video editing software', '2014/1/22', 'wm', 299, 'sonyvegas.jpg', 'sony vegas pro');
+INSERT INTO "Products" (product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (204, 109, '3d rendering and editing software', '2013/10/12', 'wml', 0, 'blender.jpg', 'blender');
+INSERT INTO "Products" (product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (205, 105, 'synthetizer plug in for ableton', '2017/11/21', 'wml', 29, 'massive.jpg', 'ableton massive plugin');
+INSERT INTO "Products" (product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (206, 106, 'vector graphic design software', '2016/4/1', 'wml', 99, 'ilustrator.jpg', 'adobe ilustrator');
+INSERT INTO "Products" (product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (207, 107, 'programming text editor', '2017/11/10', 'w', 0, 'visualcode.jpg', 'microsoft visual code');
+INSERT INTO "Products" (product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (208, 108, 'digital audio editing suite software', '2002/7/12', 'wm', 199, 'soundforge.jpg', 'sony sound forge');
+INSERT INTO "Products" (product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (209, 109, 'dynamic mixing device', '2018/10/9', 'wml', 99, 'channelblender.jpg', 'channel blender');
 
 -- Product Images (product_id, img_path)
 INSERT INTO "ProductImages"(product_id, img_path) VALUES (200, 'abletonimg1.jpg');
@@ -66,17 +66,18 @@ INSERT INTO "Tags"(product_id, tag_name) VALUES (207, 'text');
 INSERT INTO "Tags"(product_id, tag_name) VALUES (208, 'audio');
 INSERT INTO "Tags"(product_id, tag_name) VALUES (209, '3d');
 
--- SerialKeys (sk_id, owner_id, product_id, code)
-INSERT INTO "SerialKeys"(sk_id, owner_id, product_id, code) VALUES (500, 105, 200, '1J6B5JHG7I');
-INSERT INTO "SerialKeys"(sk_id, owner_id, product_id, code) VALUES (501, 106, 201, '0FIAJ5N6B3');
-INSERT INTO "SerialKeys"(sk_id, owner_id, product_id, code) VALUES (502, 107, 202, '09FUHRB5N6');
-INSERT INTO "SerialKeys"(sk_id, owner_id, product_id, code) VALUES (503, 108, 203, 'S0HNS4K6HS');
-INSERT INTO "SerialKeys"(sk_id, owner_id, product_id, code) VALUES (504, 109, 204, 'OFCJAGHI54');
-INSERT INTO "SerialKeys"(sk_id, owner_id, product_id, code) VALUES (505, 105, 205, '0SAIDUFRKF');
-INSERT INTO "SerialKeys"(sk_id, owner_id, product_id, code) VALUES (506, 106, 206, 'SGHUDIFOG3');
-INSERT INTO "SerialKeys"(sk_id, owner_id, product_id, code) VALUES (507, 107, 207, '5URJEDKHA4');
-INSERT INTO "SerialKeys"(sk_id, owner_id, product_id, code) VALUES (508, 108, 208, '38HUEDWXJH');
-INSERT INTO "SerialKeys"(sk_id, owner_id, product_id, code) VALUES (509, 109, 209, 'IODIGHOI2N');
+-- SerialKeys (sk_id, user_id, product_id, code)
+INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (500, 105, 200, '1J6B5JHG7I');
+INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (501, 106, 201, '0FIAJ5N6B3');
+INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (502, 107, 202, '09FUHRB5N6');
+INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (503, 108, 203, 'S0HNS4K6HS');
+INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (504, 109, 204, 'OFCJAGHI54');
+INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (505, 105, 205, '0SAIDUFRKF');
+INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (506, 106, 206, 'SGHUDIFOG3');
+INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (507, 107, 207, '5URJEDKHA4');
+INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (508, 108, 208, '38HUEDWXJH');
+INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (509, 109, 209, 'IODIGHOI2N');
+INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (510, 109, 209, 'IODIGHOP2N');
 
 
 -- Reviews (sk_id, rating, review_date, comment)
@@ -98,17 +99,17 @@ INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALU
 INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALUES (203, 20, '2018/12/1', '2019/1/4');
 INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALUES (204, 15, '2018/4/1', '2018/4/30');
 
--- Purchases (purchase_id, final_price, buyer_id, sk_id, paid_date, paymentmethod, details)
-INSERT INTO "Purchases"(purchase_id, final_price, buyer_id, paid_date, payment_method, details) VALUES (800, 579, 100, '2018/4/21', 'Credit Card', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, buyer_id, paid_date, payment_method, details) VALUES (801, 579, 101, '2018/6/12', 'Credit Card', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, buyer_id, paid_date, payment_method, details) VALUES (802, 169, 102, '2018/5/2', 'PayPal', 'Minor setbacks contacting seller');
-INSERT INTO "Purchases"(purchase_id, final_price, buyer_id, paid_date, payment_method, details) VALUES (803, 279, 103, '2018/6/23', 'Banking Transfer', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, buyer_id, paid_date, payment_method, details) VALUES (804, 14, 104, '2018/3/31', 'Banking Transfer', 'Minor setbacks contacting seller');
-INSERT INTO "Purchases"(purchase_id, final_price, buyer_id, paid_date, payment_method, details) VALUES (805, 29, 100, '2018/1/26', 'Credit Card', 'Purchase sucessful');
-INSERT INTO "Purchases"(purchase_id, final_price, buyer_id, paid_date, payment_method, details) VALUES (806, 99, 101, '2018/8/1', 'PayPal', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, buyer_id, paid_date, payment_method, details) VALUES (807, 579, 102, '2018/11/4', 'PayPal', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, buyer_id, paid_date, payment_method, details) VALUES (808, 199, 103, '2018/3/10', 'PayPal', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, buyer_id, paid_date, payment_method, details) VALUES (809, 99, 104, '2018/9/2', 'Credit Card', 'Purchase successful');
+-- Purchases (purchase_id, final_price, user_id, sk_id, paid_date, paymentmethod, details)
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (800, 579, 100, '2018/4/21', 'Credit Card', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (801, 579, 101, '2018/6/12', 'Credit Card', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (802, 169, 102, '2018/5/2', 'PayPal', 'Minor setbacks contacting seller');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (803, 279, 103, '2018/6/23', 'Banking Transfer', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (804, 14, 104, '2018/3/31', 'Banking Transfer', 'Minor setbacks contacting seller');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (805, 29, 100, '2018/1/26', 'Credit Card', 'Purchase sucessful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (806, 99, 101, '2018/8/1', 'PayPal', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (807, 579, 102, '2018/11/4', 'PayPal', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (808, 199, 103, '2018/3/10', 'PayPal', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (809, 99, 104, '2018/9/2', 'Credit Card', 'Purchase successful');
 
 -- Wishlists (user_id, product_id)
 INSERT INTO "Wishlists"(user_id, product_id) VALUES (100, 209);
@@ -132,8 +133,8 @@ INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (504, 804, 100);
 INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (505, 805,52 );
 INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (506, 806, 75);
 INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (507, 808,43 );
-INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (502, 807, 12);
-INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (501, 804, 32);
-INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (508, 803, 43);
+INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (508, 807, 12);
+INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (509, 804, 32);
+INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (510, 803, 43);
 
 
