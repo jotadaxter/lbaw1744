@@ -104,7 +104,7 @@ INSERT INTO Discounts(product_id, discounted_price, begin_date, end_date) VALUES
 INSERT INTO Discounts(product_id, discounted_price, begin_date, end_date) VALUES (201, 20, '2018/5/10', '2018/5/20');
 INSERT INTO Discounts(product_id, discounted_price, begin_date, end_date) VALUES (202, 30, '2018/5/10', '2018/5/20');
 INSERT INTO Discounts(product_id, discounted_price, begin_date, end_date) VALUES (203, 20, '2018/12/1', '2019/1/4'),;
-INSERT INTO Discounts(product_id, discounted_price, begin_date, end_date) VALUES (205, 15, '2018/4/1', '2018/4/30');
+INSERT INTO Discounts(product_id, discounted_price, begin_date, end_date) VALUES (204, 15, '2018/4/1', '2018/4/30');
 
 -- SerialKeys (sk_id, owner_id, product_id, code)
 INSERT INTO SerialKeys(sk_id, owner_id, product_id, code) VALUES (700, 105, 200, '1J6B5JHG7I');
