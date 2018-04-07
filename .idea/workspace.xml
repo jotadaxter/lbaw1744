@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1e04a5c-2a1c-4f2f-8099-e31409cfb8ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/artefacts/A7.md" beforeDir="false" afterPath="$PROJECT_DIR$/artefacts/A7.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,13 +17,13 @@
         <entry file="file://$PROJECT_DIR$/artefacts/A7.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="778">
-                <caret line="457" column="7" selection-start-line="457" selection-start-column="7" selection-end-line="457" selection-end-column="7" />
+              <first_editor relative-caret-position="115">
+                <caret line="400" column="25" selection-start-line="400" selection-start-column="25" selection-end-line="400" selection-end-column="25" />
                 <folding>
-                  <marker date="1523121791430" expanded="true" signature="8431:8661" ph="{...}" />
-                  <marker date="1523121791430" expanded="true" signature="8443:8659" ph="[...]" />
-                  <marker date="1523121791430" expanded="true" signature="8449:8556" ph="{&quot;user&quot;: &quot;Rui Paulo&quot;...}" />
-                  <marker date="1523121791430" expanded="true" signature="8562:8655" ph="{&quot;user&quot;: &quot;Jaime Teixiera&quot;...}" />
+                  <marker date="1523121881604" expanded="true" signature="8371:8601" ph="{...}" />
+                  <marker date="1523121881604" expanded="true" signature="8383:8599" ph="[...]" />
+                  <marker date="1523121881604" expanded="true" signature="8389:8496" ph="{&quot;user&quot;: &quot;Rui Paulo&quot;...}" />
+                  <marker date="1523121881604" expanded="true" signature="8502:8595" ph="{&quot;user&quot;: &quot;Jaime Teixiera&quot;...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -107,12 +106,12 @@
       <updated>1519293285183</updated>
       <workItem from="1519293286823" duration="45000" />
       <workItem from="1523117156936" duration="321000" />
-      <workItem from="1523117526743" duration="4262000" />
+      <workItem from="1523117526743" duration="4352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4628000" />
+    <option name="totallyTimeSpent" value="4718000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
@@ -152,10 +151,10 @@
           <first_editor relative-caret-position="1394">
             <caret line="82" column="17" lean-forward="true" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
             <folding>
-              <marker date="1523121791430" expanded="true" signature="8431:8661" ph="{...}" />
-              <marker date="1523121791430" expanded="true" signature="8443:8659" ph="[...]" />
-              <marker date="1523121791430" expanded="true" signature="8449:8556" ph="{&quot;user&quot;: &quot;Rui Paulo&quot;...}" />
-              <marker date="1523121791430" expanded="true" signature="8562:8655" ph="{&quot;user&quot;: &quot;Jaime Teixiera&quot;...}" />
+              <marker date="1523121881604" expanded="true" signature="8371:8601" ph="{...}" />
+              <marker date="1523121881604" expanded="true" signature="8383:8599" ph="[...]" />
+              <marker date="1523121881604" expanded="true" signature="8389:8496" ph="{&quot;user&quot;: &quot;Rui Paulo&quot;...}" />
+              <marker date="1523121881604" expanded="true" signature="8502:8595" ph="{&quot;user&quot;: &quot;Jaime Teixiera&quot;...}" />
             </folding>
           </first_editor>
           <second_editor />
@@ -175,13 +174,13 @@
     <entry file="file://$PROJECT_DIR$/artefacts/A7.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="778">
-            <caret line="457" column="7" selection-start-line="457" selection-start-column="7" selection-end-line="457" selection-end-column="7" />
+          <first_editor relative-caret-position="115">
+            <caret line="400" column="25" selection-start-line="400" selection-start-column="25" selection-end-line="400" selection-end-column="25" />
             <folding>
-              <marker date="1523121791430" expanded="true" signature="8431:8661" ph="{...}" />
-              <marker date="1523121791430" expanded="true" signature="8443:8659" ph="[...]" />
-              <marker date="1523121791430" expanded="true" signature="8449:8556" ph="{&quot;user&quot;: &quot;Rui Paulo&quot;...}" />
-              <marker date="1523121791430" expanded="true" signature="8562:8655" ph="{&quot;user&quot;: &quot;Jaime Teixiera&quot;...}" />
+              <marker date="1523121881604" expanded="true" signature="8371:8601" ph="{...}" />
+              <marker date="1523121881604" expanded="true" signature="8383:8599" ph="[...]" />
+              <marker date="1523121881604" expanded="true" signature="8389:8496" ph="{&quot;user&quot;: &quot;Rui Paulo&quot;...}" />
+              <marker date="1523121881604" expanded="true" signature="8502:8595" ph="{&quot;user&quot;: &quot;Jaime Teixiera&quot;...}" />
             </folding>
           </first_editor>
           <second_editor />
