@@ -18,14 +18,26 @@
         <entry file="file://$PROJECT_DIR$/artefacts/A7.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="575">
-                <caret line="163" column="20" selection-start-line="163" selection-start-column="20" selection-end-line="163" selection-end-column="20" />
+              <first_editor relative-caret-position="473">
+                <caret line="163" column="41" selection-start-line="163" selection-start-column="41" selection-end-line="163" selection-end-column="41" />
                 <folding>
-                  <marker date="1523117924372" expanded="true" signature="3928:4158" ph="{...}" />
-                  <marker date="1523117924372" expanded="true" signature="3940:4156" ph="[...]" />
-                  <marker date="1523117924372" expanded="true" signature="3946:4053" ph="{&quot;user&quot;: &quot;Rui Paulo&quot;...}" />
-                  <marker date="1523117924372" expanded="true" signature="4059:4152" ph="{&quot;user&quot;: &quot;Jaime Teixiera&quot;...}" />
+                  <marker date="1523118821122" expanded="true" signature="3987:4217" ph="{...}" />
+                  <marker date="1523118821122" expanded="true" signature="3999:4215" ph="[...]" />
+                  <marker date="1523118821122" expanded="true" signature="4005:4112" ph="{&quot;user&quot;: &quot;Rui Paulo&quot;...}" />
+                  <marker date="1523118821122" expanded="true" signature="4118:4211" ph="{&quot;user&quot;: &quot;Jaime Teixiera&quot;...}" />
                 </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="A6.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/artefacts/A6.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="595">
+                <caret line="35" lean-forward="true" selection-start-line="29" selection-end-line="35" />
               </first_editor>
               <second_editor />
             </state>
@@ -50,7 +62,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -107,18 +119,18 @@
       <updated>1519293285183</updated>
       <workItem from="1519293286823" duration="45000" />
       <workItem from="1523117156936" duration="321000" />
-      <workItem from="1523117526743" duration="398000" />
+      <workItem from="1523117526743" duration="1294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="764000" />
+    <option name="totallyTimeSpent" value="1660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24634655" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24634655" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -152,11 +164,21 @@
           <first_editor relative-caret-position="1394">
             <caret line="82" column="17" lean-forward="true" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
             <folding>
-              <marker date="1523117924372" expanded="true" signature="3928:4158" ph="{...}" />
-              <marker date="1523117924372" expanded="true" signature="3940:4156" ph="[...]" />
-              <marker date="1523117924372" expanded="true" signature="3946:4053" ph="{&quot;user&quot;: &quot;Rui Paulo&quot;...}" />
-              <marker date="1523117924372" expanded="true" signature="4059:4152" ph="{&quot;user&quot;: &quot;Jaime Teixiera&quot;...}" />
+              <marker date="1523118821122" expanded="true" signature="3987:4217" ph="{...}" />
+              <marker date="1523118821122" expanded="true" signature="3999:4215" ph="[...]" />
+              <marker date="1523118821122" expanded="true" signature="4005:4112" ph="{&quot;user&quot;: &quot;Rui Paulo&quot;...}" />
+              <marker date="1523118821122" expanded="true" signature="4118:4211" ph="{&quot;user&quot;: &quot;Jaime Teixiera&quot;...}" />
             </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/artefacts/A6.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="595">
+            <caret line="35" lean-forward="true" selection-start-line="29" selection-end-line="35" />
           </first_editor>
           <second_editor />
         </state>
@@ -165,13 +187,13 @@
     <entry file="file://$PROJECT_DIR$/artefacts/A7.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="575">
-            <caret line="163" column="20" selection-start-line="163" selection-start-column="20" selection-end-line="163" selection-end-column="20" />
+          <first_editor relative-caret-position="473">
+            <caret line="163" column="41" selection-start-line="163" selection-start-column="41" selection-end-line="163" selection-end-column="41" />
             <folding>
-              <marker date="1523117924372" expanded="true" signature="3928:4158" ph="{...}" />
-              <marker date="1523117924372" expanded="true" signature="3940:4156" ph="[...]" />
-              <marker date="1523117924372" expanded="true" signature="3946:4053" ph="{&quot;user&quot;: &quot;Rui Paulo&quot;...}" />
-              <marker date="1523117924372" expanded="true" signature="4059:4152" ph="{&quot;user&quot;: &quot;Jaime Teixiera&quot;...}" />
+              <marker date="1523118821122" expanded="true" signature="3987:4217" ph="{...}" />
+              <marker date="1523118821122" expanded="true" signature="3999:4215" ph="[...]" />
+              <marker date="1523118821122" expanded="true" signature="4005:4112" ph="{&quot;user&quot;: &quot;Rui Paulo&quot;...}" />
+              <marker date="1523118821122" expanded="true" signature="4118:4211" ph="{&quot;user&quot;: &quot;Jaime Teixiera&quot;...}" />
             </folding>
           </first_editor>
           <second_editor />
