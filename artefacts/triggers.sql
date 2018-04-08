@@ -1,5 +1,5 @@
     --TRIGGERS
-
+ 
 -- adding repeated item
 CREATE FUNCTION add_repeated_item() RETURNS TRIGGER AS
 $BODY$
