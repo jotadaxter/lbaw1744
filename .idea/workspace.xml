@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1e04a5c-2a1c-4f2f-8099-e31409cfb8ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/LBAW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LBAW.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/artefacts/A7.md" beforeDir="false" afterPath="$PROJECT_DIR$/artefacts/A7.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +20,8 @@
         <entry file="file://$PROJECT_DIR$/artefacts/A7.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="636">
-                <caret line="983" column="5" lean-forward="true" selection-start-line="983" selection-start-column="5" selection-end-line="983" selection-end-column="5" />
+              <first_editor relative-caret-position="697">
+                <caret line="595" column="20" lean-forward="true" selection-start-line="595" selection-start-column="20" selection-end-line="595" selection-end-column="20" />
                 <folding>
                   <element signature="e#2664#2685#0" />
                   <element signature="e#3012#3035#0" />
@@ -38,7 +36,6 @@
                   <element signature="e#8424#8456#0" />
                   <element signature="e#8791#8822#0" />
                   <element signature="e#9160#9193#0" />
-                  <element signature="e#10367#10398#0" />
                   <element signature="e#11205#11234#0" />
                   <element signature="e#12065#12088#0" />
                   <element signature="e#12495#12522#0" />
@@ -147,12 +144,12 @@
       <workItem from="1519293286823" duration="45000" />
       <workItem from="1523117156936" duration="321000" />
       <workItem from="1523117526743" duration="12631000" />
-      <workItem from="1523711895523" duration="541000" />
+      <workItem from="1523711895523" duration="2123000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13538000" />
+    <option name="totallyTimeSpent" value="15120000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -205,7 +202,6 @@
               <element signature="e#8424#8456#0" />
               <element signature="e#8791#8822#0" />
               <element signature="e#9160#9193#0" />
-              <element signature="e#10367#10398#0" />
               <element signature="e#11205#11234#0" />
               <element signature="e#12065#12088#0" />
               <element signature="e#12495#12522#0" />
@@ -251,7 +247,6 @@
               <element signature="e#8424#8456#0" />
               <element signature="e#8791#8822#0" />
               <element signature="e#9160#9193#0" />
-              <element signature="e#10367#10398#0" />
               <element signature="e#11205#11234#0" />
               <element signature="e#12065#12088#0" />
               <element signature="e#12495#12522#0" />
@@ -291,8 +286,8 @@
     <entry file="file://$PROJECT_DIR$/artefacts/A7.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="636">
-            <caret line="983" column="5" lean-forward="true" selection-start-line="983" selection-start-column="5" selection-end-line="983" selection-end-column="5" />
+          <first_editor relative-caret-position="697">
+            <caret line="595" column="20" lean-forward="true" selection-start-line="595" selection-start-column="20" selection-end-line="595" selection-end-column="20" />
             <folding>
               <element signature="e#2664#2685#0" />
               <element signature="e#3012#3035#0" />
@@ -307,7 +302,6 @@
               <element signature="e#8424#8456#0" />
               <element signature="e#8791#8822#0" />
               <element signature="e#9160#9193#0" />
-              <element signature="e#10367#10398#0" />
               <element signature="e#11205#11234#0" />
               <element signature="e#12065#12088#0" />
               <element signature="e#12495#12522#0" />
