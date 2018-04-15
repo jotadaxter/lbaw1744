@@ -1,0 +1,36 @@
+#prodDIV .tag, #prodDIV [type="button"]{
+	font-family: "Microsoft Sans Serif", sans-serif;
+	color: black;
+	box-shadow: -1px -1px 1px rgba(0,0,0,1) inset, 1px 1px 1px rgba(255,255,255,1) inset;
+	background: lightgrey;
+	border: 1px solid;
+	border-radius: 0;
+	padding: 5px 5px 5px 5px;
+		
+	display: inline-block;
+}
+
+#prodDIV{
+	font-family: "Microsoft Sans Serif", sans-serif;
+	color: black;
+	box-shadow: -1px -1px 1px rgba(0,0,0,1) inset, 1px 1px 1px rgba(255,255,255,1) inset;
+	background: lightgrey;
+	border: 1px solid;
+	border-radius: 0;
+	
+	padding: 1px;
+	
+}
+
+#prodDIV > .container-fluid > .container-fluid{
+	margin: 10px;
+}
+
+#prodDIV .product-title > h1, #prodDIV .nav.nav-tabs.nav_tabs > li > a{
+	margin: 2px 2px 0;
+    padding: 1px 6px;
+    color: #fff;
+    background: linear-gradient(to right, #000080, #1084d0);
+    font-weight: bold;
+	display: block;
+}
