@@ -5,7 +5,7 @@
     {{ csrf_field() }}
 
     <label for="name">Name</label>
-    <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus>
+    <input id="fullname" type="text" name="fullname" value="{{ old('fullname') }}" required autofocus>
     @if ($errors->has('name'))
       <span class="error">
           {{ $errors->first('name') }}

@@ -1,11 +1,11 @@
 document.getElementById("signIn_btn").addEventListener("click", function(){
-    document.location.href = 'signin';
+    document.location.href = 'login';
 });
 document.getElementById("register_btn").addEventListener("click", function(){
-    document.location.href = '/lbaw1744/register.html';
+    document.location.href = 'register';
 });
 document.getElementById("search_btn").addEventListener("click", function(){
-    document.location.href = '/lbaw1744/product_search.html';
+    document.location.href = 'product_search';
 });
 
 
