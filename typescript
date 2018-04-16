@@ -768,4 +768,59 @@ Changes not staged for commit:
 	[31mmodified:   typescript[m
 
 no changes added to commit (use "git add" and/or "git commit -a")
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [43m[34m[30m  master ● [49m[33m[39m [K[?1h=[?2004hggit add *[?1l>[?2004l
+]2;git add *]1;gitThe following paths are ignored by one of your .gitignore files:
+vendor
+Use -f if you really want to add them.
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m [31m✘[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [43m[34m[30m  master ✚ [49m[33m[39m [K[?1h=[?2004hggit commit -m " [K"e"em" "t"e"r"r"a" "d" "c"" " e" "c"e"g"o"s" "q"u"e"m" "t"m" "" " e"m" "o"l"h"o" "e" "r"e"i"[?1l>[?2004l
+]2;git commit -m "em terra de cegos quem tem olho e rei"]1;git[master 2e0f1fa] em terra de cegos quem tem olho e rei
+ 1 file changed, 95 insertions(+), 1 deletion(-)
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [42m[34m[30m  master [49m[32m[39m [K[?1h=[?2004hggit push[?1l>[?2004l
+]2;git push]1;gitwarning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': nunocr
+Password for 'https://nunocr@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 2.03 KiB | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/jotadaxter/lbaw1744/
+   c29a1da..2e0f1fa  master -> master
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [42m[34m[30m  master [49m[32m[39m [K[?1h=[?2004hccat upload_image.sh[1m [0m[K[K[?1l>[?2004l
+]2;cat upload_image.sh]1;cat#!/bin/bash
+
+# Stop execution if a step fails
+set -e
+
+DOCKER_USERNAME=nunocr # Replace by your docker hub username
+IMAGE_NAME=lbaw1744
+
+# Ensure that dependencies are available
+composer install
+php artisan clear-compiled
+php artisan optimize
+
+docker build -t $DOCKER_USERNAME/$IMAGE_NAME .
+docker push $DOCKER_USERNAME/$IMAGE_NAME
 [
