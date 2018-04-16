@@ -55,7 +55,7 @@
                             <input class="form-control" id="password-confirm" type="password" name="password_confirmation" required>
                         </div>
 
-                        <button type="submit">
+                        <button class="btn btn-success" type="submit">
                         Register
                         </button>
                         <a class="button button-outline" href="{{ route('login') }}">Login</a>

@@ -75,26 +75,6 @@
     </div>
     </div>
 </form>
-    
-    <div class="row">
-        <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-            <form action="{{ route('login') }}" autocomplete="off" method="POST">
-            {{ csrf_field() }}
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                    <input type="text" class="form-control" name="username" placeholder="email address">
-                </div>
-                <span class="help-block"></span>
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                    <input  type="password" class="form-control" name="password" placeholder="Password">
-                </div>
-                <span class="help-block"></span>
-                <button id="login_btn" type="button" class="btn btn-lg btn-primary btn-block" >Sign in</button>
-
-            </form>
-        </div>
-    </div>
 </div>
 
 @endsection

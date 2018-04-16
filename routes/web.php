@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('cards', 'CardController@list');
 Route::get('cards/{id}', 'CardController@show');
 
+//Product
+Route::get('product/{product_id}', 'ProductController@show');
+
 // API
 Route::put('api/cards', 'CardController@create');
 Route::delete('api/cards/{card_id}', 'CardController@delete');
