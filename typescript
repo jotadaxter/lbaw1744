@@ -1,0 +1,677 @@
+Script started on Seg 16 Abr 2018 00:24:29 WEST
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [43m[34m[30m  master [49m[33m[39m [K[?1h=[?2004h../.  ../updl  load images[1m/[0m[0m            pload_image.sh[1m [0m[0m [?1l>[?2004l
+]2;./upload_image.sh]1;./upload_image.shPHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pdo_pgsql.dll' - /usr/lib/php/20160303/php_pdo_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pgsql.dll' - /usr/lib/php/20160303/php_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+[30;43mCannot create cache directory /home/user/.composer/cache/repo/https---packagist.org/, or directory is not writable. Proceeding without cache[39;49m
+[30;43mCannot create cache directory /home/user/.composer/cache/files/, or directory is not writable. Proceeding without cache[39;49m
+[32mLoading composer repositories with package information[39m
+[32mInstalling dependencies (including require-dev) from lock file[39m
+Nothing to install or update
+[32mGenerating optimized autoload files[39m
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pdo_pgsql.dll' - /usr/lib/php/20160303/php_pdo_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pgsql.dll' - /usr/lib/php/20160303/php_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+Discovered Package: fideloper/proxy
+Discovered Package: laravel/tinker
+Package manifest generated successfully.
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pdo_pgsql.dll' - /usr/lib/php/20160303/php_pdo_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pgsql.dll' - /usr/lib/php/20160303/php_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+[32mThe compiled services & packages files have been removed.[39m
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pdo_pgsql.dll' - /usr/lib/php/20160303/php_pdo_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pgsql.dll' - /usr/lib/php/20160303/php_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+WARNING: Error loading config file: /home/user/.docker/config.json - stat /home/user/.docker/config.json: permission denied
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon   23.4MBSending build context to Docker daemon  43.45MBSending build context to Docker daemon  54.03MBSending build context to Docker daemon  61.28MBSending build context to Docker daemon  67.96MBSending build context to Docker daemon  73.95MB
+Step 1/11 : FROM ubuntu:17.10
+ ---> 14107f6d2c97
+Step 2/11 : RUN apt-get update
+ ---> Using cache
+ ---> e9d21326cd11
+Step 3/11 : RUN apt-get install -y --no-install-recommends libpq-dev vim nginx php-fpm php-mbstring php-xml php-pgsql
+ ---> Using cache
+ ---> af4031c4c726
+Step 4/11 : COPY . /var/www/
+ ---> 70826379f043
+Step 5/11 : RUN chown -R www-data:www-data /var/www/
+ ---> Running in fbcc8f4e9b8f
+Removing intermediate container fbcc8f4e9b8f
+ ---> 4d86fdba96c3
+Step 6/11 : COPY ./etc/php/php.ini /usr/local/etc/php/conf.d/php.ini
+ ---> eb4ecb94962f
+Step 7/11 : COPY ./etc/nginx/default.conf /etc/nginx/sites-enabled/default
+ ---> ea822fff2ac6
+Step 8/11 : COPY .env_production /var/www/.env
+ ---> 58496d141b4a
+Step 9/11 : COPY docker_run.sh /docker_run.sh
+ ---> 669089bd5f86
+Step 10/11 : RUN mkdir /var/run/php
+ ---> Running in bcd22050196d
+Removing intermediate container bcd22050196d
+ ---> aa48af0f019e
+Step 11/11 : CMD sh /docker_run.sh
+ ---> Running in f4bb0e2f9bba
+Removing intermediate container f4bb0e2f9bba
+ ---> 4192150207c3
+Successfully built 4192150207c3
+Successfully tagged nunocr/lbaw1744:latest
+WARNING: Error loading config file: /home/user/.docker/config.json - stat /home/user/.docker/config.json: permission denied
+The push refers to repository [docker.io/nunocr/lbaw1744]
+
+[1A[1K[K715303baf7d7: Preparing [1B
+[1A[1K[Keaa82f1c2bad: Preparing [1B
+[1A[1K[Kb64fdce0a412: Preparing [1B
+[1A[1K[K41c93d12327b: Preparing [1B
+[1A[1K[Kf70e438387ff: Preparing [1B
+[1A[1K[K6954d2cb9959: Preparing [1B
+[1A[1K[K67a17861b420: Preparing [1B
+[1A[1K[K4d499b3e69b6: Preparing [1B
+[1A[1K[Kf3e23c252e2d: Preparing [1B
+[1A[1K[K88a829f161f1: Preparing [1B
+[1A[1K[K578274993908: Preparing [1B
+[1A[1K[K53f920de5f54: Preparing [1B
+[1A[1K[K270fe481982d: Preparing [1B
+[1A[1K[K6aea1091a8f5: Preparing [1B[9A[1K[K6954d2cb9959: Waiting [9B[5A[1K[K88a829f161f1: Waiting [5B[4A[1K[K578274993908: Waiting [4B[8A[1K[K67a17861b420: Waiting [8B[6A[1K[Kf3e23c252e2d: Waiting [6B[7A[1K[K4d499b3e69b6: Waiting [7B[2A[1K[K270fe481982d: Waiting [2B[1A[1K[K6aea1091a8f5: Waiting [1B[3A[1K[K53f920de5f54: Waiting [3Bdenied: requested access to the resource is denied
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m [31m✘[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [43m[34m[30m  master [49m[33m[39m [K[?1h=[?2004hs ./upload_image.sh [K[K[A[79Cs./upload_image.sh[A[63Csu./upload_image.sh[A[63Cd./upload_image.sh[A[63Co./upload_image.sh[A[63C ./upload_image.sh[A[63C[?1l>[?2004l[1B
+]2;sudo ./upload_image.sh]1;./upload_image.sh[sudo] password for user: 
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pdo_pgsql.dll' - /usr/lib/php/20160303/php_pdo_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pgsql.dll' - /usr/lib/php/20160303/php_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+[30;43mDo not run Composer as root/super user! See https://getcomposer.org/root for details[39;49m
+[32mLoading composer repositories with package information[39m
+[32mInstalling dependencies (including require-dev) from lock file[39m
+Nothing to install or update
+[32mGenerating optimized autoload files[39m
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pdo_pgsql.dll' - /usr/lib/php/20160303/php_pdo_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pgsql.dll' - /usr/lib/php/20160303/php_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+Discovered Package: fideloper/proxy
+Discovered Package: laravel/tinker
+Package manifest generated successfully.
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pdo_pgsql.dll' - /usr/lib/php/20160303/php_pdo_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pgsql.dll' - /usr/lib/php/20160303/php_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+[32mThe compiled services & packages files have been removed.[39m
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pdo_pgsql.dll' - /usr/lib/php/20160303/php_pdo_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pgsql.dll' - /usr/lib/php/20160303/php_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon   23.4MBSending build context to Docker daemon  38.99MBSending build context to Docker daemon  51.81MBSending build context to Docker daemon  59.05MBSending build context to Docker daemon  65.73MBSending build context to Docker daemon  72.97MBSending build context to Docker daemon  73.96MB
+Step 1/11 : FROM ubuntu:17.10
+ ---> 14107f6d2c97
+Step 2/11 : RUN apt-get update
+ ---> Using cache
+ ---> e9d21326cd11
+Step 3/11 : RUN apt-get install -y --no-install-recommends libpq-dev vim nginx php-fpm php-mbstring php-xml php-pgsql
+ ---> Using cache
+ ---> af4031c4c726
+Step 4/11 : COPY . /var/www/
+ ---> f65dab028092
+Step 5/11 : RUN chown -R www-data:www-data /var/www/
+ ---> Running in ba15a1d4ea67
+Removing intermediate container ba15a1d4ea67
+ ---> 65c5d0a9aa11
+Step 6/11 : COPY ./etc/php/php.ini /usr/local/etc/php/conf.d/php.ini
+ ---> 454f90467e09
+Step 7/11 : COPY ./etc/nginx/default.conf /etc/nginx/sites-enabled/default
+ ---> e783d0346b8e
+Step 8/11 : COPY .env_production /var/www/.env
+ ---> 2d352518f5a7
+Step 9/11 : COPY docker_run.sh /docker_run.sh
+ ---> 4aa17ee54b9c
+Step 10/11 : RUN mkdir /var/run/php
+ ---> Running in 6167052efd74
+Removing intermediate container 6167052efd74
+ ---> e9662dcd0fc9
+Step 11/11 : CMD sh /docker_run.sh
+ ---> Running in d44c5a028bad
+Removing intermediate container d44c5a028bad
+ ---> 957d80e1e93e
+Successfully built 957d80e1e93e
+Successfully tagged nunocr/lbaw1744:latest
+The push refers to repository [docker.io/nunocr/lbaw1744]
+
+[1A[1K[Kc9063148606e: Preparing [1B
+[1A[1K[Keaa82f1c2bad: Preparing [1B
+[1A[1K[Kbebb215ae5f5: Preparing [1B
+[1A[1K[K8ba9b2351b6f: Preparing [1B
+[1A[1K[K345c0aa3edd7: Preparing [1B
+[1A[1K[K3fbcf355fd1c: Preparing [1B
+[1A[1K[K979a0e3265d5: Preparing [1B
+[1A[1K[K4d499b3e69b6: Preparing [1B
+[1A[1K[Kf3e23c252e2d: Preparing [1B
+[1A[1K[K88a829f161f1: Preparing [1B
+[1A[1K[K578274993908: Preparing [1B
+[1A[1K[K53f920de5f54: Preparing [1B
+[1A[1K[K270fe481982d: Preparing [1B
+[1A[1K[K6aea1091a8f5: Preparing [1B[7A[1K[K4d499b3e69b6: Waiting [7B[6A[1K[Kf3e23c252e2d: Waiting [6B[5A[1K[K88a829f161f1: Waiting [5B[4A[1K[K578274993908: Waiting [4B[3A[1K[K53f920de5f54: Waiting [3B[2A[1K[K270fe481982d: Waiting [2B[1A[1K[K6aea1091a8f5: Waiting [1B[9A[1K[K3fbcf355fd1c: Waiting [9B[8A[1K[K979a0e3265d5: Waiting [8B[10A[1K[K345c0aa3edd7: Pushing  1.024kB/70.39kB[10B[11A[1K[K8ba9b2351b6f: Pushing     512B/873B[11B[13A[1K[Keaa82f1c2bad: Pushing     512B[13B[13A[1K[Keaa82f1c2bad: Pushing  2.048kB[13B[11A[1K[K8ba9b2351b6f: Pushing  4.096kB[11B[10A[1K[K345c0aa3edd7: Pushing  74.75kB[10B[14A[1K[Kc9063148606e: Pushing  2.048kB[14B[12A[1K[Kbebb215ae5f5: Pushing     512B[12B[12A[1K[Kbebb215ae5f5: Pushing  3.072kB[12B[12A[1K[Kbebb215ae5f5: Pushed [12B[13A[1K[Keaa82f1c2bad: Pushed [13B[14A[1K[Kc9063148606e: Pushed [14B[11A[1K[K8ba9b2351b6f: Pushed [11B[10A[1K[K345c0aa3edd7: Pushed [10B[6A[1K[Kf3e23c252e2d: Layer already exists [6B[5A[1K[K88a829f161f1: Layer already exists [5B[7A[1K[K4d499b3e69b6: Layer already exists [7B[8A[1K[K979a0e3265d5: Pushing  524.8kB/67.87MB[8B[4A[1K[K578274993908: Layer already exists [4B[9A[1K[K3fbcf355fd1c: Pushing  524.8kB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  1.082MB/67.87MB[8B[3A[1K[K53f920de5f54: Layer already exists [3B[9A[1K[K3fbcf355fd1c: Pushing  1.082MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  1.639MB/67.87MB[8B[2A[1K[K270fe481982d: Layer already exists [2B[9A[1K[K3fbcf355fd1c: Pushing  1.639MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  2.753MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  2.753MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing   3.31MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  3.867MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  3.867MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  4.424MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  4.981MB/67.87MB[8B[1A[1K[K6aea1091a8f5: Layer already exists [1B[9A[1K[K3fbcf355fd1c: Pushing  5.538MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  6.095MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  6.095MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  6.652MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  7.209MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  7.209MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  7.767MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  7.767MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  8.324MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  8.881MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  8.324MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  9.438MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  8.881MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  9.995MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  9.438MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  10.55MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  11.11MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  9.995MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  11.67MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  10.55MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  12.22MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  12.78MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  13.34MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  11.11MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  14.45MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  11.67MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  15.57MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  12.22MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  16.12MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  16.68MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  13.34MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  17.24MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  13.89MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  18.35MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  14.45MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  18.91MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  20.58MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  15.01MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  21.69MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  15.57MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  22.22MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  16.12MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  24.36MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  24.92MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  16.68MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  26.03MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  17.24MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  26.59MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  17.79MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  27.15MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  27.71MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  18.35MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  28.26MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  18.91MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  29.91MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  19.46MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  30.44MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  20.02MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing     31MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  31.56MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  20.58MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing   32.1MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  21.14MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  32.66MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  21.69MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  33.21MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  22.22MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  34.85MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing   35.9MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  36.98MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  23.83MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  39.68MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  42.39MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  43.99MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  24.92MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  45.58MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  47.19MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  48.81MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  25.48MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  50.43MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  52.56MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  26.03MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  54.67MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  56.79MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  58.93MB/67.87MB[9B[8A[1K[K979a0e3265d5: Pushing  26.59MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  61.09MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  63.74MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  65.84MB/67.87MB[9B[9A[1K[K3fbcf355fd1c: Pushing  68.52MB[9B[9A[1K[K3fbcf355fd1c: Pushing  71.19MB[9B[9A[1K[K3fbcf355fd1c: Pushing  73.84MB[9B[8A[1K[K979a0e3265d5: Pushing  27.15MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushing  74.05MB[9B[8A[1K[K979a0e3265d5: Pushing  27.71MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  28.26MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  29.35MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  29.91MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  30.44MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing     31MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  31.55MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing   32.1MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  32.66MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  33.21MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  33.74MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  34.29MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  34.84MB/67.87MB[8B[9A[1K[K3fbcf355fd1c: Pushed [9B[8A[1K[K979a0e3265d5: Pushing   35.9MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  36.43MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  36.98MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  40.23MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  40.79MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  42.91MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  43.44MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  45.05MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  46.13MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  47.73MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  48.26MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing   49.9MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  51.48MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  54.14MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  56.26MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  56.79MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  58.93MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  61.08MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  61.61MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  64.27MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  66.37MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing  67.43MB/67.87MB[8B[8A[1K[K979a0e3265d5: Pushing   69.6MB[8B[8A[1K[K979a0e3265d5: Pushing  72.25MB[8B[8A[1K[K979a0e3265d5: Pushing  73.84MB[8B[8A[1K[K979a0e3265d5: Pushing  74.05MB[8B[8A[1K[K979a0e3265d5: Pushed [8Blatest: digest: sha256:de046fa8dd95c162c6385e8279a6c93f174b401839ba48176d51b0c0c9fb340e size: 3242
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [43m[34m[30m  master [49m[33m[39m [K[?1h=[?2004hsudo ./upload_image.sh[K[A[58C[5P[14C.sh[K[1B[K[A[78C[17Dscript           [11Dgit pushcommit -m "nao atires pedras se o teu telhado e de vidro"[K[A[23Cadd *[K[1B[K[A[70Cpull shcommit -m "nao atires pedras se o teu telhado e de vidro"[K[A[23Cadd *[K[1B[K[A[70Cstatus[10Dcd Desktop/lbaw1744 [K[A[61Cls[K[1B[K[A[63Ccd Desktop/lvaw1744 [K[A[61Cphp artisan serve[K[1B[K[A[78C[17D./upload_image.sh[17Dphp artisan serve[17D./upload_image.sh[17Dphp artisan serve[17D./upload_image.sh[17Dphp artisan serverdb:seed [K[K[?1l>[?2004l
+]2;php artisan db:seed]1;phpPHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pdo_pgsql.dll' - /usr/lib/php/20160303/php_pdo_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pgsql.dll' - /usr/lib/php/20160303/php_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+
+[33mIn Connection.php line 664:[39m
+[37;41m                                                                               [39;49m
+[37;41m  SQLSTATE[42703]: Undefined column: 7 ERROR:  column "user_id" referenced in  [39;49m
+[37;41m   foreign key constraint does not exist (SQL: DROP TYPE IF EXISTS paymentmet  [39;49m
+[37;41m  hod CASCADE;                                                                 [39;49m
+[37;41m  DROP TYPE IF EXISTS userstate CASCADE;                                       [39;49m
+[37;41m  DROP TABLE IF EXISTS Discounts CASCADE;                                      [39;49m
+[37;41m  DROP TABLE IF EXISTS ProductImages CASCADE;                                  [39;49m
+[37;41m  DROP TABLE IF EXISTS Products CASCADE;                                       [39;49m
+[37;41m  DROP TABLE IF EXISTS Purchases CASCADE;                                      [39;49m
+[37;41m  DROP TABLE IF EXISTS Reviews CASCADE;                                        [39;49m
+[37;41m  DROP TABLE IF EXISTS Sellers CASCADE;                                        [39;49m
+[37;41m  DROP TABLE IF EXISTS SerialKeys CASCADE;                                     [39;49m
+[37;41m  DROP TABLE IF EXISTS Tags CASCADE;                                           [39;49m
+[37;41m  DROP TABLE IF EXISTS users CASCADE;                                          [39;49m
+[37;41m  DROP TABLE IF EXISTS PurchasedKeys CASCADE;                                  [39;49m
+[37;41m  DROP TABLE IF EXISTS Wishlists CASCADE;                                      [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  CREATE TYPE paymentmethod AS ENUM (                                          [39;49m
+[37;41m      'Credit Card',                                                           [39;49m
+[37;41m      'PayPal',                                                                [39;49m
+[37;41m      'Banking Transfer'                                                       [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  CREATE TYPE userstate AS ENUM (                                              [39;49m
+[37;41m      'Active',                                                                [39;49m
+[37;41m      'Inactive',                                                              [39;49m
+[37;41m      'Blocked',                                                               [39;49m
+[37;41m      'Banned'                                                                 [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  CREATE TABLE "Discounts" (                                                   [39;49m
+[37;41m      product_id integer NOT NULL,                                             [39;49m
+[37;41m      discounted_price double precision NOT NULL,                              [39;49m
+[37;41m      begin_date timestamp with time zone DEFAULT now() NOT NULL,              [39;49m
+[37;41m      end_date timestamp with time zone NOT NULL,                              [39;49m
+[37;41m      CONSTRAINT "Discounts_check" CHECK (end_date > begin_date),              [39;49m
+[37;41m      CONSTRAINT "Discounts_discounted_price_check" CHECK (discounted_price >  [39;49m
+[37;41m  = 0.)                                                                        [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  CREATE TABLE "ProductImages" (                                               [39;49m
+[37;41m      product_id integer NOT NULL,                                             [39;49m
+[37;41m      img_path text NOT NULL                                                   [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  CREATE TABLE "Products" (                                                    [39;49m
+[37;41m      product_id SERIAL NOT NULL,                                              [39;49m
+[37;41m      user_id integer NOT NULL,                                                [39;49m
+[37;41m      description text NOT NULL,                                               [39;49m
+[37;41m      release_date timestamp with time zone NOT NULL,                          [39;49m
+[37;41m      operating_system text NOT NULL,                                          [39;49m
+[37;41m      price double precision NOT NULL,                                         [39;49m
+[37;41m      logo_path text NOT NULL,                                                 [39;49m
+[37;41m      name text NOT NULL,                                                      [39;49m
+[37;41m      CONSTRAINT "Products_price_check" CHECK (price >= 0.)                    [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  CREATE TABLE "Purchases" (                                                   [39;49m
+[37;41m      purchase_id SERIAL NOT NULL,                                             [39;49m
+[37;41m      final_price double precision NOT NULL,                                   [39;49m
+[37;41m      user_id integer NOT NULL,                                                [39;49m
+[37;41m      paid_date timestamp with time zone DEFAULT now() NOT NULL,               [39;49m
+[37;41m      payment_method paymentmethod,                                            [39;49m
+[37;41m      details text,                                                            [39;49m
+[37;41m      CONSTRAINT "Payments_check" CHECK ((final_price > 0. AND payment_method  [39;49m
+[37;41m   <> NULL) OR (final_price = 0. AND payment_method = NULL))                   [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  CREATE TABLE "Reviews" (                                                     [39;49m
+[37;41m  	sk_id integer NOT NULL,                                                     [39;49m
+[37;41m      rating integer NOT NULL,                                                 [39;49m
+[37;41m      review_date timestamp with time zone DEFAULT now() NOT NULL,             [39;49m
+[37;41m      "comment" text                                                           [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  CREATE TABLE "Sellers" (                                                     [39;49m
+[37;41m      user_id integer NOT NULL,                                                [39;49m
+[37;41m      professional_email text NOT NULL,                                        [39;49m
+[37;41m      professional_name text NOT NULL,                                         [39;49m
+[37;41m      professional_phone integer NOT NULL                                      [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  CREATE TABLE "SerialKeys" (                                                  [39;49m
+[37;41m  	sk_id SERIAL NOT NULL,                                                      [39;49m
+[37;41m      user_id integer,                                                         [39;49m
+[37;41m      product_id integer NOT NULL,                                             [39;49m
+[37;41m      code text NOT NULL                                                       [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  CREATE TABLE "Tags" (                                                        [39;49m
+[37;41m      product_id SERIAL NOT NULL,                                              [39;49m
+[37;41m      tag_name text NOT NULL                                                   [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  CREATE TABLE "users" (                                                       [39;49m
+[37;41m      id SERIAL NOT NULL,                                                      [39;49m
+[37;41m      username text NOT NULL,                                                  [39;49m
+[37;41m      password text NOT NULL,                                                  [39;49m
+[37;41m      fullname text,                                                           [39;49m
+[37;41m      email text NOT NULL,                                                     [39;49m
+[37;41m      phone_number integer,                                                    [39;49m
+[37;41m      birth_date timestamp with time zone NOT NULL,                            [39;49m
+[37;41m      admission_date timestamp with time zone DEFAULT now() NOT NULL,          [39;49m
+[37;41m      "state" userstate DEFAULT 'Active' NOT NULL,                             [39;49m
+[37;41m      "admin" boolean DEFAULT false NOT NULL,                                  [39;49m
+[37;41m      img text,                                                                [39;49m
+[37;41m      nif integer                                                              [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  CREATE TABLE "Wishlists" (                                                   [39;49m
+[37;41m      user_id integer NOT NULL,                                                [39;49m
+[37;41m      product_id integer NOT NULL                                              [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  CREATE TABLE "PurchasedKeys" (                                               [39;49m
+[37;41m      sk_id integer NOT NULL,                                                  [39;49m
+[37;41m      purchase_id integer NOT NULL,                                            [39;49m
+[37;41m      price double precision NOT NULL                                          [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  	-- Primary Keys and Uniques                                                 [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Discounts"                                                 [39;49m
+[37;41m      ADD CONSTRAINT "Discounts_pkey" PRIMARY KEY (product_id);                [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "ProductImages"                                             [39;49m
+[37;41m      ADD CONSTRAINT "ProductImages_pkey" PRIMARY KEY (product_id, img_path);  [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Products"                                                  [39;49m
+[37;41m      ADD CONSTRAINT "Products_name_key" UNIQUE (name);                        [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Products"                                                  [39;49m
+[37;41m      ADD CONSTRAINT "Products_pkey" PRIMARY KEY (product_id);                 [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Purchases"                                                 [39;49m
+[37;41m      ADD CONSTRAINT "Purchases_pkey" PRIMARY KEY (purchase_id);               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Reviews"                                                   [39;49m
+[37;41m      ADD CONSTRAINT "Reviews_pkey" PRIMARY KEY (sk_id);                       [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Sellers"                                                   [39;49m
+[37;41m      ADD CONSTRAINT "Sellers_pkey" PRIMARY KEY (user_id);                     [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Sellers"                                                   [39;49m
+[37;41m      ADD CONSTRAINT "Sellers_professional_email_key" UNIQUE (professional_em  [39;49m
+[37;41m  ail);                                                                        [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Sellers"                                                   [39;49m
+[37;41m      ADD CONSTRAINT "Sellers_user_id_key" UNIQUE (user_id);                   [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "SerialKeys"                                                [39;49m
+[37;41m      ADD CONSTRAINT "SerialKeys_pkey" PRIMARY KEY (sk_id);                    [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Tags"                                                      [39;49m
+[37;41m      ADD CONSTRAINT "Tags_pkey" PRIMARY KEY (product_id, tag_name);           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "users"                                                     [39;49m
+[37;41m      ADD CONSTRAINT "Users_email_key" UNIQUE (email);                         [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "users"                                                     [39;49m
+[37;41m      ADD CONSTRAINT "Users_pkey" PRIMARY KEY (id);                            [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "users"                                                     [39;49m
+[37;41m      ADD CONSTRAINT "Users_username_key" UNIQUE (username);                   [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Wishlists"                                                 [39;49m
+[37;41m      ADD CONSTRAINT "Wishlists_pkey" PRIMARY KEY (user_id, product_id);       [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "PurchasedKeys"                                             [39;49m
+[37;41m      ADD CONSTRAINT "PurchasedKeys_pkey" PRIMARY KEY (sk_id, purchase_id);    [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  	-- Foreign Keys                                                             [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "ProductImages"                                             [39;49m
+[37;41m      ADD CONSTRAINT "ProductImages_product_id_fkey" FOREIGN KEY (product_id)  [39;49m
+[37;41m   REFERENCES "Products"(product_id) ON UPDATE CASCADE;                        [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Products"                                                  [39;49m
+[37;41m      ADD CONSTRAINT "Products_user_id_fkey" FOREIGN KEY (user_id) REFERENCES  [39;49m
+[37;41m   "Sellers"(user_id) ON UPDATE CASCADE;                                       [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Purchases"                                                 [39;49m
+[37;41m      ADD CONSTRAINT "Purchases_user_id_fkey" FOREIGN KEY (user_id) REFERENCE  [39;49m
+[37;41m  S "users"(user_id) ON UPDATE CASCADE;                                        [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Reviews"                                                   [39;49m
+[37;41m      ADD CONSTRAINT "Reviews_purchase_id_fkey" FOREIGN KEY (sk_id) REFERENCE  [39;49m
+[37;41m  S "SerialKeys"(sk_id) ON UPDATE CASCADE;                                     [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Sellers"                                                   [39;49m
+[37;41m      ADD CONSTRAINT "Sellers_user_id_fkey" FOREIGN KEY (user_id) REFERENCES   [39;49m
+[37;41m  "users"(user_id) ON UPDATE CASCADE;                                          [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "SerialKeys"                                                [39;49m
+[37;41m      ADD CONSTRAINT "SerialKeys_user_id_fkey" FOREIGN KEY (user_id) REFERENC  [39;49m
+[37;41m  ES "users"(user_id) ON UPDATE CASCADE;                                       [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "SerialKeys"                                                [39;49m
+[37;41m      ADD CONSTRAINT "SerialKeys_product_id_fkey" FOREIGN KEY (product_id) RE  [39;49m
+[37;41m  FERENCES "Products"(product_id) ON UPDATE CASCADE;                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Tags"                                                      [39;49m
+[37;41m      ADD CONSTRAINT "Tags_product_id_fkey" FOREIGN KEY (product_id) REFERENC  [39;49m
+[37;41m  ES "Products"(product_id) ON UPDATE CASCADE;                                 [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Wishlists"                                                 [39;49m
+[37;41m      ADD CONSTRAINT "Wishlists_product_id_fkey" FOREIGN KEY (product_id) REF  [39;49m
+[37;41m  ERENCES "Products"(product_id) ON UPDATE CASCADE;                            [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "Wishlists"                                                 [39;49m
+[37;41m      ADD CONSTRAINT "Wishlists_user_id_fkey" FOREIGN KEY (user_id) REFERENCE  [39;49m
+[37;41m  S "users"(user_id) ON UPDATE CASCADE;                                        [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "PurchasedKeys"                                             [39;49m
+[37;41m      ADD CONSTRAINT "PurchasedKeys_sk_id_fkey" FOREIGN KEY (sk_id) REFERENCE  [39;49m
+[37;41m  S "SerialKeys"(sk_id) ON UPDATE CASCADE;                                     [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  ALTER TABLE ONLY "PurchasedKeys"                                             [39;49m
+[37;41m  ADD CONSTRAINT "PurchasedKeys_purchase_id_fkey" FOREIGN KEY (purchase_id) R  [39;49m
+[37;41m  EFERENCES "Purchases"(purchase_id) ON UPDATE CASCADE;                        [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  -- Users (user_id, username, password, fullname, email, phone_number, birth  [39;49m
+[37;41m  _date, admission_date, userstate, admin, img, nif)                           [39;49m
+[37;41m  INSERT INTO "users"(id, username, password, fullname, phone_number, email,   [39;49m
+[37;41m  birth_date, admission_date, state, admin, img, nif) VALUES(100, 'janedoe1',  [39;49m
+[37;41m   'cheekybreeky', 'jane eleanor doer', 969420666, 'janedoe@gmail.com', '1988  [39;49m
+[37;41m  /11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666420666);         [39;49m
+[37;41m  INSERT INTO "users"(id, username, password, fullname, phone_number, email,   [39;49m
+[37;41m  birth_date, admission_date, state, admin, img, nif) VALUES(101, 'jenlong',   [39;49m
+[37;41m  'oblivion', 'jenny long', 911999333, 'jenny.long84@example.com', '1973/7/10  [39;49m
+[37;41m  ', '2018/2/20', 'Active', false, 'jenavatar.jpg', 666420777);                [39;49m
+[37;41m  INSERT INTO "users"(id, username, password, fullname, phone_number, email,   [39;49m
+[37;41m  birth_date, admission_date, state, admin, img, nif) VALUES(102, 'everettdot  [39;49m
+[37;41m  net', 'morrowind', 'everett adams', 969420444, 'everett.adams60@example.com  [39;49m
+[37;41m  ', '1980/3/8', '2018/1/10', 'Active', false, 'eveavatar.jpg', 666420888);    [39;49m
+[37;41m  INSERT INTO "users"(id, username, password, fullname, phone_number, email,   [39;49m
+[37;41m  birth_date, admission_date, state, admin, img, nif) VALUES(103, 'zdaroviaqu  [39;49m
+[37;41m  een', 'zdarovia', 'regina duncan', 969420555, 'regina.duncan44@example.com'  [39;49m
+[37;41m  , '1990/1/1', '2018/3/11', 'Active', false, 'regavatar.jpg', 666420999);     [39;49m
+[37;41m  INSERT INTO "users"(id, username, password, fullname, phone_number, email,   [39;49m
+[37;41m  birth_date, admission_date, state, admin, img, nif) VALUES(104, 'kentron',   [39;49m
+[37;41m  'notoriousbig', 'ken gonzalez', 969420777, 'ken.gonzalez84@example.com', '1  [39;49m
+[37;41m  994/4/4', '2018/1/18', 'Active', false, 'tedavatar.jpg', 666421000);         [39;49m
+[37;41m  INSERT INTO "users"(id, username, password, fullname, phone_number, email,   [39;49m
+[37;41m  birth_date, admission_date, state, admin, img, nif) VALUES(105, 'teddyboy',  [39;49m
+[37;41m   'yeezytaughtme', 'ted mitchell', 969420888, 'ted.mitchell70@example.com',   [39;49m
+[37;41m  '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666421111);    [39;49m
+[37;41m  INSERT INTO "users"(id, username, password, fullname, phone_number, email,   [39;49m
+[37;41m  birth_date, admission_date, state, admin, img, nif) VALUES(106, 'nottheacto  [39;49m
+[37;41m  r', 'hoffhoff', 'dustin hoffman', 969420999, 'dustin.hoffman16@example.com'  [39;49m
+[37;41m  , '1987/9/19', '2018/6/21', 'Active', false, 'dustavatar.jpg', 666421222);   [39;49m
+[37;41m  INSERT INTO "users"(id, username, password, fullname, phone_number, email,   [39;49m
+[37;41m  birth_date, admission_date, state, admin, img, nif) VALUES(107, 'desuguripp  [39;49m
+[37;41m  u', 'noided', 'michael arnold', 969420111, 'michael.arnold30@example.com',   [39;49m
+[37;41m  '1984/8/7', '2018/3/22', 'Active', false, 'micavatar.jpg', 666421333);       [39;49m
+[37;41m  INSERT INTO "users"(id, username, password, fullname, phone_number, email,   [39;49m
+[37;41m  birth_date, admission_date, state, admin, img, nif) VALUES(108, 'normac', '  [39;49m
+[37;41m  cardibandrum', 'norma cooper', 969420222, 'norma.cooper92@example.com', '19  [39;49m
+[37;41m  99/12/28', '2018/1/4', 'Active', false, 'normavatar.jpg', 666421444);        [39;49m
+[37;41m  INSERT INTO "users"(id, username, password, fullname, phone_number, email,   [39;49m
+[37;41m  birth_date, admission_date, state, admin, img, nif) VALUES(109, 'lilnina',   [39;49m
+[37;41m  'groovey', 'nina sutton', 969420333, 'nina.sutton76@example.com', '1997/10/  [39;49m
+[37;41m  9', '2018/2/3', 'Active', false, 'ninavatar.jpg', 666421555);                [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  -- Sellers (user_id, professional_email, professional_name, professional_ph  [39;49m
+[37;41m  one)                                                                         [39;49m
+[37;41m  INSERT INTO "Sellers"(user_id, professional_email, professional_name, profe  [39;49m
+[37;41m  ssional_phone) VALUES (105, 'ableton@gmail.com', 'ableton', 912345678);      [39;49m
+[37;41m  INSERT INTO "Sellers"(user_id, professional_email, professional_name, profe  [39;49m
+[37;41m  ssional_phone) VALUES (106, 'adobe@gmail.com', 'adobe', 913456789);          [39;49m
+[37;41m  INSERT INTO "Sellers"(user_id, professional_email, professional_name, profe  [39;49m
+[37;41m  ssional_phone) VALUES (107, 'microsoft@gmail.com', 'microsoft', 912543876);  [39;49m
+[37;41m  INSERT INTO "Sellers"(user_id, professional_email, professional_name, profe  [39;49m
+[37;41m  ssional_phone) VALUES (108, 'sony@gmail.com', 'sony', 913654987);            [39;49m
+[37;41m  INSERT INTO "Sellers"(user_id, professional_email, professional_name, profe  [39;49m
+[37;41m  ssional_phone) VALUES (109, 'blender@gmail.com', 'blender', 919876543);      [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  -- Products (product_id, user_id, description, release_date, operating_syst  [39;49m
+[37;41m  em, price, logo_path, name)                                                  [39;49m
+[37;41m  INSERT INTO "Products" (product_id, user_id, description, release_date, ope  [39;49m
+[37;41m  rating_system, price, logo_path, name) VALUES (200, 105, 'daw for live mixi  [39;49m
+[37;41m  ng and production', '2015/10/20', 'wml', 599, 'ableton9.jpg', 'ableton 9 li  [39;49m
+[37;41m  ve suite');                                                                  [39;49m
+[37;41m  INSERT INTO "Products" (product_id, user_id, description, release_date, ope  [39;49m
+[37;41m  rating_system, price, logo_path, name) VALUES (201, 106, 'image editing sof  [39;49m
+[37;41m  tware', '2016/2/14', 'wml', 599, 'photoshop.jpg', 'adobe photoshop');        [39;49m
+[37;41m  INSERT INTO "Products" (product_id, user_id, description, release_date, ope  [39;49m
+[37;41m  rating_system, price, logo_path, name) VALUES (202, 107, 'programming ide',  [39;49m
+[37;41m   '2018/3/12', 'w', 199, 'visualstudio.jpg', 'visual studio 2018');           [39;49m
+[37;41m  INSERT INTO "Products" (product_id, user_id, description, release_date, ope  [39;49m
+[37;41m  rating_system, price, logo_path, name) VALUES (203, 108, 'video editing sof  [39;49m
+[37;41m  tware', '2014/1/22', 'wm', 299, 'sonyvegas.jpg', 'sony vegas pro');          [39;49m
+[37;41m  INSERT INTO "Products" (product_id, user_id, description, release_date, ope  [39;49m
+[37;41m  rating_system, price, logo_path, name) VALUES (204, 109, '3d rendering and   [39;49m
+[37;41m  editing software', '2013/10/12', 'wml', 0, 'blender.jpg', 'blender');        [39;49m
+[37;41m  INSERT INTO "Products" (product_id, user_id, description, release_date, ope  [39;49m
+[37;41m  rating_system, price, logo_path, name) VALUES (205, 105, 'synthetizer plug   [39;49m
+[37;41m  in for ableton', '2017/11/21', 'wml', 29, 'massive.jpg', 'ableton massive p  [39;49m
+[37;41m  lugin');                                                                     [39;49m
+[37;41m  INSERT INTO "Products" (product_id, user_id, description, release_date, ope  [39;49m
+[37;41m  rating_system, price, logo_path, name) VALUES (206, 106, 'vector graphic de  [39;49m
+[37;41m  sign software', '2016/4/1', 'wml', 99, 'ilustrator.jpg', 'adobe ilustrator'  [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m  INSERT INTO "Products" (product_id, user_id, description, release_date, ope  [39;49m
+[37;41m  rating_system, price, logo_path, name) VALUES (207, 107, 'programming text   [39;49m
+[37;41m  editor', '2017/11/10', 'w', 0, 'visualcode.jpg', 'microsoft visual code');   [39;49m
+[37;41m  INSERT INTO "Products" (product_id, user_id, description, release_date, ope  [39;49m
+[37;41m  rating_system, price, logo_path, name) VALUES (208, 108, 'digital audio edi  [39;49m
+[37;41m  ting suite software', '2002/7/12', 'wm', 199, 'soundforge.jpg', 'sony sound  [39;49m
+[37;41m   forge');                                                                    [39;49m
+[37;41m  INSERT INTO "Products" (product_id, user_id, description, release_date, ope  [39;49m
+[37;41m  rating_system, price, logo_path, name) VALUES (209, 109, 'dynamic mixing de  [39;49m
+[37;41m  vice', '2018/10/9', 'wml', 99, 'channelblender.jpg', 'channel blender');     [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  -- Product Images (product_id, img_path)                                     [39;49m
+[37;41m  INSERT INTO "ProductImages"(product_id, img_path) VALUES (200, 'abletonimg1  [39;49m
+[37;41m  .jpg');                                                                      [39;49m
+[37;41m  INSERT INTO "ProductImages"(product_id, img_path) VALUES (201, 'photoshopim  [39;49m
+[37;41m  g1.jpg');                                                                    [39;49m
+[37;41m  INSERT INTO "ProductImages"(product_id, img_path) VALUES (202, 'visualstudi  [39;49m
+[37;41m  oimg1.jpg');                                                                 [39;49m
+[37;41m  INSERT INTO "ProductImages"(product_id, img_path) VALUES (203, 'sonyvegasim  [39;49m
+[37;41m  g1.jpg');                                                                    [39;49m
+[37;41m  INSERT INTO "ProductImages"(product_id, img_path) VALUES (204, 'blenderimg1  [39;49m
+[37;41m  .jpg');                                                                      [39;49m
+[37;41m  INSERT INTO "ProductImages"(product_id, img_path) VALUES (205, 'massiveimg1  [39;49m
+[37;41m  .jpg');                                                                      [39;49m
+[37;41m  INSERT INTO "ProductImages"(product_id, img_path) VALUES (206, 'ilustratori  [39;49m
+[37;41m  mg1.jpg');                                                                   [39;49m
+[37;41m  INSERT INTO "ProductImages"(product_id, img_path) VALUES (207, 'visualcodei  [39;49m
+[37;41m  mg1.jpg');                                                                   [39;49m
+[37;41m  INSERT INTO "ProductImages"(product_id, img_path) VALUES (208, 'soundforgei  [39;49m
+[37;41m  mg1.jpg');                                                                   [39;49m
+[37;41m  INSERT INTO "ProductImages"(product_id, img_path) VALUES (209, 'channelblen  [39;49m
+[37;41m  derimg1.jpg');                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  -- Tags (product_id, tag_name)                                               [39;49m
+[37;41m  INSERT INTO "Tags"(product_id, tag_name) VALUES (200, 'daw');                [39;49m
+[37;41m  INSERT INTO "Tags"(product_id, tag_name) VALUES (201, 'image');              [39;49m
+[37;41m  INSERT INTO "Tags"(product_id, tag_name) VALUES (202, 'programming');        [39;49m
+[37;41m  INSERT INTO "Tags"(product_id, tag_name) VALUES (203, 'video');              [39;49m
+[37;41m  INSERT INTO "Tags"(product_id, tag_name) VALUES (204, '3d');                 [39;49m
+[37;41m  INSERT INTO "Tags"(product_id, tag_name) VALUES (205, 'audio');              [39;49m
+[37;41m  INSERT INTO "Tags"(product_id, tag_name) VALUES (206, 'design');             [39;49m
+[37;41m  INSERT INTO "Tags"(product_id, tag_name) VALUES (207, 'text');               [39;49m
+[37;41m  INSERT INTO "Tags"(product_id, tag_name) VALUES (208, 'audio');              [39;49m
+[37;41m  INSERT INTO "Tags"(product_id, tag_name) VALUES (209, '3d');                 [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  -- SerialKeys (sk_id, user_id, product_id, code)                             [39;49m
+[37;41m  INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (500, 105  [39;49m
+[37;41m  , 200, '1J6B5JHG7I');                                                        [39;49m
+[37;41m  INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (501, 106  [39;49m
+[37;41m  , 201, '0FIAJ5N6B3');                                                        [39;49m
+[37;41m  INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (502, 107  [39;49m
+[37;41m  , 202, '09FUHRB5N6');                                                        [39;49m
+[37;41m  INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (503, 108  [39;49m
+[37;41m  , 203, 'S0HNS4K6HS');                                                        [39;49m
+[37;41m  INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (504, 109  [39;49m
+[37;41m  , 204, 'OFCJAGHI54');                                                        [39;49m
+[37;41m  INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (505, 105  [39;49m
+[37;41m  , 205, '0SAIDUFRKF');                                                        [39;49m
+[37;41m  INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (506, 106  [39;49m
+[37;41m  , 206, 'SGHUDIFOG3');                                                        [39;49m
+[37;41m  INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (507, 107  [39;49m
+[37;41m  , 207, '5URJEDKHA4');                                                        [39;49m
+[37;41m  INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (508, 108  [39;49m
+[37;41m  , 208, '38HUEDWXJH');                                                        [39;49m
+[37;41m  INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (509, 109  [39;49m
+[37;41m  , 209, 'IODIGHOI2N');                                                        [39;49m
+[37;41m  INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (510, 109  [39;49m
+[37;41m  , 209, 'IODIGHOP2N');                                                        [39;49m
+[37;41m                                                                               [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  -- Reviews (sk_id, rating, review_date, comment)                             [39;49m
+[37;41m  INSERT INTO "Reviews"(sk_id, rating, review_date, comment) VALUES (500, 4,   [39;49m
+[37;41m  '2018/3/1', 'very good product although a tad expensive');                   [39;49m
+[37;41m  INSERT INTO "Reviews"(sk_id, rating, review_date, comment) VALUES (501, 5,   [39;49m
+[37;41m  '2017/4/12', 'i am amazed at this product it is very nice');                 [39;49m
+[37;41m  INSERT INTO "Reviews"(sk_id, rating, review_date, comment) VALUES (502, 5,   [39;49m
+[37;41m  '2018/10/25', 'this is an incredible piece of software');                    [39;49m
+[37;41m  INSERT INTO "Reviews"(sk_id, rating, review_date, comment) VALUES (503, 4,   [39;49m
+[37;41m  '2017/6/15', 'the product fulfills its purpose with precision');             [39;49m
+[37;41m  INSERT INTO "Reviews"(sk_id, rating, review_date, comment) VALUES (504, 3,   [39;49m
+[37;41m  '2018/2/5', 'hey thats pretty good');                                        [39;49m
+[37;41m  INSERT INTO "Reviews"(sk_id, rating, review_date, comment) VALUES (505, 5,   [39;49m
+[37;41m  '2018/8/14', 'i am astonished at how efficient this product is');            [39;49m
+[37;41m  INSERT INTO "Reviews"(sk_id, rating, review_date, comment) VALUES (506, 2,   [39;49m
+[37;41m  '2018/4/22', 'way too expensive for the amount of features it comes with');  [39;49m
+[37;41m  INSERT INTO "Reviews"(sk_id, rating, review_date, comment) VALUES (507, 4,   [39;49m
+[37;41m  '2017/10/30', 'way too cheap for the amount of features it comes with');     [39;49m
+[37;41m  INSERT INTO "Reviews"(sk_id, rating, review_date, comment) VALUES (508, 1,   [39;49m
+[37;41m  '2016/7/6', 'absolutely atrocious, barely works, cant even install it');     [39;49m
+[37;41m  INSERT INTO "Reviews"(sk_id, rating, review_date, comment) VALUES (509, 3,   [39;49m
+[37;41m  '2018/12/14', 'its nice but there are way better options out there');        [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  -- Discounts (product_id, discounted_rice, begin_date, end_date)             [39;49m
+[37;41m  INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date)  [39;49m
+[37;41m   VALUES (200, 20, '2018/5/10', '2018/5/20');                                 [39;49m
+[37;41m  INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date)  [39;49m
+[37;41m   VALUES (201, 20, '2018/5/10', '2018/5/20');                                 [39;49m
+[37;41m  INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date)  [39;49m
+[37;41m   VALUES (202, 30, '2018/5/10', '2018/5/20');                                 [39;49m
+[37;41m  INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date)  [39;49m
+[37;41m   VALUES (203, 20, '2018/12/1', '2019/1/4');                                  [39;49m
+[37;41m  INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date)  [39;49m
+[37;41m   VALUES (204, 15, '2018/4/1', '2018/4/30');                                  [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  -- Purchases (purchase_id, final_price, user_id, sk_id, paid_date, paymentm  [39;49m
+[37;41m  ethod, details)                                                              [39;49m
+[37;41m  INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payme  [39;49m
+[37;41m  nt_method, details) VALUES (800, 579, 100, '2018/4/21', 'Credit Card', 'Pur  [39;49m
+[37;41m  chase successful');                                                          [39;49m
+[37;41m  INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payme  [39;49m
+[37;41m  nt_method, details) VALUES (801, 579, 101, '2018/6/12', 'Credit Card', 'Pur  [39;49m
+[37;41m  chase successful');                                                          [39;49m
+[37;41m  INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payme  [39;49m
+[37;41m  nt_method, details) VALUES (802, 169, 102, '2018/5/2', 'PayPal', 'Minor set  [39;49m
+[37;41m  backs contacting seller');                                                   [39;49m
+[37;41m  INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payme  [39;49m
+[37;41m  nt_method, details) VALUES (803, 279, 103, '2018/6/23', 'Banking Transfer',  [39;49m
+[37;41m   'Purchase successful');                                                     [39;49m
+[37;41m  INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payme  [39;49m
+[37;41m  nt_method, details) VALUES (804, 14, 104, '2018/3/31', 'Banking Transfer',   [39;49m
+[37;41m  'Minor setbacks contacting seller');                                         [39;49m
+[37;41m  INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payme  [39;49m
+[37;41m  nt_method, details) VALUES (805, 29, 100, '2018/1/26', 'Credit Card', 'Purc  [39;49m
+[37;41m  hase sucessful');                                                            [39;49m
+[37;41m  INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payme  [39;49m
+[37;41m  nt_method, details) VALUES (806, 99, 101, '2018/8/1', 'PayPal', 'Purchase s  [39;49m
+[37;41m  uccessful');                                                                 [39;49m
+[37;41m  INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payme  [39;49m
+[37;41m  nt_method, details) VALUES (807, 579, 102, '2018/11/4', 'PayPal', 'Purchase  [39;49m
+[37;41m   successful');                                                               [39;49m
+[37;41m  INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payme  [39;49m
+[37;41m  nt_method, details) VALUES (808, 199, 103, '2018/3/10', 'PayPal', 'Purchase  [39;49m
+[37;41m   successful');                                                               [39;49m
+[37;41m  INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payme  [39;49m
+[37;41m  nt_method, details) VALUES (809, 99, 104, '2018/9/2', 'Credit Card', 'Purch  [39;49m
+[37;41m  ase successful');                                                            [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  -- Wishlists (user_id, product_id)                                           [39;49m
+[37;41m  INSERT INTO "Wishlists"(user_id, product_id) VALUES (100, 209);              [39;49m
+[37;41m  INSERT INTO "Wishlists"(user_id, product_id) VALUES (101, 208);              [39;49m
+[37;41m  INSERT INTO "Wishlists"(user_id, product_id) VALUES (102, 207);              [39;49m
+[37;41m  INSERT INTO "Wishlists"(user_id, product_id) VALUES (103, 206);              [39;49m
+[37;41m  INSERT INTO "Wishlists"(user_id, product_id) VALUES (104, 205);              [39;49m
+[37;41m  INSERT INTO "Wishlists"(user_id, product_id) VALUES (105, 204);              [39;49m
+[37;41m  INSERT INTO "Wishlists"(user_id, product_id) VALUES (106, 203);              [39;49m
+[37;41m  INSERT INTO "Wishlists"(user_id, product_id) VALUES (107, 202);              [39;49m
+[37;41m  INSERT INTO "Wishlists"(user_id, product_id) VALUES (108, 201);              [39;49m
+[37;41m  INSERT INTO "Wishlists"(user_id, product_id) VALUES (109, 200);              [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  -- PurchasedKeys                                                             [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (500, 800,32   [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m  INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (501, 801, 53  [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m  INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (502, 802, 66  [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m  INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (503, 803,77   [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m  INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (504, 804, 10  [39;49m
+[37;41m  0);                                                                          [39;49m
+[37;41m  INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (505, 805,52   [39;49m
+[37;41m  );                                                                           [39;49m
+[37;41m                                                                               [39;49m
+[37;41m  )                                                                            [39;49m
+[37;41m                                                                               [39;49m
+
+[33mIn Connection.php line 507:[39m
+[37;41m                                                                               [39;49m
+[37;41m  SQLSTATE[42703]: Undefined column: 7 ERROR:  column "user_id" referenced in  [39;49m
+[37;41m   foreign key constraint does not exist                                       [39;49m
+[37;41m                                                                               [39;49m
+
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m [31m✘[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [43m[34m[30m  master ● [49m[33m[39m [K[?1h=[?2004hphp artisan db:seed[K[?1l>[?2004l
+]2;php artisan db:seed]1;phpPHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pdo_pgsql.dll' - /usr/lib/php/20160303/php_pdo_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303/php_pgsql.dll' - /usr/lib/php/20160303/php_pgsql.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+[32mDatabase seeded![39m
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [43m[34m[30m  master ● [49m[33m[39m [K[?1h=[?2004hggit t status[?1l>[?2004l
+]2;git status]1;gitOn branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes i
