@@ -674,4 +674,98 @@ PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/20160303
 Your branch is up-to-date with 'origin/master'.
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes i
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   app/Http/Controllers/Auth/LoginController.php[m
+	[31mmodified:   app/Http/Controllers/Auth/RegisterController.php[m
+	[31mmodified:   resources/sql/seed.sql[m
+	[31mmodified:   resources/views/auth/login.blade.php[m
+	[31mmodified:   resources/views/auth/register.blade.php[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mresources/views/auth/register(prof).blade.php[m
+	[31mtypescript[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [43m[34m[30m  master ● [49m[33m[39m [K[?1h=[?2004hggit add *[?1l>[?2004l
+]2;git add *]1;gitThe following paths are ignored by one of your .gitignore files:
+vendor
+Use -f if you really want to add them.
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m [31m✘[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [43m[34m[30m  master ✚ [49m[33m[39m [K[?1h=[?2004hggit commit -m " [K"[K[A[79C"[K[1B[K[A[78C" " " " " " " " " " " g" " [1C ggit pull[?1l>[?2004l[1B]2;git pull]1;gitAlready up-to-date.
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [43m[34m[30m  master ✚ [49m[33m[39m [K[?1h=[?2004hggit commit -m ""e" [K[A[79Cm" " t"e"r"r"a" "d"e" "c"e"g"o"s" "q"u"e"m" "t"e"m" "o"l"h"o" "e" "r"e"i"[?1l>[?2004l
+]2;git commit -m "em terra de cegos quem tem olho e rei"]1;git[master c29a1da] em terra de cegos quem tem olho e rei
+ 7 files changed, 850 insertions(+), 77 deletions(-)
+ copy resources/views/auth/{register.blade.php => register(prof).blade.php} (100%)
+ rewrite resources/views/auth/register.blade.php (97%)
+ create mode 100644 typescript
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [42m[34m[30m  master [49m[32m[39m [K[?1h=[?2004hggit push[?1l>[?2004l
+]2;git push]1;gitwarning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': nunocr
+Password for 'https://nunocr@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/jotadaxter/lbaw1744/'
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m [31m✘[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [43m[34m[30m  master ● [49m[33m[39m [K[?1h=[?2004hggit push[?1l>[?2004l
+]2;git push]1;gitwarning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': nunocr
+Password for 'https://nunocr@github.com': 
+Counting objects: 16, done.
+Delta compression using up to 4 threads.
+Compressing objects:   6% (1/15)   Compressing objects:  13% (2/15)   Compressing objects:  20% (3/15)   Compressing objects:  26% (4/15)   Compressing objects:  33% (5/15)   Compressing objects:  40% (6/15)   Compressing objects:  46% (7/15)   Compressing objects:  53% (8/15)   Compressing objects:  60% (9/15)   Compressing objects:  66% (10/15)   Compressing objects:  73% (11/15)   Compressing objects:  80% (12/15)   Compressing objects:  86% (13/15)   Compressing objects:  93% (14/15)   Compressing objects: 100% (15/15)   Compressing objects: 100% (15/15), done.
+Writing objects:   6% (1/16)   Writing objects:  12% (2/16)   Writing objects:  18% (3/16)   Writing objects:  25% (4/16)   Writing objects:  31% (5/16)   Writing objects:  37% (6/16)   Writing objects:  43% (7/16)   Writing objects:  50% (8/16)   Writing objects:  56% (9/16)   Writing objects:  62% (10/16)   Writing objects:  68% (11/16)   Writing objects:  75% (12/16)   Writing objects:  81% (13/16)   Writing objects:  87% (14/16)   Writing objects:  93% (15/16)   Writing objects: 100% (16/16)   Writing objects: 100% (16/16), 11.18 KiB | 0 bytes/s, done.
+Total 16 (delta 9), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/9)   [Kremote: Resolving deltas:  11% (1/9)   [Kremote: Resolving deltas:  22% (2/9)   [Kremote: Resolving deltas:  33% (3/9)   [Kremote: Resolving deltas:  44% (4/9)   [Kremote: Resolving deltas:  55% (5/9)   [Kremote: Resolving deltas:  66% (6/9)   [Kremote: Resolving deltas:  77% (7/9)   [Kremote: Resolving deltas:  88% (8/9)   [Kremote: Resolving deltas: 100% (9/9)   [Kremote: Resolving deltas: 100% (9/9), completed with 9 local objects.[K
+To https://github.com/jotadaxter/lbaw1744/
+   07ea59a..c29a1da  master -> master
+[1m[7m%[27m[1m[0m                                                                                ]2;user@user-SATELLITE-L50-B: ~/Desktop/lbaw1744]1;..ktop/lbaw1744[0m[27m[24m[J[39m[0m[49m[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [43m[34m[30m  master ● [49m[33m[39m [K[?1h=[?2004h[H[2J[0m[27m[24m[J[39m[0m[49m[40m[39m user@user-SATELLITE-L50-B [44m[30m[30m ~/Desktop/lbaw1744 [43m[34m[30m  master ● [49m[33m[39m [Kggit status[?1l>[?2004l
+]2;git status]1;gitOn branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   typescript[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[
