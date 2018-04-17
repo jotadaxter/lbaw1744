@@ -1,16 +1,22 @@
-DROP TYPE IF EXISTS paymentmethod CASCADE;
 DROP TYPE IF EXISTS userstate CASCADE;
-DROP TABLE IF EXISTS Discounts CASCADE;
-DROP TABLE IF EXISTS ProductImages CASCADE;
+DROP TABLE IF EXISTS Users CASCADE;
+DROP TABLE IF EXISTS Sellers CASCADE;
 DROP TABLE IF EXISTS Products CASCADE;
+DROP TYPE IF EXISTS paymentmethod CASCADE;
+DROP TABLE IF EXISTS SerialKeys CASCADE;
+
+DROP TABLE IF EXISTS Discounts CASCADE;
+
 DROP TABLE IF EXISTS Purchases CASCADE;
 DROP TABLE IF EXISTS Reviews CASCADE;
-DROP TABLE IF EXISTS Sellers CASCADE;
-DROP TABLE IF EXISTS SerialKeys CASCADE;
+
 DROP TABLE IF EXISTS Tags CASCADE;
-DROP TABLE IF EXISTS users CASCADE;
+
 DROP TABLE IF EXISTS PurchasedKeys CASCADE;
 DROP TABLE IF EXISTS Wishlists CASCADE;
+
+DROP TABLE IF EXISTS ProductImages CASCADE;
+
 
 CREATE TYPE paymentmethod AS ENUM (
     'Credit Card',
@@ -97,7 +103,7 @@ CREATE TABLE "Tags" (
 );
 
 
-CREATE TABLE "users" (
+CREATE TABLE "Users" (
     id SERIAL NOT NULL,
     username text NOT NULL,
     password text NOT NULL,
@@ -172,15 +178,15 @@ ALTER TABLE ONLY "Tags"
     ADD CONSTRAINT "Tags_pkey" PRIMARY KEY (product_id, tag_name);
 
 
-ALTER TABLE ONLY "users"
+ALTER TABLE ONLY "Users"
     ADD CONSTRAINT "Users_email_key" UNIQUE (email);
 
 
-ALTER TABLE ONLY "users"
+ALTER TABLE ONLY "Users"
     ADD CONSTRAINT "Users_pkey" PRIMARY KEY (id);
 
 
-ALTER TABLE ONLY "users"
+ALTER TABLE ONLY "Users"
     ADD CONSTRAINT "Users_username_key" UNIQUE (username);
 
 
@@ -205,7 +211,7 @@ ALTER TABLE ONLY "Products"
 
 
 ALTER TABLE ONLY "Purchases"
-    ADD CONSTRAINT "Purchases_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "users"(id) ON UPDATE CASCADE;
+    ADD CONSTRAINT "Purchases_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "Reviews"
@@ -213,11 +219,11 @@ ALTER TABLE ONLY "Reviews"
 
 
 ALTER TABLE ONLY "Sellers"
-    ADD CONSTRAINT "Sellers_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "users"(id) ON UPDATE CASCADE;
+    ADD CONSTRAINT "Sellers_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "SerialKeys"
-    ADD CONSTRAINT "SerialKeys_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "users"(id) ON UPDATE CASCADE;
+    ADD CONSTRAINT "SerialKeys_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "SerialKeys"
@@ -233,7 +239,7 @@ ALTER TABLE ONLY "Wishlists"
 
 
 ALTER TABLE ONLY "Wishlists"
-    ADD CONSTRAINT "Wishlists_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "users"(id) ON UPDATE CASCADE;
+    ADD CONSTRAINT "Wishlists_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "PurchasedKeys"
@@ -243,18 +249,29 @@ ALTER TABLE ONLY "PurchasedKeys"
 ALTER TABLE ONLY "PurchasedKeys"
 ADD CONSTRAINT "PurchasedKeys_purchase_id_fkey" FOREIGN KEY (purchase_id) REFERENCES "Purchases"(purchase_id) ON UPDATE CASCADE;
 
+--deletes
+DELETE FROM "Users";
+DELETE FROM "Sellers";
+DELETE FROM "Products";
+DELETE FROM "Discounts";
+DELETE FROM "Purchases";
+DELETE FROM "Reviews";
+DELETE FROM "Wishlists";
+DELETE FROM "ProductImages";
+DELETE FROM "Tags";
+DELETE FROM "SerialKeys";
 
--- Users (user_id, username, password, fullname, email, phone_number, birth_date, admission_date, userstate, admin, img, nif)
-INSERT INTO "users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(100, 'janedoe1', 'cheekybreeky', 'jane eleanor doer', 969420666, 'janedoe@gmail.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666420666);
-INSERT INTO "users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(101, 'jenlong', 'oblivion', 'jenny long', 911999333, 'jenny.long84@example.com', '1973/7/10', '2018/2/20', 'Active', false, 'jenavatar.jpg', 666420777);
-INSERT INTO "users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(102, 'everettdotnet', 'morrowind', 'everett adams', 969420444, 'everett.adams60@example.com', '1980/3/8', '2018/1/10', 'Active', false, 'eveavatar.jpg', 666420888);
-INSERT INTO "users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(103, 'zdaroviaqueen', 'zdarovia', 'regina duncan', 969420555, 'regina.duncan44@example.com', '1990/1/1', '2018/3/11', 'Active', false, 'regavatar.jpg', 666420999);
-INSERT INTO "users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(104, 'kentron', 'notoriousbig', 'ken gonzalez', 969420777, 'ken.gonzalez84@example.com', '1994/4/4', '2018/1/18', 'Active', false, 'tedavatar.jpg', 666421000);
-INSERT INTO "users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(105, 'teddyboy', 'yeezytaughtme', 'ted mitchell', 969420888, 'ted.mitchell70@example.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666421111);
-INSERT INTO "users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(106, 'nottheactor', 'hoffhoff', 'dustin hoffman', 969420999, 'dustin.hoffman16@example.com', '1987/9/19', '2018/6/21', 'Active', false, 'dustavatar.jpg', 666421222);
-INSERT INTO "users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(107, 'desugurippu', 'noided', 'michael arnold', 969420111, 'michael.arnold30@example.com', '1984/8/7', '2018/3/22', 'Active', false, 'micavatar.jpg', 666421333);
-INSERT INTO "users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(108, 'normac', 'cardibandrum', 'norma cooper', 969420222, 'norma.cooper92@example.com', '1999/12/28', '2018/1/4', 'Active', false, 'normavatar.jpg', 666421444);
-INSERT INTO "users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(109, 'lilnina', 'groovey', 'nina sutton', 969420333, 'nina.sutton76@example.com', '1997/10/9', '2018/2/3', 'Active', false, 'ninavatar.jpg', 666421555);
+-- Users (user_id, username, password, fullname, email, phone_number, birth_date, admission_date, Userstate, admin, img, nif)
+INSERT INTO "Users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(100, 'janedoe1', 'cheekybreeky', 'jane eleanor doer', 969420666, 'janedoe@gmail.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666420666);
+INSERT INTO "Users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(101, 'jenlong', 'oblivion', 'jenny long', 911999333, 'jenny.long84@example.com', '1973/7/10', '2018/2/20', 'Active', false, 'jenavatar.jpg', 666420777);
+INSERT INTO "Users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(102, 'everettdotnet', 'morrowind', 'everett adams', 969420444, 'everett.adams60@example.com', '1980/3/8', '2018/1/10', 'Active', false, 'eveavatar.jpg', 666420888);
+INSERT INTO "Users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(103, 'zdaroviaqueen', 'zdarovia', 'regina duncan', 969420555, 'regina.duncan44@example.com', '1990/1/1', '2018/3/11', 'Active', false, 'regavatar.jpg', 666420999);
+INSERT INTO "Users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(104, 'kentron', 'notoriousbig', 'ken gonzalez', 969420777, 'ken.gonzalez84@example.com', '1994/4/4', '2018/1/18', 'Active', false, 'tedavatar.jpg', 666421000);
+INSERT INTO "Users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(105, 'teddyboy', 'yeezytaughtme', 'ted mitchell', 969420888, 'ted.mitchell70@example.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666421111);
+INSERT INTO "Users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(106, 'nottheactor', 'hoffhoff', 'dustin hoffman', 969420999, 'dustin.hoffman16@example.com', '1987/9/19', '2018/6/21', 'Active', false, 'dustavatar.jpg', 666421222);
+INSERT INTO "Users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(107, 'desugurippu', 'noided', 'michael arnold', 969420111, 'michael.arnold30@example.com', '1984/8/7', '2018/3/22', 'Active', false, 'micavatar.jpg', 666421333);
+INSERT INTO "Users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(108, 'normac', 'cardibandrum', 'norma cooper', 969420222, 'norma.cooper92@example.com', '1999/12/28', '2018/1/4', 'Active', false, 'normavatar.jpg', 666421444);
+INSERT INTO "Users"(id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(109, 'lilnina', 'groovey', 'nina sutton', 969420333, 'nina.sutton76@example.com', '1997/10/9', '2018/2/3', 'Active', false, 'ninavatar.jpg', 666421555);
 
 -- Sellers (user_id, professional_email, professional_name, professional_phone)
 INSERT INTO "Sellers"(user_id, professional_email, professional_name, professional_phone) VALUES (105, 'ableton@gmail.com', 'ableton', 912345678);
