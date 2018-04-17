@@ -84,5 +84,3 @@
 <div class="row visible-xs">
     <br><br><br>
 </div>
-
-@yield('content')

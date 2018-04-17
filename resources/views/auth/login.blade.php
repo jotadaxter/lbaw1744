@@ -1,4 +1,4 @@
-@extends('layouts.page');
+@extends('layouts.page_unregisted');
 
 @section('content')
 <div class="container">

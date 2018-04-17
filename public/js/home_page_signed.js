@@ -1,8 +1,11 @@
 document.getElementById("signOut_btn").addEventListener("click", function(){
-    document.location.href = '/lbaw1744/home.html';
+    document.location.href = '/logout';
 });
 document.getElementById("search_btn").addEventListener("click", function(){
     document.location.href = '/lbaw1744/product_search.html';
+});
+document.getElementById("view_profile").addEventListener("click", function(){
+    document.location.href = '/lbaw1744/profile.html';
 });
 document.getElementById("view_profile").addEventListener("click", function(){
     document.location.href = '/lbaw1744/profile.html';

@@ -17,11 +17,4 @@ class Product extends Model
   public function user() {
     return $this->belongsTo('App\User');
   }
-
-  /**
-   * Items inside this card
-   */
-  public function items() {
-    return $this->hasMany('App\Item');
-  }
 }
