@@ -24,8 +24,8 @@
 /* Background Style */
 body {
     /*background-color: var(--color-bg-main);*/
-    background: url(../res/images/icons_bg.png) right bottom no-repeat,
-    url(../res/images/fore-grid.png) bottom no-repeat,
+    background: url(../icons_bg.png) right bottom no-repeat,
+    url(../fore-grid.png) bottom no-repeat,
     linear-gradient(to bottom, var(--color-bg-main-top) 0%, var(--color-bg-main-mid) 80%, var(--color-bg-main-bot) 100%); /* Standard syntax (must be last) */
 
     background-size:17.5%,100% 20%, auto;

@@ -21,6 +21,12 @@ Route::get('products', 'ProductsController@show');
 //Product
 Route::get('product/{product_id}', 'ProductController@show');
 
+//Profile
+Route::get('profile', 'ProfileController@showRegisted');
+Route::get('profile/{user_id}', 'ProfileController@show');
+Route::get('profile/{user_id}/edit', 'ProfileController@showEdit')->name('edit');
+Route::post('profile/{user_id}/edit', 'ProfileController@update');
+
 // Authentication
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');

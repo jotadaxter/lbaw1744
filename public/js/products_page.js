@@ -1,37 +1,37 @@
 $(document).ready(function () {
   var data, grid, dialog;
   data = [
-    { 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'Dropbox',
-		'Tags': '<img src="res/images/windows_logo.png" width="30">',
-		'Rate': '<img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30">' },
+    { 'ID': '<img src="/product.png" width="30">', 'Name': 'Dropbox',
+		'Tags': '<img src="/windows_logo.png" width="30">',
+		'Rate': '<img src="star_full.png" width="30"> <img src="/star_full.png" width="30">' },
 		
-    { 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'Abode Reader',
-		'Tags': '<img src="res/images/windows_logo.png" width="30"> <img src="res/images/ios_logo.png" width="30">' ,
-		'Rate': '<img src="res/images/star_full.png" width="30">'},
+    { 'ID': '<img src="/product.png" width="30">', 'Name': 'Abode Reader',
+		'Tags': '<img src="/windows_logo.png" width="30"> <img src="/ios_logo.png" width="30">' ,
+		'Rate': '<img src="/star_full.png" width="30">'},
 		
-    { 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'Windows', 
-		'Tags': '<img src="res/images/windows_logo.png" width="30"> <img src="res/images/linux_logo.png" width="30">' , 
-		'Rate': '<img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30">'},
+    { 'ID': '<img src="/product.png" width="30">', 'Name': 'Windows', 
+		'Tags': '<img src="/windows_logo.png" width="30"> <img src="/linux_logo.png" width="30">' , 
+		'Rate': '<img src="/star_full.png" width="30"> <img src="/star_full.png" width="30"> <img src="/star_full.png" width="30"> <img src="/star_full.png" width="30"> <img src="/star_full.png" width="30">'},
 		
-    { 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'Linux', 
-		'Tags': '<img src="res/images/windows_logo.png" width="30"> <img src="res/images/linux_logo.png" width="30"> <img src="res/images/ios_logo.png" width="30">' , 
-		'Rate': '<img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30">'},
+    { 'ID': '<img src="/product.png" width="30">', 'Name': 'Linux', 
+		'Tags': '<img src="/windows_logo.png" width="30"> <img src="/linux_logo.png" width="30"> <img src="/ios_logo.png" width="30">' , 
+		'Rate': '<img src="/star_full.png" width="30"> <img src="/star_full.png" width="30">'},
 		
-    { 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'Ubunto', 
-		'Tags': '<img src="res/images/linux_logo.png" width="30">' , 
-		'Rate': '<img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30">'},
+    { 'ID': '<img src="/product.png" width="30">', 'Name': 'Ubunto', 
+		'Tags': '<img src="/linux_logo.png" width="30">' , 
+		'Rate': '<img src="/star_full.png" width="30"> <img src="/star_full.png" width="30"> <img src="/star_full.png" width="30"> <img src="/star_full.png" width="30">'},
 		
-    { 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'IOS', 
-		'Tags': '<img src="res/images/windows_logo.png" width="30">' , 
-		'Rate': '<img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30">'},
+    { 'ID': '<img src="/product.png" width="30">', 'Name': 'IOS', 
+		'Tags': '<img src="/windows_logo.png" width="30">' , 
+		'Rate': '<img src="/star_full.png" width="30"> <img src="/star_full.png" width="30">'},
 		
-	{ 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'IOS', 
-		'Tags': '<img src="res/images/windows_logo.png" width="30">' , 
-		'Rate': '<img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30">'},
+	{ 'ID': '<img src="/product.png" width="30">', 'Name': 'IOS', 
+		'Tags': '<img src="/windows_logo.png" width="30">' , 
+		'Rate': '<img src="/star_full.png" width="30"> <img src="/star_full.png" width="30">'},
 		
-	{ 'ID': '<img src="res/images/product.png" width="30">', 'Name': 'IOS', 
-		'Tags': '<img src="res/images/windows_logo.png" width="30">' , 
-		'Rate': '<img src="res/images/star_full.png" width="30"> <img src="res/images/star_full.png" width="30">'}
+	{ 'ID': '<img src="/product.png" width="30">', 'Name': 'IOS', 
+		'Tags': '<img src="/windows_logo.png" width="30">' , 
+		'Rate': '<img src="/star_full.png" width="30"> <img src="/star_full.png" width="30">'}
   ];
   grid = $('#grid').grid({
     dataSource: data,

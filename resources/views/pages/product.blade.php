@@ -1,4 +1,4 @@
-@extends('layouts.page_unregisted')
+@extends('layouts.page_registed')
 
 @section('title', $product->name)
 

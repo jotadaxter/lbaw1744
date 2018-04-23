@@ -1,6 +1,4 @@
-document.getElementById("signIn_btn").addEventListener("click", function(){
-    document.location.href = 'login';
-});
+
 document.getElementById("register_btn").addEventListener("click", function(){
     document.location.href = 'register';
 });

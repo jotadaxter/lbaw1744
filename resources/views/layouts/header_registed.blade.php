@@ -13,6 +13,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
     <link href="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/product_page.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,17 +40,19 @@
 
         <div class="col-md-1 col-lg-1 "  style="margin-top: 15px">
             <!-- Notification Icon -->
-            <img id="bell" class="img-rounded img-thumbnail" src="res/icons/bell.png" alt="bell_icon">
+            <img id="bell" class="img-rounded img-thumbnail" src="/bell.png" alt="bell_icon">
         </div>
         <div class="col-md-1 col-lg-1 "  style="margin-top: 15px">
             <!-- Cart Icon -->
-            <img id="cart2" class="img-rounded img-thumbnail" src="res/icons/cart.png" alt="cart_icon">
+            <img id="cart2" class="img-rounded img-thumbnail" src="/cart.png" alt="cart_icon">
         </div>
         <div class="col-md-2 col-lg-2"  style="margin-top: 20px">
             <!-- User Dropbox Menu -->
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="usernameOptions dropdown-toggle" data-toggle="dropdown">janedoe69<span class="caret"></span></a>
+                    <a href="#" class="usernameOptions dropdown-toggle" data-toggle="dropdown">
+                        <?=auth()->user()->username;?>
+                    <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a id="view_profile" href="#">View Profile <span class="glyphicon glyphicon-user pull-right"></span></a></li>
                         <li class="divider"></li>
@@ -59,14 +62,14 @@
                         <li class="divider"></li>
                         <li><a href="#">Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
                         <li class="divider"></li>
-                        <li><a id="signOut_btn" href="#">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                        <li><a id="signOut_btn" href="{{ url('/logout') }}">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
                     </ul>
                 </li>
             </ul>
         </div>
         <div class="col-md-1 col-lg-1 "  style="margin-top: 10px;">
             <!-- Profile Picture -->
-            <img id="profile_picture" class="img-rounded img-thumbnail" src="res/images/profile_picture.png" alt="profile_picture">
+            <img id="profile_picture" class="img-rounded img-thumbnail" src="/profile_picture.png" alt="profile_picture">
         </div>
 
     </div>

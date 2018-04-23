@@ -40,9 +40,9 @@
         <div class="row shift-down">
             <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1 btn-group">
                 <!-- Cart Icon -->
-                <button type="button" id="cart_btn" class="cart_btn btn"><img id="cart" class="cart_not_signed img-rounded thumbnail" src="res/icons/cart.png" alt="cart_icon"></button>
+                <button type="button" id="cart_btn" class="cart_btn btn"><img id="cart" class="cart_not_signed img-rounded thumbnail" src="/public/cart.png" alt="cart_icon"></button>
                 <button type="button" id="register_btn" class="register_btn btn">Register</button>
-                <button type="submit" id="signIn_btn" class="signIn_btn btn" action="url('/logout')">Sign In</button>
+                <a class="register_btn btn button" href="{{url('/login')}}"" id="signIn_btn">Login</a></button>
             </div>
         </div>
     </div>
