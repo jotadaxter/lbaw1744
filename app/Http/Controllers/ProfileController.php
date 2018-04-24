@@ -37,11 +37,18 @@ class ProfileController extends Controller
 
     public function update(Request $request, $user_id)
     {
+       $validatedData = $request->validate([
+            'username' => 'string|max:16',
+            'fullname' => 'string|max:255',
+            'email' => 'string|email|max:255',
+            'password' => 'nullable|string|min:6|confirmed',
+            'birth_date' =>'nullable|date',
+         ]);
         $user = User::find($user_id);
         $user->username = $request->input('username');
         $user->fullname = $request->input('fullname');
         if($request->input('password') != "")
-            $user->password = $request->input('password');
+            $user->password = bcrypt($request->input('password'));
         $user->email = $request->input('email');
         $user->phone_number = $request->input('phone_number');
         $user->save();

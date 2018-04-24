@@ -3,7 +3,7 @@ $(document).ready(function () {
   data = [
     { 'ID': '<img src="/product.png" width="30">', 'Name': 'Dropbox',
 		'Tags': '<img src="/windows_logo.png" width="30">',
-		'Rate': '<img src="star_full.png" width="30"> <img src="/star_full.png" width="30">' },
+		'Rate': '<img src="/star_full.png" width="30"> <img src="/star_full.png" width="30">' },
 		
     { 'ID': '<img src="/product.png" width="30">', 'Name': 'Abode Reader',
 		'Tags': '<img src="/windows_logo.png" width="30"> <img src="/ios_logo.png" width="30">' ,
@@ -25,7 +25,7 @@ $(document).ready(function () {
 		'Tags': '<img src="/windows_logo.png" width="30">' , 
 		'Rate': '<img src="/star_full.png" width="30"> <img src="/star_full.png" width="30">'},
 		
-	{ 'ID': '<img src="/product.png" width="30">', 'Name': 'IOS', 
+	  { 'ID': '<img src="/product.png" width="30">', 'Name': 'IOS', 
 		'Tags': '<img src="/windows_logo.png" width="30">' , 
 		'Rate': '<img src="/star_full.png" width="30"> <img src="/star_full.png" width="30">'},
 		
@@ -40,7 +40,7 @@ $(document).ready(function () {
       { field: 'ID', width: 48 },
       { field: 'Name', sortable: true },
       { field: 'Tags', title: 'Tags'},
-	  { field: 'Rate', title: 'Rate', sortable: true },
+	    { field: 'Rate', title: 'Rate', sortable: true },
       { title: '', field: 'Edit', width: 34, type: 'icon', icon: 'glyphicon-pencil', tooltip: 'Edit', events: { 'click': Edit } },
                     { title: '', field: 'Delete', width: 34, type: 'icon', icon: 'glyphicon-remove', tooltip: 'Delete', events: { 'click': Delete } }
     ],

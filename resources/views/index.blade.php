@@ -1,5 +1,6 @@
-@include('layouts.header_unregisted')
+@extends('layouts.page_registed')
 
+@section('content')
 <div id="myDIV" class="container">
     <!-- Slideshow -->
     <section class="jk-slider">
@@ -14,13 +15,13 @@
             <div class="carousel-inner slideshow">
                 <div class="item active">
                     <div class="overlay"></div>
-                    <a href="#"><img src="res/images/landscape.png" /></a>
+                    <a href="#"><img src="/landscape.png" /></a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="res/images/landscape.png" /></a>
+                    <a href="#"><img src="/landscape.png" /></a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="res/images/landscape.png" /></a>
+                    <a href="#"><img src="/landscape.png" /></a>
                 </div>
             </div>
             <!-- Switch Image buttons -->
@@ -49,7 +50,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter new">
                 <figure>
-                    <img src="res/images/product.png" class="img-responsive">
+                    <img src="/product.png" class="img-responsive">
                     <figcaption class="figure-caption text-center product-description">
 						<div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
 					</figcaption>
@@ -58,7 +59,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                 <figure>
-                    <img src="res/images/product.png" class="img-responsive">
+                    <img src="/product.png" class="img-responsive">
                     <figcaption class="figure-caption text-center product-description">
 						<div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
 					</figcaption>
@@ -67,7 +68,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter new">
                 <figure>
-                    <img src="res/images/product.png" class="img-responsive">
+                    <img src="/product.png" class="img-responsive">
                     <figcaption class="figure-caption text-center product-description">
 						<div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
 					</figcaption>
@@ -76,7 +77,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                 <figure>
-                    <img src="res/images/product.png" class="img-responsive">
+                    <img src="/product.png" class="img-responsive">
                     <figcaption class="figure-caption text-center product-description">
 						<div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
 					</figcaption>
@@ -85,7 +86,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                 <figure>
-                    <img src="res/images/product.png" class="img-responsive">
+                    <img src="/product.png" class="img-responsive">
                     <figcaption class="figure-caption text-center product-description">
 						<div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
 					</figcaption>
@@ -94,7 +95,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                 <figure>
-                    <img src="res/images/product.png" class="img-responsive">
+                    <img src="/product.png" class="img-responsive">
                     <figcaption class="figure-caption text-center product-description">
 						<div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
 					</figcaption>
@@ -103,7 +104,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                 <figure>
-                    <img src="res/images/product.png" class="img-responsive">
+                    <img src="/product.png" class="img-responsive">
                     <figcaption class="figure-caption text-center product-description">
 						<div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
 					</figcaption>
@@ -112,7 +113,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                 <figure>
-                    <img src="res/images/product.png" class="img-responsive">
+                    <img src="/product.png" class="img-responsive">
                     <figcaption class="figure-caption text-center product-description">
 						<div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
 					</figcaption>
@@ -121,7 +122,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                 <figure>
-                    <img src="res/images/product.png" class="img-responsive">
+                    <img src="/product.png" class="img-responsive">
                     <figcaption class="figure-caption text-center product-description">
 						<div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
 					</figcaption>
@@ -130,7 +131,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter new">
                 <figure>
-                    <img src="res/images/product.png" class="img-responsive">
+                    <img src="/product.png" class="img-responsive">
                     <figcaption class="figure-caption text-center product-description">
 						<div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
 					</figcaption>
@@ -139,7 +140,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                 <figure>
-                    <img src="res/images/product.png" class="img-responsive">
+                    <img src="/product.png" class="img-responsive">
                     <figcaption class="figure-caption text-center product-description">
 						<div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
 					</figcaption>
@@ -148,7 +149,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                 <figure>
-                    <img src="res/images/product.png" class="img-responsive">
+                    <img src="/product.png" class="img-responsive">
                     <figcaption class="figure-caption text-center product-description">
 						<div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€ </s><b style="color:red;font-size:25px;"> 300€</b></div>
 					</figcaption>
@@ -159,4 +160,4 @@
 
 </div>
 
-@include('layouts.footer');
+@endsection

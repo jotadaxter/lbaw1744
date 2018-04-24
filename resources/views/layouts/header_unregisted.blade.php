@@ -1,18 +1,19 @@
-<!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title class="vaporTitle">V A P O R</title>
     <meta charset="UTF-8">
-    <link rel="icon" href="res/icons/shopping-cart.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/shopping-cart.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="/css/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/style.css?v=1.0" rel="stylesheet" type="text/css">
+    <link href="/css/products_page.css?v=1.0" rel="stylesheet" type="text/css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <link href="/css/product_page.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -40,46 +41,13 @@
         <div class="row shift-down">
             <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1 btn-group">
                 <!-- Cart Icon -->
-                <button type="button" id="cart_btn" class="cart_btn btn"><img id="cart" class="cart_not_signed img-rounded thumbnail" src="/public/cart.png" alt="cart_icon"></button>
+                <button type="button" id="cart_btn" class="cart_btn btn"><img id="cart" class="cart_not_signed img-rounded thumbnail" src="/cart.png" alt="cart_icon"></button>
                 <button type="button" id="register_btn" class="register_btn btn">Register</button>
                 <a class="register_btn btn button" href="{{url('/login')}}"" id="signIn_btn">Login</a></button>
             </div>
         </div>
     </div>
 
-    <!-- Visible XS Header -->
-    <div class="row visible-xs">
-        <div class="nav navbar-default navbar-fixed-top visible-xs" style="background-color: grey">
-            <div class="container">
-                <div class="col-xs-9">
-                    <!-- Title -->
-                    <h6 class="vaporTitle">V A P O R</h6>
-                </div>
-                <div class="col-xs-2 col-xs-offset-1" >
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <button style="margin-top:25px;"
-                                    data-toggle="dropdown" type="button"
-                                    class="dropdown-toggle navbar-toggle pull-left">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="#">View Profile <span class="glyphicon glyphicon-user pull-right"></span></a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Wishlist <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
-                                <li class="divider"></li>
-                                <li><a id="signOut_btn" href="{{ url('/logout') }}">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 <!-- XS Header Alignment -->

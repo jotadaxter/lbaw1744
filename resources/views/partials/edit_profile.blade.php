@@ -35,7 +35,7 @@
                         <div class="form-group">
                             <label for="pass" class="col-lg-3 control-label">New Password:</label>
                             <div class="col-lg-8">
-                                <input id="password" class="form-control" type="password">
+                                <input id="password" class="form-control" type="password" name="password">
                                 @if ($errors->has('password'))
                                 <span class="error">
                                     {{ $errors->first('password') }}
