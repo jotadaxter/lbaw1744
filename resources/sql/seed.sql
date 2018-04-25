@@ -63,6 +63,7 @@ CREATE TABLE "Products" (
     price double precision NOT NULL,
     logo_path text NOT NULL,
     name text NOT NULL,
+	hidden NOT NULL boolean,
     CONSTRAINT "Products_price_check" CHECK (price >= 0.)
 );
 

@@ -73,16 +73,12 @@ WHERE "Products".product_id IN
 	
 -- View Product
 
-Select * 
-from "Products" INNER JOIN "ProductImages" ON "ProductImages".product_id="Products".product_Id;
-WHERE "Products".product_id=$product_id;
-
+Select * from "Products" WHERE "Products".product_id=$product_id;
 
 -- Add new Product 
 
 INSERT INTO "Products" (user_id, description, release_date, operating_system, price, logo_path, name)
 VALUES ($user_id, $description, $release_date, $operating_system, $price, $logo_path, $name);
-
 
 -- Edit Product 
 
@@ -91,10 +87,13 @@ SET "Products".description=$description, "Products".release_date=$release_date, 
 	"Products".price=$price, "Products".logo_path=$logo_path, "Products".name=$name 
 WHERE "Products".product_id=$product_id;
 
+-- Remove Product (hid product)
 
--- Remove Product
+UPDATE "Products" SET "Products".hidden = TRUE WHERE "Products".product_id=$product_id;
 
-DELETE FROM "Products" WHERE "Products".product_id=$product_id;
+-- View Product's Images
+
+SELECT * FROM "ProductImages" WHERE "ProductImages".product_id = $product_id;
 
 -- Add image to Product
 
@@ -102,8 +101,7 @@ INSERT INTO "ProductImages" (product_id, img_path) VALUES ($product_id, $new_ima
 
 -- Delete Image from a product's gallery
 
-DELETE FROM "ProductImages" WHERE "ProductImages".product_id=$product_id;
-
+DELETE FROM "ProductImages" WHERE "ProductImages".product_id=$product_id AND "ProductImages".img_path=$img_path;
 
 --------------------------
 -- Reviews and Wishlist --
@@ -117,7 +115,7 @@ WHERE "SerialKeys".product_id = $product_id;
 
 -- Review a Product
 
-INSERT INTO "Reviews" (rating, comment) 
+INSERT INTO "Reviews" (rating, comment) VALUES ($rating, $comment);
 
 -- Edit a Review
 
