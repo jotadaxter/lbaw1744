@@ -73,26 +73,36 @@ WHERE "Products".product_id IN
 	
 -- View Product
 
+Select * 
+from "Products" INNER JOIN "ProductImages" ON "ProductImages".product_id="Products".product_Id;
+WHERE "Products".product_id=$product_id;
 
 
 -- Add new Product 
 
-
+INSERT INTO "Products" (user_id, description, release_date, operating_system, price, logo_path, name)
+VALUES ($user_id, $description, $release_date, $operating_system, $price, $logo_path, $name);
 
 
 -- Edit Product 
 
-
+UPDATE "Products" 
+SET "Products".description=$description, "Products".release_date=$release_date, "Products".operating_system=$operating_system, 
+	"Products".price=$price, "Products".logo_path=$logo_path, "Products".name=$name 
+WHERE "Products".product_id=$product_id;
 
 
 -- Remove Product
 
-
+DELETE FROM "Products" WHERE "Products".product_id=$product_id;
 
 -- Add image to Product
 
+INSERT INTO "ProductImages" (product_id, img_path) VALUES ($product_id, $new_image_path);
 
+-- Delete Image from a product's gallery
 
+DELETE FROM "ProductImages" WHERE "ProductImages".product_id=$product_id;
 
 
 --------------------------
@@ -101,31 +111,35 @@ WHERE "Products".product_id IN
 
 -- View Product's reviews
 
-
-
+SELECT "Reviews".rating, "Reviews".review_date, "Reviews".comment
+FROM "Reviews" INNER JOIN "SerialKeys" ON "SerialKeys".sk_id = "Reviews".sk_id
+WHERE "SerialKeys".product_id = $product_id;
 
 -- Review a Product
 
 INSERT INTO "Reviews" (rating, comment) 
 
-
 -- Edit a Review
 
-
+Update "Reviews" SET "Reviews".rating = $rating, "Reviews".comment = $comment WHERE "Reviews".sk_id = sk_id;
 
 -- Delete a Review
  
+DELETE FROM "Reviews" WHERE "Reviews".sk_id = $sk_id;
 
 -- View Wishlist
 
-
+SELECT *
+FROM "Products" 
+INNER JOIN "Wishlists" ON "Wishlists".product_id = "Products".product_id
+WHERE "Wishlists".user_id = $userId;
 
 -- Add Product to Wishlist
 
-
+INSERT INTO "Whishlists" (user_id, product_id) VALUES ($user_id, $product_id);
 
 -- Remove Product from WishList
-
+DELETE FROM "Whishlists" WHERE "Whishlists".user_id = $user_id AND "Whishlists".product_id = $product_id;
 
 
 --------------------------
@@ -140,14 +154,27 @@ INSERT INTO "Reviews" (rating, comment)
 --------------------------
 
 -- Get All Users
-
+SELECT * "Users" FROM "Users" INNER JOIN "Sellers" ON "Users".id = "Sellers".user_id;
 
 -- Suspend a user 
 
-UPDATE "Users" SET "Users".state = "suspended" Where "User".username=$username;
+UPDATE "Users" SET "Users".state = "blocked" Where "Users".username=$username;
+
+-- Reinstate USER
+
+UPDATE "Users" SET "Users".state = "inactive" WHERE "Users".username=$username;
 
 
+--------------------------
+--       Triggers       --
+--------------------------
 
+--WHEN login, if inactive UPDATE state to active
+--WHEN logout, if active UPDATE state to inactive
+
+--se passasse de por pagar para pago, tinha um trigger 
+--no alter q automaticamente registava a compra finalizada
+--ou entao, se mudasse para cancelada, limpava o assignment id das keys
 
 
 
