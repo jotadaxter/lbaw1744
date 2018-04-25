@@ -1,7 +1,0 @@
-Task List
-
-- Notifications Page
-- Admin Page
-- Cart Page
-- Wishlist Page
-- User Library Page
