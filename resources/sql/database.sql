@@ -1,5 +1,6 @@
 DROP SCHEMA IF EXISTS public CASCADE;
-CREATE SCHEMA public AUTHORIZATION lbaw1744;
+CREATE SCHEMA public AUTHORIZATION CURRENT_USER;
+
 
 CREATE TYPE paymentmethod AS ENUM (
     'Credit Card',
@@ -8,11 +9,19 @@ CREATE TYPE paymentmethod AS ENUM (
 );
 
 
+CREATE TYPE invoicestate AS ENUM (
+    'Payment received',
+    'Awaiting Payment',
+    'Canceled'
+);
+
+
 CREATE TYPE userstate AS ENUM (
     'Active',
     'Inactive',
     'Blocked',
-    'Banned'
+    'Banned',
+	'Closed'
 );
 
 
@@ -35,7 +44,7 @@ CREATE TABLE "ProductImages" (
 
 
 CREATE TABLE "Products" (
-    product_id SERIAL NOT NULL,
+    product_id integer NOT NULL,
     user_id integer NOT NULL,
     description text NOT NULL,
     release_date timestamp with time zone NOT NULL,
@@ -48,7 +57,7 @@ CREATE TABLE "Products" (
 
 
 CREATE TABLE "Purchases" (
-    purchase_id SERIAL NOT NULL,
+    purchase_id integer NOT NULL,
     final_price double precision NOT NULL,
     user_id integer NOT NULL,
     paid_date timestamp with time zone DEFAULT now() NOT NULL,
@@ -75,7 +84,7 @@ CREATE TABLE "Sellers" (
 
 
 CREATE TABLE "SerialKeys" (
-	sk_id SERIAL NOT NULL,
+	sk_id integer NOT NULL,
     user_id integer,
     product_id integer NOT NULL,
     code text NOT NULL
@@ -83,13 +92,13 @@ CREATE TABLE "SerialKeys" (
 
 
 CREATE TABLE "Tags" (
-    product_id SERIAL NOT NULL,
+    product_id integer NOT NULL,
     tag_name text NOT NULL
 );
 
 
 CREATE TABLE "Users" (
-    user_id SERIAL NOT NULL,
+    user_id integer NOT NULL,
     username text NOT NULL,
     password text NOT NULL,
     fullname text,
@@ -113,6 +122,16 @@ CREATE TABLE "PurchasedKeys" (
     sk_id integer NOT NULL,
     purchase_id integer NOT NULL,
     price double precision NOT NULL
+);
+
+CREATE TABLE "Invoices" (
+    invoice_id integer NOT NULL,
+    final_price double precision NOT NULL,
+    user_id integer NOT NULL,
+    emission_date timestamp with time zone DEFAULT now() NOT NULL,
+    payment_method paymentmethod,
+    state invoicestate,
+    CONSTRAINT "Payments_check" CHECK ((final_price > 0. AND payment_method <> NULL) OR (final_price = 0. AND payment_method = NULL))
 );
 
 
@@ -208,10 +227,6 @@ ALTER TABLE ONLY "Sellers"
 
 
 ALTER TABLE ONLY "SerialKeys"
-    ADD CONSTRAINT "SerialKeys_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(user_id) ON UPDATE CASCADE;
-
-
-ALTER TABLE ONLY "SerialKeys"
     ADD CONSTRAINT "SerialKeys_product_id_fkey" FOREIGN KEY (product_id) REFERENCES "Products"(product_id) ON UPDATE CASCADE;
 
 
@@ -233,3 +248,27 @@ ALTER TABLE ONLY "PurchasedKeys"
 
 ALTER TABLE ONLY "PurchasedKeys"
     ADD CONSTRAINT "PurchasedKeys_purchase_id_fkey" FOREIGN KEY (purchase_id) REFERENCES "Purchases"(purchase_id) ON UPDATE CASCADE;
+
+
+
+	-- Sequences
+
+
+CREATE SEQUENCE "SerialGenerator";
+
+ALTER SEQUENCE "SerialGenerator" SET SCHEMA public;
+
+ALTER TABLE ONLY "Products"
+	ALTER COLUMN product_id SET DEFAULT nextval('SerialGenerator'::regclass);
+	
+ALTER TABLE ONLY "Users"
+	ALTER COLUMN user_id SET DEFAULT nextval('SerialGenerator'::regclass);
+	
+ALTER TABLE ONLY "SerialKeys"
+	ALTER COLUMN sk_id SET DEFAULT nextval('SerialGenerator'::regclass);
+	
+ALTER TABLE ONLY "Purchases"
+	ALTER COLUMN purchase_id SET DEFAULT nextval('SerialGenerator'::regclass);
+	
+ALTER TABLE ONLY "Invoices"
+	ALTER COLUMN invoice_id SET DEFAULT nextval('SerialGenerator'::regclass);
