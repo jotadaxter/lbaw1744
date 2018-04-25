@@ -71,17 +71,80 @@ WHERE "Products".product_id IN
 	AND "Products".product_id="Discounts".product_id
 	AND "Products".name = $product_name;
 	
+-- View Product
+
+
+
+-- Add new Product 
+
+
+
+
+-- Edit Product 
+
+
+
+
+-- Remove Product
+
+
+
+-- Add image to Product
+
+
+
+
+
+--------------------------
+-- Reviews and Wishlist --
+--------------------------
+
+-- View Product's reviews
+
+
+
+
 -- Review a Product
 
 INSERT INTO "Reviews" (rating, comment) 
 
+
+-- Edit a Review
+
+
+
+-- Delete a Review
+ 
+
+-- View Wishlist
+
+
+
+-- Add Product to Wishlist
+
+
+
+-- Remove Product from WishList
+
+
+
+--------------------------
+--  Cart and Checkout   --
+--------------------------
+
+
+
+
+--------------------------
+-- User Administration  --
+--------------------------
+
+-- Get All Users
+
+
 -- Suspend a user 
 
 UPDATE "Users" SET "Users".state = "suspended" Where "User".username=$username;
-
-
-
-
 
 
 
