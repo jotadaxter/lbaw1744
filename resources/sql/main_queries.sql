@@ -152,7 +152,7 @@ DELETE FROM "Whishlists" WHERE "Whishlists".user_id = $user_id AND "Whishlists".
 --------------------------
 
 -- Get All Users
-SELECT * "Users" FROM "Users" INNER JOIN "Sellers" ON "Users".id = "Sellers".user_id;
+SELECT * FROM "Users" INNER JOIN "Sellers" ON "Users".id = "Sellers".user_id;
 
 -- Suspend a user 
 
