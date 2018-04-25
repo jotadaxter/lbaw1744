@@ -20,13 +20,23 @@ CREATE TYPE paymentmethod AS ENUM (
 );
 
 
+CREATE TYPE invoicestate AS ENUM (
+    'Payment received',
+    'Awaiting Payment',
+    'Canceled'
+);
+
+
 CREATE TYPE userstate AS ENUM (
     'Active',
     'Inactive',
     'Blocked',
-    'Banned'
+    'Banned',
+	'Closed'
 );
 
+
+	-- Tables
 
 CREATE TABLE "Discounts" (
     product_id integer NOT NULL,
@@ -45,7 +55,7 @@ CREATE TABLE "ProductImages" (
 
 
 CREATE TABLE "Products" (
-    product_id SERIAL NOT NULL,
+    product_id integer NOT NULL,
     user_id integer NOT NULL,
     description text NOT NULL,
     release_date timestamp with time zone NOT NULL,
@@ -58,7 +68,7 @@ CREATE TABLE "Products" (
 
 
 CREATE TABLE "Purchases" (
-    purchase_id SERIAL NOT NULL,
+    purchase_id integer NOT NULL,
     final_price double precision NOT NULL,
     user_id integer NOT NULL,
     paid_date timestamp with time zone DEFAULT now() NOT NULL,
@@ -85,7 +95,7 @@ CREATE TABLE "Sellers" (
 
 
 CREATE TABLE "SerialKeys" (
-	sk_id SERIAL NOT NULL,
+	sk_id integer NOT NULL,
     user_id integer,
     product_id integer NOT NULL,
     code text NOT NULL
@@ -93,13 +103,13 @@ CREATE TABLE "SerialKeys" (
 
 
 CREATE TABLE "Tags" (
-    product_id SERIAL NOT NULL,
+    product_id integer NOT NULL,
     tag_name text NOT NULL
 );
 
 
 CREATE TABLE "Users" (
-    id SERIAL NOT NULL,
+    user_id integer NOT NULL,
     username text NOT NULL,
     password text NOT NULL,
     fullname text,
@@ -123,6 +133,16 @@ CREATE TABLE "PurchasedKeys" (
     sk_id integer NOT NULL,
     purchase_id integer NOT NULL,
     price double precision NOT NULL
+);
+
+CREATE TABLE "Invoices" (
+    invoice_id integer NOT NULL,
+    final_price double precision NOT NULL,
+    user_id integer NOT NULL,
+    emission_date timestamp with time zone DEFAULT now() NOT NULL,
+    payment_method paymentmethod,
+    state invoicestate,
+    CONSTRAINT "Payments_check" CHECK ((final_price > 0. AND payment_method <> NULL) OR (final_price = 0. AND payment_method = NULL))
 );
 
 
@@ -178,7 +198,7 @@ ALTER TABLE ONLY "Users"
 
 
 ALTER TABLE ONLY "Users"
-    ADD CONSTRAINT "Users_pkey" PRIMARY KEY (id);
+    ADD CONSTRAINT "Users_pkey" PRIMARY KEY (user_id);
 
 
 ALTER TABLE ONLY "Users"
@@ -206,7 +226,7 @@ ALTER TABLE ONLY "Products"
 
 
 ALTER TABLE ONLY "Purchases"
-    ADD CONSTRAINT "Purchases_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(id) ON UPDATE CASCADE;
+    ADD CONSTRAINT "Purchases_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(user_id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "Reviews"
@@ -214,11 +234,7 @@ ALTER TABLE ONLY "Reviews"
 
 
 ALTER TABLE ONLY "Sellers"
-    ADD CONSTRAINT "Sellers_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(id) ON UPDATE CASCADE;
-
-
-ALTER TABLE ONLY "SerialKeys"
-    ADD CONSTRAINT "SerialKeys_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(id) ON UPDATE CASCADE;
+    ADD CONSTRAINT "Sellers_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(user_id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "SerialKeys"
@@ -234,7 +250,7 @@ ALTER TABLE ONLY "Wishlists"
 
 
 ALTER TABLE ONLY "Wishlists"
-    ADD CONSTRAINT "Wishlists_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(id) ON UPDATE CASCADE;
+    ADD CONSTRAINT "Wishlists_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(user_id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "PurchasedKeys"
@@ -242,7 +258,32 @@ ALTER TABLE ONLY "PurchasedKeys"
 
 
 ALTER TABLE ONLY "PurchasedKeys"
-ADD CONSTRAINT "PurchasedKeys_purchase_id_fkey" FOREIGN KEY (purchase_id) REFERENCES "Purchases"(purchase_id) ON UPDATE CASCADE;
+    ADD CONSTRAINT "PurchasedKeys_purchase_id_fkey" FOREIGN KEY (purchase_id) REFERENCES "Purchases"(purchase_id) ON UPDATE CASCADE;
+
+
+
+	-- Sequences
+
+
+CREATE SEQUENCE "SerialGenerator";
+
+ALTER SEQUENCE "SerialGenerator" SET SCHEMA public;
+
+ALTER TABLE ONLY "Products"
+	ALTER COLUMN product_id SET DEFAULT nextval('SerialGenerator'::regclass);
+	
+ALTER TABLE ONLY "Users"
+	ALTER COLUMN user_id SET DEFAULT nextval('SerialGenerator'::regclass);
+	
+ALTER TABLE ONLY "SerialKeys"
+	ALTER COLUMN sk_id SET DEFAULT nextval('SerialGenerator'::regclass);
+	
+ALTER TABLE ONLY "Purchases"
+	ALTER COLUMN purchase_id SET DEFAULT nextval('SerialGenerator'::regclass);
+	
+ALTER TABLE ONLY "Invoices"
+	ALTER COLUMN invoice_id SET DEFAULT nextval('SerialGenerator'::regclass);
+
 
 --deletes
 DELETE FROM "Users";
@@ -312,17 +353,17 @@ INSERT INTO "Tags"(product_id, tag_name) VALUES (208, 'audio');
 INSERT INTO "Tags"(product_id, tag_name) VALUES (209, '3d');
 
 -- SerialKeys (sk_id, user_id, product_id, code)
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (500, 105, 200, '1J6B5JHG7I');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (501, 106, 201, '0FIAJ5N6B3');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (502, 107, 202, '09FUHRB5N6');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (503, 108, 203, 'S0HNS4K6HS');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (504, 109, 204, 'OFCJAGHI54');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (505, 105, 205, '0SAIDUFRKF');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (506, 106, 206, 'SGHUDIFOG3');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (507, 107, 207, '5URJEDKHA4');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (508, 108, 208, '38HUEDWXJH');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (509, 109, 209, 'IODIGHOI2N');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (510, 109, 209, 'IODIGHOP2N');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (500, 105, 200, '1J6B5JHG7I');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (501, 106, 201, '0FIAJ5N6B3');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (502, 107, 202, '09FUHRB5N6');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (503, 108, 203, 'S0HNS4K6HS');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (504, 109, 204, 'OFCJAGHI54');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (505, 105, 205, '0SAIDUFRKF');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (506, 106, 206, 'SGHUDIFOG3');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (507, 107, 207, '5URJEDKHA4');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (508, 108, 208, '38HUEDWXJH');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (509, 109, 209, 'IODIGHOI2N');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (510, 109, 209, 'IODIGHOP2N');
 
 
 -- Reviews (sk_id, rating, review_date, comment)
