@@ -12,6 +12,7 @@ DROP TABLE IF EXISTS "Tags" CASCADE;
 DROP TABLE IF EXISTS "PurchasedKeys" CASCADE;
 DROP TABLE IF EXISTS "Wishlists" CASCADE;
 DROP TABLE IF EXISTS "ProductImages" CASCADE;
+DROP TABLE IF EXISTS "Invoices" CASCADE;
 
 
 CREATE TYPE paymentmethod AS ENUM (
@@ -293,6 +294,7 @@ DELETE FROM "Wishlists";
 DELETE FROM "ProductImages";
 DELETE FROM "Tags";
 DELETE FROM "SerialKeys";
+DELETE FROM "Invoices";
 
 -- Users (user_id, username, password, fullname, email, phone_number, birth_date, admission_date, Userstate, admin, img, nif)
 INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(100, 'janedoe1', 'cheekybreeky', 'jane eleanor doer', 969420666, 'janedoe@gmail.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666420666);
