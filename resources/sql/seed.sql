@@ -264,9 +264,7 @@ ALTER TABLE ONLY "PurchasedKeys"
 
 DROP SEQUENCE IF EXISTS "SerialGenerator" CASCADE;
 
-CREATE SEQUENCE IF NOT EXISTS "SerialGenerator";
-
-ALTER SEQUENCE "SerialGenerator" SET SCHEMA "public";
+CREATE SEQUENCE "SerialGenerator";
 
 ALTER TABLE ONLY "Products"
 	ALTER COLUMN product_id SET DEFAULT nextval('SerialGenerator'::regclass);
