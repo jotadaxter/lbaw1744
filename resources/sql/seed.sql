@@ -73,7 +73,7 @@ CREATE TABLE "Products" (
 CREATE TABLE "Purchases" (
     purchase_id integer NOT NULL,
     final_price double precision NOT NULL,
-    assignment_id integer NOT NULL,
+    user_id integer NOT NULL,
     paid_date timestamp with time zone DEFAULT now() NOT NULL,
     payment_method paymentmethod,
     details text,
@@ -99,7 +99,7 @@ CREATE TABLE "Sellers" (
 
 CREATE TABLE "SerialKeys" (
 	sk_id integer NOT NULL,
-    user_id integer,
+    assignment_id integer,
     product_id integer NOT NULL,
     code text NOT NULL
 );
@@ -226,6 +226,10 @@ ALTER TABLE ONLY "ProductImages"
 
 ALTER TABLE ONLY "Products"
     ADD CONSTRAINT "Products_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Sellers"(user_id) ON UPDATE CASCADE;
+	
+
+ALTER TABLE ONLY "Purchases"
+    ADD CONSTRAINT "Purchases_user_id_fkey" FOREIGN KEY (user_id) REFERENCES "Users"(user_id) ON UPDATE CASCADE;
 
 
 ALTER TABLE ONLY "Reviews"
@@ -352,17 +356,17 @@ INSERT INTO "Tags"(product_id, tag_name) VALUES (208, 'audio');
 INSERT INTO "Tags"(product_id, tag_name) VALUES (209, '3d');
 
 -- SerialKeys (sk_id, user_id, product_id, code)
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (500, 105, 200, '1J6B5JHG7I');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (501, 106, 201, '0FIAJ5N6B3');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (502, 107, 202, '09FUHRB5N6');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (503, 108, 203, 'S0HNS4K6HS');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (504, 109, 204, 'OFCJAGHI54');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (505, 105, 205, '0SAIDUFRKF');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (506, 106, 206, 'SGHUDIFOG3');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (507, 107, 207, '5URJEDKHA4');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (508, 108, 208, '38HUEDWXJH');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (509, 109, 209, 'IODIGHOI2N');
-INSERT INTO "SerialKeys"(sk_id, user_id, product_id, code) VALUES (510, 109, 209, 'IODIGHOP2N');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (500, 105, 200, '1J6B5JHG7I');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (501, 106, 201, '0FIAJ5N6B3');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (502, 107, 202, '09FUHRB5N6');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (503, 108, 203, 'S0HNS4K6HS');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (504, 109, 204, 'OFCJAGHI54');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (505, 105, 205, '0SAIDUFRKF');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (506, 106, 206, 'SGHUDIFOG3');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (507, 107, 207, '5URJEDKHA4');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (508, 108, 208, '38HUEDWXJH');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (509, 109, 209, 'IODIGHOI2N');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (510, 109, 209, 'IODIGHOP2N');
 
 
 -- Reviews (sk_id, rating, review_date, comment)
@@ -385,16 +389,16 @@ INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALU
 INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALUES (204, 15, '2018/4/1', '2018/4/30');
 
 -- Purchases (purchase_id, final_price, user_id, sk_id, paid_date, paymentmethod, details)
-INSERT INTO "Purchases"(purchase_id, final_price, assignment_id, paid_date, payment_method, details) VALUES (800, 579, 100, '2018/4/21', 'Credit Card', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, assignment_id, paid_date, payment_method, details) VALUES (801, 579, 101, '2018/6/12', 'Credit Card', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, assignment_id, paid_date, payment_method, details) VALUES (802, 169, 102, '2018/5/2', 'PayPal', 'Minor setbacks contacting seller');
-INSERT INTO "Purchases"(purchase_id, final_price, assignment_id, paid_date, payment_method, details) VALUES (803, 279, 103, '2018/6/23', 'Banking Transfer', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, assignment_id, paid_date, payment_method, details) VALUES (804, 14, 104, '2018/3/31', 'Banking Transfer', 'Minor setbacks contacting seller');
-INSERT INTO "Purchases"(purchase_id, final_price, assignment_id, paid_date, payment_method, details) VALUES (805, 29, 100, '2018/1/26', 'Credit Card', 'Purchase sucessful');
-INSERT INTO "Purchases"(purchase_id, final_price, assignment_id, paid_date, payment_method, details) VALUES (806, 99, 101, '2018/8/1', 'PayPal', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, assignment_id, paid_date, payment_method, details) VALUES (807, 579, 102, '2018/11/4', 'PayPal', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, assignment_id, paid_date, payment_method, details) VALUES (808, 199, 103, '2018/3/10', 'PayPal', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, assignment_id, paid_date, payment_method, details) VALUES (809, 99, 104, '2018/9/2', 'Credit Card', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (800, 579, 100, '2018/4/21', 'Credit Card', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (801, 579, 101, '2018/6/12', 'Credit Card', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (802, 169, 102, '2018/5/2', 'PayPal', 'Minor setbacks contacting seller');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (803, 279, 103, '2018/6/23', 'Banking Transfer', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (804, 14, 104, '2018/3/31', 'Banking Transfer', 'Minor setbacks contacting seller');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (805, 29, 100, '2018/1/26', 'Credit Card', 'Purchase sucessful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (806, 99, 101, '2018/8/1', 'PayPal', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (807, 579, 102, '2018/11/4', 'PayPal', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (808, 199, 103, '2018/3/10', 'PayPal', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (809, 99, 104, '2018/9/2', 'Credit Card', 'Purchase successful');
 
 -- Wishlists (user_id, product_id)
 INSERT INTO "Wishlists"(user_id, product_id) VALUES (100, 209);
