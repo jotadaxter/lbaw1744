@@ -268,19 +268,19 @@ DROP SEQUENCE IF EXISTS "SerialGenerator" CASCADE;
 CREATE SEQUENCE "SerialGenerator";
 
 ALTER TABLE ONLY "Products"
-	ALTER COLUMN product_id SET DEFAULT nextval('SerialGenerator'::regclass);
+	ALTER COLUMN product_id SET DEFAULT nextval('"SerialGenerator"'::regclass);
 	
 ALTER TABLE ONLY "Users"
-	ALTER COLUMN user_id SET DEFAULT nextval('SerialGenerator'::regclass);
+	ALTER COLUMN user_id SET DEFAULT nextval('"SerialGenerator"'::regclass);
 	
 ALTER TABLE ONLY "SerialKeys"
-	ALTER COLUMN sk_id SET DEFAULT nextval('SerialGenerator'::regclass);
+	ALTER COLUMN sk_id SET DEFAULT nextval('"SerialGenerator"'::regclass);
 	
 ALTER TABLE ONLY "Purchases"
-	ALTER COLUMN purchase_id SET DEFAULT nextval('SerialGenerator'::regclass);
+	ALTER COLUMN purchase_id SET DEFAULT nextval('"SerialGenerator"'::regclass);
 	
 ALTER TABLE ONLY "Invoices"
-	ALTER COLUMN invoice_id SET DEFAULT nextval('SerialGenerator'::regclass);
+	ALTER COLUMN invoice_id SET DEFAULT nextval('"SerialGenerator"'::regclass);
 
 
 --deletes
