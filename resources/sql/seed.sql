@@ -420,3 +420,7 @@ INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (502, 802, 66);
 INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (503, 803,77 );
 INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (504, 804, 100);
 INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (505, 805,52 );
+
+-- Invoices
+
+--INSERT INTO "Invoices" (final_price, user_id, emission_date, payment_method, state) VALUES ();
