@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="panel-footer">
-                    <a href="{{ url('/profile/'.$user->id.'/edit') }}" id="edit_profile_btn">Edit Profile</a>
+                    <a href="{{ url('/profile/'.$user->user_id.'/edit') }}" id="edit_profile_btn">Edit Profile</a>
                 </div>
             </div>
         </div>

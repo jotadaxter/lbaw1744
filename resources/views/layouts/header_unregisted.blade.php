@@ -29,7 +29,7 @@
         <div class="col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-5 col-lg-offset-1 center">
             <!-- Search Bar -->
             <div class="input-group stylish-input-group shift-down">
-                <input type="text" class="white-box form-control"  placeholder="Search" >
+                <input type="text" class="white-box form-control"  placeholder="Search" href="{{url('/products')}}">
                 <span class="input-group-addon btn">
                     <button type="button" id="search_btn">
                         <span class="glyphicon glyphicon-search"></span>

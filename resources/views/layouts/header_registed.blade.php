@@ -29,7 +29,7 @@
         <div class="col-md-3 col-lg-4">
             <!-- Search Bar -->
             <div class="input-group stylish-input-group" style="margin-top: 20px">
-                <input type="text" class="form-control"  placeholder="Search" >
+                <input type="text" class="form-control"  placeholder="Search" href="{{url('/products')}}">
                 <span class="input-group-addon">
                     <button type="button" id="search_btn">
                         <span class="glyphicon glyphicon-search"></span>
