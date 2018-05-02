@@ -362,3 +362,7 @@ ul.nav.nav-pills.nav-stacked{
     margin-right: auto;
     width: 100%;
 }
+
+.error {
+    color:red;
+}

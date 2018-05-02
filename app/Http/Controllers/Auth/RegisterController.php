@@ -64,12 +64,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $temp = str_replace('-', '/', $data['birth_date']);
+        $temp = date('Y/m/d', strtotime($temp));
         return User::create([
             'username' => $data['username'],
             'fullname' => $data['fullname'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'birth_date' => $data['birth_date'],
+            'birth_date' => $temp,
         ]);
     }
 }

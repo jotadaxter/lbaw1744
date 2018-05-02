@@ -56,8 +56,8 @@
                         </div>
 
                         <div class="form-group">    
-                            <label for="birth_date"><span class="req">* </span> Birth-date: </label>
-                            <input class="form-control" id="birth_date" type="text" name="birth_date" value="{{ old('birth_date') }}" required autofocus>
+                            <label for="birth_date"><span class="req">* </span> Birthday: </label>
+                            <input class="form-control" id="birth_date" type="date" name="birth_date" value="{{ old('birth_date') }}" required data-date-format="yyyy/mm/dd" autofocus>
                             @if ($errors->has('birth_date'))
                             <span class="error">
                                 {{ $errors->first('birth_date') }}
