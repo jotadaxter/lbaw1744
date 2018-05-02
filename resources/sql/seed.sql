@@ -311,6 +311,8 @@ INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, 
 INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(107, 'desugurippu', 'noided', 'michael arnold', 969420111, 'michael.arnold30@example.com', '1984/8/7', '2018/3/22', 'Active', false, 'micavatar.jpg', 666421333);
 INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(108, 'normac', 'cardibandrum', 'norma cooper', 969420222, 'norma.cooper92@example.com', '1999/12/28', '2018/1/4', 'Active', false, 'normavatar.jpg', 666421444);
 INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(109, 'lilnina', 'groovey', 'nina sutton', 969420333, 'nina.sutton76@example.com', '1997/10/9', '2018/2/3', 'Active', false, 'ninavatar.jpg', 666421555);
+INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(110, 'lilnisna2', 'groovey2', 'nina sutton2', 969420332, 'nina.sutton762@example.com', '1997/10/2', '2018/2/2', 'Active', false, 'ninavatar.jpg', 666221555);
+
 -- 100 cheekybreeky: $2y$10$meM7TAYhkBvbVktCou/ecOzZO30A.m72MzcyibQtsr88JGGCBghiu
 -- 101 oblivion: 
 -- 102 morrowind: 
