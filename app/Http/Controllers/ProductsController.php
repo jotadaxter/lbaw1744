@@ -18,6 +18,6 @@ class ProductsController extends Controller
     public function show()
     {
 
-      return view('pages.products');
+      return view('products.products');
     }
 }

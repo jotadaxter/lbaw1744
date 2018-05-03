@@ -22,6 +22,6 @@ class ProductController extends Controller
 
      // $this->authorize('show', $product);
 
-      return view('pages.product', ['product' => $product]);
+      return view('products.profile', ['product' => $product]);
     }
 }
