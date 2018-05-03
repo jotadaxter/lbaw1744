@@ -27,9 +27,9 @@
     </div>
 </footer>
 
-<script src="/js/home_page.js"></script>
+
 <script src="/js/products_page.js"></script>
-<script src="/js/home_page_signed.js"></script>
+
 
 </body>
 </html>

@@ -21,23 +21,18 @@ class ProfileController extends Controller
     {
        $user = User::find($user_id);
 
-      return view('pages.profile', ['user' => $user]);
-    }
-
-    public function showRegisted()
-    {
-      return view('pages.profileRegisted');
+      return view('users.profile', ['user' => $user]);
     }
 
     public function showEdit($user_id)
     {
         $user = User::find($user_id);
-      return view('pages.edit_profile', ['user' => $user]);
+      return view('users.edit_profile', ['user' => $user]);
     }
 
     public function update(Request $request, $user_id)
     {
-       $validatedData = $request->validate([
+       $request->validate([
             'username' => 'string|max:16',
             'fullname' => 'string|max:255',
             'email' => 'string|email|max:255',
@@ -52,7 +47,7 @@ class ProfileController extends Controller
         $user->email = $request->input('email');
         $user->phone_number = $request->input('phone_number');
         $user->save();
-        return view('pages.profileRegisted');
+        return view('users.profile', ['user' => $user]);
     }
 }
 

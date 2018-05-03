@@ -15,19 +15,22 @@ Route::get('/', function () {return view('index');});
 
 /* Module M01: Authentication and Individual Profile */
 
-//Profile
-Route::get('profile', 'ProfileController@showRegisted');
-Route::get('profile/{user_id}', 'ProfileController@show');
-Route::get('profile/{user_id}/edit', 'ProfileController@showEdit')->name('edit');
-Route::post('profile/{user_id}/edit', 'ProfileController@update');
-
-// Authentication
+// Login Form
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+//Login Action
 Route::post('login', 'Auth\LoginController@login');
+//Logout Action
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+//Register Form
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+//Register Action
 Route::post('register', 'Auth\RegisterController@register');
-
+//View Profile
+Route::get('profile/{user_id}', 'ProfileController@show')->name('profile');
+//Edit Profile Form
+Route::get('profile/{user_id}/edit', 'ProfileController@showEdit')->name('edit');
+//Edit Profile Action
+Route::post('profile/{user_id}/edit', 'ProfileController@update');
 
 /* Module M02: Products */
 

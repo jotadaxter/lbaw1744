@@ -10,9 +10,6 @@
 
     <title class="vaporTitle"><?php echo e(config('app.name', 'Laravel')); ?></title>
 
-    <!-- Styles -->
-    <link href="<?php echo e(asset('css/milligram.min.css')); ?>" rel="stylesheet">
-    <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <script type="text/javascript">
         // Fix for Firefox autofocus CSS bug
         // See: http://stackoverflow.com/questions/18943276/html-5-autofocus-messes-up-css-loading/18945951#18945951
