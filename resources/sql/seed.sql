@@ -123,7 +123,8 @@ CREATE TABLE "Users" (
     "state" userstate DEFAULT 'Active' NOT NULL,
     "admin" boolean DEFAULT false NOT NULL,
     img text,
-    nif integer
+    nif integer,
+    remember_token text
 );
 
 
@@ -301,17 +302,17 @@ DELETE FROM "SerialKeys";
 DELETE FROM "Invoices";
 
 -- Users (user_id, username, password, fullname, email, phone_number, birth_date, admission_date, Userstate, admin, img, nif)
-INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(100, 'janedoe1', '$2y$10$meM7TAYhkBvbVktCou/ecOzZO30A.m72MzcyibQtsr88JGGCBghiu', 'jane eleanor doer', 969420666, 'janedoe@gmail.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666420666);
-INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(101, 'jenlong', 'oblivion', 'jenny long', 911999333, 'jenny.long84@example.com', '1973/7/10', '2018/2/20', 'Active', false, 'jenavatar.jpg', 666420777);
-INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(102, 'everettdotnet', 'morrowind', 'everett adams', 969420444, 'everett.adams60@example.com', '1980/3/8', '2018/1/10', 'Active', false, 'eveavatar.jpg', 666420888);
-INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(103, 'zdaroviaqueen', 'zdarovia', 'regina duncan', 969420555, 'regina.duncan44@example.com', '1990/1/1', '2018/3/11', 'Active', false, 'regavatar.jpg', 666420999);
-INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(104, 'kentron', 'notoriousbig', 'ken gonzalez', 969420777, 'ken.gonzalez84@example.com', '1994/4/4', '2018/1/18', 'Active', false, 'tedavatar.jpg', 666421000);
-INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(105, 'teddyboy', 'yeezytaughtme', 'ted mitchell', 969420888, 'ted.mitchell70@example.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666421111);
-INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(106, 'nottheactor', 'hoffhoff', 'dustin hoffman', 969420999, 'dustin.hoffman16@example.com', '1987/9/19', '2018/6/21', 'Active', false, 'dustavatar.jpg', 666421222);
-INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(107, 'desugurippu', 'noided', 'michael arnold', 969420111, 'michael.arnold30@example.com', '1984/8/7', '2018/3/22', 'Active', false, 'micavatar.jpg', 666421333);
-INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(108, 'normac', 'cardibandrum', 'norma cooper', 969420222, 'norma.cooper92@example.com', '1999/12/28', '2018/1/4', 'Active', false, 'normavatar.jpg', 666421444);
-INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(109, 'lilnina', 'groovey', 'nina sutton', 969420333, 'nina.sutton76@example.com', '1997/10/9', '2018/2/3', 'Active', false, 'ninavatar.jpg', 666421555);
-INSERT INTO "Users"(user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES(110, 'lilnisna2', 'groovey2', 'nina sutton2', 969420332, 'nina.sutton762@example.com', '1997/10/2', '2018/2/2', 'Active', false, 'ninavatar.jpg', 666221555);
+INSERT INTO "Users"(remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', 100, 'janedoe1', '$2y$10$meM7TAYhkBvbVktCou/ecOzZO30A.m72MzcyibQtsr88JGGCBghiu', 'jane eleanor doer', 969420666, 'janedoe@gmail.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666420666);
+INSERT INTO "Users"(remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', 101, 'jenlong', 'oblivion', 'jenny long', 911999333, 'jenny.long84@example.com', '1973/7/10', '2018/2/20', 'Active', false, 'jenavatar.jpg', 666420777);
+INSERT INTO "Users"(remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', 102, 'everettdotnet', 'morrowind', 'everett adams', 969420444, 'everett.adams60@example.com', '1980/3/8', '2018/1/10', 'Active', false, 'eveavatar.jpg', 666420888);
+INSERT INTO "Users"(remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', 103, 'zdaroviaqueen', 'zdarovia', 'regina duncan', 969420555, 'regina.duncan44@example.com', '1990/1/1', '2018/3/11', 'Active', false, 'regavatar.jpg', 666420999);
+INSERT INTO "Users"(remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', 104, 'kentron', 'notoriousbig', 'ken gonzalez', 969420777, 'ken.gonzalez84@example.com', '1994/4/4', '2018/1/18', 'Active', false, 'tedavatar.jpg', 666421000);
+INSERT INTO "Users"(remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', 105, 'teddyboy', 'yeezytaughtme', 'ted mitchell', 969420888, 'ted.mitchell70@example.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666421111);
+INSERT INTO "Users"(remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', 106, 'nottheactor', 'hoffhoff', 'dustin hoffman', 969420999, 'dustin.hoffman16@example.com', '1987/9/19', '2018/6/21', 'Active', false, 'dustavatar.jpg', 666421222);
+INSERT INTO "Users"(remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', 107, 'desugurippu', 'noided', 'michael arnold', 969420111, 'michael.arnold30@example.com', '1984/8/7', '2018/3/22', 'Active', false, 'micavatar.jpg', 666421333);
+INSERT INTO "Users"(remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', 108, 'normac', 'cardibandrum', 'norma cooper', 969420222, 'norma.cooper92@example.com', '1999/12/28', '2018/1/4', 'Active', false, 'normavatar.jpg', 666421444);
+INSERT INTO "Users"(remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', 109, 'lilnina', 'groovey', 'nina sutton', 969420333, 'nina.sutton76@example.com', '1997/10/9', '2018/2/3', 'Active', false, 'ninavatar.jpg', 666421555);
+INSERT INTO "Users"(remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', 110, 'lilnisna2', 'groovey2', 'nina sutton2', 969420332, 'nina.sutton762@example.com', '1997/10/2', '2018/2/2', 'Active', false, 'ninavatar.jpg', 666221555);
 
 -- 100 cheekybreeky: $2y$10$meM7TAYhkBvbVktCou/ecOzZO30A.m72MzcyibQtsr88JGGCBghiu
 -- 101 oblivion: 

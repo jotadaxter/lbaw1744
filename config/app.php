@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'V A P O R'),
 
     /*
     |--------------------------------------------------------------------------
@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        VAPOR\Providers\AppServiceProvider::class,
+        VAPOR\Providers\AuthServiceProvider::class,
+        // VAPOR\Providers\BroadcastServiceProvider::class,
+        VAPOR\Providers\EventServiceProvider::class,
+        VAPOR\Providers\RouteServiceProvider::class,
 
     ],
 

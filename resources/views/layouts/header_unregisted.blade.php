@@ -1,5 +1,4 @@
-<html lang="en-US">
-<head>
+<!--
     <title class="vaporTitle">V A P O R</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,9 +13,7 @@
     <script src="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
     <link href="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <link href="/css/product_page.css" rel="stylesheet">
-</head>
-
-<body>
+-->
 
 <!-- Header -->
 <div id="header_box" class="container">
@@ -43,7 +40,7 @@
                 <!-- Cart Icon -->
                 <button type="button" id="cart_btn" class="cart_btn btn"><img id="cart" class="cart_not_signed img-rounded thumbnail" src="/cart.png" alt="cart_icon"></button>
                 <button type="button" id="register_btn" class="register_btn btn">Register</button>
-                <a class="register_btn btn button" href="{{url('/login')}}"" id="signIn_btn">Login</a></button>
+                <a class="register_btn btn button" href="{{url('/login')}}" id="signIn_btn">Login</a></button>
             </div>
         </div>
     </div>

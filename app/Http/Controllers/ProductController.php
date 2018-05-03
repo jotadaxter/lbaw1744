@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace VAPOR\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
-use App\Product;
+use VAPOR\Product;
 
 class ProductController extends Controller
 {

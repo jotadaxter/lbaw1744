@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Policies;
+namespace VAPOR\Policies;
 
-use App\User;
-use App\Product;
+use VAPOR\User;
+use VAPOR\Product;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Illuminate\Support\Facades\Auth;

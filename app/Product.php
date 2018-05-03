@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace VAPOR;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,6 +15,6 @@ class Product extends Model
    * The user this product belongs to
    */
   public function user() {
-    return $this->belongsTo('App\User');
+    return $this->belongsTo('VAPOR\User');
   }
 }

@@ -67,7 +67,7 @@ return [
     'providers' => [
         'Users' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => VAPOR\User::class,
         ],
 
         // 'Users' => [

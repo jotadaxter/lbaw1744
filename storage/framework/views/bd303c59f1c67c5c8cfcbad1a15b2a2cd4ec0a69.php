@@ -49,32 +49,33 @@
     <form method="POST" action="<?php echo e(route('login')); ?>">
     <?php echo e(csrf_field()); ?>
 
+
     <div class="input-group">
         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-        <input id="email" class="form-control" type="email" name="email" value="<?php echo e(old('email')); ?>" required autofocus>
+        <input id="email" class="form-control" type="email" name="email" value="<?php echo e(old('email')); ?>" required autofocus>  
+    </div>
         <?php if($errors->has('email')): ?>
             <span class="error">
             <?php echo e($errors->first('email')); ?>
 
             </span>
         <?php endif; ?>
-    </div>
 
     <div class="input-group">
         <span class="input-group-addon"><i class="fa fa-lock"></i></span>
         <input class="form-control" id="password" type="password" name="password" required>
+    </div>
         <?php if($errors->has('password')): ?>
             <span class="error">
                 <?php echo e($errors->first('password')); ?>
 
             </span>
         <?php endif; ?>
-    </div>
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">
         Login
     </button>
-    <a class="button button-outline" href="<?php echo e(route('register')); ?>">Register</a>
+    <a class="btn btn-lg btn-primary btn-block" href="<?php echo e(route('register')); ?>">Register</a>
     </div>
     </div>
 </form>

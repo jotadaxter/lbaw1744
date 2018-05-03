@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console;
+namespace VAPOR\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
