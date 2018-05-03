@@ -1,4 +1,4 @@
-@extends('layouts.page_unregisted');
+@extends('layouts.app');
 
 @section('content')
 <div class="container">
@@ -48,30 +48,31 @@
         <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
     <form method="POST" action="{{ route('login') }}">
     {{ csrf_field() }}
+
     <div class="input-group">
         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-        <input id="email" class="form-control" type="email" name="email" value="{{ old('email') }}" required autofocus>
+        <input id="email" class="form-control" type="email" name="email" value="{{ old('email') }}" required autofocus>  
+    </div>
         @if ($errors->has('email'))
             <span class="error">
             {{ $errors->first('email') }}
             </span>
         @endif
-    </div>
 
     <div class="input-group">
         <span class="input-group-addon"><i class="fa fa-lock"></i></span>
         <input class="form-control" id="password" type="password" name="password" required>
+    </div>
         @if ($errors->has('password'))
             <span class="error">
                 {{ $errors->first('password') }}
             </span>
         @endif
-    </div>
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">
         Login
     </button>
-    <a class="button button-outline" href="{{ route('register') }}">Register</a>
+    <a class="btn btn-lg btn-primary btn-block" href="{{ route('register') }}">Register</a>
     </div>
     </div>
 </form>
