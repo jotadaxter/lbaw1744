@@ -31,6 +31,10 @@ Route::get('profile/{user_id}', 'ProfileController@show')->name('profile');
 Route::get('profile/{user_id}/edit', 'ProfileController@showEdit')->name('edit');
 //Edit Profile Action
 Route::post('profile/{user_id}/edit', 'ProfileController@update');
+//Reset Password Form
+Route::get('password/reset', function () { return view('password.reset');})->name('password_reset');
+//Reset Password Action
+Route::post('password/reset', 'ProfileController@passwordReset');
 
 /* Module M02: Products */
 

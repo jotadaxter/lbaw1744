@@ -49,5 +49,15 @@ class ProfileController extends Controller
         $user->save();
         return view('users.profile', ['user' => $user]);
     }
+
+    public function showPasswordReset()
+    {
+        return view('password.reset');
+    }
+
+    public function passwordReset()
+    {
+
+    }
 }
 

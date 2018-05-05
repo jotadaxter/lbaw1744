@@ -371,7 +371,11 @@ ul.nav.nav-pills.nav-stacked{
     font-size: 500%;
 }
 
-.page404_explanation, .page404, .terms_title {
+.page404_explanation, .page404, .terms_title, .about-format {
     text-align:center;
 }
 
+.scrollbar-window {
+    height: 50vh;
+    overflow: auto;
+}
