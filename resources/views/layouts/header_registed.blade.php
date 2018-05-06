@@ -18,10 +18,7 @@
             </div>
         </div>
 
-        <div class="col-md-1 col-lg-1 "  style="margin-top: 15px">
-            <!-- Notification Icon -->
-            <img id="bell" class="img-rounded img-thumbnail" src="/bell.png" alt="bell_icon">
-        </div>
+        
         <div class="col-md-1 col-lg-1 "  style="margin-top: 15px">
             <!-- Cart Icon -->
             <img id="cart2" class="img-rounded img-thumbnail" src="/cart.png" alt="cart_icon">

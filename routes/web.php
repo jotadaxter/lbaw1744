@@ -32,7 +32,7 @@ Route::get('profile/{user_id}/edit', 'ProfileController@showEdit')->name('edit')
 //Edit Profile Action
 Route::post('profile/{user_id}/edit', 'ProfileController@update');
 //Reset Password Form
-Route::get('password/reset', function () { return view('password.reset');})->name('password_reset');
+Route::get('password/reset', 'ProfileController@showPasswordReset')->name('passwordReset');
 //Reset Password Action
 Route::post('password/reset', 'ProfileController@passwordReset');
 

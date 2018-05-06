@@ -55,8 +55,17 @@ class ProfileController extends Controller
         return view('password.reset');
     }
 
-    public function passwordReset()
+    public function passwordReset(Request $request)
     {
+        $request->validate([
+            'email' => 'string|email|max:255'
+        ]);
+
+        $users = User::where('email', '=', $request->input('email'))->get();
+        //o user tem de existir. se não existir tratar do erro
+
+        //enviar email e esperar pelo codigo de confirmação
+        
 
     }
 }

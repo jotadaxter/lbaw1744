@@ -1,9 +1,9 @@
 
 document.getElementById("register_btn").addEventListener("click", function(){
-    document.location.href = 'register';
+    document.location.href = '/register';
 });
 document.getElementById("search_btn").addEventListener("click", function(){
-    document.location.href = 'product_search';
+    document.location.href = '/product_search';
 });
 
 
