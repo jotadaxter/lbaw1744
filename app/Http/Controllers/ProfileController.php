@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
+use VAPOR\Mail\ResetPWMail;
 use VAPOR\User;
 
 class ProfileController extends Controller
@@ -55,18 +56,20 @@ class ProfileController extends Controller
         return view('password.reset');
     }
 
-    public function passwordReset(Request $request)
+    public function passwordReset(Request $request, \Illuminate\Mail\Mailer $mailer)
     {
         $request->validate([
-            'email' => 'string|email|max:255'
+            'email' => 'required|string|email|max:255|exists:Users'
         ]);
 
-        $users = User::where('email', '=', $request->input('email'))->get();
-        //o user tem de existir. se não existir tratar do erro
+        $user = User::where('email', '=', $request->input('email'))->get();
 
-        //enviar email e esperar pelo codigo de confirmação
-        
+        //send email
+        $mailer->to($request->input('email'))
+               ->send(new ResetPWMail());
 
+
+        return view('password.confirmation');
     }
 }
 
