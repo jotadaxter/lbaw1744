@@ -35,6 +35,16 @@ Route::post('profile/{user_id}/edit', 'ProfileController@update');
 Route::get('password/reset', 'ProfileController@showPasswordReset')->name('passwordReset');
 //Reset Password Action
 Route::post('password/reset', 'ProfileController@passwordReset');
+//Reset Password Confirmation Form
+Route::get('password/confirmation', 'ProfileController@showPasswordConfirmation')->name('passwordConfirmation');
+//Reset Password Confirmation Action
+Route::post('password/confirmation', 'ProfileController@passwordConfirmation');
+//Reset Password Change Form
+Route::get('password/change', 'ProfileController@showPasswordChange')->name('passwordChange');
+//Reset Password Change Action
+Route::post('password/change', 'ProfileController@passwordChange');
+//Password Change Success
+Route::get('/password/changeSuccess', 'Auth\ProfileController@showChangeSuccess')->name('changeSuccess');
 
 /* Module M02: Products */
 

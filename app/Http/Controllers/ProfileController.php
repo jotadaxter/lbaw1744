@@ -62,14 +62,64 @@ class ProfileController extends Controller
             'email' => 'required|string|email|max:255|exists:Users'
         ]);
 
-        $user = User::where('email', '=', $request->input('email'))->get();
+        $user = \VAPOR\User::where('email', '=', $request->input('email'))->get();
 
+        $code=md5(microtime());
         //send email
         $mailer->to($request->input('email'))
-               ->send(new ResetPWMail());
+               ->send(new ResetPWMail($code));
 
 
+        return view('password.confirmation', ['code' => $code])
+            ->with('user_demo', $user);
+    }
+
+    public function showPasswordConfirmation()
+    {
         return view('password.confirmation');
+    }
+
+    public function passwordConfirmation(Request $request)
+    {
+        if($request->input('code')==$request->input('confirmation_code')){
+            //goto change password
+
+
+            return view('password.change')
+                ->with('user_demo', $request->input('user_demo'));
+        }
+        else{
+            $errors = new \Illuminate\Support\MessageBag();
+            $errors->add('confirmation_code', 'Code is Incorrect');
+            return view('password.confirmation')
+                ->withErrors($errors)
+                ->with('code', $request->input('code'))
+                ->with('user_demo', $request->input('user_demo'));
+        }
+
+
+    }
+
+    public function showPasswordChange()
+    {
+        return view('password.change');
+    }
+
+    public function passwordChange(Request $request)
+    {
+        $request->validate([
+            'password' => 'string|min:6|confirmed'
+        ]);
+        $user = $request->input('user_demo');
+        $user->password = bcrypt($request->input('password'));
+
+        return view('password.changeSuccess');
+    }
+
+    public function showChangeSuccess()
+    {
+
+        return view('password.changeSuccess');
     }
 }
 

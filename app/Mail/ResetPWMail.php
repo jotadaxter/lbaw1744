@@ -11,14 +11,17 @@ class ResetPWMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $code;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($code)
     {
-        //
+        $this->code = $code;
+
     }
 
     /**
