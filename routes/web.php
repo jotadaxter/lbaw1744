@@ -40,7 +40,7 @@ Route::get('password/confirmation', 'ProfileController@showPasswordConfirmation'
 //Reset Password Confirmation Action
 Route::post('password/confirmation', 'ProfileController@passwordConfirmation');
 //Reset Password Change Form
-Route::get('password/change', 'ProfileController@showPasswordChange')->name('passwordChange');
+Route::get('password/change', function () { return view('password.change');})->name('passwordChange');
 //Reset Password Change Action
 Route::post('password/change', 'ProfileController@passwordChange');
 //Password Change Success

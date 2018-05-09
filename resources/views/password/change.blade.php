@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="col-md-6 col-lg-6 col-lg-offset-3">
-                        <form method="POST" action="{{ route('passwordChange') }}" id="pwResetForm" role="form">
+                        <form method="POST"  action="{{ route('passwordChange') }}" id="pwChangeForm" role="form">
                             {{ csrf_field() }}
                             <fieldset>
                                 <div class="form-group">

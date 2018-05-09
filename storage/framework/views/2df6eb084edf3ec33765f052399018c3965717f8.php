@@ -34,7 +34,7 @@
                         </div>
 
                         <div class="form-group">  
-                            <label for="email">E-Mail Address</label>
+                            <label for="email"><span class="req">* </span>E-Mail Address</label>
                             <input class="form-control"  id="email" type="email" name="email" value="<?php echo e(old('email')); ?>" required>
                             <?php if($errors->has('email')): ?>
                             <span class="error">
@@ -45,7 +45,7 @@
                         </div>
 
                         <div class="form-group">  
-                            <label for="password">Password</label>
+                            <label for="password"><span class="req">* </span>Password</label>
                             <input class="form-control" id="password" type="password" name="password" required>
                             <?php if($errors->has('password')): ?>
                             <span class="error">
@@ -56,7 +56,7 @@
                         </div>
 
                         <div class="form-group">  
-                            <label for="password-confirm">Confirm Password</label>
+                            <label for="password-confirm"><span class="req">* </span>Confirm Password</label>
                             <input class="form-control" id="password-confirm" type="password" name="password_confirmation" required>
                         </div>
 
@@ -71,7 +71,27 @@
                             <?php endif; ?>
                         </div>
 
-                        
+                        <div class="form-group">
+                            <label for="phone_number"> Phone Number: </label>
+                            <input type="tel" name="phone_number" id="phone_number" class="form-control phone"/>
+                            <?php if($errors->has('phone_number')): ?>
+                                <span class="error">
+                                <?php echo e($errors->first('phone_number')); ?>
+
+                            </span>
+                            <?php endif; ?>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nif">NIF: </label>
+                            <input type="number" name="nif" id="nif" class="form-control phone" size="9"/>
+                            <?php if($errors->has('nif')): ?>
+                                <span class="error">
+                                <?php echo e($errors->first('nif')); ?>
+
+                            </span>
+                            <?php endif; ?>
+                        </div>
 
                         <button class="btn btn-success" type="submit">
                         Register

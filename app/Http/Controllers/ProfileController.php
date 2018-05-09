@@ -108,18 +108,20 @@ class ProfileController extends Controller
     public function passwordChange(Request $request)
     {
         $request->validate([
-            'password' => 'string|min:6|confirmed'
+            'password' => 'string|min:6|confirmed',
         ]);
         $user = $request->input('user_demo');
         $user->password = bcrypt($request->input('password'));
 
-        return view('password.changeSuccess');
+        \Flash::message('bla');
+        return redirect('password.changeSuccess');
+
     }
 
     public function showChangeSuccess()
     {
 
-        return view('password.changeSuccess');
+        return ('password.changeSuccess');
     }
 }
 

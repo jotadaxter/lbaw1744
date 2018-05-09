@@ -6,6 +6,8 @@ use VAPOR\User;
 use VAPOR\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use VAPOR\Mail\Welcome;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
@@ -54,6 +56,8 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:Users',
             'password' => 'required|string|min:6|confirmed',
             'birth_date' =>'required|date',
+            'nif' => 'digits:9|max:9',
+            'phone_number' => 'numeric',
         ]);
     }
 
@@ -67,12 +71,17 @@ class RegisterController extends Controller
     {
         $temp = str_replace('-', '/', $data['birth_date']);
         $temp = date('Y/m/d', strtotime($temp));
+
+        Mail::to($data['email'])
+            ->send(new Welcome($data['username']));
         return User::create([
             'username' => $data['username'],
+            'password' => bcrypt($data['password']),
             'fullname' => $data['fullname'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'phone_number' => $data['phone_number'],
             'birth_date' => $temp,
+            'nif' => $data['nif'],
         ]);
     }
 }
