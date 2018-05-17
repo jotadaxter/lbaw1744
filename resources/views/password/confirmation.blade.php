@@ -28,6 +28,7 @@
                                 <button class="btn btn-success" type="submit">
                                     Submit
                                 </button>
+                                <a class="btn btn-success" href="{{route('resendConfirmationMail', session('email'))}}">Resend email</a>
                                 <a class="button button-outline" href="{{ route('passwordReset') }}">Back</a>
                             </fieldset>
                         </form>

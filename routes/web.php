@@ -37,6 +37,8 @@ Route::get('password/reset', 'ProfileController@showPasswordReset')->name('passw
 Route::post('password/reset', 'ProfileController@passwordReset');
 //Reset Password Confirmation Form
 Route::get('password/confirmation', 'ProfileController@showPasswordConfirmation')->name('passwordConfirmation');
+//Resend Email with confirmation code
+Route::get('password/resendConfirmation/{email}', 'ProfileController@resendConfirmationMail')->name('resendConfirmationMail');
 //Reset Password Confirmation Action
 Route::post('password/confirmation', 'ProfileController@passwordConfirmation');
 //Reset Password Change Form

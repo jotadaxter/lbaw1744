@@ -147,5 +147,24 @@ class ProfileController extends Controller
 
         return view('password.changeSuccess');
     }
+
+    public function resendConfirmationMail(Request $request, $email, \Illuminate\Mail\Mailer $mailer)
+    {
+        $user = User::where('email', '=', $email)->first();
+
+        $code=md5(microtime());
+
+        //register confirmation_code on user db
+        $user->confirmation_code = $code;
+        $user->save();
+
+        //send email
+        $mailer->to($email)
+            ->send(new ResetPWMail($code));
+
+        return redirect()->route('passwordConfirmation')
+            ->with('email', $email);
+
+    }
 }
 
