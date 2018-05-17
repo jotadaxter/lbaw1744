@@ -19,6 +19,9 @@
                                             {{ $errors->first('password') }}
                                         </span>
                                     @endif
+                                    @if (session()->has('email'))
+                                        <input class="form-control"  id="email" type="hidden" name="email" value="{{session('email')}}">
+                                    @endif
                                 </div>
 
                                 <div class="form-group">

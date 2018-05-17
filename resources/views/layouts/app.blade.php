@@ -43,6 +43,7 @@
     </header>
 
     <section id="content">
+        @include('layouts.flash_message')
         @yield('content')
     </section>
 

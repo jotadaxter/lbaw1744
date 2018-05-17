@@ -13,15 +13,15 @@
                             <fieldset>
 
                                 <div class="form-group">
-                                    <label for="confirmation_code">Insert the Confirmation Code Sent to Your Email</label>
+                                    <label for="confirmation_code"> Insert the Confirmation Code Sent to Your Email</label>
                                     <input class="form-control"  id="confirmation_code" type="text" name="confirmation_code" required>
                                     @if ($errors->has('confirmation_code'))
                                         <span class="error">
                                             {{ $errors->first('confirmation_code') }}
                                         </span>
                                     @endif
-                                    @if (!empty($code))
-                                        <input class="form-control"  id="code" type="hidden" name="code" value="{{$code}}">
+                                    @if (session()->has('email'))
+                                        <input class="form-control"  id="email" type="hidden" name="email" value="{{session('email')}}">
                                     @endif
                                 </div>
 

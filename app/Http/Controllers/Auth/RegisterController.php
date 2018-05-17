@@ -82,6 +82,7 @@ class RegisterController extends Controller
             'phone_number' => $data['phone_number'],
             'birth_date' => $temp,
             'nif' => $data['nif'],
+            'confirmation_code' => "",
         ]);
     }
 }

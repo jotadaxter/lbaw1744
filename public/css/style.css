@@ -379,3 +379,7 @@ ul.nav.nav-pills.nav-stacked{
     height: 50vh;
     overflow: auto;
 }
+
+#flash_message{
+    animation: flash-message 4s forwards;
+}

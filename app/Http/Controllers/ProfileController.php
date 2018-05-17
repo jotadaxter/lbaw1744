@@ -62,39 +62,50 @@ class ProfileController extends Controller
             'email' => 'required|string|email|max:255|exists:Users'
         ]);
 
-        $user = \VAPOR\User::where('email', '=', $request->input('email'))->get();
+        $email = $request->input('email');
+
+        $user = User::where('email', '=', $email)->first();
 
         $code=md5(microtime());
+
+        //register confirmation_code on user db
+        $user->confirmation_code = $code;
+        $user->save();
+
         //send email
-        $mailer->to($request->input('email'))
+        $mailer->to($email)
                ->send(new ResetPWMail($code));
 
-
-        return view('password.confirmation', ['code' => $code])
-            ->with('user_demo', $user);
+        return redirect()->route('passwordConfirmation')
+            ->with('email', $email);
     }
 
     public function showPasswordConfirmation()
     {
+
         return view('password.confirmation');
     }
 
     public function passwordConfirmation(Request $request)
     {
-        if($request->input('code')==$request->input('confirmation_code')){
+
+        $email = $request->input('email');
+
+        $user = User::where('email', '=', $email)->first();
+
+
+        if($request->input('confirmation_code')==$user->confirmation_code){
             //goto change password
 
-
-            return view('password.change')
-                ->with('user_demo', $request->input('user_demo'));
+            return redirect()->route('passwordChange')
+                ->with('email', $email);
         }
         else{
             $errors = new \Illuminate\Support\MessageBag();
             $errors->add('confirmation_code', 'Code is Incorrect');
-            return view('password.confirmation')
+            return redirect()->route('passwordConfirmation')
                 ->withErrors($errors)
-                ->with('code', $request->input('code'))
-                ->with('user_demo', $request->input('user_demo'));
+                ->with('email', $email);
         }
 
 
@@ -107,21 +118,34 @@ class ProfileController extends Controller
 
     public function passwordChange(Request $request)
     {
+        $email = $request->input('email');
+        session([
+            'email' => $email
+        ]);
+
+        $user = User::where('email', '=', $email)->first();
+
+        //reset confirmation code
+        $user->confirmation_code = "";
+        $user->save();
+
         $request->validate([
             'password' => 'string|min:6|confirmed',
         ]);
-        $user = $request->input('user_demo');
-        $user->password = bcrypt($request->input('password'));
+        if($request->input('password') != "")
+            $user->password = bcrypt($request->input('password'));
+        $user->save();
 
-        \Flash::message('bla');
-        return redirect('password.changeSuccess');
+        session()->flash('password_changed_success', 'Password was changed with success!');
+
+        return redirect()->route('changeSuccess');
 
     }
 
     public function showChangeSuccess()
     {
 
-        return ('password.changeSuccess');
+        return view('password.changeSuccess');
     }
 }
 
