@@ -44,7 +44,7 @@
         </div>
         <div class="col-md-1 col-lg-1 "  style="margin-top: 10px;">
             <!-- Profile Picture -->
-            <img id="profile_picture" class="img-rounded img-thumbnail" src="/profile_picture.png" alt="profile_picture">
+            <img id="profile_picture" class="img-rounded img-thumbnail" src="/uploads/profile_images/{{ Auth::user()->img }}" alt="profile_picture">
         </div>
 
     </div>

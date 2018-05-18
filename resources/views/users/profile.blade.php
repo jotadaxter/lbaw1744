@@ -13,8 +13,15 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-3 col-lg-3 " align="center">
-                                <img alt="User Pic" src="/profile_picture.png"
+                                <img alt="User Pic" src="/uploads/profile_images/{{ $user->img }}"
                                      class="img-circle img-responsive"> </div>
+                            <form enctype="multipart/form-data" action="/profile/{{$user->user_id}}/avatar" method="POST">
+                                {{ csrf_field() }}
+                                <input type="file" name="avatar" >
+                                <button class="btn btn-success" type="submit">
+                                    Change Image
+                                </button>
+                            </form>
                             <div class=" col-md-9 col-lg-9 ">
                                 <table class="white-box table table-user-information">
                                     <tbody>
@@ -47,7 +54,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-success" href="{{route('resendConfirmationMail', session('email'))}}">Change Avatar</a>
+
 
                     <a class="btn btn-success" href="{{ url('/profile/'.$user->user_id.'/edit') }}" id="edit_profile_btn">Edit Profile</a>
 

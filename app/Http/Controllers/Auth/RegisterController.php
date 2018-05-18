@@ -87,6 +87,7 @@ class RegisterController extends Controller
             'birth_date' => $temp,
             'nif' => $data['nif'],
             'confirmation_code' => "",
+            'img' => 'default.png',
         ]);
     }
 }

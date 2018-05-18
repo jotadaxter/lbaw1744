@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'StaticPagesController@showIndex');
+Route::get('/', 'StaticPagesController@showIndex')->name('index');
 
 /* Module M01: Authentication and Individual Profile */
 
@@ -47,6 +47,10 @@ Route::get('password/change', 'ProfileController@showPasswordChange')->name('pas
 Route::post('password/change', 'ProfileController@passwordChange');
 //Password Change Success
 Route::get('password/changeSuccess', 'ProfileController@showChangeSuccess')->name('changeSuccess');
+//Change Profile Avatar
+Route::post('profile/{user_id}/avatar', 'ProfileController@changeAvatar');
+
+
 
 /* Module M02: Products */
 
@@ -67,19 +71,14 @@ Route::get('product/{product_id}', 'ProductController@show');
 
 /* Module M06: Static Pages */
 //Home Page
-Route::get('/home', 'StaticPagesController@showHome');
-
+Route::get('/home', 'StaticPagesController@showHome')->name('home');
 //About Page
-Route::get('/about', 'StaticPagesController@showAbout');
-
+Route::get('/about', 'StaticPagesController@showAbout')->name('about');
 //Contacts Page
-Route::get('/contacts', 'StaticPagesController@showContacts');
-
+Route::get('/contacts', 'StaticPagesController@showContacts')->name('contacts');
 //Terms Page
-Route::get('/terms', 'StaticPagesController@showTerms');
-
+Route::get('/terms', 'StaticPagesController@showTerms')->name('terms');
 //Privacy Page
-Route::get('/privacy', 'StaticPagesController@showPrivacy');
-
+Route::get('/privacy', 'StaticPagesController@showPrivacy')->name('privacy');
 //404 Page
-Route::get('/404', 'StaticPagesController@show404');
+Route::get('/404', 'StaticPagesController@show404')->name('404');

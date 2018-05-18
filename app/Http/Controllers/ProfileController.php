@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 use VAPOR\Mail\ResetPWMail;
 use VAPOR\User;
+use Image;
 
 class ProfileController extends Controller
 {
@@ -169,9 +170,22 @@ class ProfileController extends Controller
 
     }
 
-    public function changeAvatar(Request $request)
+    public function changeAvatar(Request $request, $user_id)
     {
+        if($request->hasFile('avatar')){
+            $avatar = $request->file('avatar');
+            $filename = time() . '.' . $avatar->getClientOriginalExtension();
 
+            Image::make($avatar)
+                ->resize(300, 300)
+                ->save( public_path('/uploads/profile_images/' . $filename));
+
+            $user = Auth::user();
+            $user->img = $filename;
+            $user->save();
+        }
+
+        return redirect()->route('profile', $user_id );
     }
 }
 
