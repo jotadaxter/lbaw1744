@@ -11,16 +11,15 @@
 
         @foreach($users as $user)
             <li class="list-group-item">
-                <div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
-                    <div class="col-xs-10">
-                        {{$user->username}}
+                <div class="row toggle horizontal-scrollbar-window" id="dropdown-detail-1" data-toggle="detail-1">
 
-                    </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-lg-2 col-lg-offset-1">
+                        {{$user->username}}
+                        <br>
                         <input type="image" src="/uploads/profile_images/{{$user->img}}" alt="Submit" width="80" height="80">
                         <a class="btn btn-success" href="{{url('/profile/'.$user->user_id)}}">Go to Profile</a>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8 col-lg-6">
                         <table class="white-box table table-user-information">
                             <tbody>
                             <tr>

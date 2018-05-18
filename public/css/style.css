@@ -380,6 +380,11 @@ ul.nav.nav-pills.nav-stacked{
     overflow: auto;
 }
 
+.horizontal-scrollbar-window {
+    overflow-X: scroll;
+    overflow-y: hidden;
+}
+
 #flash_message{
     animation: flash-message 4s forwards;
 }

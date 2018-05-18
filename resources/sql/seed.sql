@@ -289,6 +289,8 @@ ALTER TABLE ONLY "Invoices"
 	ALTER COLUMN invoice_id SET DEFAULT nextval('"SerialGenerator"'::regclass);
 
 
+
+
 --deletes
 DELETE FROM "Users";
 DELETE FROM "Sellers";
@@ -431,6 +433,8 @@ INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (502, 802, 66);
 INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (503, 803,77 );
 INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (504, 804, 100);
 INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price) VALUES (505, 805,52 );
+
+ALTER SEQUENCE "SerialGenerator" RESTART WITH 999;
 
 -- Invoices
 

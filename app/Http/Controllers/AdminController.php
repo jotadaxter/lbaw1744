@@ -3,6 +3,7 @@
 namespace VAPOR\Http\Controllers;
 
 use Illuminate\Http\Request;
+use VAPOR\Product;
 use VAPOR\User;
 
 class AdminController extends Controller
@@ -24,6 +25,10 @@ class AdminController extends Controller
     }
 
     function showAdminPageProducts(){
-        return view('admin.products');
+        $products = Product::all();
+
+        return view('admin.products')
+            ->with('products', $products);
+
     }
 }
