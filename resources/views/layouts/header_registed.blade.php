@@ -27,12 +27,19 @@
             <!-- User Dropbox Menu -->
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="usernameOptions dropdown-toggle" data-toggle="dropdown">{{Auth::user()->username}}<span class="caret"></span></a>
+                    <a href="#" class="usernameOptions " data-toggle="dropdown">{{Auth::user()->username}}  </a>
                     <ul class="dropdown-menu">
                         <li><a id="view_profile" href="/profile/{{Auth::id()}}">View Profile <span class="glyphicon glyphicon-user pull-right"></span></a></li>
                         <li class="divider"></li>
                         <li><a href="#">My Products <span class="glyphicon glyphicon-th-list pull-right"></span></a></li>
                         <li class="divider"></li>
+
+                        @if(Auth::user()->admin)
+                            <li><a href="{{route('adminPage')}}">Admin Menu <span class="glyphicon glyphicon-user pull-right"></span></a></li>
+                            <li class="divider"></li>
+
+                        @endif
+
                         <li><a href="#">Wishlist <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
                         <li class="divider"></li>
                         <li><a href="#">Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>

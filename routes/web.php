@@ -68,6 +68,15 @@ Route::get('product/{product_id}', 'ProductController@show');
 
 /* Module M05: User Administration */
 
+//Admin Page
+Route::get('/admin', 'AdminController@showAdminPage')->name('adminPage');
+//Admin Page Users
+Route::get('/admin/users', 'AdminController@showAdminPageUsers')->name('admin_users');
+//Admin Page Products
+Route::get('/admin/products', 'AdminController@showAdminPageProducts')->name('admin_products');
+
+//Reset Password Change Action
+//Route::post('password/change', 'AdminController@passwordChange');
 
 /* Module M06: Static Pages */
 //Home Page
