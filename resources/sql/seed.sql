@@ -303,17 +303,17 @@ DELETE FROM "SerialKeys";
 DELETE FROM "Invoices";
 
 -- Users (user_id, username, password, fullname, email, phone_number, birth_date, admission_date, Userstate, admin, img, nif)
-INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 1, 'janedoe1', '$2y$10$meM7TAYhkBvbVktCou/ecOzZO30A.m72MzcyibQtsr88JGGCBghiu', 'jane eleanor doer', 969420666, 'janedoe@gmail.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666420666);
-INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 2, 'jenlong', 'oblivion', 'jenny long', 911999333, 'jenny.long84@example.com', '1973/7/10', '2018/2/20', 'Active', false, 'jenavatar.jpg', 666420777);
-INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 3, 'everettdotnet', 'morrowind', 'everett adams', 969420444, 'everett.adams60@example.com', '1980/3/8', '2018/1/10', 'Active', false, 'eveavatar.jpg', 666420888);
-INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 4, 'zdaroviaqueen', 'zdarovia', 'regina duncan', 969420555, 'regina.duncan44@example.com', '1990/1/1', '2018/3/11', 'Active', false, 'default.png', 666420999);
-INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 5, 'kentron', 'notoriousbig', 'ken gonzalez', 969420777, 'ken.gonzalez84@example.com', '1994/4/4', '2018/1/18', 'Active', false, 'default.png', 666421000);
-INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 6, 'teddyboy', 'yeezytaughtme', 'ted mitchell', 969420888, 'ted.mitchell70@example.com', '1988/11/18', '2018/3/20', 'Active', false, 'default.png', 666421111);
-INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 7, 'nottheactor', 'hoffhoff', 'dustin hoffman', 969420999, 'dustin.hoffman16@example.com', '1987/9/19', '2018/6/21', 'Active', false, 'default.png', 666421222);
-INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 8, 'desugurippu', 'noided', 'michael arnold', 969420111, 'michael.arnold30@example.com', '1984/8/7', '2018/3/22', 'Active', false, 'default.png', 666421333);
-INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 9, 'normac', 'cardibandrum', 'norma cooper', 969420222, 'norma.cooper92@example.com', '1999/12/28', '2018/1/4', 'Active', false, 'default.png', 666421444);
-INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 10, 'lilnina', 'groovey', 'nina sutton', 969420333, 'nina.sutton76@example.com', '1997/10/9', '2018/2/3', 'Active', false, 'default.png', 666421555);
-INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 11, 'lilnisna2', 'groovey2', 'nina sutton2', 969420332, 'nina.sutton762@example.com', '1997/10/2', '2018/2/2', 'Active', false, 'default.png', 666221555);
+INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 100, 'janedoe1', '$2y$10$meM7TAYhkBvbVktCou/ecOzZO30A.m72MzcyibQtsr88JGGCBghiu', 'jane eleanor doer', 969420666, 'janedoe@gmail.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666420666);
+INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 101, 'jenlong', 'oblivion', 'jenny long', 911999333, 'jenny.long84@example.com', '1973/7/10', '2018/2/20', 'Active', false, 'jenavatar.jpg', 666420777);
+INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 102, 'everettdotnet', 'morrowind', 'everett adams', 969420444, 'everett.adams60@example.com', '1980/3/8', '2018/1/10', 'Active', false, 'eveavatar.jpg', 666420888);
+INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 103, 'zdaroviaqueen', 'zdarovia', 'regina duncan', 969420555, 'regina.duncan44@example.com', '1990/1/1', '2018/3/11', 'Active', false, 'default.png', 666420999);
+INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 104, 'kentron', 'notoriousbig', 'ken gonzalez', 969420777, 'ken.gonzalez84@example.com', '1994/4/4', '2018/1/18', 'Active', false, 'default.png', 666421000);
+INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 105, 'teddyboy', 'yeezytaughtme', 'ted mitchell', 969420888, 'ted.mitchell70@example.com', '1988/11/18', '2018/3/20', 'Active', false, 'default.png', 666421111);
+INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 106, 'nottheactor', 'hoffhoff', 'dustin hoffman', 969420999, 'dustin.hoffman16@example.com', '1987/9/19', '2018/6/21', 'Active', false, 'default.png', 666421222);
+INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 107, 'desugurippu', 'noided', 'michael arnold', 969420111, 'michael.arnold30@example.com', '1984/8/7', '2018/3/22', 'Active', false, 'default.png', 666421333);
+INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 108, 'normac', 'cardibandrum', 'norma cooper', 969420222, 'norma.cooper92@example.com', '1999/12/28', '2018/1/4', 'Active', false, 'default.png', 666421444);
+INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 109, 'lilnina', 'groovey', 'nina sutton', 969420333, 'nina.sutton76@example.com', '1997/10/9', '2018/2/3', 'Active', false, 'default.png', 666421555);
+INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 110, 'lilnisna2', 'groovey2', 'nina sutton2', 969420332, 'nina.sutton762@example.com', '1997/10/2', '2018/2/2', 'Active', false, 'default.png', 666221555);
 
 -- 100 cheekybreeky: $2y$10$meM7TAYhkBvbVktCou/ecOzZO30A.m72MzcyibQtsr88JGGCBghiu
 -- 101 oblivion: 
@@ -324,23 +324,23 @@ INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, passwo
 
 
 -- Sellers (user_id, professional_email, professional_name, professional_phone)
-INSERT INTO "Sellers"(user_id, professional_email, professional_name, professional_phone) VALUES (6, 'ableton@gmail.com', 'ableton', 912345678);
-INSERT INTO "Sellers"(user_id, professional_email, professional_name, professional_phone) VALUES (7, 'adobe@gmail.com', 'adobe', 913456789);
-INSERT INTO "Sellers"(user_id, professional_email, professional_name, professional_phone) VALUES (8, 'microsoft@gmail.com', 'microsoft', 912543876);
-INSERT INTO "Sellers"(user_id, professional_email, professional_name, professional_phone) VALUES (9, 'sony@gmail.com', 'sony', 913654987);
-INSERT INTO "Sellers"(user_id, professional_email, professional_name, professional_phone) VALUES (10, 'blender@gmail.com', 'blender', 919876543);
+INSERT INTO "Sellers"(user_id, professional_email, professional_name, professional_phone) VALUES (105, 'ableton@gmail.com', 'ableton', 912345678);
+INSERT INTO "Sellers"(user_id, professional_email, professional_name, professional_phone) VALUES (106, 'adobe@gmail.com', 'adobe', 913456789);
+INSERT INTO "Sellers"(user_id, professional_email, professional_name, professional_phone) VALUES (107, 'microsoft@gmail.com', 'microsoft', 912543876);
+INSERT INTO "Sellers"(user_id, professional_email, professional_name, professional_phone) VALUES (108, 'sony@gmail.com', 'sony', 913654987);
+INSERT INTO "Sellers"(user_id, professional_email, professional_name, professional_phone) VALUES (109, 'blender@gmail.com', 'blender', 919876543);
 
 -- Products (product_id, user_id, description, release_date, operating_system, price, logo_path, name)
-INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 200, 6, 'daw for live mixing and production', '2015/10/20', 'wml', 599, 'ableton9.jpg', 'ableton 9 live suite');
-INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 201, 7, 'image editing software', '2016/2/14', 'wml', 599, 'photoshop.jpg', 'adobe photoshop');
-INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 202, 8, 'programming ide', '2018/3/12', 'w', 199, 'visualstudio.jpg', 'visual studio 2018');
-INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 203, 9, 'video editing software', '2014/1/22', 'wm', 299, 'sonyvegas.jpg', 'sony vegas pro');
-INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 204, 10, '3d rendering and editing software', '2013/10/12', 'wml', 0, 'blender.jpg', 'blender');
-INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 205, 6, 'synthetizer plug in for ableton', '2017/11/21', 'wml', 29, 'massive.jpg', 'ableton massive plugin');
-INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 206, 7, 'vector graphic design software', '2016/4/1', 'wml', 99, 'ilustrator.jpg', 'adobe ilustrator');
-INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 207, 8, 'programming text editor', '2017/11/10', 'w', 0, 'visualcode.jpg', 'microsoft visual code');
-INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 208, 9, 'digital audio editing suite software', '2002/7/12', 'wm', 199, 'soundforge.jpg', 'sony sound forge');
-INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 209, 10, 'dynamic mixing device', '2018/10/9', 'wml', 99, 'channelblender.jpg', 'channel blender');
+INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 200, 105, 'daw for live mixing and production', '2015/10/20', 'wml', 599, 'ableton9.jpg', 'ableton 9 live suite');
+INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 201, 106, 'image editing software', '2016/2/14', 'wml', 599, 'photoshop.jpg', 'adobe photoshop');
+INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 202, 107, 'programming ide', '2018/3/12', 'w', 199, 'visualstudio.jpg', 'visual studio 2018');
+INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 203, 108, 'video editing software', '2014/1/22', 'wm', 299, 'sonyvegas.jpg', 'sony vegas pro');
+INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 204, 109, '3d rendering and editing software', '2013/10/12', 'wml', 0, 'blender.jpg', 'blender');
+INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 205, 105, 'synthetizer plug in for ableton', '2017/11/21', 'wml', 29, 'massive.jpg', 'ableton massive plugin');
+INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 206, 106, 'vector graphic design software', '2016/4/1', 'wml', 99, 'ilustrator.jpg', 'adobe ilustrator');
+INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 207, 107, 'programming text editor', '2017/11/10', 'w', 0, 'visualcode.jpg', 'microsoft visual code');
+INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 208, 108, 'digital audio editing suite software', '2002/7/12', 'wm', 199, 'soundforge.jpg', 'sony sound forge');
+INSERT INTO "Products" (hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES (FALSE, 209, 109, 'dynamic mixing device', '2018/10/9', 'wml', 99, 'channelblender.jpg', 'channel blender');
 
 -- Product Images (product_id, img_path)
 INSERT INTO "ProductImages"(product_id, img_path) VALUES (200, 'abletonimg1.jpg');
@@ -367,17 +367,17 @@ INSERT INTO "Tags"(product_id, tag_name) VALUES (208, 'audio');
 INSERT INTO "Tags"(product_id, tag_name) VALUES (209, '3d');
 
 -- SerialKeys (sk_id, user_id, product_id, code)
-INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (500, 6, 200, '1J6B5JHG7I');
-INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (501, 7, 201, '0FIAJ5N6B3');
-INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (502, 8, 202, '09FUHRB5N6');
-INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (503, 9, 203, 'S0HNS4K6HS');
-INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (504, 10, 204, 'OFCJAGHI54');
-INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (505, 11, 205, '0SAIDUFRKF');
-INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (506, 12, 206, 'SGHUDIFOG3');
-INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (507, 13, 207, '5URJEDKHA4');
-INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (508, 14, 208, '38HUEDWXJH');
-INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (509, 15, 209, 'IODIGHOI2N');
-INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (510, 16, 209, 'IODIGHOP2N');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (500, 105, 200, '1J6B5JHG7I');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (501, 106, 201, '0FIAJ5N6B3');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (502, 107, 202, '09FUHRB5N6');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (503, 108, 203, 'S0HNS4K6HS');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (504, 109, 204, 'OFCJAGHI54');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (505, 105, 205, '0SAIDUFRKF');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (506, 106, 206, 'SGHUDIFOG3');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (507, 107, 207, '5URJEDKHA4');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (508, 108, 208, '38HUEDWXJH');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (509, 109, 209, 'IODIGHOI2N');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (510, 109, 209, 'IODIGHOP2N');
 
 
 -- Reviews (sk_id, rating, review_date, comment)
@@ -400,28 +400,28 @@ INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALU
 INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALUES (204, 15, '2018/4/1', '2018/4/30');
 
 -- Purchases (purchase_id, final_price, user_id, sk_id, paid_date, paymentmethod, details)
-INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (800, 579, 1, '2018/4/21', 'Credit Card', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (801, 579, 2, '2018/6/12', 'Credit Card', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (802, 169, 3, '2018/5/2', 'PayPal', 'Minor setbacks contacting seller');
-INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (803, 279, 4, '2018/6/23', 'Banking Transfer', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (804, 14, 5, '2018/3/31', 'Banking Transfer', 'Minor setbacks contacting seller');
-INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (805, 29, 1, '2018/1/26', 'Credit Card', 'Purchase sucessful');
-INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (806, 99, 2, '2018/8/1', 'PayPal', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (807, 579,3, '2018/11/4', 'PayPal', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (808, 199, 4, '2018/3/10', 'PayPal', 'Purchase successful');
-INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (809, 99, 5, '2018/9/2', 'Credit Card', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (800, 579, 100, '2018/4/21', 'Credit Card', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (801, 579, 101, '2018/6/12', 'Credit Card', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (802, 169, 102, '2018/5/2', 'PayPal', 'Minor setbacks contacting seller');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (803, 279, 103, '2018/6/23', 'Banking Transfer', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (804, 14, 104, '2018/3/31', 'Banking Transfer', 'Minor setbacks contacting seller');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (805, 29, 100, '2018/1/26', 'Credit Card', 'Purchase sucessful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (806, 99, 101, '2018/8/1', 'PayPal', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (807, 579, 102, '2018/11/4', 'PayPal', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (808, 199, 103, '2018/3/10', 'PayPal', 'Purchase successful');
+INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (809, 99, 104, '2018/9/2', 'Credit Card', 'Purchase successful');
 
 -- Wishlists (user_id, product_id)
-INSERT INTO "Wishlists"(user_id, product_id) VALUES (1, 209);
-INSERT INTO "Wishlists"(user_id, product_id) VALUES (2, 208);
-INSERT INTO "Wishlists"(user_id, product_id) VALUES (3, 207);
-INSERT INTO "Wishlists"(user_id, product_id) VALUES (3, 206);
-INSERT INTO "Wishlists"(user_id, product_id) VALUES (5, 205);
-INSERT INTO "Wishlists"(user_id, product_id) VALUES (6, 204);
-INSERT INTO "Wishlists"(user_id, product_id) VALUES (7, 203);
-INSERT INTO "Wishlists"(user_id, product_id) VALUES (8, 202);
-INSERT INTO "Wishlists"(user_id, product_id) VALUES (9, 201);
-INSERT INTO "Wishlists"(user_id, product_id) VALUES (10, 200);
+INSERT INTO "Wishlists"(user_id, product_id) VALUES (100, 209);
+INSERT INTO "Wishlists"(user_id, product_id) VALUES (101, 208);
+INSERT INTO "Wishlists"(user_id, product_id) VALUES (102, 207);
+INSERT INTO "Wishlists"(user_id, product_id) VALUES (103, 206);
+INSERT INTO "Wishlists"(user_id, product_id) VALUES (104, 205);
+INSERT INTO "Wishlists"(user_id, product_id) VALUES (105, 204);
+INSERT INTO "Wishlists"(user_id, product_id) VALUES (106, 203);
+INSERT INTO "Wishlists"(user_id, product_id) VALUES (107, 202);
+INSERT INTO "Wishlists"(user_id, product_id) VALUES (108, 201);
+INSERT INTO "Wishlists"(user_id, product_id) VALUES (109, 200);
 
 -- PurchasedKeys
 
