@@ -39,6 +39,8 @@ class ProfileController extends Controller
             'email' => 'string|email|max:255',
             'password' => 'nullable|string|min:6|confirmed',
             'birth_date' =>'nullable|date',
+            'nif' => 'digits:9|max:9',
+            'phone_number' => 'numeric',
          ]);
         $user = User::find($user_id);
         $user->username = $request->input('username');
@@ -164,6 +166,11 @@ class ProfileController extends Controller
 
         return redirect()->route('passwordConfirmation')
             ->with('email', $email);
+
+    }
+
+    public function changeAvatar(Request $request)
+    {
 
     }
 }

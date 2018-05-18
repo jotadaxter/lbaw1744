@@ -73,7 +73,7 @@
 
                         <div class="form-group">
                             <label for="phone_number"> Phone Number: </label>
-                            <input type="tel" name="phone_number" id="phone_number" class="form-control phone"/>
+                            <input type="tel" name="phone_number" id="phone_number" class="form-control phone" value="<?php echo e(old('phone_number')); ?>"/>
                             <?php if($errors->has('phone_number')): ?>
                                 <span class="error">
                                 <?php echo e($errors->first('phone_number')); ?>
@@ -84,7 +84,7 @@
 
                         <div class="form-group">
                             <label for="nif">NIF: </label>
-                            <input type="number" name="nif" id="nif" class="form-control phone" size="9"/>
+                            <input type="number" name="nif" id="nif" class="form-control phone" size="9" value="<?php echo e(old('nif')); ?>"/>
                             <?php if($errors->has('nif')): ?>
                                 <span class="error">
                                 <?php echo e($errors->first('nif')); ?>

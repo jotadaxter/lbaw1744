@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {return view('index');});
+Route::get('/', 'StaticPagesController@showIndex');
 
 /* Module M01: Authentication and Individual Profile */
 
@@ -67,19 +67,19 @@ Route::get('product/{product_id}', 'ProductController@show');
 
 /* Module M06: Static Pages */
 //Home Page
-Route::get('/home', function () { return view('index');});
+Route::get('/home', 'StaticPagesController@showHome');
 
 //About Page
-Route::get('/about', function () {return view('about');});
+Route::get('/about', 'StaticPagesController@showAbout');
 
 //Contacts Page
-Route::get('/contacts', function () {return view('contacts');});
+Route::get('/contacts', 'StaticPagesController@showContacts');
 
 //Terms Page
-Route::get('/terms', function () {return view('terms');});
+Route::get('/terms', 'StaticPagesController@showTerms');
 
 //Privacy Page
-Route::get('/privacy', function () {return view('privacy');});
+Route::get('/privacy', 'StaticPagesController@showPrivacy');
 
 //404 Page
-Route::get('/404', function () {return view('404');});
+Route::get('/404', 'StaticPagesController@show404');

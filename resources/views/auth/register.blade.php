@@ -67,7 +67,7 @@
 
                         <div class="form-group">
                             <label for="phone_number"> Phone Number: </label>
-                            <input type="tel" name="phone_number" id="phone_number" class="form-control phone"/>
+                            <input type="tel" name="phone_number" id="phone_number" class="form-control phone" value="{{ old('phone_number') }}"/>
                             @if ($errors->has('phone_number'))
                                 <span class="error">
                                 {{ $errors->first('phone_number') }}
@@ -77,7 +77,7 @@
 
                         <div class="form-group">
                             <label for="nif">NIF: </label>
-                            <input type="number" name="nif" id="nif" class="form-control phone" size="9"/>
+                            <input type="number" name="nif" id="nif" class="form-control phone" size="9" value="{{ old('nif') }}"/>
                             @if ($errors->has('nif'))
                                 <span class="error">
                                 {{ $errors->first('nif') }}

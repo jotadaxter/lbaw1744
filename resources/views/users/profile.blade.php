@@ -16,7 +16,7 @@
                                 <img alt="User Pic" src="/profile_picture.png"
                                      class="img-circle img-responsive"> </div>
                             <div class=" col-md-9 col-lg-9 ">
-                                <table class="table table-user-information">
+                                <table class="white-box table table-user-information">
                                     <tbody>
                                     <tr>
                                         <td>Username:</td>
@@ -47,9 +47,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="panel-footer">
-                        <a href="{{ url('/profile/'.$user->user_id.'/edit') }}" id="edit_profile_btn">Edit Profile</a>
-                    </div>
+                    <a class="btn btn-success" href="{{route('resendConfirmationMail', session('email'))}}">Change Avatar</a>
+
+                    <a class="btn btn-success" href="{{ url('/profile/'.$user->user_id.'/edit') }}" id="edit_profile_btn">Edit Profile</a>
+
                 </div>
             </div>
         </div>

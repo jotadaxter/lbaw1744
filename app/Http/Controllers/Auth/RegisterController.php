@@ -30,7 +30,7 @@ class RegisterController extends Controller
      * @var string
      */
 
-    protected $redirectTo = '/';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -56,8 +56,8 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:Users',
             'password' => 'required|string|min:6|confirmed',
             'birth_date' =>'required|date',
-            'nif' => 'digits:9|max:9',
-            'phone_number' => 'numeric',
+            'nif' => 'digits:9|max:9|nullable',
+            'phone_number' => 'numeric|nullable',
         ]);
     }
 
@@ -74,6 +74,10 @@ class RegisterController extends Controller
 
         Mail::to($data['email'])
             ->send(new Welcome($data['username']));
+
+        session()->flash('account_created_success', 'Account was created with success!');
+
+
         return User::create([
             'username' => $data['username'],
             'password' => bcrypt($data['password']),
