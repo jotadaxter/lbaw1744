@@ -394,14 +394,21 @@ ul.nav.nav-pills.nav-stacked{
     background-color: black;
 }
 
-.dropdownbox-element {
-    height: 50%;
-}
 
-.dropdownbox-element:hover {
-
-}
 
 .hr_header {
     border-color: black;
+}
+
+.hr_header2 {
+    border-color: grey;
+}
+
+.dropdown-item-element {
+    text-align: center;
+    color:black;
+}
+
+.dropdown-item-element:active {
+    background-color: grey;
 }

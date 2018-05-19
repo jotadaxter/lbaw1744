@@ -66,7 +66,7 @@
                         <li class="divider"></li>
                         <li><a href="#">Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
                         <li class="divider"></li>
-                        <li><a id="signOut_btn" href="/logout">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                        <li><a id="signOut_btn" href="{{route('logout')}}">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
                     </ul>
                 </div>
 
@@ -113,19 +113,40 @@
 
             <ul class="nav navbar-nav">
                 <hr class="hr_header">
-                <li class="dropdownbox-element"><a href="{{route('cart')}}">Cart </a></li>
+                <li class="dropdownbox-element"><a href="{{route('cart')}}" style="color:black;" >Cart </a></li>
                 <hr class="hr_header">
                 <li class="dropdown">
-                    <a class=" active dropdownbox-element" data-toggle="dropdown"
-                       role="button" aria-haspopup="true" aria-expanded="false">Dropdown </a>
+                    <a class=" active dropdownbox-element" style="color:black;" data-toggle="dropdown"
+                       role="button" aria-haspopup="true" aria-expanded="false">{{$user->username}}</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
+                        <li><a class="dropdown-item-element" style="color:black;" href="/profile/{{Auth::id()}}">
+                                View Profile
+                            </a>
+                        </li>
+
+                        <hr class="hr_header2">
+
+                        <li><a class="active dropdown-item-element" style="color:black;" href="#">My Products</a></li>
+
+                        <hr class="hr_header">
+
+                        @if(Auth::user()->admin)
+                            <li><a class="dropdown-item-element" style="color:black;" href="{{route('adminPage')}}">
+                                    Admin Menu
+                                </a>
+                            </li>
+                            <hr class="hr_header2">
+                        @endif
+
+                        <li><a class="active dropdown-item-element" style="color:black;" href="#">Wishlist</a></li>
+
+                        <hr class="hr_header2">
+
+                        <li><a class="active dropdown-item-element" style="color:black;" href="#">Settings</a></li>
+
+                        <hr class="hr_header2">
+
+                        <li><a class="dropdown-item-element" style="color:black;" href="{{route('logout')}}">Sign Out</a></li>
                     </ul>
                 </li>
             </ul>

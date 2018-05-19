@@ -33,10 +33,48 @@
             </div>
         </div>
     </div>
-
-    <!-- Visible XS Header -->
-
 </div>
+
+<!-- Visible XS Header -->
+<nav class="visible-xs navbar navbar-default btn">
+    <div class="container">
+
+        <!-- Header Mobile Navbar -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle navbar-toggle-2 collapsed"
+                    data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand vaporTitle vapor_xs" style="color:black" href="{{route('home')}}" >V A P O R</a>
+        </div>
+
+        <!-- Dropbox -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <div class="input-group stylish-input-group navbar-left">
+                <input type="text" class="white-box form-control"  placeholder="Search" href="{{url('/products')}}">
+                <span class="input-group-addon btn">
+                    <button type="button" id="search_btn">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <hr class="hr_header">
+                <li class="dropdownbox-element"><a href="{{route('cart')}}" style="color:black;" >Cart </a></li>
+                <hr class="hr_header">
+                <li class="dropdownbox-element"><a href="{{route('login')}}" style="color:black;" >Login </a></li>
+                <hr class="hr_header">
+                <li class="dropdownbox-element"><a href="{{route('register')}}" style="color:black;" >Register </a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
 
 <!-- XS Header Alignment -->
 <div class="row visible-xs">
