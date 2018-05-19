@@ -20,4 +20,9 @@ class ProductsController extends Controller
 
       return view('products.products');
     }
+
+    public function showCart()
+    {
+        return view('cart');
+    }
 }

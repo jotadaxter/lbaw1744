@@ -1,16 +1,27 @@
 <!-- Header Signed -->
 <div id="header_box" class="container">
-    <!-- Hidden XS Header -->
     <div class="row hidden-xs">
-        <div class="col-md-3 col-lg-3 ">
-            <!-- Title -->
-            <h1 class="vaporTitle">V A P O R</h1>
+        <div class="col-sm-3 col-md-3 col-lg-3 ">
+            <div class="visible-sm">
+                <!-- Title -->
+                <h1 class="vaporTitle registed_title_sm">V A P O R</h1>
+            </div>
+            <div class="visible-md">
+                <!-- Title -->
+                <h1 class="vaporTitle registed_title_md">V A P O R</h1>
+            </div>
+            <div class="hidden-md hidden-sm hidden-xs">
+                <!-- Title -->
+                <h1 class="vaporTitle">V A P O R</h1>
+            </div>
+
         </div>
-        <div class="col-md-3 col-lg-4">
+
+        <div class="col-sm-3 col col-md-4 col-lg-4  center">
             <!-- Search Bar -->
-            <div class="input-group stylish-input-group" style="margin-top: 20px">
-                <input type="text" class="form-control"  placeholder="Search" >
-                <span class="input-group-addon">
+            <div class="input-group stylish-input-group shift-down">
+                <input type="text" class="white-box form-control"  placeholder="Search" href="{{url('/products')}}">
+                <span class="input-group-addon btn">
                     <button type="button" id="search_btn">
                         <span class="glyphicon glyphicon-search"></span>
                     </button>
@@ -18,43 +29,60 @@
             </div>
         </div>
 
-        
-        <div class="col-md-1 col-lg-1 "  style="margin-top: 15px">
-            <!-- Cart Icon -->
-            <img id="cart2" class="img-rounded img-thumbnail" src="/cart.png" alt="cart_icon">
-        </div>
-        <div class="col-md-2 col-lg-2"  style="margin-top: 20px">
-            <!-- User Dropbox Menu -->
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="usernameOptions " data-toggle="dropdown">{{Auth::user()->username}}  </a>
-                    <ul class="dropdown-menu">
-                        <li><a id="view_profile" href="/profile/{{Auth::id()}}">View Profile <span class="glyphicon glyphicon-user pull-right"></span></a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">My Products <span class="glyphicon glyphicon-th-list pull-right"></span></a></li>
-                        <li class="divider"></li>
+        <div class="shift-down">
+            <div class="col-sm-1 col-md-1 col-lg-1  btn-group">
+            <!-- Cart Button -->
+            <a href="{{route('cart')}}" id="cart_btn" class="cart_btn btn">
+                <img id="cart"  class="cart_not_signed img-rounded thumbnail" src="/icons/cart.png" alt="cart_icon" height="80" width="80">
+            </a>
+            </div>
 
-                        @if(Auth::user()->admin)
-                            <li><a href="{{route('adminPage')}}">Admin Menu <span class="glyphicon glyphicon-user pull-right"></span></a></li>
+            <div class="col-sm-3 col-md-2 col-lg-2 btn-group">
+
+                <!-- User Dropbox Menu-->
+
+                    <div class="dropdown ">
+                        <button class="register_btn btn button dropdown-toggle btn-block" type="button" data-toggle="dropdown">
+                            {{$user->username}}
+                            </button>
+                        <ul class="dropdown-menu">
+                            <li><a id="view_profile" href="/profile/{{Auth::id()}}">View Profile <span class="glyphicon glyphicon-user pull-right"></span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">My Products <span class="glyphicon glyphicon-th-list pull-right"></span></a></li>
                             <li class="divider"></li>
 
-                        @endif
+                            @if(Auth::user()->admin)
+                                <li><a href="{{route('adminPage')}}">Admin Menu <span class="glyphicon glyphicon-user pull-right"></span></a></li>
+                                <li class="divider"></li>
 
-                        <li><a href="#">Wishlist <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
-                        <li class="divider"></li>
-                        <li><a id="signOut_btn" href="/logout">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
-                    </ul>
-                </li>
-            </ul>
+                            @endif
+
+                            <li><a href="#">Wishlist <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+                            <li class="divider"></li>
+                            <li><a id="signOut_btn" href="/logout">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                        </ul>
+                    </div>
+
+
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2 btn-group shift-up">
+                <a class="register_btn btn button">
+                    <img id="profile_picture" class="img-rounded img-thumbnail" src="/uploads/profile_images/{{ Auth::user()->img }}" alt="profile_picture" height="60" width="60">
+                </a>
+            </div>
         </div>
-        <div class="col-md-1 col-lg-1 "  style="margin-top: 10px;">
-            <!-- Profile Picture -->
-            <img id="profile_picture" class="img-rounded img-thumbnail" src="/uploads/profile_images/{{ Auth::user()->img }}" alt="profile_picture">
-        </div>
+    </div>
+
+    <div class="row">
 
     </div>
+
+
+
+
+
     <!-- Visible XS Header -->
     <div class="row visible-xs">
         <div class="nav navbar-default navbar-fixed-top visible-xs" style="background-color: grey">
@@ -94,6 +122,7 @@
             </div>
         </div>
     </div>
+
 </div>
 
 <!-- XS Header Alignment -->
@@ -101,4 +130,9 @@
     <br><br><br><br>
 </div>
 
-<script src="/js/home_page_signed.js"></script>
+<!-- SM Header Alignment -->
+<div class="row visible-sm">
+    <br><br>
+</div>
+
+<script src="/js/home_page.js"></script>

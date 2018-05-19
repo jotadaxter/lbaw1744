@@ -77,9 +77,9 @@
             </div>
 
             <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-3">
-                <a class="btn btn-lg btn-primary btn-block" href="/password/reset">Forgot Password?</a>
+                <a class="btn btn-lg btn-primary btn-block" href="{{route('passwordReset')}}">Forgot Password?</a>
             </div>
-            <div class="col-sm-4 col-md-3">
+            <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-md-3">
                 <a class="btn btn-lg btn-primary btn-block" href="{{ route('register') }}">Register</a>
             </div>
 

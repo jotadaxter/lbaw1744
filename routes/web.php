@@ -64,6 +64,8 @@ Route::get('product/{product_id}', 'ProductController@show');
 
 
 /* Module M04: Cart and Checkout */
+Route::get('cart', 'ProductsController@showCart')->name('cart');
+
 
 
 /* Module M05: User Administration */
