@@ -33,15 +33,28 @@ body {
 
 }
 
+.vapor_xs {
+    text-shadow: 2px 2px var(--color-bg-main-top);
+}
+
 /* Vapor Title */
 .vaporTitle {
     font-size: 300%;
-    font-family: "Times New Roman";
+    font-family: "Times New Roman", serif;
     text-align: left;
     color:var(--color-fg-text);
-
+    text-decoration:none;
     animation: rotateY360 5s ease-in-out;
 }
+.vaporTitle:hover{
+    text-decoration:none;
+}
+
+.vaporTitleLink{
+    text-decoration : none;
+}
+
+
 
 .indent-box,tbody,
 .panel-footer{
@@ -315,6 +328,14 @@ ul.nav.nav-pills.nav-stacked{
 .navbar-default .navbar-toggle .icon-bar {
     background-color: white;
 }
+
+.navbar-toggle-2{
+    border: 1px solid;
+    color:black;
+    box-shadow: 1px 1px 1px rgba(0,0,0,1) inset, -1px -1px 1px rgba(0,0,0,1) inset;
+
+}
+
 .navbar-default:hover .navbar-toggle:hover {
     background-color: pink;
 }
@@ -369,4 +390,18 @@ ul.nav.nav-pills.nav-stacked{
     font-size: 250%;
 }
 
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+}
 
+.dropdownbox-element {
+    height: 50%;
+}
+
+.dropdownbox-element:hover {
+
+}
+
+.hr_header {
+    border-color: black;
+}

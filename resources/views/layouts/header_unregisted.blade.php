@@ -1,9 +1,12 @@
 <div id="header_box" class="container">
+
     <!-- Hidden XS Header -->
     <div class="row hidden-xs">
         <div class="col-sm-4 col-md-3 col-lg-3 ">
             <!-- Title -->
-            <h1 class="vaporTitle">V A P O R</h1>
+            <a href="{{route('home')}}" style="text-decoration : none">
+                <h1 class="vaporTitle">V A P O R</h1>
+            </a>
         </div>
         <div class="col-sm-5 col col-md-4 col-md-offset-1 col-lg-5 col-lg-offset-1 center">
             <!-- Search Bar -->
@@ -30,6 +33,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Visible XS Header -->
 
 </div>
 
