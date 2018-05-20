@@ -10,7 +10,6 @@
                     <div class="row" style="margin-top: 10px">
                         <div class="col-xs-12">
                             <table id="grid">
-                                {{print_r($products)}}
                                 <input id="products_json" value="{{$products}}" class="hidden">
                             </table>
                         </div>

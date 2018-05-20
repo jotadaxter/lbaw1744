@@ -15,7 +15,7 @@
                     <div class="col-md-2 col-lg-2 col-lg-offset-1">
                         {{$product->name}}
                         <br>
-                        <input type="image" src="/uploads/product_images/{{$product->logo_path}}" alt="Submit" width="80" height="80">
+                        {{$product->logo_path}}
                     </div>
                     <div class="col-md-8 col-lg-6">
                         <table class="white-box table table-user-information">

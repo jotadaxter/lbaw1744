@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var grid, dialog;
-    var data = document.getElementById('products_json').value;
+    var data = JSON.parse(document.getElementById('products_json').value);
 
     /*data = [
         { 'Logo': '<img src="/product.png" width="30">', 'Name': 'Dropbox',
@@ -42,11 +42,11 @@ $(document).ready(function () {
         dataSource: data,
         uiLibrary: 'bootstrap',
         columns: [
+            { field: 'logo_path', width: 60, title: 'Logo' },
             { field: 'name', sortable: true },
             { field: 'price', title: 'Price' },
             { field: 'description', title: 'Description' },
             { field: 'release_date', title: 'Release Date' },
-            { field: 'logo_path', width: 60 },
             { field: 'operating_system', title: 'O.S.'},
         ],
         pager: { limit: 7 }

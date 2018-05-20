@@ -29,11 +29,10 @@ class SearchController extends Controller
             '
         , ['%'.$search.'%']);
 
-        print_r($result);
-
 
         return view('products.search')
-            ->with('products', json_encode($result));
+            ->with(['products' => json_encode($result),
+                'old_value' => $search]);
     }
 
     public function showCart()
