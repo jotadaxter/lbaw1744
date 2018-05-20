@@ -26,14 +26,7 @@
 
         <div class="col-sm-3 col col-md-4 col-lg-4  center">
             <!-- Search Bar -->
-            <div class="input-group stylish-input-group shift-down">
-                <input type="text" class="white-box form-control"  placeholder="Search" href="{{url('/products')}}">
-                <span class="input-group-addon btn">
-                    <button type="button" id="search_btn">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
-                </span>
-            </div>
+            @include('layouts.search_bar')
         </div>
 
         <div class="shift-down">

@@ -1,14 +1,3 @@
-
-document.getElementById("cart_btn").addEventListener("click", function(){
-    document.location.href = '';
-});
-document.getElementById("search_btn").addEventListener("click", function(){
-    document.location.href = '/product_search';
-});
-document.getElementById("signOut_btn").addEventListener("click", function(){
-    document.location.href = '/logout';
-});
-
 /* Filters the Products shown */
 $(document).ready(function(){
     $(".filter-button").click(function(){

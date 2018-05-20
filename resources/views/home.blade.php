@@ -2,6 +2,7 @@
 
 @section('content')
     <div id="myDIV" class="container">
+
         <!-- Slideshow -->
         <section class="jk-slider">
             <div id="carousel-example" class="carousel slide" data-ride="carousel">

@@ -54,17 +54,17 @@ Route::post('profile/{user_id}/avatar', 'ProfileController@changeAvatar');
 
 /* Module M02: Products */
 
-//Products
-Route::get('products', 'ProductsController@show');
+//Products Search
+Route::get('products/search', 'SearchController@showProductSearch')->name('productSearch');
 
 //Product
-Route::get('product/{product_id}', 'ProductController@show');
+Route::get('products/{product_id}', 'ProductController@show');
 
 /* Module M03: Reviews and Wish list */
 
 
 /* Module M04: Cart and Checkout */
-Route::get('cart', 'ProductsController@showCart')->name('cart');
+Route::get('cart', 'SearchController@showCart')->name('cart');
 
 
 

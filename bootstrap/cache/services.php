@@ -26,11 +26,13 @@
     22 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
     23 => 'Intervention\\Image\\ImageServiceProvider',
     24 => 'Laravel\\Tinker\\TinkerServiceProvider',
-    25 => 'VAPOR\\Providers\\AppServiceProvider',
-    26 => 'VAPOR\\Providers\\AuthServiceProvider',
-    27 => 'VAPOR\\Providers\\EventServiceProvider',
-    28 => 'VAPOR\\Providers\\RouteServiceProvider',
-    29 => 'Intervention\\Image\\ImageServiceProvider',
+    25 => 'Collective\\Html\\HtmlServiceProvider',
+    26 => 'VAPOR\\Providers\\AppServiceProvider',
+    27 => 'VAPOR\\Providers\\AuthServiceProvider',
+    28 => 'VAPOR\\Providers\\EventServiceProvider',
+    29 => 'VAPOR\\Providers\\RouteServiceProvider',
+    30 => 'Intervention\\Image\\ImageServiceProvider',
+    31 => 'Collective\\Html\\HtmlServiceProvider',
   ),
   'eager' => 
   array (
@@ -151,6 +153,10 @@
     'validator' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
+    'html' => 'Collective\\Html\\HtmlServiceProvider',
+    'form' => 'Collective\\Html\\HtmlServiceProvider',
+    'Collective\\Html\\HtmlBuilder' => 'Collective\\Html\\HtmlServiceProvider',
+    'Collective\\Html\\FormBuilder' => 'Collective\\Html\\HtmlServiceProvider',
   ),
   'when' => 
   array (
@@ -191,6 +197,9 @@
     array (
     ),
     'Laravel\\Tinker\\TinkerServiceProvider' => 
+    array (
+    ),
+    'Collective\\Html\\HtmlServiceProvider' => 
     array (
     ),
   ),
