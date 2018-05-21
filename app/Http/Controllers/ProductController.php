@@ -39,12 +39,28 @@ class ProductController extends Controller
         $counter=0;
         //calculate Average Rating
         foreach($reviews as $review){
-            //acc
+            $avg_rating+=($review->rating);
         }
         $avg_rating=($avg_rating/$counter);
 
+        //Tags
+        $tags = DB::select('
+            SELECT "Tags".tag_name
+            FROM "Products" INNER JOIN "Tags" ON "Products".product_id = "Tags".product_id
+        ');
 
+        //Discounts
+        $date=date("Y/m/d");
+        $discounts = DB::select('
+            SELECT *
+            FROM "Products" INNER JOIN "Discounts" ON "Products".product_id = "Discounts".product_id
+            WHERE "Discounts".begin_date <= ? AND "Discounts".end_date >= ? 
+        ', [$date, $date]);
         return view('products.product', ['product' => $product])
-            ->with(['images'=> $images, 'avg_rating' => $avg_rating]);
+            ->with(['images'=> $images,
+                    'avg_rating' => $avg_rating,
+                    'reviews' => $reviews,
+                    'tags' => $tags
+            ]);
     }
 }

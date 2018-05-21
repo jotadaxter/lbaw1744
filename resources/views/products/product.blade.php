@@ -38,7 +38,7 @@
 
                             <!-- Add to cart function -->
                             <div class="col-md-4">
-                                <button type="button">Add to Cart!</button>
+                                <a href="{{route('addProductToCart', ['' => $product])}}">Add to Cart!</a>
                             </div>
                         </div>
 
@@ -79,9 +79,10 @@
 
                         <!-- Product tags -->
                         <div class="product-title"><b>TAGS</b></div><br>
-                        <div class="tag">Audio</div>
-                        <div class="tag">Aaw</div>
-                        <div class="tag">Ableton</div>
+                        @foreach($tags as $tag)
+                            <div class="tag">{{$tag}}</div>
+                        @endforeach
+
                     </div>
                     <div class="row">
                         <div class="col-md-6"></div>
@@ -98,7 +99,6 @@
                     <!-- Reviews -->
                     <div class="col-md-4">
                         <ul class="nav nav-tabs nav_tabs">
-
                             <li class="active"><a href="#" data-toggle="tab">Reviews</a>
                                 <br>
                                 <div class="col-md-1">
