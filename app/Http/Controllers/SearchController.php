@@ -19,6 +19,8 @@ class SearchController extends Controller
     {
         $search = $request->input('search');
 
+        $db_input = '%'.$search.'%';
+
         $result = DB::select('
             select "Products".name, "Products".price, "Products".description
             , "Products".release_date, "Products".logo_path, "Products".operating_system
@@ -27,11 +29,28 @@ class SearchController extends Controller
             order by "Products".name asc;
             
             '
-        , ['%'.$search.'%']);
+        , [$db_input]);
+/*
+        $result = DB::select('
+            select distinct * from "Products"
+            from "Products"
+            where "Products".name LIKE ? AND "Products".operating_system LIKE ?
+            AND "Products".release_date LIKE ? AND "Products".price LIKE ?
+            order by "Products".name asc, "Products".price ASC ;
+            
+            '
+            , [$db_input, $db_input, $db_input, $db_input]);
 
+*/
+        $products = json_encode($result);
+
+        foreach($products as $product){
+            $product->logo_path='<a href="' . route('product', ['product_id' => $product->product_id]) . '"><img alt="' . $product->name .
+                '" src="/uploads/product_images/' . $product->logo_path .  '" width="30"></a>';
+        }
 
         return view('products.search')
-            ->with(['products' => json_encode($result),
+            ->with(['products' => $products,
                 'old_value' => $search]);
     }
 

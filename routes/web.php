@@ -58,7 +58,7 @@ Route::post('profile/{user_id}/avatar', 'ProfileController@changeAvatar');
 Route::get('products/search', 'SearchController@showProductSearch')->name('productSearch');
 
 //Product
-Route::get('products/{product_id}', 'ProductController@show');
+Route::get('products/{product_id}', 'ProductController@showProduct');
 
 /* Module M03: Reviews and Wish list */
 
