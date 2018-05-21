@@ -451,16 +451,15 @@
       <workItem from="1526907429406" duration="887000" />
       <workItem from="1526909280291" duration="940000" />
       <workItem from="1526910903126" duration="857000" />
-      <workItem from="1526924069403" duration="5398000" />
+      <workItem from="1526924069403" duration="5439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154994000" />
+    <option name="totallyTimeSpent" value="155035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1028" y="25" width="892" height="950" extended-state="4" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3296355" />
