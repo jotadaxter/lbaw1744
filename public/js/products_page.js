@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    var grid, dialog;
+    /*var grid, dialog;
     var data = JSON.parse(document.getElementById('products_json').value);
 
-    /*data = [
+    data = [
         { 'Logo': '<img src="/product.png" width="30">', 'Name': 'Dropbox',
             'O.S.': '<img src="/windows_logo.png" width="30">',
             'Rate': '<img src="/star_full.png" width="30"> <img src="/star_full.png" width="30">' },
@@ -34,7 +34,7 @@ $(document).ready(function () {
         { 'Logo': '<img src="/product.png" width="30">', 'Name': 'IOS',
             'O.S.': '<img src="/windows_logo.png" width="30">' ,
             'Rate': '<img src="/star_full.png" width="30"> <img src="/star_full.png" width="30">'}
-    ];*/
+    ];
 
     console.log(data);
 
@@ -98,5 +98,5 @@ $(document).ready(function () {
     $('#btnClear').on('click', function () {
         $('#txtQuery').val('');
         grid.render(data);
-    });
+    });*/
 });

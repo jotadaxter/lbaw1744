@@ -13,20 +13,20 @@
                     <div class="col-md-4">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="uploads/product_images/{{$product->logo_path}}" style="width:210px;height: 210px;" class="img-rounded" alt="Cinque Terre" width="400" height="400">
+                                <img src="/uploads/product_images/{{$product->logo_path}}" style="width:210px;height: 210px;" class="img-rounded" alt="Cinque Terre" width="400" height="400">
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <!-- Product Gallery -->
                             <div class="col-md-3">
-                                <img src="res/images/dropbox2.png" style="width:70px;height: 70px;" class="img-rounded" alt="Cinque Terre" width="294" height="172">
+                                <img src="/dropbox2.png" style="width:70px;height: 70px;" class="img-rounded" alt="Cinque Terre" width="294" height="172">
                             </div>
                             <div class="col-md-3">
-                                <img src="res/images/dropbox3.png" style="width:70px;height: 70px;" class="img-rounded" alt="Cinque Terre" width="960" height="691">
+                                <img src="/dropbox3.png" style="width:70px;height: 70px;" class="img-rounded" alt="Cinque Terre" width="960" height="691">
                             </div>
                             <div class="col-md-3">
-                                <img src="res/images/dropbox4.png" class="img-rounded" alt="Cinque Terre" width="70" height="70">
+                                <img src="/dropbox4.png" class="img-rounded" alt="Cinque Terre" width="70" height="70">
                             </div>
                         </div>
                         <br>
@@ -54,19 +54,21 @@
 
                             <!-- Rating -->
                             <div class="product-desc"><b>Rating:</b>
-                                <img src="res/images/star_full.png" style="width:20px;" width="1969">
-                                <img src="res/images/star_full.png" style="width:20px;" width="1969">
+                                <img src="/star_full.png" style="width:20px;" width="1969">
+                                <img src="/star_full.png" style="width:20px;" width="1969">
                             </div><br>
 
                             <!-- Operating System -->
                             <div class="product-desc">
                                 <b>Systems:</b>
-                                @if((strpos($products->operating_system, 'w') !== false))
-                                    <img src="os/images/windows_logo.png" style="width:20px;" width="420">
-                                @elseif((strpos($products->operating_system, 'm') !== false))
-                                    <img src="os_images/ios_logo.png" style="width:20px;" width="420">
-                                @elseif((strpos($products->operating_system, 'l') !== false))
-                                    <img src="os_images/linux_logo.png" style="width:20px;" width="420">
+                                @if((strpos($product->operating_system, 'w') !== false))
+                                    <img src="/os_images/windows_logo.png" style="width:20px;" width="420">
+                                @endif
+                                @if((strpos($product->operating_system, 'm') !== false))
+                                    <img src="/os_images/ios_logo.png" style="width:20px;" width="420">
+                                @endif
+                                @if((strpos($product->operating_system, 'l') !== false))
+                                    <img src="/os_images/linux_logo.png" style="width:20px;" width="420">
                                 @endif
 
                             </div>
@@ -79,9 +81,11 @@
 
                         <!-- Product tags -->
                         <div class="product-title"><b>TAGS</b></div><br>
-                        @foreach($tags as $tag)
-                            <div class="tag">{{$tag}}</div>
-                        @endforeach
+                        @if(isset($tags))
+                            @foreach($tags as $tag)
+                                <div class="tag">{{$tag->tag_name}}</div>
+                            @endforeach
+                        @endif
 
                     </div>
                     <div class="row">
@@ -102,13 +106,13 @@
                             <li class="active"><a href="#" data-toggle="tab">Reviews</a>
                                 <br>
                                 <div class="col-md-1">
-                                    <img src="res/images/profile_picture.png" style="width:20px;" width="256">
+                                    <img src="/uploads/profile_images/default.png" style="width:20px;" width="256">
                                 </div>
                                 <div class="col-md-4">Janedoe</div>
                                 <div class="col-md-4">
-                                    <img src="res/images/star_full.png" style="width:10px;" width="1969">
-                                    <img src="res/images/star_full.png" style="width:10px;" width="1969">
-                                    <img src="res/images/star_full.png" style="width:10px;" width="1969">
+                                    <img src="/star_full.png" style="width:10px;" width="1969">
+                                    <img src="/star_full.png" style="width:10px;" width="1969">
+                                    <img src="/star_full.png" style="width:10px;" width="1969">
                                 </div>
                             </li>
                         </ul>
@@ -127,13 +131,13 @@
 
                     <div class="col-md-8">
                         <div class="col-md-4">
-                            <img src="res/images/product.png" class="img-rounded" alt="Cinque Terre" style="width:170px;height: 170px;" width="400" height="400">
+                            <img src="/product.png" class="img-rounded" alt="Cinque Terre" style="width:170px;height: 170px;" width="400" height="400">
                         </div>
                         <div class="col-md-4">
-                            <img src="res/images/product.png" class="img-rounded" alt="Cinque Terre" style="width:170px;height: 170px;" width="400" height="400">
+                            <img src="/product.png" class="img-rounded" alt="Cinque Terre" style="width:170px;height: 170px;" width="400" height="400">
                         </div>
                         <div class="col-md-4">
-                            <img src="res/images/product.png" class="img-rounded" alt="Cinque Terre" style="width:170px;height: 170px;" width="400" height="400">
+                            <img src="/product.png" class="img-rounded" alt="Cinque Terre" style="width:170px;height: 170px;" width="400" height="400">
                         </div>
                     </div>
                 </div>

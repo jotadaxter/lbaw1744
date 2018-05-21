@@ -46,14 +46,7 @@
         <!-- Dropbox -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-            <div class="input-group stylish-input-group navbar-left">
-                <input type="text" class="white-box form-control"  placeholder="Search" href="{{url('/products')}}">
-                <span class="input-group-addon btn">
-                    <button type="button" id="search_btn">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
-                </span>
-            </div>
+            @include('layouts.search_bar')
 
             <ul class="nav navbar-nav">
                 <hr class="hr_header">
@@ -69,9 +62,6 @@
 </nav>
 
 
-<!-- XS Header Alignment -->
-<div class="row visible-xs">
-    <br><br><br>
-</div>
+
 
 <script src="/js/home_page.js"></script>

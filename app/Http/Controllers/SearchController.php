@@ -21,7 +21,7 @@ class SearchController extends Controller
 
         $db_input = '%'.$search.'%';
 
-        $result = DB::select('
+        /*$result = DB::select('
             select "Products".name, "Products".price, "Products".description
             , "Products".release_date, "Products".logo_path, "Products".operating_system
             from "Products"
@@ -29,33 +29,22 @@ class SearchController extends Controller
             order by "Products".name asc;
             
             '
-        , [$db_input]);
-/*
-        $result = DB::select('
-            select distinct * from "Products"
+        , [$db_input]);*/
+
+        $products = DB::select('
+            select distinct * 
             from "Products"
-            where "Products".name LIKE ? AND "Products".operating_system LIKE ?
-            AND "Products".release_date LIKE ? AND "Products".price LIKE ?
+            where "Products".name LIKE ? OR "Products".operating_system LIKE ? 
             order by "Products".name asc, "Products".price ASC ;
             
             '
-            , [$db_input, $db_input, $db_input, $db_input]);
+            , [$db_input, $db_input]);
 
-*/
-        $products = json_encode($result);
-
-        foreach($products as $product){
-            $product->logo_path='<a href="' . route('product', ['product_id' => $product->product_id]) . '"><img alt="' . $product->name .
-                '" src="/uploads/product_images/' . $product->logo_path .  '" width="30"></a>';
-        }
 
         return view('products.search')
             ->with(['products' => $products,
                 'old_value' => $search]);
     }
 
-    public function showCart()
-    {
-        return view('cart');
-    }
+
 }

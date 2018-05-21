@@ -412,3 +412,9 @@ ul.nav.nav-pills.nav-stacked{
 .dropdown-item-element:active {
     background-color: grey;
 }
+
+.product_logo {
+    margin-top:20px;
+    margin-left:10px;
+    margin-bottom:20px
+}

@@ -3,7 +3,7 @@
 
 @section('admin_content')
     <div class="panel-heading">
-        <h3 class="panel-title">Users Lists</h3>
+        <h3 class="panel-title">Products Lists</h3>
     </div>
     <ul class="list-group">
 

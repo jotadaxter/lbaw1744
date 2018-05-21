@@ -58,14 +58,16 @@ Route::post('profile/{user_id}/avatar', 'ProfileController@changeAvatar');
 Route::get('products/search', 'SearchController@showProductSearch')->name('productSearch');
 
 //Product
-Route::get('products/{product_id}', 'ProductController@showProduct');
+Route::get('products/{product_id}', 'ProductController@showProduct')->name('product');
 
 /* Module M03: Reviews and Wish list */
 
 
 /* Module M04: Cart and Checkout */
-Route::get('cart', 'SearchController@showCart')->name('cart');
-
+Route::get('cart', 'CartController@showCart')->name('cart');
+//Add Product To Cart
+Route::get('cart/add/{product_id}', 'CartController@addToCart')->name('addProductToCart');
+//Remove Product from Cart
 
 
 /* Module M05: User Administration */

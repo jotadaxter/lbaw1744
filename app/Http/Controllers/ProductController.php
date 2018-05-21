@@ -22,8 +22,8 @@ class ProductController extends Controller
 
         //get images
         $images=DB::select('
-            SELECT "Image".img_path
-            FROM "Image" INNER JOIN "Products" ON "Image".product_id="Products".product_id       
+            SELECT "ProductImages".img_path
+            FROM "ProductImages" INNER JOIN "Products" ON "ProductImages".product_id="Products".product_id       
        ');
 
         //get reviews
@@ -31,7 +31,7 @@ class ProductController extends Controller
             SELECT "Reviews".sk_id, "Reviews".rating, "Reviews".review_date, "Reviews".comment
             FROM (("Reviews" INNER JOIN "SerialKeys" ON "Reviews".sk_id="SerialKeys".sk_id)
             INNER JOIN "Products" ON "Products".product_id = "SerialKeys".product_id)
-            ORDER BY "Reviews".date DESC;
+            ORDER BY "Reviews".review_date DESC;
                    
        ');
 
@@ -40,6 +40,7 @@ class ProductController extends Controller
         //calculate Average Rating
         foreach($reviews as $review){
             $avg_rating+=($review->rating);
+            $counter++;
         }
         $avg_rating=($avg_rating/$counter);
 
@@ -49,6 +50,7 @@ class ProductController extends Controller
             FROM "Products" INNER JOIN "Tags" ON "Products".product_id = "Tags".product_id
         ');
 
+
         //Discounts
         $date=date("Y/m/d");
         $discounts = DB::select('
@@ -56,6 +58,7 @@ class ProductController extends Controller
             FROM "Products" INNER JOIN "Discounts" ON "Products".product_id = "Discounts".product_id
             WHERE "Discounts".begin_date <= ? AND "Discounts".end_date >= ? 
         ', [$date, $date]);
+
         return view('products.product', ['product' => $product])
             ->with(['images'=> $images,
                     'avg_rating' => $avg_rating,
