@@ -13,6 +13,7 @@ class ResetPWMail extends Mailable
 
     public $code;
 
+
     /**
      * Create a new message instance.
      *
@@ -21,7 +22,6 @@ class ResetPWMail extends Mailable
     public function __construct($code)
     {
         $this->code = $code;
-
     }
 
     /**
