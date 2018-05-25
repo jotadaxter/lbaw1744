@@ -307,7 +307,7 @@ DELETE FROM "SerialKeys";
 DELETE FROM "Invoices";
 
 -- Users (user_id, username, password, fullname, email, phone_number, birth_date, admission_date, Userstate, admin, img, nif)
-INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 100, 'janedoe1', '$2y$10$meM7TAYhkBvbVktCou/ecOzZO30A.m72MzcyibQtsr88JGGCBghiu', 'jane eleanor doer', 969420666, 'janedoe@gmail.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666420666);
+INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 100, 'janedoe1', '$2y$10$KpcYrPtUzXQTG65mlBEfV.HKlDn7WDIN8BsPDZBgsGOnb4rbh49RS', 'jane eleanor doer', 969420666, 'janedoe@gmail.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666420666);
 INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 101, 'jenlong', 'oblivion', 'jenny long', 911999333, 'jenny.long84@example.com', '1973/7/10', '2018/2/20', 'Active', false, 'jenavatar.jpg', 666420777);
 INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 102, 'everettdotnet', 'morrowind', 'everett adams', 969420444, 'everett.adams60@example.com', '1980/3/8', '2018/1/10', 'Active', false, 'eveavatar.jpg', 666420888);
 INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 103, 'zdaroviaqueen', 'zdarovia', 'regina duncan', 969420555, 'regina.duncan44@example.com', '1990/1/1', '2018/3/11', 'Active', false, 'default.png', 666420999);
@@ -319,7 +319,7 @@ INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, passwo
 INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 109, 'lilnina', 'groovey', 'nina sutton', 969420333, 'nina.sutton76@example.com', '1997/10/9', '2018/2/3', 'Active', false, 'default.png', 666421555);
 INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 110, 'lilnisna2', 'groovey2', 'nina sutton2', 969420332, 'nina.sutton762@example.com', '1997/10/2', '2018/2/2', 'Active', false, 'default.png', 666221555);
 
--- 100 cheekybreeky: $2y$10$meM7TAYhkBvbVktCou/ecOzZO30A.m72MzcyibQtsr88JGGCBghiu
+-- 100 cheekybreeky: $2y$10$KpcYrPtUzXQTG65mlBEfV.HKlDn7WDIN8BsPDZBgsGOnb4rbh49RS
 -- 101 oblivion: 
 -- 102 morrowind: 
 -- 103 zdarovia: 
