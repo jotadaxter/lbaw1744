@@ -56,6 +56,8 @@ Route::post('profile/{user_id}/avatar', 'ProfileController@changeAvatar');
 
 //Products Search
 Route::get('products/search', 'SearchController@showProductSearch')->name('productSearch');
+//Products Search By Tag
+Route::post('products/search', 'SearchController@showProductsByTag')->name('productsByTag');
 
 //Product
 Route::get('products/{product_id}', 'ProductController@showProduct')->name('product');

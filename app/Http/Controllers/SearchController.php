@@ -55,6 +55,14 @@ class SearchController extends Controller
             ->with(['products' => $products,
                 'old_value' => $search]);
     }
+    public function showProductsByTag(Request $request)
+    {
+        $products = null;
+
+
+        return view('products.search')
+            ->with('products', $products);
+    }
 
 
 }

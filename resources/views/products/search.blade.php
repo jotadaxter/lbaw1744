@@ -14,7 +14,7 @@
                             </div>
                             <ul class="list-group">
 
-
+                                @if(isset($products))
                                 @foreach($products as $product)
                                     <li class="list-group-item">
                                         <div class="row toggle horizontal-scrollbar-window" id="dropdown-detail-1" data-toggle="detail-1">
@@ -60,8 +60,9 @@
                                     </li>
                                 @endforeach
 
-                                    {{$products->appends(Input::except('page'))->links()}}
 
+                                    {{$products->appends(Input::except('page'))->links()}}
+                                @endif
                             </ul>
                         </div>
                     </div>
