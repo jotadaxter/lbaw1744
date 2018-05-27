@@ -15,4 +15,8 @@ $(document).ready(function(){
         $(this).removeClass("active");
     }
     $(this).addClass("active");
+	
+	
+    $(".filter").not('.trending').hide(0);
+    $('.filter').filter('.trending').show(0);
 });
