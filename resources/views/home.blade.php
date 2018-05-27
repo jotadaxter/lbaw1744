@@ -43,119 +43,52 @@
                 </div>
 
                 <div align="center">
-                    <button class="btn btn-default filter-button" data-filter="all">Popular</button>
-                    <button class="btn btn-default filter-button" data-filter="new">Novidades</button>
-                    <button class="btn btn-default filter-button" data-filter="promo">Promoções</button>
+                    <button class="btn btn-default filter-button" data-filter="trending">Trending</button>
+                    <button class="btn btn-default filter-button" data-filter="promo">Promotions</button>
                 </div>
                 <br/>
 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter new">
-                    <figure>
-                        <img src="/product.png" class="img-responsive">
-                        <figcaption class="figure-caption text-center product-description">
-                            <div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
-                        </figcaption>
-                    </figure>
-                </div>
+                <!-- Most Trending Products -->
+                @if(isset($trending_products))
+                    @foreach($trending_products as $tprod)
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter trending">
+                            <figure>
+                                <a href="{{url('products/'. $tprod->product_id)}}">
+                                    <img src="/uploads/product_images/{{$tprod->logo_path}}" class="img-responsive slide_image">
+                                </a>
+                                <figcaption class="figure-caption text-center product-description">
+                                    <div> <b style="font-size: 25px;"> {{$tprod->name}}</b>
+                                        <p><s>450€</s><b style="color:red;font-size:25px;">300€</b>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                    <figure>
-                        <img src="/product.png" class="img-responsive">
-                        <figcaption class="figure-caption text-center product-description">
-                            <div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
-                        </figcaption>
-                    </figure>
-                </div>
+                    @endforeach
+                @endif
 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter new">
-                    <figure>
-                        <img src="/product.png" class="img-responsive">
-                        <figcaption class="figure-caption text-center product-description">
-                            <div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
-                        </figcaption>
-                    </figure>
-                </div>
 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                    <figure>
-                        <img src="/product.png" class="img-responsive">
-                        <figcaption class="figure-caption text-center product-description">
-                            <div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
-                        </figcaption>
-                    </figure>
-                </div>
+                <!-- Promotion Products -->
+                @if(isset($promo_products))
+                    @foreach($promo_products as $pprod)
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
+                            <figure>
+                                <a href="{{url('products/'. $pprod->product_id)}}">
+                                    <img src="/uploads/product_images/{{$pprod->logo_path}}" class="img-responsive slide_image">
+                                </a>
+                                <figcaption class="figure-caption text-center product-description">
+                                    <div> <b style="font-size: 25px;"> {{$pprod->name}}</b>
+                                        <p><s>450€</s><b style="color:red;font-size:25px;">300€</b>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                    <figure>
-                        <img src="/product.png" class="img-responsive">
-                        <figcaption class="figure-caption text-center product-description">
-                            <div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
-                        </figcaption>
-                    </figure>
-                </div>
+                    @endforeach
+                @endif
 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                    <figure>
-                        <img src="/product.png" class="img-responsive">
-                        <figcaption class="figure-caption text-center product-description">
-                            <div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
-                        </figcaption>
-                    </figure>
-                </div>
 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                    <figure>
-                        <img src="/product.png" class="img-responsive">
-                        <figcaption class="figure-caption text-center product-description">
-                            <div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
-                        </figcaption>
-                    </figure>
-                </div>
 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                    <figure>
-                        <img src="/product.png" class="img-responsive">
-                        <figcaption class="figure-caption text-center product-description">
-                            <div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                    <figure>
-                        <img src="/product.png" class="img-responsive">
-                        <figcaption class="figure-caption text-center product-description">
-                            <div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter new">
-                    <figure>
-                        <img src="/product.png" class="img-responsive">
-                        <figcaption class="figure-caption text-center product-description">
-                            <div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                    <figure>
-                        <img src="/product.png" class="img-responsive">
-                        <figcaption class="figure-caption text-center product-description">
-                            <div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€</s><b style="color:red;font-size:25px;">300€</b></div>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
-                    <figure>
-                        <img src="/product.png" class="img-responsive">
-                        <figcaption class="figure-caption text-center product-description">
-                            <div> <b style="font-size: 25px;"> Nome Produto</b> <p><s>450€ </s><b style="color:red;font-size:25px;"> 300€</b></div>
-                        </figcaption>
-                    </figure>
-                </div>
             </div>
         </div>
 

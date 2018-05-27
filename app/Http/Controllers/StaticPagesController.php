@@ -10,24 +10,12 @@ class StaticPagesController extends Controller
 {
     public function showHome()
     {
-        //new Products
-        $new_products = null;
-        /*$new_products = DB::select('
-            select  
-            from 
-            where ;
-        
-        
-        ');*/
-
-
         //Promotion Products
         $promo_products = DB::select('
-            SELECT product_id 
-            FROM "Discounts" 
+            SELECT * 
+            FROM "Products" INNER JOIN "Discounts" on "Products".product_id = "Discounts".product_id 
             WHERE (CURRENT_DATE BETWEEN "Discounts".begin_date AND "Discounts".end_date);        
         ');
-
 
 
         $days = 20;
@@ -46,7 +34,7 @@ class StaticPagesController extends Controller
 	          WHERE "SerialKeys".product_id = "Products".product_id AND 
 	          "Purchases".paid_date >= NOW() - INTERVAL \'20 day\' 
 	          GROUP BY "SerialKeys".product_id
-	          ORDER BY 2 DESC) as DERP
+	          ORDER BY 2 DESC) as BLA
 )
         
         
@@ -54,7 +42,6 @@ class StaticPagesController extends Controller
 
         return view('home')
             ->with(['trending_products' => $trending_products,
-                    'new_products' => $new_products,
                     'promo_products' => $promo_products
                 ]);
     }

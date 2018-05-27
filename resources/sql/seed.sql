@@ -409,11 +409,11 @@ INSERT INTO "Reviews"(sk_id, rating, review_date, comment) VALUES (508, 1, '2016
 INSERT INTO "Reviews"(sk_id, rating, review_date, comment) VALUES (509, 3, '2018/12/14', 'its nice but there are way better options out there');
 
 -- Discounts (product_id, discounted_rice, begin_date, end_date)
-INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALUES (200, 20, '2018/5/10', '2018/5/20');
-INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALUES (201, 20, '2018/5/10', '2018/5/20');
-INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALUES (202, 30, '2018/5/10', '2018/5/20');
-INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALUES (203, 20, '2018/12/1', '2019/1/4');
-INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALUES (204, 15, '2018/4/1', '2018/4/30');
+INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALUES (200, 20, '2018/5/10', '2019/5/20');
+INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALUES (201, 20, '2018/5/10', '2019/5/20');
+INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALUES (202, 30, '2018/5/10', '2019/5/20');
+INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALUES (203, 20, '2017/12/1', '2019/1/4');
+INSERT INTO "Discounts"(product_id, discounted_price, begin_date, end_date) VALUES (204, 15, '2018/4/1', '2019/4/30');
 
 -- Purchases (purchase_id, final_price, user_id, sk_id, paid_date, paymentmethod, details)
 INSERT INTO "Purchases"(purchase_id, final_price, user_id, paid_date, payment_method, details) VALUES (800, 579, 100, '2018/4/21', 'Credit Card', 'Purchase successful');
