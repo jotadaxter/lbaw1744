@@ -44,7 +44,7 @@ class SearchController extends Controller
 
 
         if($request->has('search')){
-            $products = Product::search($request->search)
+            $products = Product::search($search)
                 ->paginate(4);
         }else{
             $products = Product::paginate(4);
