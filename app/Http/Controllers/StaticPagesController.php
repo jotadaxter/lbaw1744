@@ -34,10 +34,7 @@ class StaticPagesController extends Controller
 	          WHERE "SerialKeys".product_id = "Products".product_id AND 
 	          "Purchases".paid_date >= NOW() - INTERVAL \'20 day\' 
 	          GROUP BY "SerialKeys".product_id
-	          ORDER BY 2 DESC) as BLA
-)
-        
-        
+	          ORDER BY 2 DESC) as BLA)       
         ');
 
         return view('home')
