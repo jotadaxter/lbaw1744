@@ -34,6 +34,7 @@
     30 => 'VAPOR\\Providers\\RouteServiceProvider',
     31 => 'Intervention\\Image\\ImageServiceProvider',
     32 => 'Collective\\Html\\HtmlServiceProvider',
+    33 => 'Laravel\\Scout\\ScoutServiceProvider',
   ),
   'eager' => 
   array (
@@ -55,6 +56,7 @@
     15 => 'VAPOR\\Providers\\EventServiceProvider',
     16 => 'VAPOR\\Providers\\RouteServiceProvider',
     17 => 'Intervention\\Image\\ImageServiceProvider',
+    18 => 'Laravel\\Scout\\ScoutServiceProvider',
   ),
   'deferred' => 
   array (

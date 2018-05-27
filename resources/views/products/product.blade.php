@@ -17,18 +17,63 @@
                             </div>
                         </div>
                         <br>
-                        <div class="row">
-                            <!-- Product Gallery -->
-                            <div class="col-md-3">
-                                <img src="/dropbox2.png" style="width:70px;height: 70px;" class="img-rounded" alt="Cinque Terre" width="294" height="172">
+
+                        <!-- Product Gallery -->
+
+                        <!-- Slideshow -->
+                        <section class="jk-slider">
+                            <div id="carousel-example" class="carousel slide" data-ride="carousel">
+                                <!-- Slide Indicator -->
+                                <ol class="carousel-indicators">
+                                    <?php $it=0; ?>
+                                    @if($images!=null)
+                                            @if(sizeof($images)>1)
+                                                @foreach($images as $image)
+                                                    <li data-target="#carousel-example" data-slide-to="{{$it}}" class="active"></li>
+                                                    <?php $it++; ?>
+                                                @endforeach
+                                            @endif
+                                        @endif
+                                </ol>
+                                <!-- images -->
+                                <div class="carousel-inner slideshow ">
+                                    @if($images!=null)
+                                        <?php $it=0; ?>
+                                        @foreach($images as $image)
+                                                @if($it==0)
+                                                    <div class="item active">
+                                                        <div class="overlay"></div>
+
+                                                        <a href="#"><img class="slide_image" src="/uploads/product_images/{{$image->img_path}}" /></a>
+
+                                                    </div>
+                                                @else
+                                                    <div class="item">
+                                                        <a href="#"><img class="slide_image" src="/uploads/product_images/{{$image->img_path}}" /></a>
+                                                    </div>
+                                                @endif
+
+                                                <?php $it++; ?>
+                                            @endforeach
+
+                                    @endif
+
+                                </div>
+                            @if($images!=null)
+                                @if(sizeof($images)>1)
+                                    <!-- Switch Image buttons -->
+                                        <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                        <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
+                                    @endif
+                                @endif
                             </div>
-                            <div class="col-md-3">
-                                <img src="/dropbox3.png" style="width:70px;height: 70px;" class="img-rounded" alt="Cinque Terre" width="960" height="691">
-                            </div>
-                            <div class="col-md-3">
-                                <img src="/dropbox4.png" class="img-rounded" alt="Cinque Terre" width="70" height="70">
-                            </div>
-                        </div>
+                        </section>
+
+
                         <br>
                         <div class="row">
                             <!-- Discount -->
@@ -48,14 +93,17 @@
                         <br>
                         <br>
                         <div class="indent-box">
-                            <div class="title-descriptor"><b>Developer:</b>{{$product->developer}}</div><br>
-                            <div class="product-desc"><b>Publisher:</b>{{$product->publisher}}</div><br>
-                            <div class="product-desc"><b>Release Date:</b>{{$product->release_date}}</div><br>
+                            <div class="title-descriptor"><b>Developer: </b>{{$product->developer}}</div><br>
+                            <div class="product-desc"><b>Publisher: </b>{{$product->publisher}}</div><br>
+                            <div class="product-desc"><b>Release Date: </b>{{$product->release_date}}</div><br>
 
                             <!-- Rating -->
                             <div class="product-desc"><b>Rating:</b>
-                                <img src="/star_full.png" style="width:20px;" width="1969">
-                                <img src="/star_full.png" style="width:20px;" width="1969">
+                                <?php $i=$avg_rating; ?>
+                                @while($i>0)
+                                    <img src="/star_full.png" style="width:20px;" width="1969">
+                                    <?php $i--; ?>
+                                @endwhile
                             </div><br>
 
                             <!-- Operating System -->
@@ -130,6 +178,10 @@
                     </div>
 
                     <div class="col-md-8">
+                        <ul class="nav nav-tabs nav_tabs">
+                            <li class="active"><a href="#" data-toggle="tab">Other Products</a>
+                            </li>
+                        </ul>
                         <div class="col-md-4">
                             <img src="/product.png" class="img-rounded" alt="Cinque Terre" style="width:170px;height: 170px;" width="400" height="400">
                         </div>

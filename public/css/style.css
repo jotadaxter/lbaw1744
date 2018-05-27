@@ -418,3 +418,9 @@ ul.nav.nav-pills.nav-stacked{
     margin-left:10px;
     margin-bottom:20px
 }
+
+.slide_image {
+    width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+}

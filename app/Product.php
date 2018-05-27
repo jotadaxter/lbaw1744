@@ -3,9 +3,11 @@
 namespace VAPOR;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Product extends Model
 {
+    use Searchable;
   // Don't add create and update timestamps in database.
   public $timestamps  = false;
   protected $table = 'Products';

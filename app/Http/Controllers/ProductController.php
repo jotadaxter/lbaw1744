@@ -23,8 +23,9 @@ class ProductController extends Controller
         //get images
         $images=DB::select('
             SELECT "ProductImages".img_path
-            FROM "ProductImages" INNER JOIN "Products" ON "ProductImages".product_id="Products".product_id       
-       ');
+              FROM "ProductImages" INNER JOIN "Products" ON "ProductImages".product_id="Products".product_id 
+            WHERE "Products".product_id = ?;    
+       ', [$product_id]);
 
         //get reviews
         $reviews=DB::select('
@@ -42,7 +43,7 @@ class ProductController extends Controller
             $avg_rating+=($review->rating);
             $counter++;
         }
-        $avg_rating=($avg_rating/$counter);
+        $avg_rating=round($avg_rating/$counter);
 
         //Tags
         $tags = DB::select('

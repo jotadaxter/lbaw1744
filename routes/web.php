@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'StaticPagesController@showIndex')->name('index');
+Route::get('/', 'StaticPagesController@showHome')->name('index');
 
 /* Module M01: Authentication and Individual Profile */
 

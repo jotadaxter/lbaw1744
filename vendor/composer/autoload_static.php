@@ -350,13 +350,37 @@ class ComposerStaticInitcbc983328d0df76bf7be0961a374bb6d
                 0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
             ),
         ),
+        'A' => 
+        array (
+            'AlgoliaSearch' => 
+            array (
+                0 => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src',
+            ),
+        ),
     );
 
     public static $classMap = array (
+        'AlgoliaSearch\\AlgoliaConnectionException' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/AlgoliaConnectionException.php',
+        'AlgoliaSearch\\AlgoliaException' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/AlgoliaException.php',
+        'AlgoliaSearch\\Client' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/Client.php',
+        'AlgoliaSearch\\ClientContext' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/ClientContext.php',
+        'AlgoliaSearch\\FailingHostsCache' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/FailingHostsCache.php',
+        'AlgoliaSearch\\FileFailingHostsCache' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/FileFailingHostsCache.php',
+        'AlgoliaSearch\\InMemoryFailingHostsCache' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/InMemoryFailingHostsCache.php',
+        'AlgoliaSearch\\Index' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/Index.php',
+        'AlgoliaSearch\\IndexBrowser' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/IndexBrowser.php',
+        'AlgoliaSearch\\Iterators\\AlgoliaIterator' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/Iterators/AlgoliaIterator.php',
+        'AlgoliaSearch\\Iterators\\RuleIterator' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/Iterators/RuleIterator.php',
+        'AlgoliaSearch\\Iterators\\SynonymIterator' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/Iterators/SynonymIterator.php',
+        'AlgoliaSearch\\Json' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/Json.php',
+        'AlgoliaSearch\\PlacesIndex' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/PlacesIndex.php',
+        'AlgoliaSearch\\SynonymType' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/SynonymType.php',
+        'AlgoliaSearch\\Version' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AlgoliaSearch/Version.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
+        'Carbon\\CarbonPeriod' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonPeriod.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'Collective\\Html\\Componentable' => __DIR__ . '/..' . '/laravelcollective/html/src/Componentable.php',
@@ -3021,6 +3045,7 @@ class ComposerStaticInitcbc983328d0df76bf7be0961a374bb6d
         'Psy\\Command\\TraceCommand' => __DIR__ . '/..' . '/psy/psysh/src/Command/TraceCommand.php',
         'Psy\\Command\\WhereamiCommand' => __DIR__ . '/..' . '/psy/psysh/src/Command/WhereamiCommand.php',
         'Psy\\Command\\WtfCommand' => __DIR__ . '/..' . '/psy/psysh/src/Command/WtfCommand.php',
+        'Psy\\Compiler' => __DIR__ . '/..' . '/psy/psysh/src/Compiler.php',
         'Psy\\ConfigPaths' => __DIR__ . '/..' . '/psy/psysh/src/ConfigPaths.php',
         'Psy\\Configuration' => __DIR__ . '/..' . '/psy/psysh/src/Configuration.php',
         'Psy\\ConsoleColorFactory' => __DIR__ . '/..' . '/psy/psysh/src/ConsoleColorFactory.php',

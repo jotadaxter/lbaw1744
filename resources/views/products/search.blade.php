@@ -60,6 +60,7 @@
                                     </li>
                                 @endforeach
 
+                                    {{$products->appends(Input::except('page'))->links()}}
 
                             </ul>
                         </div>

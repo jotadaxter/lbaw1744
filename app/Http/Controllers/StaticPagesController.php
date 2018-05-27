@@ -6,15 +6,12 @@ use Illuminate\Http\Request;
 
 class StaticPagesController extends Controller
 {
-    public function showIndex()
-    {
-        return view('home');
-    }
-
     public function showHome()
     {
         return view('home');
     }
+
+
 
     public function showAbout()
     {

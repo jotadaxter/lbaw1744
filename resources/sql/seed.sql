@@ -307,8 +307,8 @@ DELETE FROM "SerialKeys";
 DELETE FROM "Invoices";
 
 -- Users (user_id, username, password, fullname, email, phone_number, birth_date, admission_date, Userstate, admin, img, nif)
-INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 100, 'janedoe1', '$2y$10$KpcYrPtUzXQTG65mlBEfV.HKlDn7WDIN8BsPDZBgsGOnb4rbh49RS', 'jane eleanor doer', 969420666, 'janedoe@gmail.com', '1988/11/18', '2018/3/20', 'Active', false, 'janeavatar.jpg', 666420666);
-INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 101, 'jenlong', '$2y$10$S52KODGbYIUIEsQlkjYjreMRIJq24jDFV/H4U9i4gLuaONRhPYx9G', 'jenny long', 911999333, 'jenny.long84@example.com', '1973/7/10', '2018/2/20', 'Active', false, 'jenavatar.jpg', 666420777);
+INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 100, 'janedoe1', '$2y$10$KpcYrPtUzXQTG65mlBEfV.HKlDn7WDIN8BsPDZBgsGOnb4rbh49RS', 'jane eleanor doer', 969420666, 'janedoe@gmail.com', '1988/11/18', '2018/3/20', 'Active', true, 'janeavatar.jpg', 666420666);
+INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 101, 'jenlong', '$2y$10$S52KODGbYIUIEsQlkjYjreMRIJq24jDFV/H4U9i4gLuaONRhPYx9G', 'jenny long', 911999333, 'jenny.long84@example.com', '1973/7/10', '2018/2/20', 'Active', true, 'jenavatar.jpg', 666420777);
 INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 102, 'everettdotnet', '$2y$10$sjD2aP0uBcLn17MNG2lqyOZl3SEgf89HoEMVJgLJqaLIkn/rkvZci', 'everett adams', 969420444, 'everett.adams60@example.com', '1980/3/8', '2018/1/10', 'Active', false, 'eveavatar.jpg', 666420888);
 INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 103, 'zdaroviaqueen', '$2y$10$jVJye8bH/JS3FE25/6x8xOx8cdgcorH0VNEccmiBlPnZWUVt21m62', 'regina duncan', 969420555, 'regina.duncan44@example.com', '1990/1/1', '2018/3/11', 'Active', false, 'default.png', 666420999);
 INSERT INTO "Users"(confirmation_code, remember_token, user_id, username, password, fullname, phone_number, email, birth_date, admission_date, state, admin, img, nif) VALUES('', '', 104, 'kentron', '$2y$10$FOR8bKgMT2qGQOUaXruwquS2I6kjqN//IxRq67se4D.Xhdw05QCrK', 'ken gonzalez', 969420777, 'ken.gonzalez84@example.com', '1994/4/4', '2018/1/18', 'Active', false, 'default.png', 666421000);
@@ -347,28 +347,28 @@ INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, descr
                                                                                                                                                    and mastering, as shown by Ableton''s companion hardware product, Ableton Push. It is also
                                                                                                                                                    used by DJs, as it offers a suite of controls for beatmatching, crossfading, and other effects
                                                                                                                                                    used by turntablists, and was one of the first music applications to automatically beatmatch songs.'
-    , '2015/10/20', 'wml', 599, 'ableton9.jpg', 'ableton 9 live suite');
-INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Adobe', 'Adobe', FALSE, 201, 106, 'image editing software', '2016/2/14', 'wml', 599, 'photoshop.jpg', 'adobe photoshop');
+    , '2015/10/20', 'wml', 599, 'ableton9.png', 'ableton 9 live suite');
+INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Adobe', 'Adobe', FALSE, 201, 106, 'image editing software', '2016/2/14', 'wml', 599, 'photoshop.png', 'adobe photoshop');
 INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Microsoft', 'Microsoft', FALSE, 202, 107, 'programming ide', '2018/3/12', 'w', 199, 'visualstudio.jpg', 'visual studio 2018');
-INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Sony', 'Sony', FALSE, 203, 108, 'video editing software', '2014/1/22', 'wm', 299, 'sonyvegas.jpg', 'sony vegas pro');
-INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Blender', 'Blender', FALSE, 204, 109, '3d rendering and editing software', '2013/10/12', 'wml', 0, 'blender.jpg', 'blender');
-INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Ableton', 'Ableton', FALSE, 205, 105, 'synthetizer plug in for ableton', '2017/11/21', 'wml', 29, 'massive.jpg', 'ableton massive plugin');
-INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Adobe', 'Adobe', FALSE, 206, 106, 'vector graphic design software', '2016/4/1', 'wml', 99, 'ilustrator.jpg', 'adobe ilustrator');
-INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Microsoft', 'Microsoft', FALSE, 207, 107, 'programming text editor', '2017/11/10', 'w', 0, 'visualcode.jpg', 'microsoft visual code');
-INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Sony', 'Sony', FALSE, 208, 108, 'digital audio editing suite software', '2002/7/12', 'wm', 199, 'soundforge.jpg', 'sony sound forge');
+INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Sony', 'Sony', FALSE, 203, 108, 'video editing software', '2014/1/22', 'wm', 299, 'sonyvegas.png', 'sony vegas pro');
+INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Blender', 'Blender', FALSE, 204, 109, '3d rendering and editing software', '2013/10/12', 'wml', 0, 'blender.png', 'blender');
+INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Ableton', 'Ableton', FALSE, 205, 105, 'synthetizer plug in for ableton', '2017/11/21', 'wml', 29, 'massive.png', 'ableton massive plugin');
+INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Adobe', 'Adobe', FALSE, 206, 106, 'vector graphic design software', '2016/4/1', 'wml', 99, 'ilustrator.png', 'adobe ilustrator');
+INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Microsoft', 'Microsoft', FALSE, 207, 107, 'programming text editor', '2017/11/10', 'w', 0, 'visualcode.png', 'microsoft visual code');
+INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Sony', 'Sony', FALSE, 208, 108, 'digital audio editing suite software', '2002/7/12', 'wm', 199, 'soundforge.png', 'sony sound forge');
 INSERT INTO "Products" (publisher, developer, hidden, product_id, user_id, description, release_date, operating_system, price, logo_path, name) VALUES ('Blender', 'Blender', FALSE, 209, 109, 'dynamic mixing device', '2018/10/9', 'wml', 99, 'channelblender.jpg', 'channel blender');
 
 -- Product Images (product_id, img_path)
-INSERT INTO "ProductImages"(product_id, img_path) VALUES (200, 'abletonimg1.jpg');
-INSERT INTO "ProductImages"(product_id, img_path) VALUES (201, 'photoshopimg1.jpg');
-INSERT INTO "ProductImages"(product_id, img_path) VALUES (202, 'visualstudioimg1.jpg');
-INSERT INTO "ProductImages"(product_id, img_path) VALUES (203, 'sonyvegasimg1.jpg');
-INSERT INTO "ProductImages"(product_id, img_path) VALUES (204, 'blenderimg1.jpg');
-INSERT INTO "ProductImages"(product_id, img_path) VALUES (205, 'massiveimg1.jpg');
-INSERT INTO "ProductImages"(product_id, img_path) VALUES (206, 'ilustratorimg1.jpg');
-INSERT INTO "ProductImages"(product_id, img_path) VALUES (207, 'visualcodeimg1.jpg');
-INSERT INTO "ProductImages"(product_id, img_path) VALUES (208, 'soundforgeimg1.jpg');
-INSERT INTO "ProductImages"(product_id, img_path) VALUES (209, 'channelblenderimg1.jpg');
+INSERT INTO "ProductImages"(product_id, img_path) VALUES (200, 'ableton9.png');
+INSERT INTO "ProductImages"(product_id, img_path) VALUES (200, 'photoshop.png');
+INSERT INTO "ProductImages"(product_id, img_path) VALUES (202, 'visualstudio.jpg');
+INSERT INTO "ProductImages"(product_id, img_path) VALUES (203, 'sonyvegas.png');
+INSERT INTO "ProductImages"(product_id, img_path) VALUES (204, 'blender.png');
+INSERT INTO "ProductImages"(product_id, img_path) VALUES (205, 'massive.png');
+INSERT INTO "ProductImages"(product_id, img_path) VALUES (206, 'ilustrator.png');
+INSERT INTO "ProductImages"(product_id, img_path) VALUES (207, 'visualcode.png');
+INSERT INTO "ProductImages"(product_id, img_path) VALUES (208, 'soundforge.png');
+INSERT INTO "ProductImages"(product_id, img_path) VALUES (209, 'channelblender.jpg');
 
 -- Tags (product_id, tag_name)
 INSERT INTO "Tags"(product_id, tag_name) VALUES (200, 'daw');
