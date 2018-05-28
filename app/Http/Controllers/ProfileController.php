@@ -200,6 +200,13 @@ class ProfileController extends Controller
         $user = User::find($user_id);
         return view('users.myProducts', ['user' => $user]);
     }
+	
+	public function addProduct($user_id)
+    {
+        $user = User::find($user_id);
+        return view('sellers.product_add', ['user' => $user]);
+    }
+	
     public function showWishList($user_id)
     {
         $user = User::find($user_id);
