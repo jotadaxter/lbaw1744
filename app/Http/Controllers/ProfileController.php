@@ -50,6 +50,7 @@ class ProfileController extends Controller
             $user->password = bcrypt($request->input('password'));
         $user->email = $request->input('email');
         $user->phone_number = $request->input('phone_number');
+        $user->nif = $request->input('nif');
         $user->save();
         return view('users.profile', ['user' => $user]);
     }
@@ -186,6 +187,23 @@ class ProfileController extends Controller
         }
 
         return redirect()->route('profile', $user_id );
+    }
+
+    public function showSettings($user_id)
+    {
+        $user = User::find($user_id);
+        return view('users.settings', ['user' => $user]);
+    }
+
+    public function showMyProducts($user_id)
+    {
+        $user = User::find($user_id);
+        return view('users.myProducts', ['user' => $user]);
+    }
+    public function showWishList($user_id)
+    {
+        $user = User::find($user_id);
+        return view('users.wishlist', ['user' => $user]);
     }
 }
 

@@ -30,6 +30,10 @@
                                         <td><?=$user->username?></td>
                                     </tr>
                                     <tr>
+                                        <td>Fullname:</td>
+                                        <td><?=$user->fullname?></td>
+                                    </tr>
+                                    <tr>
                                         <td>Join date:</td>
                                         <td><?=$user->admission_date?></td>
                                     </tr>

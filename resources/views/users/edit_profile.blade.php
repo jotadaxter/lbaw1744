@@ -26,7 +26,7 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label" for="username"> Fullname: </label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" id="fullname" type="text" name="fullname" value=<?=$user->fullname?> required autofocus>
+                                        <input class="form-control" id="fullname" type="text" name="fullname" value="{{$user->fullname}}" required autofocus>
                                         @if ($errors->has('fullname'))
                                             <span class="error">
                                                 {{ $errors->first('fullname') }}
@@ -68,9 +68,20 @@
                                     <label for="phone_number" class="col-lg-3 control-label">Phone Number:</label>
                                     <div class="col-lg-8">
                                         <input class="form-control"  id="phone_number" type="phone_number" name="phone_number" value=<?=$user->phone_number?> >
-                                        @if ($errors->has('email'))
+                                        @if ($errors->has('phone_number'))
                                             <span class="error">
                                                 {{ $errors->first('phone_number') }}
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nif" class="col-lg-3 control-label">NIF:</label>
+                                    <div class="col-lg-8">
+                                        <input class="form-control"  id="nif" type="nif" name="nif" value=<?=$user->nif?> >
+                                        @if ($errors->has('nif'))
+                                            <span class="error">
+                                                {{ $errors->first('nif') }}
                                             </span>
                                         @endif
                                     </div>

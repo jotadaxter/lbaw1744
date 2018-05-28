@@ -44,9 +44,9 @@
                         {{$user->username}}
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a id="view_profile" href="/profile/{{Auth::id()}}">View Profile <span class="glyphicon glyphicon-user pull-right"></span></a></li>
+                        <li><a id="view_profile" href="{{route('profile', Auth::id())}}">View Profile <span class="glyphicon glyphicon-user pull-right"></span></a></li>
                         <li class="divider"></li>
-                        <li><a href="#">My Products <span class="glyphicon glyphicon-th-list pull-right"></span></a></li>
+                        <li><a href="{{route('myProducts', Auth::id())}}">My Products <span class="glyphicon glyphicon-th-list pull-right"></span></a></li>
                         <li class="divider"></li>
 
                         @if(Auth::user()->admin)
@@ -55,9 +55,9 @@
 
                         @endif
 
-                        <li><a href="#">Wishlist <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
+                        <li><a href="{{route('wishlist', Auth::id())}}">Wishlist <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+                        <li><a href="{{route('settings', Auth::id())}}">Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
                         <li class="divider"></li>
                         <li><a id="signOut_btn" href="{{route('logout')}}">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
                     </ul>

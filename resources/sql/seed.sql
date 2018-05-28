@@ -389,7 +389,7 @@ INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (502, 10
 INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (503, 108, 203, 'S0HNS4K6HS');
 INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (504, 109, 204, 'OFCJAGHI54');
 INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (505, 105, 205, '0SAIDUFRKF');
-INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (506, 106, 206, 'SGHUDIFOG3');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (506, 106, 205, 'SGHUDIFOG3');
 INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (507, 107, 207, '5URJEDKHA4');
 INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (508, 108, 208, '38HUEDWXJH');
 INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (509, 109, 209, 'IODIGHOI2N');

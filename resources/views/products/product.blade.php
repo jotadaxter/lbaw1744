@@ -150,31 +150,40 @@
                 <div class="row">
                     <!-- Reviews -->
                     <div class="col-md-4">
-                        <ul class="nav nav-tabs nav_tabs">
-                            <li class="active"><a href="#" data-toggle="tab">Reviews</a>
-                                <br>
-                                <div class="col-md-1">
-                                    <img src="/uploads/profile_images/default.png" style="width:20px;" width="256">
-                                </div>
-                                <div class="col-md-4">Janedoe</div>
-                                <div class="col-md-4">
-                                    <img src="/star_full.png" style="width:10px;" width="1969">
-                                    <img src="/star_full.png" style="width:10px;" width="1969">
-                                    <img src="/star_full.png" style="width:10px;" width="1969">
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="row">
-                            <br>
-                            <div class="col-md-12"><p>
-                                    Vry good<br>
-                                    The product, I mean. Issa good product. <br>
-                                    Recommend it vry much to frens and family.<br>
+                        @if(isset($reviews))
+                            @foreach($reviews as $review)
+                                <ul class="nav nav-tabs nav_tabs">
+                                    <li class="active"><a href="#" data-toggle="tab">Reviews</a>
+                                        <div class="white-box scrollbar-window2">
+                                            <br>
+                                            <div class="col-md-1">
+                                                <img src="/uploads/profile_images/{{$review->img}}" style="width:20px;" width="256">
+                                            </div>
+                                            <div class="col-md-4">{{$review->username}}</div>
+                                            <div class="row">
+                                                <!-- Rating -->
+                                                <div class="product-desc"><b>Rating:</b>
+                                                    <?php $i=$review->rating; ?>
+                                                    @while($i>0)
+                                                        <img src="/star_full.png" style="width:10px;" width="1969">
+                                                        <?php $i--; ?>
+                                                    @endwhile
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7">
+                                            </div>
+                                            <br>
+                                            <div class="col-md-12">
+                                                <p>
+                                                   {{$review->comment}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
 
-                                    Kthnx
-                                </p>
-                            </div>
-                        </div>
+                            @endforeach
+                        @endif
                     </div>
 
                     <div class="col-md-8">

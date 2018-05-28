@@ -29,12 +29,15 @@ class ProductController extends Controller
 
         //get reviews
         $reviews=DB::select('
-            SELECT "Reviews".sk_id, "Reviews".rating, "Reviews".review_date, "Reviews".comment
-            FROM (("Reviews" INNER JOIN "SerialKeys" ON "Reviews".sk_id="SerialKeys".sk_id)
-            INNER JOIN "Products" ON "Products".product_id = "SerialKeys".product_id)
-            ORDER BY "Reviews".review_date DESC;
+           SELECT "Reviews".rating, "Reviews".comment, "Reviews".review_date, "Users".username, "Users".img, "Users".user_id
+           FROM (("Reviews"
+           INNER JOIN "SerialKeys" ON "SerialKeys".sk_id = "Reviews".sk_id)
+           INNER JOIN "Users" ON "SerialKeys".assignment_id = "Users".user_id)
+           WHERE "SerialKeys".product_id = ?
+           ORDER BY "Reviews".rating DESC;
                    
-       ');
+       ', [$product_id]);
+        print_r($reviews);
 
         $avg_rating =0;
         $counter=0;

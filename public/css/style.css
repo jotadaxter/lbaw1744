@@ -369,6 +369,10 @@ ul.nav.nav-pills.nav-stacked{
     height: 50vh;
     overflow: auto;
 }
+.scrollbar-window2 {
+    height: 20vh;
+    overflow: auto;
+}
 
 .horizontal-scrollbar-window {
     overflow-X: scroll;

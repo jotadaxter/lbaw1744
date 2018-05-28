@@ -49,7 +49,8 @@ Route::post('password/change', 'ProfileController@passwordChange');
 Route::get('password/changeSuccess', 'ProfileController@showChangeSuccess')->name('changeSuccess');
 //Change Profile Avatar
 Route::post('profile/{user_id}/avatar', 'ProfileController@changeAvatar');
-
+//Profile Settings
+Route::get('profile/{user_id}/settings/', 'ProfileController@showSettings')->name('settings');
 
 
 /* Module M02: Products */
@@ -58,14 +59,18 @@ Route::post('profile/{user_id}/avatar', 'ProfileController@changeAvatar');
 Route::get('products/search', 'SearchController@showProductSearch')->name('productSearch');
 //Products Search By Tag
 Route::post('products/search', 'SearchController@showProductsByTag')->name('productsByTag');
-
-//Product
+//View a Product
 Route::get('products/{product_id}', 'ProductController@showProduct')->name('product');
+//User Products
+Route::get('profile/{user_id}/products/', 'ProfileController@showMyProducts')->name('myProducts');
 
 /* Module M03: Reviews and Wish list */
 
+Route::get('profile/{user_id}/wishlist', 'ProfileController@showWishList')->name('wishlist');
+
 
 /* Module M04: Cart and Checkout */
+
 Route::get('cart', 'CartController@showCart')->name('cart');
 //Add Product To Cart
 Route::get('cart/add/{product_id}', 'CartController@addToCart')->name('addProductToCart');
