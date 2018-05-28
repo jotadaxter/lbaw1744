@@ -63,6 +63,10 @@ Route::post('products/search', 'SearchController@showProductsByTag')->name('prod
 Route::get('products/{product_id}', 'ProductController@showProduct')->name('product');
 //User Products
 Route::get('profile/{user_id}/products/', 'ProfileController@showMyProducts')->name('myProducts');
+//Seller Add Products Form
+Route::get('profile/{user_id}/products/add/', 'ProfileController@addProduct')->name('addProducts');
+//Seller Add Products Action
+Route::post('profile/{user_id}/products/add/', 'ProfileController@addProductAction');
 
 /* Module M03: Reviews and Wish list */
 
