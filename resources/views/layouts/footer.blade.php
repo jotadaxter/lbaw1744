@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-lg-12 footer_2" >
                 <ul class="nav nav-pills nav-justified">
-                    <li><a class="line" href="{{route('404')}}"> &copy; 2018 V a p o r</a></li>
+                    <li><a class="line" href="{{route('help')}}">Help</a></li>
                     <li><a class="line" href="{{route('terms')}}">Terms of Service</a></li>
                     <li><a class="line" href="{{route('privacy')}}">Privacy</a></li>
                 </ul>
