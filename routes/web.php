@@ -75,6 +75,7 @@ Route::get('profile/{user_id}/wishlist', 'ProfileController@showWishList')->name
 
 /* Module M04: Cart and Checkout */
 
+//Show Produts in Cart
 Route::get('cart', 'CartController@showCart')->name('cart');
 //Add Product To Cart
 Route::get('cart/add/{product_id}', 'CartController@addToCart')->name('addProductToCart');
