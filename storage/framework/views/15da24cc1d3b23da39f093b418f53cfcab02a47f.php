@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
     <div class="about container panel-limit-margin">
-        <h3 class="panel-title">Vapor</h3>
+        <h3 class="panel-title">About</h3>
         <div class="container padded">
             <div class="white-box about-format">
                 <img id="feup_logo" class="padded img-rounded img-fluid img-responsive" src="feup_logo.png" alt="feup_logo.jpg">

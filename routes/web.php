@@ -107,6 +107,8 @@ Route::get('/terms', 'StaticPagesController@showTerms')->name('terms');
 Route::get('/privacy', 'StaticPagesController@showPrivacy')->name('privacy');
 //404 Page
 Route::get('/404', 'StaticPagesController@show404')->name('404');
+//Help Page
+Route::get('/help', 'StaticPagesController@showHelp')->name('help');
 
 Route::get('/phpinfo', function() {
     return phpinfo();

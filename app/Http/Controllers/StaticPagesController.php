@@ -64,9 +64,14 @@ class StaticPagesController extends Controller
     {
         return view('privacy');
     }
-
+    
     public function show404()
     {
         return view('404');
+    }
+
+    public function showHelp()
+    {
+        return view('help');
     }
 }
