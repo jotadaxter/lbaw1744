@@ -80,7 +80,7 @@ Route::get('cart', 'CartController@showCart')->name('cart');
 //Add Product To Cart
 Route::get('cart/add/{product_id}', 'CartController@addToCart')->name('addProductToCart');
 //Remove Product from Cart
-
+Route::post('cart/remove/{product_id}', 'CartController@removeProduct')->name('removeProduct');
 
 /* Module M05: User Administration */
 

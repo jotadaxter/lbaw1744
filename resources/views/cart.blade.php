@@ -50,15 +50,17 @@
                                                         </tbody>
                                                     </table>
                                                 </div>
-
+                                                <div>
+                                                    <form method="POST" action="{{ url('cart/remove/' . $product->product_id) }}" id="fileForm" role="form">
+                                                            {{ csrf_field() }}
+                                                    <button class="btn btn-success" type="submit">Remove </button>
+                                                </div>
 
                                             </div>
 
                                         </li>
                                     @endforeach
 
-
-                                    {{$products->appends(Input::except('page'))->links()}}
                                 @endif
                             </ul>
                         </div>
