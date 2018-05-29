@@ -3,18 +3,26 @@
 @section('content')
     <div id="myDIV" class="container">
 
-        <div class="col-md-12">
-            <div class="content">
-                <div class="row" style="margin-top: 10px">
-                    <div class="col-xs-12">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">My Cart</h3>
-                        </div>
-                        <ul class="list-group">
+            <div class="col-md-12">
+                <div class="content">
+                    <div class="row" style="margin-top: 10px">
+                        <div class="col-xs-12">
+                            <div class="panel-heading">
+                                <div>
+                                     
+                                </div>
+                                <h3 class="panel-title">My Cart</h3>
+                            </div>
                             @if(isset($products))
-                                @foreach($products as $product)
-                                    <li class="list-group-item">
-                                        <div class="row toggle horizontal-scrollbar-window" id="dropdown-detail-1" data-toggle="detail-1">
+                                    <form method="POST" action="{{ url('cart/checkout') }}" id="fileForm" role="form">
+                                            {{ csrf_field() }}
+                                    <button class="btn btn-success" type="submit">Checkout </button>
+                                    @endif
+                            <ul class="list-group">
+                                @if(isset($products))
+                                    @foreach($products as $product)
+                                        <li class="list-group-item">
+                                            <div class="row toggle horizontal-scrollbar-window" id="dropdown-detail-1" data-toggle="detail-1">
 
                                             <div class="col-sm-4 col-md-2 col-lg-2 col-lg-offset-1">
                                                 {{$product->name}}

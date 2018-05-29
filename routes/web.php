@@ -81,6 +81,8 @@ Route::get('cart', 'CartController@showCart')->name('cart');
 Route::get('cart/add/{product_id}', 'CartController@addToCart')->name('addProductToCart');
 //Remove Product from Cart
 Route::post('cart/remove/{product_id}', 'CartController@removeProduct')->name('removeProduct');
+//Checkout Products from Cart
+Route::post('cart/checkout', 'CartController@buyProduct')->name('buyProduct');
 
 /* Module M05: User Administration */
 
