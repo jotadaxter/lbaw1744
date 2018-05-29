@@ -16,7 +16,7 @@
                         {{$product->name}}
                         <br>
                         <img src="/uploads/product_images/{{$product->logo_path}}"
-                             alt="Submit" width="80" height="80">
+                             alt="Product_image" width="80" height="80">
 
 
                     </div>

@@ -13,7 +13,7 @@
                     <div class="col-md-4">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="/uploads/product_images/{{$product->logo_path}}" style="width:210px;height: 210px;" class="img-rounded" alt="Cinque Terre" width="400" height="400">
+                                <img src="/uploads/product_images/{{$product->logo_path}}" alt="product_image" style="width:210px;height: 210px;" class="img-rounded" alt="Cinque Terre" width="400" height="400">
                             </div>
                         </div>
                         <br>
@@ -44,12 +44,12 @@
                                                     <div class="item active">
                                                         <div class="overlay"></div>
 
-                                                        <a href="#"><img class="slide_image" src="/uploads/product_images/{{$image->img_path}}" /></a>
+                                                        <a href="#"><img class="slide_image" alt="img{{$it}}" src="/uploads/product_images/{{$image->img_path}}" /></a>
 
                                                     </div>
                                                 @else
                                                     <div class="item">
-                                                        <a href="#"><img class="slide_image" src="/uploads/product_images/{{$image->img_path}}" /></a>
+                                                        <a href="#"><img class="slide_image" alt="img{{$it}}" src="/uploads/product_images/{{$image->img_path}}" /></a>
                                                     </div>
                                                 @endif
 
@@ -102,7 +102,7 @@
                                 <?php $i=$avg_rating; ?>
                                 @if($avg_rating>-1)
                                     @while($i>0)
-                                        <img src="/star_full.png" style="width:20px;" width="1969">
+                                        <img src="/star_full.png" alt="star" style="width:20px;" width="1969">
                                         <?php $i--; ?>
                                     @endwhile
 
@@ -116,13 +116,13 @@
                             <div class="product-desc">
                                 <b>Systems:</b>
                                 @if((strpos($product->operating_system, 'w') !== false))
-                                    <img src="/os_images/windows_logo.png" style="width:20px;" width="420">
+                                    <img src="/os_images/windows_logo.png" alt="windows_logo.png" style="width:20px;" width="420">
                                 @endif
                                 @if((strpos($product->operating_system, 'm') !== false))
-                                    <img src="/os_images/ios_logo.png" style="width:20px;" width="420">
+                                    <img src="/os_images/ios_logo.png" alt="ios_logo.png" style="width:20px;" width="420">
                                 @endif
                                 @if((strpos($product->operating_system, 'l') !== false))
-                                    <img src="/os_images/linux_logo.png" style="width:20px;" width="420">
+                                    <img src="/os_images/linux_logo.png" alt="linux_logo.png" style="width:20px;" width="420">
                                 @endif
 
                             </div>
@@ -163,7 +163,8 @@
                                         <div class="white-box scrollbar-window2">
                                             <br>
                                             <div class="col-md-1">
-                                                <img src="/uploads/profile_images/{{$review->img}}" style="width:20px;" width="256">
+                                                <img src="/uploads/profile_images/{{$review->img}}"
+                                                     alt="{{$review->username}}" style="width:20px;" width="256">
                                             </div>
                                             <div class="col-md-4">{{$review->username}}</div>
                                             <div class="row">
@@ -171,7 +172,7 @@
                                                 <div class="product-desc"><b>Rating:</b>
                                                     <?php $i=$review->rating; ?>
                                                     @while($i>0)
-                                                        <img src="/star_full.png" style="width:10px;" width="1969">
+                                                        <img src="/star_full.png" alt="star" style="width:10px;" width="1969">
                                                         <?php $i--; ?>
                                                     @endwhile
                                                 </div>
@@ -198,13 +199,13 @@
                             </li>
                         </ul>
                         <div class="col-md-4">
-                            <img src="/product.png" class="img-rounded" alt="Cinque Terre" style="width:170px;height: 170px;" width="400" height="400">
+                            <img src="/product.png" class="img-rounded" alt="product" style="width:170px;height: 170px;" width="400" height="400">
                         </div>
                         <div class="col-md-4">
-                            <img src="/product.png" class="img-rounded" alt="Cinque Terre" style="width:170px;height: 170px;" width="400" height="400">
+                            <img src="/product.png" class="img-rounded" alt="product" style="width:170px;height: 170px;" width="400" height="400">
                         </div>
                         <div class="col-md-4">
-                            <img src="/product.png" class="img-rounded" alt="Cinque Terre" style="width:170px;height: 170px;" width="400" height="400">
+                            <img src="/product.png" class="img-rounded" alt="product" style="width:170px;height: 170px;" width="400" height="400">
                         </div>
                     </div>
                 </div>

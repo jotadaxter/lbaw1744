@@ -2,7 +2,8 @@
 
 @section('content')
 
-        <img class="vapor-mail-banner" src="https://i.imgur.com/yYYEEW8.jpg" width="460" height="40" border="0">
+        <img class="vapor-mail-banner" src="https://i.imgur.com/yYYEEW8.jpg"
+             width="460" height="40" border="0" alt="vapor-mail-banner">
         <pre class ="pw-reset-message">
         Dear user, 
 

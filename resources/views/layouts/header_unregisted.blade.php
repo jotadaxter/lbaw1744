@@ -17,7 +17,8 @@
             <div class="col-sm-3 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1 btn-group">
                 <!-- Cart Button -->
                 <a href="{{route('cart')}}" id="cart_btn" class="cart_btn btn">
-                    <img id="cart"  class="cart_not_signed img-rounded thumbnail" src="/icons/cart.png" alt="cart_icon">
+                    <img id="cart"  class="cart_not_signed img-rounded thumbnail"
+                         src="/icons/cart.png" alt="cart_icon">
                 </a>
                 <!-- Register Button -->
                 <a class="register_btn btn button" href="{{route('register')}}" id="signIn_btn">Register</a>

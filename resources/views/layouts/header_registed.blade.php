@@ -33,7 +33,8 @@
             <!-- Cart Button -->
             <div class="col-sm-1 col-md-1 col-lg-1  btn-group">
                 <a href="{{route('cart')}}" id="cart_btn" class="cart_btn btn">
-                    <img id="cart"  class="cart_not_signed img-rounded thumbnail" src="/icons/cart.png" alt="cart_icon" height="80" width="80">
+                    <img id="cart"  class="cart_not_signed img-rounded thumbnail"
+                         src="/icons/cart.png" alt="cart_icon" height="80" width="80">
                 </a>
             </div>
 
@@ -69,7 +70,9 @@
             <!-- User Profile Avatar -->
             <div class="col-sm-2 col-md-2 col-lg-2 btn-group shift-up">
                 <a class="register_btn btn button">
-                    <img id="profile_picture" class="img-rounded img-thumbnail" src="/uploads/profile_images/{{ Auth::user()->img }}" alt="profile_picture" height="60" width="60">
+                    <img id="profile_picture" class="img-rounded img-thumbnail"
+                         src="/uploads/profile_images/{{ Auth::user()->img }}"
+                         alt="profile_picture" height="60" width="60">
                 </a>
             </div>
         </div>
