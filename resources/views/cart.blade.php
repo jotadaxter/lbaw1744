@@ -40,7 +40,7 @@
                                                             <td>O.S.</td>
                                                             <td>{{$product->operating_system}}</td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr> 
                                                             <td>Price
                                                                 <!-- if discount, change this parameter -->
                                                             </td>

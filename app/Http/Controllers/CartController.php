@@ -11,7 +11,7 @@ use VAPOR\Product;
 
 class CartController extends Controller
 {
-    public function showCart()
+    public function showCart() 
     {
 
     	$search = session('cart');
