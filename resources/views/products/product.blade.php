@@ -100,10 +100,16 @@
                             <!-- Rating -->
                             <div class="product-desc"><b>Rating:</b>
                                 <?php $i=$avg_rating; ?>
-                                @while($i>0)
-                                    <img src="/star_full.png" style="width:20px;" width="1969">
-                                    <?php $i--; ?>
-                                @endwhile
+                                @if($avg_rating>-1)
+                                    @while($i>0)
+                                        <img src="/star_full.png" style="width:20px;" width="1969">
+                                        <?php $i--; ?>
+                                    @endwhile
+
+                                @else
+                                    No rating yet
+
+                                @endif
                             </div><br>
 
                             <!-- Operating System -->

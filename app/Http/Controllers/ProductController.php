@@ -37,7 +37,6 @@ class ProductController extends Controller
            ORDER BY "Reviews".rating DESC;
                    
        ', [$product_id]);
-        print_r($reviews);
 
         $avg_rating =0;
         $counter=0;
@@ -46,7 +45,11 @@ class ProductController extends Controller
             $avg_rating+=($review->rating);
             $counter++;
         }
-        $avg_rating=round($avg_rating/$counter);
+        if($counter>0)
+            $avg_rating=round($avg_rating/$counter);
+        else{
+            $avg_rating = -1;
+        }
 
         //Tags
         $tags = DB::select('

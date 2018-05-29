@@ -58,7 +58,7 @@
                                 </a>
                                 <figcaption class="figure-caption text-center product-description">
                                     <div> <b style="font-size: 25px;"> {{$tprod->name}}</b>
-                                        <p><b style="color:red;font-size:25px;">300€</b>
+                                        <p><b style="color:red;font-size:25px;">{{$tprod->price}}€</b>
                                     </div>
                                 </figcaption>
                             </figure>
