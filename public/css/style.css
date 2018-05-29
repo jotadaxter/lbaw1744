@@ -54,6 +54,9 @@ body {
     text-decoration : none;
 }
 
+textarea {
+  resize: vertical;
+}
 
 /*tbody,*/
 .indent-box,
