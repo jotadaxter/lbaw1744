@@ -26,6 +26,8 @@ class CartController extends Controller
         	return view('cart');
         }
 
+        if(session('cart_number') == 0)
+            return view('cart');
         //$products = Product::paginate(4);
 
         return view('cart')
@@ -95,7 +97,11 @@ class CartController extends Controller
         session(['cart' => $cart_array]);
         session(['cart_number' => $cart_number]);
         
-        if(session()->exists('cart_number') || $session('cart_number') == 0) {
+        if(!session()->exists('cart_number')){
+            return view('cart');
+        }
+
+        if(session('cart_number') == 0) {
             return view('cart');
         }
         
@@ -108,5 +114,34 @@ class CartController extends Controller
         
 
         return view('cart')->with(['products' => $products]);
+    }
+
+    public function buyProduct() {
+        
+
+        if(!session()->exists('cart_number')){
+            return view('cart');
+        }
+
+        if(session('cart_number') == 0) {
+            return view('cart');
+        }
+
+        $cart_array = session('cart');
+
+        $sendToSQL = 'BEGIN TRANSACTION; SET TRANSACTION ISOLATION LEVEL SERIALIZABLE READ INSERT INTO "SearchTable"(product_id) VALUES';
+        foreach ($product_ids as $id) 
+        for($i = 0; $i<session('cart_number'); $i++) {
+            $sendToSQL .= '(' . $cart_array[$i] . '),'; 
+            $sendToSQL = rtrim($sendToSQL,","); 
+            $sendToSQL .= '; EXECUTE PROCEDURE paymentRun($user_id, $payment_date, $payMethod, $paid_amount, $payDetails) DELETE FROM "SearchTable"; COMMIT;'; 
+        }
+            
+
+        DB::select($sendToSQL);
+
+        echo 'compra efetuada';
+        
+        return view('cart');
     }
 }
