@@ -8,8 +8,16 @@
                     <div class="row" style="margin-top: 10px">
                         <div class="col-xs-12">
                             <div class="panel-heading">
+                                <div>
+                                     
+                                </div>
                                 <h3 class="panel-title">My Cart</h3>
                             </div>
+                            @if(isset($products))
+                                    <form method="POST" action="{{ url('cart/checkout') }}" id="fileForm" role="form">
+                                            {{ csrf_field() }}
+                                    <button class="btn btn-success" type="submit">Checkout </button>
+                                    @endif
                             <ul class="list-group">
                                 @if(isset($products))
                                     @foreach($products as $product)
