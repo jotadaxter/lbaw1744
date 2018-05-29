@@ -17,7 +17,7 @@
                                      class="img-circle img-responsive"> </div>
                             <form enctype="multipart/form-data" action="/profile/{{$user->user_id}}/avatar" method="POST">
                                 {{ csrf_field() }}
-                                <input type="file" name="avatar" >
+                                <input type="file" name="avatar" alt="avatar">
                                 <button class="btn btn-success" type="submit">
                                     Change Image
                                 </button>

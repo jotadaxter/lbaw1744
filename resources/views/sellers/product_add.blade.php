@@ -56,14 +56,14 @@
 											<label for="op_sys" class="col-lg-5 control-label">Supported Systems:</label>
 											<div class="col-lg-5">
 												<input type="checkbox" name="op_sys" value="w">Windows
-												<img src="/os_images/windows_logo.png" style="width:20px;" width="420">
+												<img src="/os_images/windows_logo.png" style="width:20px;" width="420" alt="windows_logo.png">
 												&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 												<input type="checkbox" name="op_sys" value="w">Mac OS
-												<img src="/os_images/ios_logo.png" style="width:20px;" width="420">
+												<img src="/os_images/ios_logo.png" style="width:20px;" width="420" alt="ios_logo.png">
 												<br>
 												<br>
 												<input type="checkbox" name="op_sys" value="w">Linux
-												<img src="/os_images/linux_logo.png" style="width:20px;" width="420">
+												<img src="/os_images/linux_logo.png" style="width:20px;" width="420" alt="linux_logo.png">
 												<br>
 												<br>
 											</div>

@@ -16,13 +16,13 @@
                 <div class="carousel-inner slideshow">
                     <div class="item active">
                         <div class="overlay"></div>
-                        <a href="#"><img src="uploads/promo_images/promo_flstudio.jpg" width="1920" height="1080"/></a>
+                        <a href="#"><img src="uploads/promo_images/promo_flstudio.jpg" alt="promo_flstudio.jpg" width="1920" height="1080"/></a>
                     </div>
                     <div class="item">
-                        <a href="#"><img src="uploads/promo_images/promo_dreamweaver.jpg" width="1920" height="1080"/></a>
+                        <a href="#"><img src="uploads/promo_images/promo_dreamweaver.jpg" alt="promo_dreamweaver.jpg" width="1920" height="1080"/></a>
                     </div>
                     <div class="item">
-                        <a href="#"><img src="uploads/promo_images/promo_sublime.jpg" width="1920" height="1080"/></a>
+                        <a href="#"><img src="uploads/promo_images/promo_sublime.jpg" alt="promo_sublime.jpg" width="1920" height="1080"/></a>
                     </div>
                 </div>
                 <!-- Switch Image buttons -->
@@ -54,7 +54,7 @@
                         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter trending">
                             <figure>
                                 <a href="{{url('products/'. $tprod->product_id)}}">
-                                    <img src="/uploads/product_images/{{$tprod->logo_path}}" class="img-responsive slide_image">
+                                    <img src="/uploads/product_images/{{$tprod->logo_path}}" alt="{{$tprod->logo_path}}" class="img-responsive slide_image">
                                 </a>
                                 <figcaption class="figure-caption text-center product-description">
                                     <div> <b style="font-size: 25px;"> {{$tprod->name}}</b>
@@ -74,7 +74,7 @@
                         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                             <figure>
                                 <a href="{{url('products/'. $pprod->product_id)}}">
-                                    <img src="/uploads/product_images/{{$pprod->logo_path}}" class="img-responsive slide_image">
+                                    <img src="/uploads/product_images/{{$pprod->logo_path}}" alt="{{$pprod->logo_path}}" class="img-responsive slide_image">
                                 </a>
                                 <figcaption class="figure-caption text-center product-description">
                                     <div> <b style="font-size: 25px;"> {{$pprod->name}}</b>

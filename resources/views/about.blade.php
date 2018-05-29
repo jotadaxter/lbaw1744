@@ -5,7 +5,8 @@
         <h3 class="panel-title">About</h3>
         <div class="container padded">
             <div class="white-box about-format">
-                <img id="feup_logo" class="padded img-rounded img-fluid img-responsive" src="feup_logo.png" alt="feup_logo.jpg">
+                <img id="feup_logo" class="padded img-rounded img-fluid img-responsive"
+                     src="feup_logo.png" alt="feup_logo.jpg">
 
                 <br>
                 Mestrado Integrado em Engenharia Informática e Computação
