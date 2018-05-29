@@ -49,33 +49,36 @@
                 <form method="POST" action="<?php echo e(route('login')); ?>">
                     <?php echo e(csrf_field()); ?>
 
+                    <fieldset>
+                        <legend style="text-align: center; color: white;">Insert Your Credentials</legend>
 
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input id="email" class="form-control" type="email" name="email" value="<?php echo e(old('email')); ?>" required autofocus>
-                    </div>
-                    <?php if($errors->has('email')): ?>
-                        <span class="error">
-                            <?php echo e($errors->first('email')); ?>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <input id="email" class="form-control" type="email" name="email"
+                                   value="<?php echo e(old('email')); ?>" required autofocus>
+                        </div>
+                        <?php if($errors->has('email')): ?>
+                            <span class="error">
+                                <?php echo e($errors->first('email')); ?>
 
-                        </span>
-                    <?php endif; ?>
+                            </span>
+                        <?php endif; ?>
 
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                        <input class="form-control" id="password" type="password" name="password" required>
-                    </div>
-                    <?php if($errors->has('password')): ?>
-                        <span class="error">
-                            <?php echo e($errors->first('password')); ?>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                            <input class="form-control" id="password" type="password" name="password" required>
+                        </div>
+                        <?php if($errors->has('password')): ?>
+                            <span class="error">
+                                <?php echo e($errors->first('password')); ?>
 
-                        </span>
-                    <?php endif; ?>
-                    <br>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">
-                        Login
-                    </button>
-
+                            </span>
+                        <?php endif; ?>
+                        <br>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">
+                            Login
+                        </button>
+                    </fieldset>
                 </form>
             </div>
 

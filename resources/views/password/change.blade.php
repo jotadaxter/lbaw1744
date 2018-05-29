@@ -15,6 +15,7 @@
                                     <label for="password">Password</label>
                                     <input class="form-control" id="password" type="password" name="password" required>
                                     @if ($errors->has('password'))
+                                        <span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
                                         <span class="error">
                                             {{ $errors->first('password') }}
                                         </span>

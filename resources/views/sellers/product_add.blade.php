@@ -21,6 +21,7 @@
 											<div class="col-lg-8">
 												<input class="form-control"  id="product_name" type="product_name" name="product_name">
 												@if ($errors->has('product_name'))
+													<span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
 													<span class="error">
 														{{ $errors->first('product_name') }}
 													</span>
@@ -34,6 +35,7 @@
 											<label for="logo" class="col-lg-5 control-label">Product Logo:</label>
 											<input type="file" name="logo" >
 											@if ($errors->has('logo'))
+												<span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
 												<span class="error">
 													{{ $errors->first('logo') }}
 												</span>
@@ -45,6 +47,7 @@
 											<div class="col-lg-8">
 												<textarea class="form-control white-box scrollbar-window" rows="10" id="descript" type="descript" name="descript"></textarea>
 												@if ($errors->has('descript'))
+													<span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
 													<span class="error">
 														{{ $errors->first('descript') }}
 													</span>
@@ -68,6 +71,7 @@
 												<br>
 											</div>
 											@if ($errors->has('op_sys'))
+												<span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
 												<span class="error">
 													{{ $errors->first('op_sys') }}
 												</span>
@@ -81,6 +85,7 @@
 											<div class="col-lg-8">
 												<textarea class="form-control white-box scrollbar-window" rows="10" id="key_list" type="key_list" name="key_list"></textarea>
 												@if ($errors->has('key_list'))
+													<span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
 													<span class="error">
 														{{ $errors->first('key_list') }}
 													</span>

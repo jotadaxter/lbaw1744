@@ -17,6 +17,7 @@
                                     <div class="col-lg-8">
                                         <input class="form-control" id="username" type="text" name="username" value=<?=$user->username?> required autofocus>
                                         @if ($errors->has('username'))
+                                            <span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
                                             <span class="error">
                                                 {{ $errors->first('username') }}
                                             </span>
@@ -28,6 +29,7 @@
                                     <div class="col-lg-8">
                                         <input class="form-control" id="fullname" type="text" name="fullname" value="{{$user->fullname}}" required autofocus>
                                         @if ($errors->has('fullname'))
+                                            <span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
                                             <span class="error">
                                                 {{ $errors->first('fullname') }}
                                             </span>
@@ -40,6 +42,7 @@
                                     <div class="col-lg-8">
                                         <input id="password" class="form-control" type="password" name="password">
                                         @if ($errors->has('password'))
+                                            <span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
                                             <span class="error">
                                                 {{ $errors->first('password') }}
                                             </span>
@@ -58,6 +61,7 @@
                                     <div class="col-lg-8">
                                         <input class="form-control"  id="email" type="email" name="email" value=<?=$user->email?> >
                                         @if ($errors->has('email'))
+                                            <span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
                                             <span class="error">
                                                 {{ $errors->first('email') }}
                                             </span>
@@ -69,6 +73,7 @@
                                     <div class="col-lg-8">
                                         <input class="form-control"  id="phone_number" type="phone_number" name="phone_number" value=<?=$user->phone_number?> >
                                         @if ($errors->has('phone_number'))
+                                            <span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
                                             <span class="error">
                                                 {{ $errors->first('phone_number') }}
                                             </span>
@@ -80,6 +85,7 @@
                                     <div class="col-lg-8">
                                         <input class="form-control"  id="nif" type="nif" name="nif" value=<?=$user->nif?> >
                                         @if ($errors->has('nif'))
+                                            <span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
                                             <span class="error">
                                                 {{ $errors->first('nif') }}
                                             </span>

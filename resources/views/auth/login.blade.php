@@ -48,31 +48,36 @@
             <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
                 <form method="POST" action="{{ route('login') }}">
                     {{ csrf_field() }}
+                    <fieldset>
+                        <legend style="text-align: center; color: white;">Insert Your Credentials</legend>
 
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input id="email" class="form-control" type="email" name="email" value="{{ old('email') }}" required autofocus>
-                    </div>
-                    @if ($errors->has('email'))
-                        <span class="error">
-                            {{ $errors->first('email') }}
-                        </span>
-                    @endif
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <input id="email" class="form-control" type="email" name="email"
+                                   value="{{ old('email') }}" required autofocus>
+                        </div>
+                        @if ($errors->has('email'))
+                            <span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
+                            <span class="error">
+                                {{ $errors->first('email') }}
+                            </span>
+                        @endif
 
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                        <input class="form-control" id="password" type="password" name="password" required>
-                    </div>
-                    @if ($errors->has('password'))
-                        <span class="error">
-                            {{ $errors->first('password') }}
-                        </span>
-                    @endif
-                    <br>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">
-                        Login
-                    </button>
-
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                            <input class="form-control" id="password" type="password" name="password" required>
+                        </div>
+                        @if ($errors->has('password'))
+                            <span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
+                            <span class="error">
+                                {{ $errors->first('password') }}
+                            </span>
+                        @endif
+                        <br>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">
+                            Login
+                        </button>
+                    </fieldset>
                 </form>
             </div>
 

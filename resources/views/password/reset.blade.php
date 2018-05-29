@@ -16,6 +16,7 @@
                                     <label for="email">E-Mail Address</label>
                                     <input class="form-control"  id="email" type="email" name="email" value="{{ old('email') }}" required>
                                     @if ($errors->has('email'))
+                                        <span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
                                         <span class="error">
                                             {{ $errors->first('email') }}
                                         </span>

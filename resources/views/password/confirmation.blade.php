@@ -16,6 +16,7 @@
                                     <label for="confirmation_code"> Insert the Confirmation Code Sent to Your Email</label>
                                     <input class="form-control"  id="confirmation_code" type="text" name="confirmation_code" required>
                                     @if ($errors->has('confirmation_code'))
+                                        <span><img src="/error_sign.png" alt="error_icon" width="10px" height="10px"></span>
                                         <span class="error">
                                             {{ $errors->first('confirmation_code') }}
                                         </span>
