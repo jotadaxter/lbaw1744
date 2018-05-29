@@ -16,7 +16,7 @@
                 <div class="carousel-inner slideshow">
                     <div class="item active">
                         <div class="overlay"></div>
-                        <a href="#"><img src="uploads/promo_images/promo_winrar.png" width="1920" height="1080"/></a>
+                        <a href="#"><img src="uploads/promo_images/promo_flstudio.jpg" width="1920" height="1080"/></a>
                     </div>
                     <div class="item">
                         <a href="#"><img src="uploads/promo_images/promo_dreamweaver.jpg" width="1920" height="1080"/></a>
