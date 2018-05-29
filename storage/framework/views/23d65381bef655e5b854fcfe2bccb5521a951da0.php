@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div id="myDIV" class="container">
 
         <!-- Slideshow -->
@@ -49,46 +47,46 @@
                 <br/>
 
                 <!-- Most Trending Products -->
-                @if(isset($trending_products))
-                    @foreach($trending_products as $tprod)
+                <?php if(isset($trending_products)): ?>
+                    <?php $__currentLoopData = $trending_products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tprod): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter trending">
                             <figure>
-                                <a href="{{url('products/'. $tprod->product_id)}}">
-                                    <img src="/uploads/product_images/{{$tprod->logo_path}}" class="img-responsive slide_image">
+                                <a href="<?php echo e(url('products/'. $tprod->product_id)); ?>">
+                                    <img src="/uploads/product_images/<?php echo e($tprod->logo_path); ?>" class="img-responsive slide_image">
                                 </a>
                                 <figcaption class="figure-caption text-center product-description">
-                                    <div> <b style="font-size: 25px;"> {{$tprod->name}}</b>
+                                    <div> <b style="font-size: 25px;"> <?php echo e($tprod->name); ?></b>
                                         <p><b style="color:red;font-size:25px;">300€</b>
                                     </div>
                                 </figcaption>
                             </figure>
                         </div>
 
-                    @endforeach
-                @endif
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php endif; ?>
 
 
                 <!-- Promotion Products -->
-                @if(isset($promo_products))
-                    @foreach($promo_products as $pprod)
+                <?php if(isset($promo_products)): ?>
+                    <?php $__currentLoopData = $promo_products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $pprod): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter promo">
                             <figure>
-                                <a href="{{url('products/'. $pprod->product_id)}}">
-                                    <img src="/uploads/product_images/{{$pprod->logo_path}}" class="img-responsive slide_image">
+                                <a href="<?php echo e(url('products/'. $pprod->product_id)); ?>">
+                                    <img src="/uploads/product_images/<?php echo e($pprod->logo_path); ?>" class="img-responsive slide_image">
                                 </a>
                                 <figcaption class="figure-caption text-center product-description">
-                                    <div> <b style="font-size: 25px;"> {{$pprod->name}}</b>
+                                    <div> <b style="font-size: 25px;"> <?php echo e($pprod->name); ?></b>
                                         <p>
-                                            <s>{{$pprod->price}}€</s>
-                                            <b style="color:red;font-size:25px;">{{$pprod->discounted_price}}€</b>
+                                            <s><?php echo e($pprod->price); ?>€</s>
+                                            <b style="color:red;font-size:25px;"><?php echo e($pprod->discounted_price); ?>€</b>
                                         </p>
                                     </div>
                                 </figcaption>
                             </figure>
                         </div>
 
-                    @endforeach
-                @endif
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php endif; ?>
 
 
 
@@ -97,5 +95,7 @@
 
     </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
