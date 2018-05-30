@@ -99,6 +99,8 @@ Route::get('/admin/users', 'AdminController@showAdminPageUsers')->name('admin_us
 //Admin Page Products
 Route::get('/admin/products', 'AdminController@showAdminPageProducts')->name('admin_products');
 
+Route::post('admin/remove/{product_id}', 'AdminController@removeProductAdmin')->name('removeProductAdmin');
+
 //Reset Password Change Action
 //Route::post('password/change', 'AdminController@passwordChange');
 

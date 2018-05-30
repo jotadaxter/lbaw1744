@@ -9,6 +9,7 @@
 
 
         @foreach($products as $product)
+        @if(!$product->hidden)
             <li class="list-group-item">
                 <div class="row toggle horizontal-scrollbar-window" id="dropdown-detail-1" data-toggle="detail-1">
 
@@ -48,10 +49,13 @@
                         </table>
                     </div>
 
-
+                    <form method="POST" action="{{ url('admin/remove/' . $product->product_id) }}" id="fileForm" role="form">
+                                                            {{ csrf_field() }}
+                                                    <button class="btn btn-success" type="submit">Remove </button>
                 </div>
 
             </li>
+            @endif
         @endforeach
 
 
