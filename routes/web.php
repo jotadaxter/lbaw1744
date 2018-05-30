@@ -66,7 +66,7 @@ Route::get('profile/{user_id}/products/', 'ProfileController@showMyProducts')->n
 //Seller Add Products Form
 Route::get('profile/{user_id}/products/add/', 'ProfileController@addProduct')->name('addProducts');
 //Seller Add Products Action
-Route::post('profile/{user_id}/products/add/', 'ProfileController@addProductAction');
+Route::post('profile/{user_id}/products/addAction/', 'ProfileController@addProductAction');
 
 /* Module M03: Reviews and Wish list */
 
