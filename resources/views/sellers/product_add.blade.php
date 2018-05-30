@@ -77,7 +77,7 @@
 										</br>
 										
 										<div class="row form-group">
-											<label for="key_list" class="col-lg-3 control-label">Key List: (one per line)</label>
+											<label for="key_list" class="col-lg-3 control-label">Haha long boy: (one per line)</label>
 											<div class="col-lg-8">
 												<textarea class="form-control white-box scrollbar-window" rows="10" id="key_list" type="key_list" name="key_list"></textarea>
 												@if ($errors->has('key_list'))
@@ -88,6 +88,22 @@
 											</div>
 										</div>
 										
+										<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+										<div class="row form-group">
+											<label for="tag_list" class="col-lg-3 control-label">Tags: (one per line)</label>
+											<div class="col-lg-8">
+												<textarea class="form-control white-box scrollbar-window" rows="10" id="tag_list" type="tag_list" name="tag_list"></textarea>
+												@if ($errors->has('tag_list'))
+													<span class="error">
+														{{ $errors->first('tag_list') }}
+													</span>
+												@endif
+											</div>
+										</div>
+
+										<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 										
 									</div>
 								</fieldset>
