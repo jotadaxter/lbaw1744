@@ -210,7 +210,14 @@ class ProfileController extends Controller
     public function showWishList($user_id)
     {
         $user = User::find($user_id);
-        return view('users.wishlist', ['user' => $user]);
+
+        $products = DB::select('SELECT *
+                    FROM "Products" 
+                    INNER JOIN "Wishlists" ON "Wishlists".product_id = "Products".product_id
+                    WHERE "Wishlists".user_id = ?;'
+                    ,[$user_id]);
+
+        return view('users.wishlist')->with(['products' => $products]);
     }
 }
 

@@ -56,9 +56,6 @@
 
                                     </li>
                                 @endforeach
-
-
-                                {{$products->appends(Input::except('page'))->links()}}
                             @endif
                         </ul>
                     </div>
