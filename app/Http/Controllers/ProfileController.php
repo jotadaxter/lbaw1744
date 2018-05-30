@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 use VAPOR\Mail\ResetPWMail;
 use VAPOR\User;
+use VAPOR\Product;
 use Image;
 
 class ProfileController extends Controller
@@ -218,6 +219,31 @@ class ProfileController extends Controller
                     ,[$user_id]);
 
         return view('users.wishlist')->with(['products' => $products]);
+    }
+	
+	 public function addProductAction(Request $data)
+    {
+        //dd($data);
+        $user = Auth::user();
+
+        //dd($user->user_id);
+        //dd($user);
+        dd($asd);
+
+        $p = Product::create([
+            'user_id' => $user->user_id,
+            'description' => $data->input('descript'),
+            'release_date' => $data['release_date'],
+            'operating_system' => $data['op_sys'],
+            'price' => $data['product_price'],
+            'logo_path' => $data['logo'],
+            'name' => $data['product_name'],
+            'hidden' => false,
+            'developer' => ['developer_name'],
+            'publisher_name' => ['publisher_name']
+        ]);
+
+        return redirect()->back();
     }
 }
 
