@@ -50,7 +50,11 @@
                                                     </tbody>
                                                 </table>
                                             </div>
-
+                                            <div>
+                                               <form method="POST" action="{{ url('wishlist/remove/' . $product->product_id) }}" id="fileForm" role="form">
+                                                            {{ csrf_field() }}
+                                                    <button class="btn btn-success" type="submit">Remove </button>
+                                            </div>
 
                                         </div>
 

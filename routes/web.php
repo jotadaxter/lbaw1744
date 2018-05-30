@@ -77,7 +77,7 @@ Route::get('profile/{user_id}/wishlist', 'ProfileController@showWishList')->name
 //Add Product To Wishlist
 Route::get('profile/wishlist/add/{product_id}', 'ProfileController@addToWishlist')->name('addProductToWishlist');
 //Remove Product from Wishlist
-Route::post('wishlist/remove/{product_id}', 'WishlistController@removeProduct')->name('removeProduct');
+Route::post('wishlist/remove/{product_id}', 'ProfileController@removeProductWishlist')->name('removeProductWishlist');
 
 /* Module M04: Cart and Checkout */
 

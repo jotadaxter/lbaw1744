@@ -275,12 +275,38 @@ class ProfileController extends Controller
     {   
 
         $user_id =  Auth::user()->user_id;
-        DB::select('
+        $product = DB::select('SELECT * FROM "Wishlists" WHERE product_id = ? AND user_id = ?', 
+            [$product_id, $user_id]);
+
+        if(count($product) != 0) {
+
+        } else {
+            DB::select('
             INSERT INTO "Wishlists"
             VALUES(?,?)
             ', [$user_id, $product_id]);
+        }
+        
         
        $user = User::find($user_id);
+
+        $products = DB::select('SELECT *
+                    FROM "Products" 
+                    INNER JOIN "Wishlists" ON "Wishlists".product_id = "Products".product_id
+                    WHERE "Wishlists".user_id = ?;'
+                    ,[$user_id]);
+
+        return view('users.wishlist')->with(['products' => $products, 'user' => $user]);
+    }
+
+    public function removeProductWishlist($product_id) {
+        $user_id =  Auth::user()->user_id;
+        $user = User::find($user_id);
+
+        $product = DB::select('DELETE FROM "Wishlists" WHERE product_id = ? AND user_id = ?', 
+            [$product_id, $user_id]);
+
+        //$product->delete();
 
         $products = DB::select('SELECT *
                     FROM "Products" 
