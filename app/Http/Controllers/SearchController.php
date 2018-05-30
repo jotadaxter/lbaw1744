@@ -75,23 +75,31 @@ class SearchController extends Controller
         $search = $request->input('search');
 
         if($request->input('Debian') != null) {
-
+            $search = $request->input('Debian');
             $products = DB::select('SELECT * 
-            FROM "Products" 
-            WHERE "Products".name LIKE '%$search%' OR EXISTS (
-                SELECT "Tags".tag_name
-                FROM "Tags"
-                WHERE "Products".product_id = "Tags".product_id AND "Tags".tag_name LIKE '%$search%'
-            ) ORDER BY "Products".name ASC;', [$request->input('Debian')]);
-        } 
+            FROM "Products", "Tags"
+            WHERE "Tags".tag_name = ? AND   "Products".product_id = "Tags".product_id
+            ORDER BY "Products".name ASC;', [$search]);
+        }
 
+        foreach ($tags as $tag) {
+            if($request->input($tag->tag_name) != null) {
+                $search = $request->input($tag->tag_name);
+                $products = DB::select('SELECT * 
+                FROM "Products", "Tags"
+                WHERE "Tags".tag_name = ? AND "Products".product_id = "Tags".product_id
+                ORDER BY "Products".name ASC;', [$search]);
+            }
+        }
 
+        
         
 
         return view('products.search')
             ->with(['products' => $products,
                     'old_value' => $search,
-                    'tags' => $tags]);
+                    'tags' => $tags,
+                    'paginate' => 'no']);
     }
 
 

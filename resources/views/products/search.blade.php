@@ -60,8 +60,13 @@
                                     </li>
                                 @endforeach
 
-
-                                    {{$products->appends(Input::except('page'))->links()}}
+                                    @if(isset($paginate))
+                                        @if($paginate == 'no')
+                                            
+                                        @endif
+                                    @else
+                                        {{$products->appends(Input::except('page'))->links()}}
+                                    @endif
                                 @endif
                             </ul>
                         </div>
