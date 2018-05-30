@@ -73,4 +73,14 @@ class ProductController extends Controller
                     'tags' => $tags
             ]);
     }
+
+    public function update(Request $request, $product_id)
+    {
+       
+        $product = Product::find($product_id);
+        
+        
+        
+        return view('users.profile', ['user' => $user]);
+    }
 }

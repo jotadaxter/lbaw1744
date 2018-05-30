@@ -205,7 +205,12 @@ class ProfileController extends Controller
 	public function addProduct($user_id)
     {
         $user = User::find($user_id);
-        return view('sellers.product_add', ['user' => $user]);
+        $products = DB::select('SELECT *
+                    FROM "Products" 
+                    WHERE "Products".user_id = ?;'
+                    ,[$user_id]);
+
+        return view('sellers.product_add', ['user' => $user, 'products' => $products]);
     }
 	
     public function showWishList($user_id)
@@ -218,7 +223,7 @@ class ProfileController extends Controller
                     WHERE "Wishlists".user_id = ?;'
                     ,[$user_id]);
 
-        return view('users.wishlist')->with(['products' => $products]);
+        return view('users.wishlist')->with(['products' => $products, 'user' => $user]);
     }
 	
 	 public function addProductAction(Request $data)
