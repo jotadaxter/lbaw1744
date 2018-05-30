@@ -15,7 +15,9 @@
                         </span>
                     @endif
                 </div>
-                 <ul class="list-group">
+
+            </div>
+            <ul class="list-group">
                             @if(isset($products))
                                 @foreach($products as $product)
                                     <li class="list-group-item">
@@ -51,11 +53,23 @@
                                                         </td>
                                                         <td>{{$product->price}}<br></td>
                                                     </tr>
-
+                                                    
+                                                        
+                                                    
                                                     </tbody>
                                                 </table>
                                             </div>
+                                            <div>
+                                                    <form method="POST" action="{{ url('profile/' . $user->user_id.'/products/edit/'.$product->product_id) }}" id="fileForm" role="form">
+                                                            {{ csrf_field() }}
+                                                    <button class="btn btn-success" type="submit">Edit </button>
+                                            </div>
 
+                                            <div>
+                                                    <form method="POST" action="{{ url('profile/' . $user->user_id.'/products/delete/'.$product->product_id) }}" id="fileForm" role="form">
+                                                            {{ csrf_field() }}
+                                                    <button class="btn btn-success" type="submit">Remove </button>
+                                            </div>
 
                                         </div>
 
@@ -63,8 +77,6 @@
                                 @endforeach
                             @endif
                         </ul>
-            </div>
-
         </div>
     </div>
 @endsection

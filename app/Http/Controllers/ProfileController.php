@@ -199,18 +199,19 @@ class ProfileController extends Controller
     public function showMyProducts($user_id)
     {
         $user = User::find($user_id);
-        return view('users.myProducts', ['user' => $user]);
+        $products = DB::select('SELECT *
+                    FROM "Products" 
+                    WHERE "Products".user_id = ?;'
+                    ,[$user_id]);
+        return view('users.myProducts', ['user' => $user, 'products' => $products]);
     }
 	
 	public function addProduct($user_id)
     {
         $user = User::find($user_id);
-        $products = DB::select('SELECT *
-                    FROM "Products" 
-                    WHERE "Products".user_id = ?;'
-                    ,[$user_id]);
+        
 
-        return view('sellers.product_add', ['user' => $user, 'products' => $products]);
+        return view('sellers.product_add', ['user' => $user]);
     }
 	
     public function showWishList($user_id)
@@ -257,5 +258,17 @@ class ProfileController extends Controller
 
         return redirect()->back();
     }
+
+    public function deleteProduct($user_id,$product_id) {
+    $product = Product::find($product_id);
+    $product->delete();
+     $user = Auth::user();
+     $products = DB::select('SELECT *
+                    FROM "Products" 
+                    INNER JOIN "Wishlists" ON "Wishlists".product_id = "Products".product_id
+                    WHERE "Wishlists".user_id = ?;'
+                    ,[$user_id]);
+    return redirect()->back();
+  }
 }
 

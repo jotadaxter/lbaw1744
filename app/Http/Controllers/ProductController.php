@@ -78,9 +78,7 @@ class ProductController extends Controller
     {
        
         $product = Product::find($product_id);
-        
-        
-        
+
         return view('users.profile', ['user' => $user]);
     }
 }

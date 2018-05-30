@@ -67,6 +67,8 @@ Route::get('profile/{user_id}/products/', 'ProfileController@showMyProducts')->n
 Route::get('profile/{user_id}/products/add/', 'ProfileController@addProduct')->name('addProducts');
 //Seller Add Products Action
 Route::post('profile/{user_id}/products/addAction/', 'ProfileController@addProductAction');
+//Delete
+Route::post('profile/{user_id}/products/delete/{product_id}', 'ProfileController@deleteProduct')->name('deleteProduct');
 
 /* Module M03: Reviews and Wish list */
 
