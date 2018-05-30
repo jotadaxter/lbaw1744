@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
-@if(Auth::check())
+
 @section('content')
+@if(Auth::check())
 	<?php $user = auth()->user();?>
 	<div class="container">
         <div class="row">

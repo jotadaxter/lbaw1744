@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 
-@if(Auth::check())
+
 @section('content')
+@if(Auth::check())
     <div id="myDIV" class="container">
 
             <div class="col-md-12">

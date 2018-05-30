@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 
-@if(Auth::check())
+
 @section('content')
+@if(Auth::check())
     <div class="myProducts container panel-limit-margin">
         <h3 class="panel-title">My Products</h3>
         <div class="container padded">
