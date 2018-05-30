@@ -270,5 +270,28 @@ class ProfileController extends Controller
                     ,[$user_id]);
     return redirect()->back();
   }
+
+    public function addToWishlist($product_id)
+    {   
+
+        $user_id =  Auth::user()->user_id;
+        DB::select('
+            INSERT INTO "Wishlists"
+            VALUES(?,?)
+            ', [$user_id, $product_id]);
+        
+       $user = User::find($user_id);
+
+        $products = DB::select('SELECT *
+                    FROM "Products" 
+                    INNER JOIN "Wishlists" ON "Wishlists".product_id = "Products".product_id
+                    WHERE "Wishlists".user_id = ?;'
+                    ,[$user_id]);
+
+        return view('users.wishlist')->with(['products' => $products, 'user' => $user]);
+    }
+
+
+
 }
 

@@ -88,7 +88,7 @@
 
                              <!-- Add to Wishlist function -->
                              <div class="col-md-3">
-                                <a href="{{route('wishlist', ['' => $product])}}">Add to Wishlist</a>
+                                <a href="{{route('addProductToWishlist', ['' => $product])}}">Add to Wishlist</a>
                             </div>
                         </div>
 

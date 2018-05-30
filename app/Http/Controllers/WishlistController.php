@@ -36,42 +36,29 @@ class wishlistController extends Controller
             ->with(['products' => $products]);
     }
 
-    public function addTowishlist($product_id)
+    public function addToWishlist($product_id)
     {
-        echo 'adding to wishlist';
-        if(!session()->exists('wishlist_number')) {
-        	print_r(session('wishlist'));
-			echo session('wishlist_number');
-		   $wishlist_number = 0;
-		   $wishlist_array[$wishlist_number] = $product_id;
-		   echo '<br> ola<br>';
-		}	else {
-			print_r(session('wishlist'));
-			echo session('wishlist_number');
-			$wishlist_array = session('wishlist');
-        	$wishlist_number = session('wishlist_number');
-        	
-        	$wishlist_array[$wishlist_number] = $product_id;
-        	
- 		}
+        DB::select('
+            INSERT INTO "wishlist"
+            VALUES(?,?)
+            ', [ Auth()::user()->user_id, $product_id]);
+        
+       if(session()->exists('wishlist_number') || session('wishlist_number') != 0){
+            for($i = 0; $i<session('wishlist_number'); $i++) {
 
- 		
-		// put the array in a session variable
-		$wishlist_number++;
-		session(['wishlist' => $wishlist_array]);
-		session(['wishlist_number' => $wishlist_number]);
+                $products[$i] = Product::find($search[$i]);
 
-
-		print_r(session('wishlist'));
-		echo session('wishlist_number');
-
-		for($i = 0; $i<session('wishlist_number'); $i++) {
-
-            $products[$i] = Product::find($wishlist_array[$i]);
-            
+            }
+        } else {
+            return view('wishlist');
         }
 
-        return view('wishlist')->with(['products' => $products]);
+        if(session('wishlist_number') == 0)
+            return view('wishlist');
+        //$products = Product::paginate(4);
+
+        return view('wishlist')
+            ->with(['products' => $products]);
     }
 
     public function removeProduct($product_id) {

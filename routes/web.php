@@ -75,7 +75,7 @@ Route::post('profile/{user_id}/products/delete/{product_id}', 'ProfileController
 //Show Products in Wishlist
 Route::get('profile/{user_id}/wishlist', 'ProfileController@showWishList')->name('wishlist');
 //Add Product To Wishlist
-Route::get('wishlist/add/{product_id}', 'WishlistController@addToWishlist')->name('addProductToWishlist');
+Route::get('profile/wishlist/add/{product_id}', 'ProfileController@addToWishlist')->name('addProductToWishlist');
 //Remove Product from Wishlist
 Route::post('wishlist/remove/{product_id}', 'WishlistController@removeProduct')->name('removeProduct');
 
