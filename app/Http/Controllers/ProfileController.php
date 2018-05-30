@@ -228,19 +228,26 @@ class ProfileController extends Controller
 
         //dd($user->user_id);
         //dd($user);
-        dd($asd);
+        //dd($asd);
+        $sellers = DB::select('SELECT *
+                    FROM "Sellers" 
+                    WHERE "Sellers".user_id = ?;'
+                    ,[$user->user_id]);
+        if (empty($sellers)) {
+            DB::select('INSERT INTO "Sellers" VALUES(?,?,?,?)', [$user->user_id, 'asd', 'asd', '931']);
+        }
 
         $p = Product::create([
             'user_id' => $user->user_id,
             'description' => $data->input('descript'),
-            'release_date' => $data['release_date'],
-            'operating_system' => $data['op_sys'],
-            'price' => $data['product_price'],
-            'logo_path' => $data['logo'],
-            'name' => $data['product_name'],
+            'release_date' => $data->input('release_date'),
+            'operating_system' => $data->input('op_sys'),
+            'price' => $data->input('product_price'),
+            'logo_path' => $data->input('logo'),
+            'name' => $data->input('product_name'),
             'hidden' => false,
-            'developer' => ['developer_name'],
-            'publisher_name' => ['publisher_name']
+            'developer' => $data->input('developer_name'),
+            'publisher' => $data->input('publisher_name')
         ]);
 
         return redirect()->back();
