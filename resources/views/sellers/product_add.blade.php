@@ -12,7 +12,11 @@
 					
 					<div class="panel-body">
                         <div class="row">
+<!--
 							<form method="POST" action="{{ url('profile/'.Auth::id().'/products/add/') }}" id="fileForm" role="form">
+-->
+							<form method="POST" action="{{ url('profile/' . $user->user_id . '/products/addAction') }}" id="fileForm" role="form">
+
 								{{ csrf_field() }}
 								<fieldset>
 									<div style="margin-left: 15px;"> 
@@ -28,7 +32,49 @@
 											</div>
 										</div>
 										
-										</br>	
+										</br>
+										
+										<div class="row form-group">
+											<label for="publisher_name" class="col-lg-3 control-label">Publisher Name:</label>
+											<div class="col-lg-8">
+												<input class="form-control"  id="publisher_name" type="publisher_name" name="publisher_name">
+												@if ($errors->has('publisher_name'))
+													<span class="error">
+														{{ $errors->first('publisher_name') }}
+													</span>
+												@endif
+											</div>
+										</div>
+										
+										</br>
+
+										<div class="row form-group">
+											<label for="developer_name" class="col-lg-3 control-label">Developer Name:</label>
+											<div class="col-lg-8">
+												<input class="form-control"  id="developer_name" type="developer_name" name="developer_name">
+												@if ($errors->has('developer_name'))
+													<span class="error">
+														{{ $errors->first('developer_name') }}
+													</span>
+												@endif
+											</div>
+										</div>
+										
+										</br>
+
+										<div class="row form-group">
+												<label for="release_date" class="col-lg-3 control-label">Release Date:</label>
+												<div class="col-lg-8">
+													<input type="date" name="release_date" id="release_date">
+													@if ($errors->has('release_date'))
+														<span class="error">
+															{{ $errors->first('release_date') }}
+														</span>
+													@endif
+												</div>
+										</div>
+
+										<br>
 										
 										<div class="row form-group">
 											<label for="logo" class="col-lg-5 control-label">Product Logo:</label>
@@ -51,19 +97,33 @@
 												@endif
 											</div>
 										</div>
+
+										<br>
+
+											<div class="row form-group" style="margin-left: 0px;">
+											<label for="product_price" class="col-lg5 control-label">Product Price:</label>
+												<input type="number" id="product_price" placeholder="0.00" step="0.01" min="0" name="product_price">
+												@if ($errors->has('product_price'))
+													<span class="error">
+														{{ $errors->first('product_price') }}
+													</span>
+												@endif
+										</div>
+
+										<br>
 										
 										<div class="row form-group">
 											<label for="op_sys" class="col-lg-5 control-label">Supported Systems:</label>
 											<div class="col-lg-5">
 												<input type="checkbox" name="op_sys" value="w">Windows
-												<img src="/os_images/windows_logo.png" style="width:20px;" width="420">
+												<img src="/os_images/windows_logo.png" style="width:20px;" width="420" alt="windows_logo.png">
 												&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 												<input type="checkbox" name="op_sys" value="w">Mac OS
-												<img src="/os_images/ios_logo.png" style="width:20px;" width="420">
+												<img src="/os_images/ios_logo.png" style="width:20px;" width="420" alt="ios_logo.png">
 												<br>
 												<br>
 												<input type="checkbox" name="op_sys" value="w">Linux
-												<img src="/os_images/linux_logo.png" style="width:20px;" width="420">
+												<img src="/os_images/linux_logo.png" style="width:20px;" width="420" alt="linux_logo.png">
 												<br>
 												<br>
 											</div>
@@ -77,7 +137,7 @@
 										</br>
 										
 										<div class="row form-group">
-											<label for="key_list" class="col-lg-3 control-label">Haha long boy: (one per line)</label>
+											<label for="key_list" class="col-lg-3 control-label">Key List: (one per line)</label>
 											<div class="col-lg-8">
 												<textarea class="form-control white-box scrollbar-window" rows="10" id="key_list" type="key_list" name="key_list"></textarea>
 												@if ($errors->has('key_list'))
@@ -87,9 +147,6 @@
 												@endif
 											</div>
 										</div>
-										
-										<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
 
 										<div class="row form-group">
 											<label for="tag_list" class="col-lg-3 control-label">Tags: (one per line)</label>
@@ -103,7 +160,19 @@
 											</div>
 										</div>
 
-										<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+										<br>
+
+										<div class ="row form-group">
+											<div class="col-lg-5">
+												<button class="btn btn-success" type="submit" id="add_product_btn">Add Product</button>
+												@if ($errors->has('add_product_btn'))
+													<span class="error">
+														{{ $errors->first('add_product_btn') }}
+													</span>
+												@endif
+											</div>
+										</div>
+										
 										
 									</div>
 								</fieldset>
