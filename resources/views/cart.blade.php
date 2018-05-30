@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+
+@if(Auth::check())
 @section('content')
     <div id="myDIV" class="container">
 
@@ -72,4 +74,7 @@
 
         </div>
     </div>
+    @else
+        @include('404')
+    @endif
 @endsection

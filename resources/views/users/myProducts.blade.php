@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+
+@if(Auth::check())
 @section('content')
     <div class="myProducts container panel-limit-margin">
         <h3 class="panel-title">My Products</h3>
@@ -79,6 +81,9 @@
                         </ul>
         </div>
     </div>
+    @else
+        @include('404')
+    @endif
 @endsection
 
 <!--
