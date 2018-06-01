@@ -507,7 +507,7 @@ BEGIN
     
         --We retrieve the associated product info, together with an available key
         curProd := (
-            SELECT "KeysForSale".product_id, "KeysForSale".sk_id, "KeysForSale".discounted_price, "KeysForSale".price, "KeysForSale".user_id
+            SELECT "KeysForSale"
             FROM "KeysForSale"
             WHERE row_STab.product_id = "KeysForSale".product_id AND (("KeysForSale".begin_date < payment_date AND "KeysForSale".end_date > payment_date) OR ("KeysForSale".discounted_price IS NULL))
             ORDER BY "KeysForSale".discounted_price ASC NULLS LAST
@@ -526,12 +526,12 @@ BEGIN
         
         --Fill in the rest of the data to prepare the purchase
         UPDATE "SearchTable"
-        SET "SearchTable".price = (
+        SET price = (
             CASE curProd.discounted_price IS NOT NULL -- if there was a discounted price, use it
             WHEN TRUE THEN curProd.discounted_price
             ELSE curProd.price
             END
-            ), "SearchTable".sk_id = curProd.sk_id 
+            ), sk_id = curProd.sk_id 
         WHERE "SearchTable".product_id = curProd.product_id;
             
     END LOOP;
@@ -542,10 +542,7 @@ BEGIN
         FROM "SearchTable"
     );
     
-    --The given price does not match the actual cost?
-    IF totalPrice <> paid_amount THEN
-            RAISE EXCEPTION 'Payment does not match cost!';
-    END IF;
+    
     
     --Create a purchase while keeping it's ID for register
     INSERT INTO "Purchases" (purchase_id, final_price, user_id, paid_date, payment_method, details)
@@ -564,7 +561,7 @@ BEGIN
         VALUES (row_STab.sk_id, returnedPID, row_STab.price);
         
         UPDATE "SerialKeys"
-        SET "SerialKeys".user_id = buyer_id
+        SET assignment_id = buyer_id
         WHERE row_STab.sk_id = "SerialKeys".sk_id;
         
     END LOOP;

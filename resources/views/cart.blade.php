@@ -14,8 +14,9 @@
                                 <h3 class="panel-title">My Cart</h3>
                             </div>
                             <form method="POST" action="{{ url('cart/checkout') }}" id="fileForm" role="form">
-                                        {{ csrf_field() }}
+                                {{ csrf_field() }}
                                 <button class="btn btn-success" type="submit">Checkout </button>
+                            </form>
                             <ul class="list-group">
                                 @if(isset($products))
                                     @foreach($products as $product)

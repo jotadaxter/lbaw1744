@@ -160,7 +160,7 @@ class CartController extends Controller
     //DB::select(DB::raw('SELECT paymentRun'))->where(Auth::id(), date('Y/m/d'),'PayPal', 10000, 'qualquer');
     DB::select('SELECT "paymentRun"(
         :buyer_id::integer,
-        :payment_date::DATE,
+        :payment_date::date,
         :paymethod::paymentmethod,
         :paid_amount::double precision,
         :paydetails::text);', 
@@ -168,7 +168,7 @@ class CartController extends Controller
         ['buyer_id' => Auth::id(), 
          'payment_date' => date('Y/m/d'),
          'paymethod' => 'PayPal',
-         'paid_amount' => 10000, 
+         'paid_amount' => 579, 
          'paydetails' =>'qualquer'
      ]);
     //DB::select('DELETE FROM "SearchTable";');
