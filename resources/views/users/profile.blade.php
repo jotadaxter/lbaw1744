@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
+
 @section('content')
+@if(Auth::check())
     <?php $user = auth()->user();?>
     <div class="container">
         <div class="row">
@@ -66,4 +68,7 @@
             </div>
         </div>
     </div>
+    @else
+        @include('404')
+    @endif
 @endsection

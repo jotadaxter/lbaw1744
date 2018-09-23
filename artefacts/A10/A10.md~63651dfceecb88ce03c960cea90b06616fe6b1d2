@@ -1,0 +1,102 @@
+# A10: Development Planning
+
+This artefact will be used as a general plan and diary for the final project development sprint.
+It shall indicate what user stories are to be done by what team member and what user stories were in fact done by what team member,
+in a way that increases development planning and organization.
+
+## User Stories
+
+A User Story is short description, usually either one or a couple of sentences that are used to sum up in a explicit way a feature the 
+system shall have, what type of user partakes in it, what the action itself consists of and the user's motivation to perform it.
+
+### Module 1 (M01): Authentication and Individual Profile
+
+#### User and Static Pages
+
+| Identifier | Name                 | Priority | Permissions | Description                                                                                                                 | Team Member |
+|------------|----------------------|----------|-------------|-----------------------------------------------------------------------------------------------------------------------------|-------------|
+| US01       | Home Page            | High     | User        | As a User, I want to access the home page to see a brief presentation of the website                                        | All         |
+| US02       | About Page           | High     | User        | As a User, I want to access the about page, so that I may see the website's complete descrition                             | All         |
+| US03       | Search               | High     | User        | As a User, I want to search for a specific product(s), its Seller and/or tag(s)                                             | All         |                   |             |
+| US08       | Contact Page         | Medium   | User        | As a User, I want to access the website's contact page, so I can see more detailed contacts                                 | All         |
+
+#### Visitor
+
+| Identifier | Name                        | Priority | Permissions | Description                                                                                                                                  | Team Member |
+|------------|-----------------------------|----------|-------------|----------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| US11       | Log in                      | High     | Visitor     | As a Visitor, I want to authenticate into the system in order to access privileged information                                               | All         |
+| US12       | Register                    | High     | Visitor     | As a Visitor, I want to register myself into the system so as to increase my privileges                                                      | All         |
+| US13       | Log in using external API   | Low      | Visitor     | As a Visitor, I want to log in through my Facebook or Google+ account, so that I may log in with ease                                        | All         |
+| US14       | Register using external API | Low      | Visitor     | As a Visitor, I want to create a new account linked to my Facebook or Google+ account, so that I can access privileged information with ease | All         |
+
+#### Member
+
+| Identifier | Name                         | Priority | Permissions | Description                                                                                        | Team Member |
+|------------|------------------------------|----------|-------------|----------------------------------------------------------------------------------------------------|-------------|
+| US21       | Change Password              | High     | Memberr     | As a Member, I want to change my password to protect my account form unauthorized access           | All         |
+| US22       | Update Profile               | High     | Member      | As a Member, I want to update or edit my profile to provide more accurate information about myself | All         |
+| US28       | Logout                       | Low      | Member      | As a Member, I want to sign out of my account                                                      | All         |
+| US29       | See another Member's Profile | Low      | Memberr     | As a Member, I want to see another Member's profile                                                | All         |
+
+
+### Module 2 (M02): Products
+
+| Identifier | Name                 | Priority | Permissions | Description                                                                                                                | Team Member |
+|------------|----------------------|----------|-------------|----------------------------------------------------------------------------------------------------------------------------|-------------|
+| US04       | Products             | High     | User        | As a User, I want to consult all the public information regarding products on sale                                         | All         |
+| US05       | Product Categories   | High     | User        | As a User, I want to consult all the available product categories, so I can better refine my search for a specific product | All         |
+| US06       | Top Selling Products | High     | User        | As a User, I want to consult a list of the most selling productd                                                           | All         |
+| US07       | Product Page         | High     | User        | As a User, I want to access a porduct's page, with all its specifications and other pertinent information                  | All         |
+| US23       | Add Product          | High     | Member      | As a Member, I want to add a product for sale                                                                              | All         |
+| US31       | Edit Product         | High     | Seller      | As a Seller, I want to edit a product's information                                                                        | All         |
+| US32       | Remove Product       | High     | Seller      | As a Seller, I want to remove a product from sale                                                                          | All         |
+
+### Module 3 (M03): Reviews and Wish List
+
+| Identifier | Name                         | Priority | Permissions | Description                                                            | Team Member |
+|------------|------------------------------|----------|-------------|------------------------------------------------------------------------|-------------|
+| US24       | Add to Wishlist              | High     | Member      | As a Member, I want to add a product to my wishlist                    | All         |
+| US25       | View Wishlist                | High     | Member      | As a Member, I want to see my Wishlist's content                       | All         |
+| US26       | Delete Product from Wishlist | Medium   | Member      | As a Member, I want to remove a product from my Wishlist               | All         |
+| US45       | Write Review                 | High     | Buyer       | As a Buyer, I want to write a review on a product                      | All         |
+| US46       | DElete Review                | Medium   | Buyer       | As a Buyer, I want to delete my previously written review on a product | All         |
+| US47       | Rate                         | High     | Buyer       | As a Buyer, I want to rate a product                                   | All         |
+
+### Module 4 (M04): Cart and Checkout
+
+| Identifier | Name             | Priority | Permissions | Description                                                           | Team Member |
+|------------|------------------|----------|-------------|-----------------------------------------------------------------------|-------------|
+| US27       | Add to Cart      | High     | Member      | As a Member, I want to add a product for later purchase               | All         |
+| US41       | Check Cart       | High     | Buyer       | As a Buyer, I want to consult the cart with the product I've selected | All         |
+| US42       | Checkout         | High     | Buyer       | As a Buyer, I want to purchase all the products in my cart            | All         |
+| US43       | Purchase History | High     | Buyer       | As a Buyer, I want to check all my previous purchases                 | All         |
+| US44       | Remove Product   | High     | Buyer       | As a Buyer, I want to remove a product from my cart                   | All         |
+
+### Module 5 (M05): User Administration
+
+| Identifier | Name                  | Priority | Permissions | Description                                                                                                                                 | Team Member |
+|------------|-----------------------|----------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| US51       | Ban User              | High     | Admins      | As an Admin, I want to record the misbehaviour of a system user, so that he can no longer access restricted contents of the sire            | All         |
+| US52       | Make Adjustments      | High     | Admin       | As an Admin, I want to modify or remove site content (e.g. duplicates, inappropriate content)                                               | All         |
+| US53       | Edit Page Permissions | High     | Admin       | As an Admin, I want to block/allow access to certain pages that regular Users shouldn't/can't access                                        | All         |
+| US54       | Send Announcements    | High     | Admin       | As an Admin, I want to send announcements to users of the system so they can be informed of system outages, issues or scheduled maintenance | All         |
+| US55       | Access Accounts       | High     | Admin       | As an Admin, I ant to access individual user accounts (profiles/attributes), so that I can manually view and update them                    | All         |
+| US56       | Systen-wide Access    | High     | Admin       | As an Admin, I want to have system-wide access to content and sections, as per necessity, so that I may resolve issues manually             | All         |
+
+ 
+## Revision history
+ 
+Changes made to the first submission:
+1. Added document
+ 
+***
+ 
+GROUP1744, 22/05/2018
+
+- Guilherme dos Santos Amaro, up201508537@fe.up.pt
+- João Alexandre Carvalho Marinho dos Santos, up201504013@fe.up.pt
+- Pedro José Lourenço Azevedo, up201306026@fe.up.pt
+- Nuno Manuel Ferreira Corte-Real, up201405158@fe.up.pt
+
+
+1

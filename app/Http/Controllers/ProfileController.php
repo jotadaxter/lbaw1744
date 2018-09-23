@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 use VAPOR\Mail\ResetPWMail;
 use VAPOR\User;
+use VAPOR\Product;
 use Image;
 
 class ProfileController extends Controller
@@ -198,19 +199,125 @@ class ProfileController extends Controller
     public function showMyProducts($user_id)
     {
         $user = User::find($user_id);
-        return view('users.myProducts', ['user' => $user]);
+        $products = DB::select('SELECT *
+                    FROM "Products" 
+                    WHERE "Products".user_id = ?;'
+                    ,[$user_id]);
+        return view('users.myProducts', ['user' => $user, 'products' => $products]);
     }
 	
 	public function addProduct($user_id)
     {
         $user = User::find($user_id);
+        
+
         return view('sellers.product_add', ['user' => $user]);
     }
 	
     public function showWishList($user_id)
     {
         $user = User::find($user_id);
-        return view('users.wishlist', ['user' => $user]);
+
+        $products = DB::select('SELECT *
+                    FROM "Products" 
+                    INNER JOIN "Wishlists" ON "Wishlists".product_id = "Products".product_id
+                    WHERE "Wishlists".user_id = ?;'
+                    ,[$user_id]);
+
+        return view('users.wishlist')->with(['products' => $products, 'user' => $user]);
     }
+	
+	 public function addProductAction(Request $data)
+    {
+        //dd($data);
+        $user = Auth::user();
+
+        //dd($user->user_id);
+        //dd($user);
+        //dd($asd);
+        $sellers = DB::select('SELECT *
+                    FROM "Sellers" 
+                    WHERE "Sellers".user_id = ?;'
+                    ,[$user->user_id]);
+        if (empty($sellers)) {
+            DB::select('INSERT INTO "Sellers" VALUES(?,?,?,?)', [$user->user_id, 'asd', 'asd', '931']);
+        }
+
+        $p = Product::create([
+            'user_id' => $user->user_id,
+            'description' => $data->input('descript'),
+            'release_date' => $data->input('release_date'),
+            'operating_system' => $data->input('op_sys'),
+            'price' => $data->input('product_price'),
+            'logo_path' => $data->input('logo'),
+            'name' => $data->input('product_name'),
+            'hidden' => false,
+            'developer' => $data->input('developer_name'),
+            'publisher' => $data->input('publisher_name')
+        ]);
+
+        return redirect()->back();
+    }
+
+    public function deleteProduct($user_id,$product_id) {
+    $product = Product::find($product_id);
+    $product->delete();
+     $user = Auth::user();
+     $products = DB::select('SELECT *
+                    FROM "Products" 
+                    INNER JOIN "Wishlists" ON "Wishlists".product_id = "Products".product_id
+                    WHERE "Wishlists".user_id = ?;'
+                    ,[$user_id]);
+    return redirect()->back();
+  }
+
+    public function addToWishlist($product_id)
+    {   
+
+        $user_id =  Auth::user()->user_id;
+        $product = DB::select('SELECT * FROM "Wishlists" WHERE product_id = ? AND user_id = ?', 
+            [$product_id, $user_id]);
+
+        if(count($product) != 0) {
+
+        } else {
+            DB::select('
+            INSERT INTO "Wishlists"
+            VALUES(?,?)
+            ', [$user_id, $product_id]);
+        }
+        
+        
+       $user = User::find($user_id);
+
+        $products = DB::select('SELECT *
+                    FROM "Products" 
+                    INNER JOIN "Wishlists" ON "Wishlists".product_id = "Products".product_id
+                    WHERE "Wishlists".user_id = ?;'
+                    ,[$user_id]);
+
+        return view('users.wishlist')->with(['products' => $products, 'user' => $user]);
+    }
+
+    public function removeProductWishlist($product_id) {
+        $user_id =  Auth::user()->user_id;
+        $user = User::find($user_id);
+
+        $product = DB::select('DELETE FROM "Wishlists" WHERE product_id = ? AND user_id = ?', 
+            [$product_id, $user_id]);
+
+        //$product->delete();
+
+        $products = DB::select('SELECT *
+                    FROM "Products" 
+                    INNER JOIN "Wishlists" ON "Wishlists".product_id = "Products".product_id
+                    WHERE "Wishlists".user_id = ?;'
+                    ,[$user_id]);
+
+        return view('users.wishlist')->with(['products' => $products, 'user' => $user]);
+    }
+
+
+
 }
 

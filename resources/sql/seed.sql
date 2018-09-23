@@ -394,6 +394,7 @@ INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (507, 10
 INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (508, 108, 208, '38HUEDWXJH');
 INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (509, 109, 209, 'IODIGHOI2N');
 INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (510, 109, 209, 'IODIGHOP2N');
+INSERT INTO "SerialKeys"(sk_id, assignment_id, product_id, code) VALUES (513, null, 201, 'IODIGHOP2A');
 
 
 -- Reviews (sk_id, rating, review_date, comment)
@@ -453,3 +454,120 @@ ALTER SEQUENCE "SerialGenerator" RESTART WITH 999;
 -- Invoices
 
 --INSERT INTO "Invoices" (final_price, user_id, emission_date, payment_method, state) VALUES ();
+
+
+
+
+
+-- Required code
+
+DROP TABLE IF EXISTS "SearchTable" CASCADE;
+DROP FUNCTION IF EXISTS "paymentRun"(integer,DATE,paymentMethod,double precision, text);
+
+--This table is used to temporarily store product IDs during a transaction
+CREATE TABLE "SearchTable" (
+    product_id integer NOT NULL,
+    price double precision,
+    sk_id integer
+);
+
+
+CREATE VIEW "KeysForSale" AS
+SELECT "Products".product_id, "Discounts".begin_date, "Discounts".end_date, "Products".price, "Discounts".discounted_price, "SerialKeys".sk_id, "Products".user_id
+FROM (("Products"
+LEFT JOIN "Discounts" ON "Products".product_id = "Discounts".product_id)
+INNER JOIN "SerialKeys" ON "Products".product_id = "SerialKeys".product_id AND assignment_id IS NULL);
+
+--NOT IMPLEMENTED
+--CREATE FUNCTION "invoiceToPurchase"()
+
+--CREATE TRIGGER "moveInvoiceToPurchase"
+    --AFTER INSERT OR UPDATE ON "Invoices"
+    --FOR EACH ROW
+    --EXECUTE PROCEDURE "invoiceToPurchase"(); 
+
+    
+-- Function to be executed during transaction
+CREATE FUNCTION "paymentRun"(buyer_id integer, payment_date DATE, payMethod paymentMethod, paid_amount double precision, payDetails text) RETURNS VOID AS
+$$
+DECLARE
+    row_STab "SearchTable"%rowtype;
+    curProd  "KeysForSale"%rowtype;
+    totalPrice double precision;
+    returnedPID integer;
+BEGIN
+
+    --For each entry in the search table
+    FOR row_STab IN 
+    (
+        SELECT *
+        FROM "SearchTable"
+    )
+    LOOP
+    
+        --We retrieve the associated product info, together with an available key
+        curProd := (
+            SELECT "KeysForSale"
+            FROM "KeysForSale"
+            WHERE row_STab.product_id = "KeysForSale".product_id AND (("KeysForSale".begin_date < payment_date AND "KeysForSale".end_date > payment_date) OR ("KeysForSale".discounted_price IS NULL))
+            ORDER BY "KeysForSale".discounted_price ASC NULLS LAST
+            LIMIT 1
+        );
+        
+        --Either there is no such product, or no keys for it
+        IF curProd IS NULL THEN
+            RAISE EXCEPTION 'Product is not available for purchase.';
+        END IF;
+        
+        --Product's seller is the buyer - we can't let that pass
+        IF curProd.user_id = buyer_id THEN
+            RAISE EXCEPTION 'A Seller cannot purchase their own product.';
+        END IF;
+        
+        --Fill in the rest of the data to prepare the purchase
+        UPDATE "SearchTable"
+        SET price = (
+            CASE curProd.discounted_price IS NOT NULL -- if there was a discounted price, use it
+            WHEN TRUE THEN curProd.discounted_price
+            ELSE curProd.price
+            END
+            ), sk_id = curProd.sk_id 
+        WHERE "SearchTable".product_id = curProd.product_id;
+            
+    END LOOP;
+
+    --Get total cost
+    totalPrice := (
+        SELECT SUM("SearchTable".price)
+        FROM "SearchTable"
+    );
+    
+    
+    
+    --Create a purchase while keeping it's ID for register
+    INSERT INTO "Purchases" (purchase_id, final_price, user_id, paid_date, payment_method, details)
+    VALUES (DEFAULT, totalPrice, buyer_id, payment_date, payMethod, payDetails)
+    RETURNING purchase_id INTO returnedPID;
+
+    --For each product we wish to purchase
+    FOR row_STab IN 
+    (
+        SELECT *
+        FROM "SearchTable"
+    )
+    LOOP
+        
+        INSERT INTO "PurchasedKeys"(sk_id, purchase_id, price)
+        VALUES (row_STab.sk_id, returnedPID, row_STab.price);
+        
+        UPDATE "SerialKeys"
+        SET assignment_id = buyer_id
+        WHERE row_STab.sk_id = "SerialKeys".sk_id;
+        
+    END LOOP;
+    
+    
+    
+END
+$$
+LANGUAGE 'plpgsql' ;

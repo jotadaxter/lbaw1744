@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@if(Auth::check())
     @if(Auth::user()->admin)
     <div class="container-fluid main-container">
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 sidebar">
@@ -20,5 +21,8 @@
     @else
         @include('404')
     @endif
+@else
+    @include('404')
+@endif
 
 @endsection

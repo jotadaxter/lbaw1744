@@ -66,12 +66,18 @@ Route::get('profile/{user_id}/products/', 'ProfileController@showMyProducts')->n
 //Seller Add Products Form
 Route::get('profile/{user_id}/products/add/', 'ProfileController@addProduct')->name('addProducts');
 //Seller Add Products Action
-Route::post('profile/{user_id}/products/add/', 'ProfileController@addProductAction');
+Route::post('profile/{user_id}/products/addAction/', 'ProfileController@addProductAction');
+//Delete
+Route::post('profile/{user_id}/products/delete/{product_id}', 'ProfileController@deleteProduct')->name('deleteProduct');
 
 /* Module M03: Reviews and Wish list */
 
+//Show Products in Wishlist
 Route::get('profile/{user_id}/wishlist', 'ProfileController@showWishList')->name('wishlist');
-
+//Add Product To Wishlist
+Route::get('profile/wishlist/add/{product_id}', 'ProfileController@addToWishlist')->name('addProductToWishlist');
+//Remove Product from Wishlist
+Route::post('wishlist/remove/{product_id}', 'ProfileController@removeProductWishlist')->name('removeProductWishlist');
 
 /* Module M04: Cart and Checkout */
 
@@ -92,6 +98,8 @@ Route::get('/admin', 'AdminController@showAdminPage')->name('adminPage');
 Route::get('/admin/users', 'AdminController@showAdminPageUsers')->name('admin_users');
 //Admin Page Products
 Route::get('/admin/products', 'AdminController@showAdminPageProducts')->name('admin_products');
+
+Route::post('admin/remove/{product_id}', 'AdminController@removeProductAdmin')->name('removeProductAdmin');
 
 //Reset Password Change Action
 //Route::post('password/change', 'AdminController@passwordChange');

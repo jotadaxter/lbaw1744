@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
+
+
 @section('content')
+@if(Auth::check())
     <div id="myDIV" class="container">
 
             <div class="col-md-12">
@@ -13,11 +16,18 @@
                                 </div>
                                 <h3 class="panel-title">My Cart</h3>
                             </div>
+<<<<<<< HEAD
                             @if(isset($products))
                                     <form method="POST" action="{{ url('cart/checkout') }}" id="fileForm" role="form">
                                             {{ csrf_field() }}
                                     <button class="btn btn-success" type="submit">Checkout </button>
                                     @endif
+=======
+                            <form method="POST" action="{{ url('cart/checkout') }}" id="fileForm" role="form">
+                                {{ csrf_field() }}
+                                <button class="btn btn-success" type="submit">Checkout </button>
+                            </form>
+>>>>>>> 63651dfceecb88ce03c960cea90b06616fe6b1d2
                             <ul class="list-group">
                                 @if(isset($products))
                                     @foreach($products as $product)
@@ -78,4 +88,7 @@
 
         </div>
     </div>
+    @else
+        @include('404')
+    @endif
 @endsection

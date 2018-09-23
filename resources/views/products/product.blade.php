@@ -81,9 +81,14 @@
                                 <button type="button">555€ - 20% = 400€</button>
                             </div>
 
-                            <!-- Add to cart function -->
+                            <!-- Add to Cart function -->
                             <div class="col-md-4">
-                                <a href="{{route('addProductToCart', ['' => $product])}}">Add to Cart!</a>
+                                <a href="{{route('addProductToCart', ['' => $product])}}">Add to Cart</a>
+                            </div>
+
+                             <!-- Add to Wishlist function -->
+                             <div class="col-md-3">
+                                <a href="{{route('addProductToWishlist', ['' => $product])}}">Add to Wishlist</a>
                             </div>
                         </div>
 

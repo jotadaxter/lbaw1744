@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
+
+
 @section('content')
+@if(Auth::check())
     <div class="container">
         <div class="row">
             <div class="panel-limit-margin col-md-8 col-md-offset-2">
@@ -105,4 +108,7 @@
             </div>
         </div>
     </div>
+    @else
+        @include('404')
+    @endif
 @endsection
